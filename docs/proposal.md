@@ -6,8 +6,8 @@
 
 ## Team
 
-- Eshan [Last Name]
-- Max [Last Name]
+- Eshan Chawla
+- Max Dokukin
 
 ## Selected Tracks
 
