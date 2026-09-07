@@ -1,0 +1,185 @@
+# Project Proposal: CASS-VLA
+
+## Title
+
+**CASS-VLA: Calibrated Active Safety Shielding for Vision-Language-Action Driving Planners**
+
+## Team
+
+- Eshan [Last Name]
+- Max [Last Name]
+
+## Selected Tracks
+
+- Track 5 — Agentic Autonomy
+- Track 6 — Safety and Evaluation
+
+## 1. Problem Formulation
+
+### Domain problem
+
+Autonomous-driving planners may generate unsafe candidate trajectories when critical scene evidence is uncertain or unavailable. This includes situations involving occluded pedestrians, ambiguous traffic lights, poor weather, low lighting, uncertain object depth, sudden cut-ins, and planner hallucinations.
+
+Modern VLA models can reason about driving scenes, but raw model confidence is not a reliable indication that a trajectory is safe. A planner needs a runtime safety mechanism that can determine when a proposed action should be accepted, checked with additional evidence, rejected, or replaced by a conservative fallback.
+
+### Research question
+
+> Under a fixed 1-Hz reasoning and tool-use budget, can a calibrated VLA safety supervisor reduce unsafe trajectory acceptance compared with planner-only, always-on critic, and uncalibrated VLA-critic baselines?
+
+### Inputs
+
+At each 1-Hz decision step, the system receives:
+
+- Current front-facing camera frame and short visual history
+- Ego state, including speed, heading, and position
+- Route command or high-level navigation instruction
+- Candidate trajectory from the main planner
+- Optional planner rationale or behavior label
+- Tool outputs, when requested
+
+### Outputs
+
+The safety supervisor returns:
+
+- `ACCEPT`: execute the proposed trajectory
+- `INSPECT(tool)`: request more visual or geometric evidence
+- `REPLAN`: reject the trajectory and request an alternative
+- `FALLBACK`: trigger a conservative controller or emergency braking policy
+
+The system additionally produces a risk score, uncertainty estimate, identified hazard, and a safety constraint for replanning.
+
+## 2. Motivation
+
+The VLA-driving literature is rapidly progressing in counterfactual reasoning, trajectory critics, tool use, and failure-driven learning. However, these methods do not fully solve a runtime-assurance problem: deciding whether a particular planner-proposed trajectory is sufficiently trustworthy to execute under limited computation.
+
+This project studies a VLA as a safety supervisor rather than as the sole planner. The VLA operates at 1 Hz for deliberative world understanding, while a conventional low-level controller remains responsible for fast control.
+
+## 3. Proposed Technical Approach
+
+### System architecture
+
+```text
+Driving observation + route + ego state
+                  ↓
+           Main driving planner
+                  ↓
+      Candidate trajectory / behavior
+                  ↓
+         CASS-VLA safety supervisor
+                  ↓
+  ┌──────────────┼───────────────┐
+  Accept      Inspect tool     Replan / fallback
+                  ↓
+          Updated safety decision
+                  ↓
+       Low-level driving controller
+```
+
+### Main planner
+
+The base planner generates a short-horizon trajectory or driving behavior. It can initially be a simulator-provided planning baseline, an existing open driving planner, or a simplified trajectory generator.
+
+### VLA safety supervisor
+
+A frozen or lightly adapted VLM/VLA evaluates the candidate trajectory in visual context. It is prompted to identify hazards relevant to the trajectory, estimate whether available evidence is sufficient, and choose an intervention action.
+
+### Tool and skill library
+
+Initial tool skills will include:
+
+- Region-of-interest inspection for distant vehicles, pedestrians, and traffic lights
+- Depth estimation for distance ambiguity
+- Object tracking for interaction and motion risk
+- Geometric collision checking against the candidate trajectory
+
+### Risk calibration
+
+The system will convert critic scores into calibrated safety decisions using split conformal prediction or a related held-out calibration procedure. The supervisor accepts a trajectory only if its calibrated upper risk estimate is below a predefined threshold.
+
+This does not claim universal real-world safety. Any formal coverage claim is limited to the assumptions and data distribution used for calibration.
+
+### Selective intervention
+
+The supervisor will call a tool only when the expected information is likely to change the safety decision. This creates a measurable safety-versus-compute tradeoff.
+
+## 4. Data and Evaluation Environment
+
+The primary evaluation environment will be CARLA with Bench2Drive-style scenarios, subject to setup availability.
+
+We will construct or select scenarios involving:
+
+- Occluded pedestrians and cyclists
+- Distant or ambiguous traffic lights
+- Night, rain, fog, and sensor noise
+- Sudden vehicle cut-ins
+- Lane blockages
+- Distance-estimation errors
+- Unsafe candidate trajectories generated by the planner
+
+## 5. Baselines
+
+1. Main planner only
+2. Main planner with an always-on VLA critic
+3. Main planner with a tool-using but uncalibrated VLA critic
+4. Main planner with a calibrated critic without tool use
+5. Full CASS-VLA system
+
+## 6. Metrics and Success Criteria
+
+### Safety metrics
+
+- Unsafe trajectory acceptance rate
+- Collision rate
+- Near-collision rate
+- Time-to-collision or minimum trajectory clearance
+- Recovery success after an intervention
+
+### Planner quality metrics
+
+- Closed-loop route completion
+- Route progress
+- False-veto rate for safe trajectories
+- Replanning frequency
+
+### Efficiency metrics
+
+- Tool calls per episode
+- VLA calls per episode
+- Latency per 1-Hz decision
+- Token or inference cost
+
+### Calibration metrics
+
+- Empirical risk coverage
+- Expected calibration error
+- Risk prediction reliability under visual perturbation
+
+### Success criteria
+
+The project will be considered successful if CASS-VLA:
+
+1. Reduces unsafe trajectory acceptance relative to planner-only and uncalibrated-critic baselines.
+2. Maintains competitive route completion without excessive false vetoes.
+3. Demonstrates improved safety at comparable tool-use and inference budgets.
+4. Produces calibrated risk estimates on held-out scenarios.
+5. Identifies clear failure modes and limitations honestly.
+
+## 7. Resource and Maintenance Plan
+
+- We will not train a foundation VLA from scratch.
+- The initial model will be a frozen or lightly adapted open VLM/VLA in the 3B–7B range.
+- Recommended hardware is a local or cloud GPU with approximately 24 GB VRAM.
+- The safety supervisor runs at 1 Hz, making inference requirements manageable.
+- Proposed repository and environment maintainer: Eshan.
+- Proposed literature and evaluation lead: Max.
+- Exact hardware access and final ownership will be confirmed before implementation.
+
+## 8. Expected Deliverables
+
+- Reproducible simulator setup
+- Literature survey and technical memo
+- Implemented planner-supervisor pipeline
+- Controlled hazard and perturbation scenarios
+- Baseline and ablation experiments
+- Experiment logs and negative results
+- Final conference-style report and presentation
