@@ -103,16 +103,22 @@ def rollout(seed):
     eg = get_ego(e)
     trace = []
     for a in ACTIONS:
-        e.step(a)
+        _, _, term, trunc, _ = e.step(a)
         trace.append(np.array(eg.position, dtype=float).copy())
+        if term or trunc:
+            break  # stepping past termination is undefined
     e.close()
     return np.array(trace)
 
 
 a = rollout(0)
 b = rollout(0)
-drift = np.abs(a - b).max()
-print(f"max |pos_a - pos_b| over {len(ACTIONS)} steps: {drift:.3e}")
+if len(a) != len(b):
+    print(f"FAIL  rollouts differ in length: {len(a)} vs {len(b)}")
+    drift = float("inf")
+else:
+    drift = np.abs(a - b).max()
+    print(f"max |pos_a - pos_b| over {len(a)} steps: {drift:.3e}")
 if drift < 1e-9:
     print("PASS  bit-identical replay -> oracle rollout via re-simulation is fine")
 elif drift < 1e-3:
