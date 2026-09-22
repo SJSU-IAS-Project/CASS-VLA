@@ -10,17 +10,19 @@ GUI = "--gui" in sys.argv
 results = []
 
 
-def check(name):
+def check(name, fatal=True):
     def wrap(fn):
         print(f"\n=== {name} ===")
         try:
             fn()
             print(f"PASS  {name}")
-            results.append((name, True, ""))
+            results.append((name, "PASS", ""))
         except Exception as e:
-            print(f"FAIL  {name}: {type(e).__name__}: {e}")
-            traceback.print_exc()
-            results.append((name, False, f"{type(e).__name__}: {e}"))
+            tag = "FAIL" if fatal else "WARN"
+            print(f"{tag}  {name}: {e}")
+            if fatal:
+                traceback.print_exc()
+            results.append((name, tag, str(e).splitlines()[0]))
         return fn
     return wrap
 
@@ -34,7 +36,7 @@ def _():
     env.close()
 
 
-@check("2. sdl2 / cv2 conflict")
+@check("2. sdl2 / cv2 conflict", fatal=False)
 def _():
     import cv2
     path = cv2.__file__
@@ -43,9 +45,14 @@ def _():
     import glob, os
     dylibs = glob.glob(os.path.join(os.path.dirname(path), ".dylibs", "*SDL*"))
     if dylibs:
+        # metadrive-simulator depends on opencv-python, so headless must be
+        # swapped in AFTER install - ordering the pip args does not help.
         raise RuntimeError(
-            "opencv-python ships SDL2 and will collide with pygame. "
-            "Fix: uv pip uninstall opencv-python && uv pip install opencv-python-headless"
+            "opencv-python ships SDL2 and collides with pygame (noisy objc "
+            "warnings; upstream says it can cause crashes). Not fatal - "
+            "rendering may work anyway. Fix:\n"
+            "       uv pip uninstall opencv-python opencv-python-headless\n"
+            "       uv pip install opencv-python-headless"
         )
     print("   no SDL2 in cv2 -> no collision with pygame")
 
@@ -88,8 +95,8 @@ if GUI:
 
 
 print("\n" + "=" * 46)
-for name, ok, err in results:
-    print(f"{'PASS' if ok else 'FAIL'}  {name}" + (f"  -> {err}" if err else ""))
+for name, tag, err in results:
+    print(f"{tag}  {name}" + (f"  -> {err}" if err else ""))
 if not GUI:
     print("\n(rerun with --gui to check the renderers)")
-sys.exit(0 if all(ok for _, ok, _ in results) else 1)
+sys.exit(1 if any(t == "FAIL" for _, t, _ in results) else 0)

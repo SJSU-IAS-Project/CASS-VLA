@@ -2,3 +2,8 @@ metadrive-simulator==0.4.3
 opencv-python-headless
 numpy
 matplotlib
+
+# NOTE: metadrive-simulator depends on opencv-python (GUI build), which ships
+# its own libSDL2 and collides with pygame on macOS. After installing, swap it:
+#   uv pip uninstall opencv-python opencv-python-headless
+#   uv pip install opencv-python-headless
