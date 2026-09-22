@@ -1,10 +1,14 @@
 metadrive-simulator==0.4.3
-opencv-python-headless
 numpy
 matplotlib
 
-# NOTE (macOS): you will see objc "Class SDL... implemented in both" warnings.
-# pygame and cv2 each bundle libSDL2. opencv-python-headless 5.x bundles it too,
-# so swapping to headless does NOT clear them (differs from opencv 4.x).
-# Verified harmless: the top-down renderer works with the collision present.
-# Pin opencv-python-headless<5 if the log noise becomes a problem.
+# opencv is intentionally NOT pinned here. metadrive-simulator depends on
+# opencv-python and installs it itself. Do NOT add opencv-python-headless:
+# both distributions own the same cv2/ directory, so having both installed and
+# then uninstalling either one deletes cv2 while the other's metadata still
+# claims it is present.
+#
+# On macOS you will see objc "Class SDL... implemented in both" warnings,
+# because pygame and cv2 each bundle libSDL2. The headless build bundles it too
+# (5.x), so swapping does not help. Verified harmless: the top-down renderer
+# works with the collision present. See docs/phase1_findings.md.

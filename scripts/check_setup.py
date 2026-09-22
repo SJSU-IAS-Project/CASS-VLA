@@ -36,25 +36,23 @@ def _():
     env.close()
 
 
-@check("2. sdl2 / cv2 conflict", fatal=False)
+@check("2. cv2 / sdl2 status", fatal=False)
 def _():
-    import cv2
-    path = cv2.__file__
-    print("   cv2:", cv2.__version__, path)
-    # the headless build ships no SDL dylibs; the GUI build collides with pygame
-    import glob, os
-    dylibs = glob.glob(os.path.join(os.path.dirname(path), ".dylibs", "*SDL*"))
+    import cv2, glob, os
+    print("   cv2:", cv2.__version__, cv2.__file__)
+    dylibs = glob.glob(os.path.join(os.path.dirname(cv2.__file__), ".dylibs", "*SDL*"))
     if dylibs:
-        # metadrive-simulator depends on opencv-python, so headless must be
-        # swapped in AFTER install - ordering the pip args does not help.
+        # Informational only. pygame and cv2 each bundle libSDL2, which makes
+        # macOS print objc duplicate-class warnings. opencv-python-headless 5.x
+        # bundles it too, so swapping builds does NOT help -- and installing
+        # both breaks cv2 outright, since they share the cv2/ directory.
+        # Verified harmless: check 4 passes with the collision present.
         raise RuntimeError(
-            "opencv-python ships SDL2 and collides with pygame (noisy objc "
-            "warnings; upstream says it can cause crashes). Not fatal - "
-            "rendering may work anyway. Fix:\n"
-            "       uv pip uninstall opencv-python opencv-python-headless\n"
-            "       uv pip install opencv-python-headless"
+            "cv2 bundles libSDL2 -> expect objc duplicate-class warnings on "
+            "macOS. Harmless; do NOT install opencv-python-headless alongside "
+            "opencv-python to 'fix' it. See docs/phase1_findings.md"
         )
-    print("   no SDL2 in cv2 -> no collision with pygame")
+    print("   no bundled SDL2 -> no objc warnings expected")
 
 
 if GUI:

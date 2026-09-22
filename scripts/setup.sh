@@ -60,17 +60,18 @@ fi
 step "Installing dependencies"
 uv pip install --python "$PY" -r requirements.txt
 
-# metadrive-simulator depends on opencv-python (GUI build). We prefer the
-# headless build: it is smaller and does not pull GUI libs. Note this does NOT
-# silence the SDL warnings on macOS -- headless 5.x bundles libSDL2 too.
-step "Preferring headless opencv"
-if uv pip list --python "$PY" 2>/dev/null | grep -q '^opencv-python '; then
-  echo "    swapping opencv-python -> opencv-python-headless"
-  uv pip uninstall --python "$PY" opencv-python >/dev/null
-  uv pip install --python "$PY" opencv-python-headless >/dev/null
-else
-  echo "    already headless"
+# Sanity check: opencv-python and opencv-python-headless share the same cv2/
+# directory. If both are ever installed, uninstalling either deletes cv2 while
+# the other still claims to provide it. Catch that here with a clear message
+# rather than letting it surface as a confusing ModuleNotFoundError later.
+step "Checking cv2"
+if ! "$PY" -c 'import cv2' 2>/dev/null; then
+  warn "cv2 is not importable. Most likely both opencv-python and"
+  warn "opencv-python-headless were installed and one was removed. Fix with:"
+  warn "    uv pip install --python $PY --reinstall opencv-python"
+  exit 1
 fi
+echo "    cv2 $("$PY" -c 'import cv2; print(cv2.__version__)') ok"
 
 step "Verifying setup"
 echo "    (first run downloads ~200MB of MetaDrive assets)"
