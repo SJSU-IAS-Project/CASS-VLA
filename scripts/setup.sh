@@ -6,19 +6,21 @@
 #   ./scripts/setup.sh --force      recreate the venv from scratch
 #   ./scripts/setup.sh --probe      also run the MetaDrive capability probe
 #   ./scripts/setup.sh --gui        also check the renderers (3D window fails on macOS)
+#   ./scripts/setup.sh --window     run the 3D window isolation probe (scripts/probe_window.py)
 #   ./scripts/setup.sh --verbose    do not filter the objc SDL warnings
 #
 set -euo pipefail
 
 PYVER=3.11
-FORCE=0; PROBE=0; GUI=0; VERBOSE=0
+FORCE=0; PROBE=0; GUI=0; WINDOW=0; VERBOSE=0
 for arg in "$@"; do
   case "$arg" in
     --force)   FORCE=1 ;;
     --probe)   PROBE=1 ;;
     --gui)     GUI=1 ;;
+    --window)  WINDOW=1 ;;
     --verbose) VERBOSE=1 ;;
-    -h|--help) sed -n '3,10p' "$0"; exit 0 ;;
+    -h|--help) sed -n '3,11p' "$0"; exit 0 ;;
     *) echo "unknown option: $arg" >&2; exit 2 ;;
   esac
 done
@@ -101,6 +103,11 @@ fi
 if [ "$PROBE" = 1 ]; then
   step "MetaDrive capability probe"
   run "$PY" scripts/probe_state.py
+fi
+
+if [ "$WINDOW" = 1 ]; then
+  step "3D window isolation probe"
+  run "$PY" scripts/probe_window.py || true
 fi
 
 step "Done"
