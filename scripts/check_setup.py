@@ -58,7 +58,11 @@ def _():
 if GUI:
     @check("3. panda3d 3D window (single-threaded)")
     def _():
+        import os
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from mac_gl import apply_mac_gl_workaround
         from metadrive.envs import MetaDriveEnv
+        apply_mac_gl_workaround()   # macOS refuses multisamples=8; see mac_gl.py
         env = MetaDriveEnv(dict(
             use_render=True,
             multi_thread_render=False,   # Cocoa needs GL on the main thread
