@@ -5,7 +5,7 @@
 #   ./scripts/setup.sh              create venv, install, verify
 #   ./scripts/setup.sh --force      recreate the venv from scratch
 #   ./scripts/setup.sh --probe      also run the MetaDrive capability probe
-#   ./scripts/setup.sh --gui        also check the renderers (3D window fails on macOS)
+#   ./scripts/setup.sh --gui        also check the renderers (3D window + top-down)
 #   ./scripts/setup.sh --window     run the 3D window isolation probe (scripts/probe_window.py)
 #   ./scripts/setup.sh --verbose    do not filter the objc SDL warnings
 #
@@ -95,7 +95,7 @@ if run "$PY" scripts/check_setup.py $CHECK_ARGS; then
 else
   warn "one or more checks FAILED -- see output above"
   if [ "$GUI" = 1 ]; then
-    warn "the Panda3D 3D window is known to fail on macOS; top-down works."
+    warn "on macOS the 3D window needs the git-pinned MetaDrive in requirements.txt"
     warn "see docs/phase1_findings.md"
   fi
 fi
