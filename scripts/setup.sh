@@ -25,6 +25,17 @@ done
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
+
+# Mirror all output to a timestamped log in the UTM shared folder so it can be
+# read from the Linux VM (mounted there at /mnt/utm-share/claude-code).
+# Override with SETUP_LOG_DIR=...; skipped silently if the dir can't be created.
+LOG_DIR="${SETUP_LOG_DIR:-/Users/user/vm/shared/claude-code}"
+if mkdir -p "$LOG_DIR" 2>/dev/null; then
+  LOG="$LOG_DIR/setup_$(date +%Y%m%d_%H%M%S).log"
+  exec > >(tee -a "$LOG") 2>&1
+  echo "logging to $LOG  ($(date))  args: $*"
+  echo "host: $(uname -a)"
+fi
 VENV="$ROOT/.venv"
 PY="$VENV/bin/python"
 
