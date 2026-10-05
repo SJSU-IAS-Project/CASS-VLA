@@ -5,6 +5,7 @@
 metadrive-simulator @ git+https://github.com/metadriverse/metadrive.git@85e5dadc6c7436d324348f6e3d8f8e680c06b4db
 numpy
 matplotlib
+pytest
 
 # opencv is intentionally NOT pinned here. metadrive-simulator depends on
 # opencv-python and installs it itself. Do NOT add opencv-python-headless:

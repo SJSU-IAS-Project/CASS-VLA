@@ -45,6 +45,12 @@ opencv-python-headless next to opencv-python; both own the `cv2/` directory
 and uninstalling either deletes it. `setup.sh` filters these lines unless run
 with `--verbose`.
 
+## Scenario suite
+
+Six scripted families (`cassvla/scenarios/`, documented in
+[`scenarios.md`](scenarios.md)) run headless and deterministically;
+`scripts/run_scenarios.py` and `tests/test_scenarios.py` exercise all of them.
+
 ## Capability probe answers (`scripts/probe_state.py`)
 
 - **Actors (Q1).** 39 objects in a default scenario: 1 `DefaultVehicle` ego
@@ -55,8 +61,12 @@ with `--verbose`.
   `get_state()` returns position (3D), heading, roll/pitch, velocity, size,
   steering, throttle_brake, crash flags, spawn road and destination. There is
   no `corners` attribute; use `bounding_box`.
-- **Traffic lights (Q3).** None in the default scenario. Managers present:
-  map, agent, traffic, replay, record. Need an intersection scenario and a
-  light manager before relying on signal state.
+- **Traffic lights (Q3).** None in PG maps by default: MetaDrive only ships a
+  light manager for replayed real-world scenarios. Resolved by
+  `cassvla/scenarios/signals.py`, which spawns `BaseTrafficLight`s on every
+  approach lane of the first X/T block and exposes per-lane status, ego/cross
+  phase and stop points through `env.signals.get_state()`. The ego's
+  `red_light`/`yellow_light` flags and IDM traffic respond to them. See
+  [`scenarios.md`](scenarios.md).
 - **Deterministic replay (Q4).** Re-simulating the same seed and actions is
   bit-identical over 38 steps. Oracle rollouts via re-simulation are safe.
