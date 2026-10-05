@@ -58,21 +58,27 @@ def _():
 if GUI:
     @check("3. panda3d 3D window (single-threaded)")
     def _():
-        import os
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from mac_gl import apply_mac_gl_workaround
-        from metadrive.envs import MetaDriveEnv
-        apply_mac_gl_workaround()   # macOS refuses multisamples=8; see mac_gl.py
-        env = MetaDriveEnv(dict(
-            use_render=True,
-            multi_thread_render=False,   # Cocoa needs GL on the main thread
-            window_size=(800, 600),
-            num_scenarios=3,
-        ))
-        env.reset(seed=0)
-        for _ in range(120):
-            env.step([0.0, 0.3])
-        env.close()
+        # Run in a subprocess: a failed ShowBase init leaves a half-built
+        # singleton behind and would make check 4 fail with "Attempt to
+        # spawn multiple ShowBase instances!".
+        import subprocess
+        code = """
+from metadrive.envs import MetaDriveEnv
+env = MetaDriveEnv(dict(
+    use_render=True,
+    multi_thread_render=False,   # Cocoa needs GL on the main thread
+    window_size=(800, 600),
+    num_scenarios=3,
+))
+env.reset(seed=0)
+for _ in range(120):
+    env.step([0.0, 0.3])
+env.close()
+print("   3D window ran 120 steps")
+"""
+        r = subprocess.run([sys.executable, "-c", code], timeout=180)
+        if r.returncode != 0:
+            raise RuntimeError(f"subprocess exit {r.returncode} (traceback above)")
 
     @check("4. top-down pygame renderer")
     def _():

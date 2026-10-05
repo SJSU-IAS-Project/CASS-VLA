@@ -1,4 +1,8 @@
-metadrive-simulator==0.4.3
+# MetaDrive pinned to a git commit, not PyPI 0.4.3: macOS rendering support
+# (PR #794, 2025-01-09) landed a month after the 0.4.3 release and there has
+# been no release since. This commit still reports VERSION 0.4.3 and pulls the
+# same assets.zip. Linux code paths are unchanged apart from panda3d>=1.10.14.
+metadrive-simulator @ git+https://github.com/metadriverse/metadrive.git@85e5dadc6c7436d324348f6e3d8f8e680c06b4db
 numpy
 matplotlib
 
