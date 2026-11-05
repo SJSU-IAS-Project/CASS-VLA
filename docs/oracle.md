@@ -56,7 +56,9 @@ out-of-road / sidewalk.
 
 Each record also logs the ego state, hazard and signal state, prefix actions,
 and all candidate paths, per the "log everything per decision" note in
-`future_steps.md`. About 0.5 s per decision (6 rollouts), about 11 KB of JSON.
+`future_steps.md`, plus each actor's pose, box and measured velocity at the
+decision. About 11 KB of JSON per decision. See
+[`baseline_results.md`](baseline_results.md) for measured throughput.
 
 ## First sweep (seeds 0–1, t_dec 0.5–6.0 s)
 
@@ -66,12 +68,11 @@ the middle of that range is retained, which is the intended behaviour.
 
 ## Known gaps
 
-- `lead_brake_cutin` seed 1 never produces an unsafe candidate before 6 s,
-  because the slow cruise prefix keeps the gap open. Per-family decision
-  windows (or a faster prefix) are needed before generating the dataset.
 - Rule compliance covers only red lights. There are no lane-line or
   speed-limit rules, and no comfort term.
-- Resetting the same env is not bit-identical (about 1e-5 m drift after 50
-  steps; a fresh env is). All rollouts of a decision share one env, and
-  repeated labels agree to within 0.05 in score.
+- Resetting the same env is not bit-identical. In a check of 420 decisions,
+  labels from a fresh process matched the sweep on every safety flag and on
+  `c*`. One candidate order differed, and scores differed by at most 0.8.
 - TTC is constant-velocity, measured edge to edge, and is a proxy only.
+- TTC uses the commanded velocity, and scripted kinematic vehicles move at 0.80
+  of it. The cause is not diagnosed.
