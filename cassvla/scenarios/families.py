@@ -34,7 +34,12 @@ class FamilySpec:
     ego_destination: str = None
     traffic_density: float = 0.0
     horizon: int = 300
+    t_window: tuple = (0.5, 6.0)
     env_overrides: dict = field(default_factory=dict)
+
+    def decision_times(self, step=0.5):
+        lo, hi = self.t_window
+        return [round(float(t), 2) for t in np.arange(lo, hi + 1e-9, step)]
 
 
 # ---------------------------------------------------------------------------
@@ -132,19 +137,19 @@ def _merge_closing_speed(rng, mgr):
 
 FAMILIES: Dict[str, FamilySpec] = {
     "occluded_pedestrian": FamilySpec(
-        "occluded_pedestrian", "SS", "pedestrian steps out from behind a car parked in the right lane", _occluded_pedestrian),
+        "occluded_pedestrian", "SS", "pedestrian steps out from behind a car parked in the right lane", _occluded_pedestrian, t_window=(1.0, 4.5)),
     "occluded_cross_traffic": FamilySpec(
         "occluded_cross_traffic", "X", "red-light runner from the south arm, hidden by a truck at the corner", _occluded_cross_traffic,
-        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_"),
+        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(3.0, 8.0)),
     "ambiguous_light": FamilySpec(
         "ambiguous_light", "X", "ego light changes around the ego's arrival at the stop line", _ambiguous_light,
-        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_"),
+        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(1.5, 7.0)),
     "lead_brake_cutin": FamilySpec(
-        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin),
+        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin, t_window=(4.0, 18.5)),
     "lane_blockage": FamilySpec(
-        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage),
+        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage, t_window=(1.5, 4.0)),
     "merge_closing_speed": FamilySpec(
-        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed),
+        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed, t_window=(2.5, 7.0)),
 }
 
 # per-seed signal schedules for families whose signal timing is randomised

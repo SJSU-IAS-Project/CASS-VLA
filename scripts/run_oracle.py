@@ -1,6 +1,6 @@
 """Generate candidates and oracle-score them over a grid of decision points.
 
-    python scripts/run_oracle.py                              # all families, seeds 0-1, t_dec 0.5..6.0
+    python scripts/run_oracle.py                              # all families, seeds 0-1, each family's t_window
     python scripts/run_oracle.py --family lane_blockage --seeds 5 --t 1.0 2.0 3.0
     python scripts/run_oracle.py --out out/oracle/run.jsonl   # one JSON record per decision point
 
@@ -23,7 +23,7 @@ p = argparse.ArgumentParser()
 p.add_argument("--family", default=None)
 p.add_argument("--seeds", type=int, default=2)
 p.add_argument("--start-seed", type=int, default=0)
-p.add_argument("--t", type=float, nargs="+", default=list(np.arange(0.5, 6.01, 0.5)), help="decision times (s)")
+p.add_argument("--t", type=float, nargs="+", default=None, help="decision times (s); default is each family's t_window every 0.5 s")
 p.add_argument("--out", default=None, help="JSONL output path")
 args = p.parse_args()
 
@@ -37,9 +37,10 @@ totals = {}
 for fam in fams:
     oracle = Oracle(fam, start_seed=args.start_seed, num_scenarios=args.seeds)
     n = kept = 0
+    times = args.t if args.t else FAMILIES[fam].decision_times()
     try:
         for seed in range(args.start_seed, args.start_seed + args.seeds):
-            for t in args.t:
+            for t in times:
                 t0 = time.time()
                 rec = oracle.label(seed, round(float(t), 2))
                 if out:
