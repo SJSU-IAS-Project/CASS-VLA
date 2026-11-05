@@ -3,7 +3,7 @@
 Lane naming (PG maps): the first block is always ``I`` with nodes
 ``>``, ``>>``, ``>>>``; the ego spawns on (">", ">>", k) and the 40 m
 approach is (">>", ">>>", k). Lane 0 is the leftmost. ``lateral`` is
-positive to the left. See docs/phase1_findings.md for the X/T lane graphs.
+positive to the right. See docs/phase1_findings.md for the X/T lane graphs.
 
 Each family is a FamilySpec whose ``build(rng, mgr)`` returns the hazards to
 spawn for one episode. Randomness comes only from ``rng`` (seeded by episode).
@@ -49,8 +49,8 @@ def _occluded_pedestrian(rng, mgr):
     lane = mgr.engine.current_map.road_network.get_lane(_lane(2))
     lon = float(rng.uniform(20.0, 30.0))
     parked = ParkedVehicle("parked_car", _lane(2), lon, lateral=0.0, large=bool(rng.random() < 0.3))
-    # pedestrian stands just right of the parked car (off the lane), then walks left across the road
-    ped_pos = lane.position(lon + float(rng.uniform(2.0, 4.0)), -4.3)
+    # 3.5 m clears the nose of both car sizes, so the walk across the ego lane does not pass through the car
+    ped_pos = lane.position(lon + float(rng.uniform(3.5, 5.0)), 0.0)
     ped = CrossingPedestrian("pedestrian", ped_pos, lane.heading_theta_at(lon) + np.pi / 2,
                              speed=float(rng.uniform(1.1, 1.8)), trigger_dist=float(rng.uniform(12.0, 20.0)),
                              walk_dist=float(rng.uniform(6.0, 10.0)))
@@ -145,9 +145,9 @@ FAMILIES: Dict[str, FamilySpec] = {
         "ambiguous_light", "X", "ego light changes around the ego's arrival at the stop line", _ambiguous_light,
         signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(1.5, 7.0)),
     "lead_brake_cutin": FamilySpec(
-        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin, t_window=(4.0, 18.5)),
+        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin, t_window=(3.5, 18.0)),
     "lane_blockage": FamilySpec(
-        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage, t_window=(1.5, 4.0)),
+        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage, t_window=(1.0, 4.5)),
     "merge_closing_speed": FamilySpec(
         "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed, t_window=(2.5, 7.0)),
 }

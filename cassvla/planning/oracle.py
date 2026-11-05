@@ -95,13 +95,35 @@ class Oracle:
         n = int(round(t_dec / 0.1))
         tracker = Tracker(cruise_candidate(env, self.cruise, t_dec + 1.0), env.agent)
         actions = []
-        for _ in range(n):
+        self._last_positions = {}
+        for i in range(n):
             a = tracker.act(env.agent)
+            if i == n - 1:
+                self._last_positions = {o.id: np.array(o.position[:2], dtype=float) for o in _actors(env)}
             _, _, term, trunc, info = env.step(a)
             actions.append(a)
             if term or trunc:
                 return actions, info
         return actions, None
+
+    def _actor_records(self):
+        """Ground-truth state of every actor at the decision point, for the tool models."""
+        names = {}
+        for h in self.env.hazards.hazards:
+            for o in ([h.obj] if getattr(h, "obj", None) is not None else getattr(h, "objs", [])):
+                names[o.id] = h.name
+        out = []
+        for o in _actors(self.env):
+            prev = self._last_positions.get(o.id)
+            pos = np.array(o.position[:2], dtype=float)
+            measured = (pos - prev) / 0.1 if prev is not None else np.zeros(2)
+            out.append(dict(name=names.get(o.id, type(o).__name__), type=type(o).__name__,
+                            position=np.round(pos, 3).tolist(), heading=round(float(o.heading_theta), 3),
+                            length=round(float(o.LENGTH), 3), width=round(float(o.WIDTH), 3),
+                            velocity=np.round(np.asarray(o.velocity, float)[:2], 3).tolist(),
+                            measured_velocity=np.round(measured, 3).tolist(),
+                            poly=np.round(_poly(o), 3).tolist()))
+        return out
 
     def _replay(self, seed, actions):
         self.env.reset(seed=seed)
@@ -155,7 +177,10 @@ class Oracle:
         rec["ego"] = dict(position=[round(float(x), 2) for x in ego.position], heading=round(float(ego.heading_theta), 3),
                           speed=round(float(ego.speed), 2), lane=list(ego.lane_index))
         rec["hazards"] = env.hazards.get_state()
-        rec["signals"] = {k: v for k, v in env.signals.get_state().items() if k != "stop_points"}
+        sig = env.signals.get_state()
+        rec["signals"] = {k: v for k, v in sig.items() if k != "stop_points"}
+        rec["signals"]["ego_stop_points"] = {str(i): sig["stop_points"][str(i)] for i, g in env.signals.group_of.items() if g == "ego"}
+        rec["actors"] = self._actor_records()
         cands = generate_candidates(env, self.horizon)
         rec["prefix_actions"] = [[round(a, 4) for a in act] for act in actions]
         rec["candidates"] = [c.to_dict() for c in cands]
