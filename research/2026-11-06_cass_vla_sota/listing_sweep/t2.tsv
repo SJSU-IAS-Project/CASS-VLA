@@ -1,0 +1,468 @@
+2607.00007	cs.AI	BaRA: Budget-constrained and Reliable Web Data Collection Agent
+2607.00056	cs.AI	Active Sensing for RIS-Aided Tracking and Power Control: A Hybrid Neuroevolution and Supervised Learning Approach
+2607.00218	cs.AI,cs.CV	EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards
+2607.00424	cs.RO	Robust Operational Space Control with Conformal Disturbance Bounds for Safe Redundant Manipulation
+2607.01084	cs.AI	Can Agents Generalize to the Open World? Unveiling the Fragility of Static Training in Tool Use
+2607.01200	cs.RO	FastBridge: Closing the Model-Based Realization Gap in Safety Filters on 3D Gaussian Splatting for Fast Quadrotor Flight
+2607.01537	cs.LG	Certified World Models as Sensing Clocks: Drift-Aware Deadlines for Active Perception
+2607.02124	cs.LG	Predictive Conformal Slip Monitoring: An Empirical Evaluation of Rolling Split Conformal Prediction for Pre-Incident Traction Loss Detection
+2607.02206	cs.LG	Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction
+2607.02497	cs.CV	Seek to Segment: Active Perception for Panoramic Referring Segmentation
+2607.02510	cs.AI,cs.LG	Online Safety Monitoring for LLMs
+2607.02565	cs.CV	Coordinate Singularities Break Conformal Coverage for Gaze and Head Pose
+2607.02722	cs.LG	Weighted Conformal Prediction for Lab-to-Track Thermal Transfer in EV Motorsport Powertrains
+2607.03161	cs.LG	Denoised Conformal Alignment for Reliable Selection of Conditional Average Treatment Effect Predictions
+2607.03339	cs.LG	CSympNet-ID: conformal-symplectic map learning for linearly damped Hamiltonian systems
+2607.03528	cs.AI,cs.LG	Aligning Language Models with Selective Prediction
+2607.04236	cs.LG	Robust Bayes-Assisted Conformal Prediction
+2607.04395	cs.LG	NKI-Agent: Domain-Specific Fine-Tuning and Agentic Tool Use for Neuron Kernel Generation
+2607.05397	cs.AI	Proof of Execution: Runtime Verification for Governed AI Agent Actions
+2607.05441	cs.AI	PORTS: Preference-Optimized Retrievers for Tool Selection with Large Language Models
+2607.05465	cs.AI,cs.CV	CanvasAgent: Enabling Complex Image Creation and Editing via Visual Tool Orchestration
+2607.05613	cs.LG	SafeImpute: Reliable Clinical Data Imputation via Conformal Selection
+2607.05790	cs.AI	Controlling Tool Use with Heading-Specific Activation Steering
+2607.06570	cs.LG	Value of Information under Imprecise Probabilities: Decision-Rule-Specific Values and Fixed-Measure Envelopes on a Credal Set
+2607.06605	cs.LG	A Quiet Failure in Calibrated Virtual Screening: Marginal Conformal Prediction Under-Covers the Minority Class, and a Class-Conditional Fix Recovers It
+2607.06616	cs.AI,cs.CV,cs.LG	WHERE to Generate Matters: Budget-Aware Synthetic Augmentation for Label Skewed Federated Learning
+2607.06690	cs.AI	tsbootstrap: Distribution-Free Uncertainty Quantification and Conformal Prediction for Time Series
+2607.08084	cs.CV,cs.LG	ConRad: Efficient Conformal Prediction for Radiomics
+2607.08196	cs.AI,cs.LG	A First-Principles Theory of Slow Thinking and Active Perception
+2607.08572	cs.CV	Switch-Reasoner: Learn When to Think in Multitask Mixtures via Reinforcement Learning
+2607.09822	cs.AI,cs.CV	Memory-Conditioned Tool Calling for Camera-First Visual Agents
+2607.10008	cs.LG	Manifold Constrained Conformal Prediction for Spatial Events
+2607.10014	cs.LG,cs.RO	Runtime Safety Filtering for Learned Small UAS Separation Policies under GNSS Degradation
+2607.11106	cs.CV	Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools
+2607.11228	cs.AI	DeepBias: Adaptive In-depth Probing of Social Biases in LVLMs
+2607.11273	cs.LG	Fixed-Protocol Amortized MPS Tomography with Conformalized Predictive Uncertainty
+2607.11470	cs.LG	Climate-Invariant Conformal Prediction Intervals for Multi-Horizon Solar and Wind Forecasting
+2607.11818	cs.AI,cs.CV	MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents
+2607.12075	cs.AI,cs.CV	Calibrated Selective Prediction Using Deep Ensembles for ROI-Based Thyroid Nodule Ultrasound Classification Under Dataset Shift: A Retrospective Evaluation
+2607.14157	cs.AI,cs.LG	Certified Domain Consistency for Multi-Domain Retrieval: Label-Free Per-Domain Contamination Control with Conformal Risk Guarantees
+2607.14547	cs.CV	AdaTurn: Budget-Aware Test-Time Scaling for Active Visual Perception Agents
+2607.15620	cs.AI,cs.RO	AEGIS: Assay-Aware Protocol Validation and Runtime Monitoring for Open-Source Liquid Handling Robots
+2607.16131	cs.AI	ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning
+2607.16203	cs.AI,cs.LG	DocOCR-Eval: A Correction-Based Framework for OCR Tool Selection Without Ground Truth
+2607.16317	cs.AI,cs.CV,cs.LG	Monte Carlo Dropout Uncertainty and Entropy-Thresholded Selective Prediction for Architecture-Agnostic Brain Tumor MRI Triage
+2607.16476	cs.AI	When to Use Which? Benchmarking Optimisers for Configurable Systems under Varying Budgets
+2607.16675	cs.LG	Isotonic Conformal Inference
+2607.17751	cs.AI	MagicSelector: Joint Optimization for Agent Tool Selection via Counterfactual Decomposition and Progressive Reranking
+2607.18199	cs.LG	PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning
+2607.18673	cs.CV	MissingBench-Verified: Probing Vision-Language Models' Inability to Detect Missing Object Parts
+2607.19339	cs.CV	OmniReasoner: Thinking with Long Audio-Video via Native Tool Use
+2607.19356	cs.AI	NEXUS: Structured Runtime Safety for Tool-Using LLM Agents
+2607.20675	cs.LG	Explanation-Based Runtime Verification for Trustworthy ML-driven Optical Networks
+2607.21623	cs.LG	Cloud-Native Evaluation-as-a-Service: A Microservices Architecture for Scalable AI Monitoring with Conformal Guarantees
+2607.22034	cs.CV,cs.LG	Small Vision-Language Models Know When They Are Wrong But Cannot Say So: A Two-Model Study of Stated versus Internal Confidence Under Realistic Image Degradation
+2607.22721	cs.AI,cs.CV	An Interactive Vision Language Platform for Cognitive Remediation in Schizophrenia
+2607.22868	cs.AI,cs.LG	What Can Be Enforced? A Theory of Certified Runtime Safety for Tool-Using Agents
+2607.22985	cs.LG	Robust Conformalized Selection with Noisy Responses
+2607.23165	cs.LG	Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series
+2607.23532	cs.AI,cs.RO	Mission-Level Runtime Assurance for LLM-Assisted ISR Swarms over a Verification-Aware Fabric
+2607.24010	cs.LG	When Should Active RAG Retrieve? A Budget-Aware Evaluation of Utility, Calibration, and Cost
+2607.24064	cs.AI,cs.CV	MarineEVT: Advancing Event-Centric Marine Video Understanding via Visual Tool Reasoning
+2607.24562	cs.AI	Hierarchical Group-Conditional Conformal Risk Control for Selective Prediction in Language Models
+2607.24729	cs.CV	MicroZoom: Structure-Preserving Detail Synthesis at Extreme Scale
+2607.24773	cs.AI	Right-sizing Recommendations (RSR): Cloud Workload Conformal Prediction for Virtual Machines in Data Center Operations
+2607.25018	cs.LG	Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference
+2607.25125	cs.CV	LENS: Adaptive Spatio-Temporal Zooming for Keyframe Sampling in Long-Form Videos
+2607.25273	cs.LG	HeAD-CP: Heterophily-Aware Diffused Conformal Prediction Sets for Graph Neural Networks
+2607.25297	cs.AI	Hybrid Analysis for Secure MCP Tool Use in LLM Agents
+2607.25816	cs.AI	Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL
+2607.25993	cs.CV	Beyond Zooming: Learning Multi-Tool Visual Reasoning for Ultra-High-Resolution Remote Sensing
+2607.26481	cs.LG	Conformal Changepoint Localization and Root Cause Analysis with Corrupted Observations
+2607.26577	cs.LG	Simultaneous Coverage and Efficiency Guarantee in Online Conformal Prediction
+2607.26828	cs.AI,cs.LG	Budget-Aware LLM Discovery via Cost-Calibrated Frontier Utility
+2607.26887	cs.LG	Conformalized Rate-Adaptive Sensing
+2607.27143	cs.AI,cs.LG	Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark
+2607.28225	cs.CV	FaithEyes: Towards Faithful Tool Use via Multi-Agent Process-Image Self-Verification
+2607.29053	cs.LG	Who Wins Where? Conformal Model Comparison for Local Superiority
+2607.29203	cs.RO	MROPE: A Multi-Robot Safe Cooperative Strategy via combined Predictive Safety Filters and Ellipse-based Constraint Compression
+2608.00315	cs.LG,cs.RO	Towards General Language-Conditioned Latent Safety Filters
+2608.00561	cs.AI,cs.CV	Through the LENS: Local Geometric Decomposition of Vision-Language Model Representations
+2608.00571	cs.LG	CoSynFlow: Conformal Symplectic Neural Flows for Cross-System Prediction of Dissipative Hamiltonian Dynamics
+2608.01460	cs.LG	Conformalized Large Language Models under Configuration Shift
+2608.02080	cs.RO	Toward Geometry-Scalable Whole-Body Touch for Humanoids: A 3D-Printed Conformal EIT Skin
+2608.02110	cs.AI	IACM-RL: Intent-Aware Context Management and Reinforcement Learning for Complex Tool Invocation under Dynamic Intent Fluctuations
+2608.02217	cs.CV	VC-Tooler: Learning Compositional and Adaptive Visual Tool Use
+2608.02305	cs.AI,cs.LG	BRiG-AFA: Bellman Risk-to-Go Learning for Non-Myopic Active Feature Acquisition
+2608.02611	cs.AI,cs.LG	KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization
+2608.02645	cs.AI	Verified Tool Calls Improve LLM Agent Reliability Under Non-Atomic Failures
+2608.02876	cs.AI	BAP-SQL: Budget-Aware Observation Planning for Agentic Text-to-SQL
+2608.03071	cs.AI	Getting the Parameters Right: A Difficulty-Graded Benchmark and Probe-Guided Training for LLM Tool Calls
+2608.03327	cs.AI	Screenshots or Tools? Eliciting Tool Use and Managing Multimodal Context in Hybrid GUI-MCP Computer-Use Agents
+2608.03360	cs.LG	Conformal risk control for model-form uncertainty in parametric non-intrusive reduced-order models
+2608.03403	cs.AI	Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance
+2608.03628	cs.LG	ConformalShift: Targeted Event Reordering Against Adaptive ECG Monitoring
+2608.03655	cs.AI	Decoupling Generation and Selection for Budget-Constrained Faithful Summarization
+2608.04025	cs.LG	A Multi-Cohort Validation of Censoring-Aware Conformal Lower Predictive Bounds for Pathology Survival Models
+2608.04052	cs.CV,cs.LG	When Modalities Fail to Tango: Conformal Backdoor Detection in Multimodal Contrastive Learning
+2608.05439	cs.AI,cs.LG	SCP-NL2TL: Selective Conformal Prediction with Semantic Verification for Natural Language to Temporal Logic Specifications
+2608.05519	cs.AI,cs.LG	EcoAgent-Bench: Evaluating Economic Decision-Making in Budget-Constrained LLM Agents
+2608.06057	cs.AI	When History Lies: Evaluating and Improving Tool Use under Misleading Multi-Turn Histories
+2608.06206	cs.LG	Beyond Marginal Validity: Finite-Sample Guarantees for Localized Conformal Prediction
+2608.06270	cs.AI	The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images
+2608.06621	cs.AI	NxN E-valuation: Hypothesis Certification via a Conformal CRT Null
+2608.07139	cs.LG	Online Conformal Prediction Beyond Feedback
+2608.07183	cs.LG	Conformal Fusion Under Missing Modalities
+2608.07434	cs.CV	Conformal Coverage Guarantees for Any Video Temporal Grounder
+2608.07589	cs.LG	Distribution-Free Conformal Prediction for Steel Fatigue Strength: Marginal Validity Is Not Enough
+2608.07795	cs.LG	Conformal Calibration for Multi-Modal Regression with Missing Modalities
+2608.08077	cs.AI,cs.RO	Explore, Map, Remember, Decide: Are Embodied VLMs Ready for Safety-Critical Scenarios?
+2608.08219	cs.AI,cs.CV	VTO: Visual Tool Orchestration for Video Anomaly Detection
+2608.08424	cs.CV,cs.LG	ARC: Augmented-Rank Conformalization for Changepoint Localization --- Finite-Sample Validity and Distribution-Robust Efficiency
+2608.08648	cs.CV	Agentic Visual Reasoning in Whole-Slide Pathology Images via Active Perception
+2608.08654	cs.AI	The Scaffolding Matters More Than the Interface: A Controlled Comparison of MCP and CLI Tool Use Across Seven Agent Scaffoldings, Five Language Models, and One Software Task
+2608.08907	cs.AI,cs.CV	ToolVision: Learning When and How to Use Visual Tools with Capability-Aligned Supervision
+2608.09166	cs.LG,cs.RO	Particle-Based Conformal Prediction for Contact-Aware Uncertainty Calibration in Stratified Configuration Spaces
+2608.09231	cs.CV	BAG: Budget-Aware Gating for Diffusion Caching
+2608.09253	cs.AI	SkillSentry: Reliable Skill Execution for LLM Agents via Runtime Assurance
+2608.09282	cs.AI	ComboShoppingBench: Evaluating LLM Agents for Budget-Constrained Basket Shopping with Coupons
+2608.09653	cs.AI,cs.RO	Predictive safety filter enhanced curriculum learning control for efficient vehicle dynamics controller
+2608.09682	cs.CV	Thinking With Tools, Not With Pixels: Tool Calls as Text Scaffolds for Visual Reasoning
+2608.10553	cs.AI,cs.LG	Retrieval-Corrected Conformal Prediction for Time Series
+2608.10791	cs.RO	Dual Stress: Runtime Safety Monitoring for Safety-Constrained MPC Navigation
+2608.10872	cs.RO	Robust Safety Filtering for Input-Constrained Underactuated Linear Systems
+2608.11715	cs.AI	When the API Speaks the Wrong Language: Revisiting Post-Training for Multilingual Tool Use
+2608.12707	cs.RO	SAP-Nav: Spatial Semantic Representation Meets Active Perception for Hierarchical Open-Vocabulary Object Navigation
+2608.13605	cs.AI,cs.RO	Active Perception for Embodied Disambiguation
+2608.14683	cs.LG	One Score, Two Decisions: Selective Prediction on the Rare-Disease Tail
+2608.15001	cs.LG	Spinning Conformal Correlators from Neural Networks
+2608.15465	cs.LG	Maintaining IoT Device Identification under Concept Drift via Budget-Aware Traffic Labeling
+2608.15768	cs.AI,cs.LG	Temporal Graph Prototype-conditioned Conformal Prediction for Fraud Detection
+2608.17079	cs.LG	Dynamic Regime-Aware Conformal Calibration for Reliable Economic Forecast Intervals under Multiple Distribution Shifts
+2608.17275	cs.AI	When Agents Act on Web3: An Attack-Surface Survey of MCP, Skills, and Tool Calling
+2608.17333	cs.AI,cs.LG	SPACE: Sample-cloud Predictive Adaptive Conformal Ellipsoids for Multivariate Time-Series Forecasting
+2608.17496	cs.RO	Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields
+2608.17678	cs.LG	Conformal Prediction for Molecular Properties under Label Shift
+2608.18171	cs.AI,cs.LG	Looped Language Models Improve Compositional Tool Calling
+2608.19298	cs.CV	SceneGTMM: A Conformal Mapping-based Scene-Aware Transferable GNN-Transformer Dual-Graph Interaction Framework for Map Matching
+2608.20256	cs.AI	Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation
+2608.20314	cs.AI	MidTool: Mid-training Data Synthesis for Agentic Tool Use
+2608.20564	cs.AI	Consilience: Conformally Calibrated Communication Control for Hidden-Profile Multi-Agent Reasoning
+2608.20771	cs.AI	CAS: Conformalized Agentic Search via Adaptive Retrieval and Policy Weighting
+2608.20802	cs.AI	SPARC: Single-Pass Scaling for Motion Forecasting with Conformal Bayesian Last Layers
+2608.21591	cs.LG	Reaching the Tail: Calibration Diversity Drives Conformal Coverage under Data Scarcity
+2608.21762	cs.CV	Learning to Look Again: Loss-Gap Supervision for Free-form Crop Routing in Vision-Language Models
+2608.22063	cs.AI	From SQL Generation to Tool Selection: A Domain-Oriented Pattern for MCP Servers
+2608.22975	cs.AI	Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B
+2608.23153	cs.LG	Conformal Risk Minimization for Semi-Supervised Domain Adaptation via Optimal Transport
+2608.23572	cs.AI,cs.CV	A Human-Factors Guided Cognitive Model of Visuospatial Complexity in Embodied Active Vision
+2608.23638	cs.LG	Replicable Conformal Prediction
+2608.23744	cs.LG	Candidate-Label Saliency for Efficient Conformal Pruning of Text Classifiers
+2608.23848	cs.AI,cs.LG	Exploit More, Explore Smarter for Budget-Constrained Agentic Search
+2608.24087	cs.AI,cs.LG	Knowing When to Ask for Help: Bayesian Self-Escalation in Hierarchical LLM Agents
+2608.24368	cs.AI	From State to Action: OODA-Tool for Reliable Multi-Turn Tool Use
+2608.24509	cs.AI	PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents
+2608.24964	cs.LG	Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions
+2608.25417	cs.AI	Paint What You See: Benchmarking Dexterous Visual Tool Use in Multimodal Agents
+2608.25559	cs.AI,cs.CV	AdaVDR: Adaptive Tool Use and Reflection for Video Deep Research
+2608.25926	cs.AI	Formal, Executable and Explainable Runtime Monitoring of Spoken Air Traffic Control Operational Procedures
+2608.26199	cs.AI	Benchmarking AI Agents for Hardware Design Automation via MCP Tool Calling
+2608.27088	cs.AI,cs.RO	Active sensing to characterize the heterogeneity of plant stress
+2608.27688	cs.LG	SafeStep: An Interactive Demonstration of Semantic Communication for Pedestrian Safety Monitoring
+2608.28179	cs.AI,cs.LG	Conformal Risk-Averse Decision Making with Optimized Certainty Equivalent Risk Control
+2608.28515	cs.AI	Conformal Uncertainty Quantification Guarantees for Neural Operators
+2608.29789	cs.LG	A Unified Perspective on Conformal Prediction and Wasserstein Distributionally Robust Optimization for Uncertainty Quantification
+2608.29942	cs.AI	Influence Is Not Authority: When Causal Guardrail Signals Make Legitimate Tool Use Look Like an Attack in Tool-Using LLM Agents
+2608.29953	cs.AI	SearchWiki: Learning to Build and Navigate Knowledge Wikis for Active Information Seeking
+2608.30889	cs.AI,cs.LG	Safety Screening for Voltage Control in Active Distribution Grids via Distributionally Robust Conformal Screening
+2609.00012	cs.AI	Long-Horizon State Tracking in LLMs: Executing MD5 through a Deep Sequence of Dependent Tool Calls
+2609.00291	cs.CV	StreamScout: Learning When to Look Deeper for Streaming Video Understanding
+2609.00311	cs.RO	Inverse kinematic solution for generic 3R positional robots using Conformal Geometric Algebra
+2609.00813	cs.AI	One Policy, Any Budget: Internalizing Budget-Aware Search via Reinforcement Learning
+2609.01168	cs.AI	Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate
+2609.01375	cs.CV	IntroConformal: Conformal Factuality Guarantees for Large Vision-Language Models via Introspective Signals
+2609.01736	cs.AI,cs.LG	Harness Engineering in LLM Tool Use via Agent-Native Reusable Tool Primitives
+2609.03005	cs.LG	Unifying Conformal Language Tasks with In-Context Ensembles
+2609.03206	cs.CV	Learning to Zoom Efficiently with a Contrastive Curriculum
+2609.03526	cs.AI	CulturalMenuBench: Probing the Knowledge-Application Gap in Multimodal Culinary Reasoning
+2609.03699	cs.RO	Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
+2609.04014	cs.AI	InSituMeasure: Probing Situated Measurement Grounding in Industrial Scenes with Multimodal Large Language Models
+2609.04445	cs.LG	Conformity Breaks Conformal Prediction
+2609.05073	cs.LG	Confounding-Valid Conformal Inference for Counterfactual KPIs in Wireless Networks
+2609.05165	cs.LG	Conformal Prediction for Offensive Security
+2609.05214	cs.LG	Dimension-Adaptive Batched Lipschitz Narrowing Without Knowing the Zooming Dimension
+2609.05513	cs.AI,cs.CV,cs.LG	When and What to Teach: Budget-Aware Online Adaptation for Web Agents
+2609.05540	cs.AI,cs.CV	From Portraits to Pathology: Probing Diagnostic Overreach in Vision-Language Models
+2609.06036	cs.AI	Generator-Independent Runtime Assurance under Partial Observation
+2609.06124	cs.AI	SAP: State-Guided Data Synthesis with Argument Provenance for Multi-Turn Tool Use
+2609.06367	cs.AI,cs.LG	Robust Conformal Consensus: Multi-Agent LLM-as-a-Judge Interval Evaluation with Conformal Prediction
+2609.06490	cs.AI,cs.CV,cs.LG	OracleZoom: On-Policy Self-Distillation Inspired Reference-Constrained Recursive Image Super Resolution
+2609.06535	cs.CV	3DHarnessBench: Probing Agentic 3D-to-Code Capabilities of Frontier Vision-Language Models
+2609.07162	cs.LG	The Oversight Gap: What LLM Safety Monitors Miss, and Why It Is Not Capability
+2609.08659	cs.AI,cs.CV	TriCCOT: Tri-part Convolutional Conformal Transformer for Onboard Space Object Detection
+2609.09025	cs.CV	Task-driven Processing with Coarse-to-Fine Glimpse-based Active Perception
+2609.09189	cs.AI,cs.CV	Reliability-Aware Hybrid-K Ensemble Selection for Cervical Cytology Classification: Integrating Discrimination, Calibration, and Selective Prediction
+2609.09417	cs.CV	Vision-language models see more about agriculture than they report, and test-time scaling remains bounded by parametric knowledge
+2609.10221	cs.AI	Why Sample What You Can Enumerate? Exact Policy Optimization for Genomic Tool Selection
+2609.10307	cs.CV,cs.LG	View-Structured Conformal Prediction for 3D Gaussian Splatting
+2609.10737	cs.LG	Conformal Calibration Transfer
+2609.11310	cs.AI,cs.CV,cs.LG	Your Model Already Knows Don't Teach It, Learn to Ask It: Soft Prompting for Few-Shot Adaptation of Vision-Language Models
+2609.11401	cs.LG	Improving the Sensitivity of Gravitational Wave Detection with Weighted Conformal Prediction
+2609.11592	cs.LG	CHOIR: heterogeneity-aware conformal prediction for crash injury severity across driver safety strata
+2609.11899	cs.CV	Caption-once, Frames-on-Demand: Visual-Need Routing for Budget-Aware Agentic Long Video Understanding
+2609.11935	cs.LG	Physics-Informed Conformal Prediction: Embedding PDE Consistency into Distribution-Free Uncertainty Quantification for Neural Operators
+2609.12179	cs.AI,cs.LG	Explanations-Driven Active Feature Acquisition for Algorithmic Recourse
+2609.12386	cs.LG	Split Conformal Prediction with Label-Shift-Adjusted Bayesian Scores
+2609.12894	cs.RO	Before the Tipping Point: Force-Guided Active Perception for Shape-Agnostic Estimation of 3D Centers of Mass
+2609.13303	cs.AI,cs.CV,cs.LG	Adaptive Conformal Redistribution for Inter-class Transitional Uncertainty in Medical Image Classification
+2609.14234	cs.AI,cs.LG	Graph-Transformer Fraud Detection with Self-Supervised Pretraining and Conformal Risk Control
+2609.14523	cs.CV	Selective Tool Use for Agentic Change Visual Question Answering in Remote Sensing
+2609.14531	cs.LG	Multi-source conformal prediction: leveraging heterogeneity via localization
+2609.14935	cs.RO	Exact Feasibility Certification and Optimal Responsibility Allocation for Multi-Robot CBF Safety Filters
+2609.15066	cs.AI,cs.LG	Salesforce Koa: An Enterprise Language Model for Agentic Tool Use
+2609.15254	cs.LG	Conformal Individual Treatment Effect Estimation under Networked Interference
+2609.15397	cs.AI	When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary
+2609.15988	cs.RO	ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids
+2609.17091	cs.AI	Scaling-Score Conformal Prediction for Multi-Target Regression
+2609.17106	cs.RO	BRAVE-6D: Benchmark for Robotic Active Vision in 6DOF Pose Estimation
+2609.17296	cs.LG	Conformal Policy Learning with Distribution-Free Safety Guarantees
+2609.17499	cs.AI,cs.LG,cs.RO	ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation
+2609.17545	cs.CV	Selective Prediction and Uncertainty-Aware Referral for Pap Smear Classification
+2609.17625	cs.RO	Predictive Varanus: Combining CSP Conformance Monitoring with Predictive LTL Runtime Verification
+2609.17628	cs.CV,cs.RO	LEAP: Learning Emergent Active Perception for Quadruped Navigation
+2609.17635	cs.AI	Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting Stealthy False Data Injection with Conformal Guarantees
+2609.17904	cs.RO	Timely Activation of Safety Filters via One-Step Reachability Expansion
+2609.17977	cs.AI	When to Call an LLM: A Confidence-Gated Hybrid for Cost-Effective Emotion Recognition in Conversational AI
+2609.18514	cs.LG,cs.RO	ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware
+2609.18548	cs.CV,cs.RO	HAP: A Hand-Driven Active Perception Framework for Egocentric Head Motion Prediction
+2609.18622	cs.LG	How Many Labels Does Model Choice Need? Certificates and Budgets for Selective Prediction
+2609.18738	cs.RO	Active perception for robotic harvesting: 3D reconstruction and localisation of tomatoes hidden within clusters in a Mediterranean greenhouse
+2609.18849	cs.AI	Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It
+2609.19241	cs.AI	Robust Conformal Intrusion Detection via Traffic-Aware Calibration and Attack-Orbit Invariance
+2609.19554	cs.CV,cs.RO	VABench: Measuring Embodied Spatial Intelligence through Visual Demonstrations, Active Perception, and Metric Control
+2609.19665	cs.RO	Runtime Safety Filtering for Two-Terminal Hazards in Robotic Battery Recycling
+2609.19719	cs.CV	SeetaPsych v1.0: An Open-source Computer Vision Toolkit for Behavior-based Psychological Measurement
+2609.21197	cs.LG	Reliability-Centered Evaluation of Sparse Longitudinal CT Lesion-Size Forecasting with Conformal Interval Calibration and Gompertz-Inspired Regularization
+2609.21713	cs.AI	TERMon: Detecting Persistent Behavioral Threats in Edge AI via Hardware-Native Ternary Runtime Monitor
+2609.21929	cs.RO	MAAP: Multi-Agent Active Perception for Collaborative Manipulation
+2609.21967	cs.AI	NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech Model with Tool Calling Capabilities
+2609.22048	cs.LG	Available Guardrails: Certifying Selective Prediction across ML Systems
+2609.22237	cs.AI,cs.LG	Not All Ranks Are Equal: Budget-Aware LoRA Merging Across Tasks
+2609.23170	cs.LG	Conformal Robustness in Prediction-Driven Decision-Making
+2609.23280	cs.RO	Safety-Critical Control under Uncertainty via Adaptive Conformal Quantile Prediction Intervals
+2609.23504	cs.RO	Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes
+2609.24124	cs.AI,cs.RO	ActiveArena: Benchmarking and Understanding Active Perception in Robotic Manipulation
+2609.24929	cs.LG	Conformalized Quantile Regression and Minimax Limits of Fixed-Score Calibration under Known Covariate Shift
+2609.24985	cs.LG	Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use
+2609.25889	cs.AI	Risk-Aware Online Conformal State Probing
+2609.25891	cs.AI,cs.CV	BAS-OPD: Budget-Aware Selective On-Policy Self-Distillation for Fine-Grained Multimodal Perception
+2609.25938	cs.LG	Certified Against Which Oracle? Execution Labels Set the Reported Risk of Conformal Abstention for Text-to-SQL
+2609.26233	cs.CV	The Temporal Moderation Gap: Text-to-Video Safety Filters Are Blind to Harm in Motion
+2609.26384	cs.LG	Learning to Defer with Guidance on Real World Medical Data
+2609.26951	cs.LG	Rolling Conformal Prediction in Sequential Model Training
+2609.26959	cs.LG	Transfer Learning with Conformalized Quantile Regression for Solar PV Forecasting Under Load-Shedding-Driven Data Scarcity
+2609.27221	cs.LG	Tail-Aware Geometry Learning for Conformal Ellipsoids
+2609.27955	cs.LG	CS-WCP: Robust Conformal Sets for LLM-Judge Traffic Shifts with Uncertain Group Proportions
+2609.27976	cs.LG	Conformal Bayes under Continuous Label Shift: Sensitivity Analysis and the Limits of Exact Validity
+2609.28083	cs.CV	ZoomDiff: A High-Fidelity Diffusion Model for Dual-Camera Smooth Zooming
+2609.28364	cs.LG,cs.RO	LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials
+2609.28522	cs.LG	Sequential Confidence Sets for Coverage-Constrained Conformal Model Selection
+2609.28895	cs.LG	GeoDose-CP: Graph-Local Conformal Inference for Continuous-Treatment Earth Observation
+2609.28984	cs.AI,cs.LG,cs.RO	CrossSafe: Towards Cross-Embodiment Latent Safety Filters
+2609.29509	cs.AI	Delay-of-Gratification as a Multi-Agent Survival Micro-benchmark for Long-Horizon LLMs: Social Exposure, Personas, and Tool Use Budgets
+2609.29847	cs.LG	Elucidating the Conformal Structure of the Brinkman Penalisation Method for Geometry-Adapted, Structure-Preserving Operator Learning of Hamiltonian PDEs
+2609.30454	cs.LG	Auditing System-1 Models on Biosecurity-Relevant Benchmarks: Calibration, Selective Prediction, and Permutation Instability in a Non-Generative Model
+2609.30706	cs.AI	LAVOIR: Teaching a Single-Pass Decision Encoder When and What to Ask with Amortized Value of Information
+2609.30715	cs.RO	RoboMonitor: Label-Efficient Runtime Monitoring of Robot Task Execution via Predictive Representation Learning
+2609.30781	cs.LG	Missingness-Aware Conformal Prediction Under Cross-Hospital Distribution Shift
+2609.30811	cs.LG	Counterfactual Online Conformal Prediction Under Adaptive Logging
+2609.30886	cs.LG	Conformal Prediction under Exponential-Tilt Joint Shift
+2609.30993	cs.AI,cs.CV	FLIP: Final Layer Inference-Time Probing for Vision-Language Models
+2609.31661	cs.CV	ForensicZoom: Adaptive Visual Inspection with Multimodal LLMs for Industrial-Grade Face Forgery Detection
+2609.32301	cs.LG	When Does Synergy Help Active Feature Acquisition? A PID-Based Study
+2609.32325	cs.AI,cs.LG	Active Feature Acquisition With Incomplete Training Data
+2609.32486	cs.LG	Elastic Selective Spectral Hybrids for Train-Once, Export-Many Budgeted Inference
+2609.32918	cs.AI,cs.CV,cs.RO	Vision-Language Agents for Active Perception in Optics Laboratories
+2609.33037	cs.LG	Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction
+2609.33123	cs.AI	Compositional Safety Failures in Harness Evolution: Identification and Runtime Monitoring
+2609.33235	cs.RO	Learning with Object-centric Representations of Tactile Interactive Perception for Robot Manipulation
+2609.33456	cs.LG	Sharp training-conditional coverage for conformal prediction under covariate shift
+2609.33482	cs.LG	How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage
+2609.33836	cs.CV,cs.RO	DeltaSeek: Toward Active Perception in Evolving Construction Environments
+2609.34887	cs.LG	Conformal Prediction and Conditional Coverage for Tabular Foundation Models
+2609.35088	cs.AI	When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents
+2609.35811	cs.AI	Lookahead-R: Budget-Aware Tool Retrieval via Execution-Centric Planning
+2609.36520	cs.CV,cs.RO	Distilling Privileged Control Barrier Functions into RGB-Only Safety Filters for Dynamic Visual Navigation
+2609.37002	cs.AI,cs.CV	Visual Parallel Search: Learning to Search High-Resolution Images with Parallel Tile Inspection and Adaptive Zoom
+2609.37292	cs.RO	Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation
+2609.37298	cs.CV,cs.LG	Scaling Full Conformal Image Classifiers
+2609.37345	cs.CV	When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs
+2609.37687	cs.AI	WISE-ATTA: When to Ask for Labels in Budgeted Active Test-Time Adaptation
+2609.38112	cs.LG	ReCIRC: Rectified Conformal Risk Control
+2609.38196	cs.AI,cs.LG	Conformal Adversarial Generative Ensemble
+2609.38222	cs.LG	Conformal Factuality Control for Multi-Hop Retrieval-Augmented Generation
+2609.38850	cs.AI	Beyond Outcome Rewards: Post-Rationale Distribution Optimization for Selective Prediction in Reasoning Models
+2609.39450	cs.AI	ActionGuard: Tool Call Authorization under Poisoned Skills
+2609.39717	cs.AI	Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents
+2609.40008	cs.LG	PINNing the pion: conformal deep learning for $F_π(s)$ and the $(g-2)_μ$ hadronic contribution
+2610.00523	cs.LG	SimplexUQ: An Evaluation Framework and Benchmark for Conformal Uncertainty on Simplex-Valued Predictions
+2610.00535	cs.LG	Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator
+2610.01236	cs.AI	Learning to Ask: Information Acquisition for SLM-LLM Collaboration, under a budget
+2610.01698	cs.RO	ActiveWAM: Evidence-Aware Active Vision for World-Action Models
+2610.01763	cs.AI	TopK-Guided: Adaptive, Budget-Aware Activation Sparsity for Efficient LLM Inference
+2610.02089	cs.AI,cs.RO	HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution
+2610.02206	cs.AI	KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards
+2610.02210	cs.CV	Moore, Escher, Penrose: A Conformal Golden Braid
+2610.02225	cs.LG	The Price of Greenwashing: Algorithmic Verification and Market Discipline using Conformal Machine Learning
+2610.02357	cs.LG	Conformal Prediction for Time Series with Deep Sequence Models
+2610.02487	cs.LG	Threshold-Aware Conformal Routing
+2610.03127	cs.LG	Coverage You Can Steer: Online Conformal Calibration for RL-Driven Hardware-Aware NAS
+2610.04239	cs.LG	Conformal Prediction with Paraphrase-Aware Scoring for LLM Uncertainty Quantification
+2610.04266	cs.RO	Real-Time Conformal-Seeded Hybrid Inverse Kinematics for Offset Redundant Manipulators
+2610.04297	cs.LG,cs.RO	Latent Safety Filters: When a Lossy Encoder Admits a Transferable Certificate
+2610.04375	cs.AI	Do Tool Calls Execute as Intended? Measuring and Repairing Intent-Execution Correspondence in LLM Agents
+2610.04402	cs.RO	Budget-Constrained Fault-Tolerant Mutual Visibility for Autonomous Robots under the Mobility Fault Model
+2610.05342	cs.AI,cs.CV	IRSTD-Agent: Agentic Infrared Small Target Detection via Zoom-Guided Interaction Learning
+2610.05542	cs.RO	Neural Barriers: An Online Certifiable Learning-enhanced Adaptive High Order Safety Critical Control
+2610.06829	cs.AI,cs.LG	CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling
+2610.06955	cs.CV,cs.RO	ROMA: LLM System for Real-World Object-Centric Multi-Sensory Active Perception
+2610.07086	cs.AI,cs.LG	SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding
+2610.07257	cs.AI	MemMux: Runtime Verification and Honest Resource Attribution for Fleets of Parallel Coding Agents
+2610.07406	cs.LG	Evaluation of Active Feature Acquisition Policies with Tabular Foundation Models
+2610.07452	cs.AI,cs.LG	Active Feature Acquisition for Cost-Efficient Temporal Prediction with Reduced Participant Burden
+2610.07474	cs.RO	Risk-Sensitive Crowd Navigation with Adaptive Ellipsoidal Conformal Prediction
+2610.07739	cs.LG	Cite What You Explore: Budget-Aware LLM Reasoning over Medical KGs with Verifiable Evidence
+2610.08115	cs.RO	Context-Conditioned Hamilton-Jacobi Reachability for Adaptive Safety Filtering
+2610.08564	cs.LG	Valid for Free: Homophily-Gated Conformal Prediction for Training-Free Node Classification with Tabular Foundation Models
+2610.08743	cs.AI,cs.LG	Reinforcement Learning with Conformal Action Sets: An Application to Sequential Recommendation
+2610.08765	cs.RO	LBA-CBF: Rapidly Adaptive Safety Filters via Parallel Dynamics Inference
+2610.08785	cs.LG	Conformal Prediction Sets Quantify Information Gain: A Theoretical Perspective
+2610.08928	cs.AI	Multi-Aspect Runtime Verification for Simulation-Based V&V of LLM-Enabled Autonomous Agents
+2610.09127	cs.AI,cs.LG	CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use
+2610.09313	cs.CV	Why VLMs Miss Small Objects, and When Zooming In Is Safe
+2610.09392	cs.CV	Quantifying Volumetric Risk: Class-Aware Asymmetric Weighted Conformal Prediction for 3D Medical Image Segmentation
+2610.10168	cs.LG	Conformal Prediction for Spatially Dependent Data via Sequential Whitening
+2610.10748	cs.RO	TAPNAV: Humanoid Navigation through Tactile Active Perception
+2610.10829	cs.LG	Conformal Prediction under Partial Verification
+2610.11039	cs.CV,cs.RO	Rendering-Free Lookahead for Question-Guided Active Vision
+2610.11349	cs.LG	Sample-Efficient Generative Conformal Prediction
+2610.11957	cs.AI,cs.LG	Stochastic Grouping Conformal Prediction for Effective Subgroup Reliability
+2610.12467	cs.LG,cs.RO	CSF: Contextual Safety Filtering for Motion Generators
+2610.12811	cs.CV	Spend Where It Matters: Particle Search with MH Refinement for Budget-Constrained Audio-Visual Alignment
+2610.12999	cs.RO	EgoReveal: Learning Active Vision and Object Manipulation under Partial Occlusions from Egocentric Demonstrations
+2610.13118	cs.RO	The value of information and the emergence of communication in evolved e-puck robots
+2610.13276	cs.LG	CopRoute: Dependence-Aware Conformal Routing for Language Models
+2610.13387	cs.CV	Radiomics-Based Thyroid Nodule Classification with Label-Conditional Conformal Prediction
+2610.13604	cs.CV	Thyroid Nodule Segmentation in Ultrasound Images with Conformal Uncertainty Estimation
+2610.13790	cs.CV	OccludeBench: Can VLMs Find What's Missing?
+2610.14030	cs.AI,cs.LG	Rotate the Loop: Blockwise Conformality for Looped Transformers
+2610.14265	cs.CV	Thinking with Images without Coordinates
+2610.14334	cs.AI	Which Metadata Matters for LLM Tool Selection in MCP? Evidence from Controlled Factor-Level Interventions
+2610.14352	cs.LG	Class-Conditional Conformal Prediction for Signal Temporal Logic Inference with Many Classes
+2610.14365	cs.LG	ConformalGuard: False-Positive-Controlled Action Gating for LM Classifiers
+2610.14907	cs.LG	Minimum Volume Optimal Transport for Multivariate Conformal Prediction
+2610.15011	cs.LG	Conformal Sequential Decision Making With Cost and Sublinear Policy Regret Guarantees
+2610.15227	cs.AI	Understanding Unified VLMs: From Attention Probing to Guidance Tuning for Multimodal Generation
+2610.15458	cs.LG	Split Conformal Interval Length under Huber Contamination
+2610.15884	cs.AI	RetryBench: Separating Retry Permission from Recovery Outcomes in GPT Tool Use
+2610.15936	cs.RO	Jacobian State Augmented Viable Kinematic Safety Filter
+2610.16048	cs.LG	Backward Conformal Prediction under Covariate Shift
+2610.17146	cs.LG	SCOPE Before You Sample: Conformal Scores Guide Posterior Exploration for Fast and Calibrated Bayesian Predictive Inference
+2610.17343	cs.LG	Monitoring for Shifts at Unknown Times: Parameter-Free Conditional Conformal Martingales
+2610.17562	cs.RO	Mobility-Budget-Constrained Submodular Maximization for Distributed Semantic Multi-Robot Exploration
+2610.17962	cs.LG	CALM-5G: Event-Level Conformal Risk Control for Predictive Service-Assurance Alarms
+2610.18420	cs.AI,cs.LG	Agaram 2.5B: The First Tamil-First Language Model Trained from Scratch with Tool Calling. A Playbook for Under-Represented Languages
+2610.18616	cs.AI	Knowledge Graphs as Files: An Agent Harness Where Tool Creation and Tool Use Co-Evolve
+2610.18642	cs.LG	MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization
+2610.19058	cs.LG	Conformalized Physics-Informed Weak Regression for Parameter Estimation in Epidemic Models
+2610.19189	cs.LG	Adaptive Computation with Conformal Certification
+2610.19484	cs.LG	State-Matched Sequence Conformal Prediction
+2610.19701	cs.AI	Runtime Monitoring of Supermartingale Certificates
+2610.19818	cs.AI	One Monitor Does Not Fit All: Formalism-Agnostic Runtime Verification for Agentic AI
+2610.19896	cs.RO	Active Perception of Upper-Limb Functional Mobility through Human-Robot Handovers
+2610.20255	cs.RO	Safe Reinforcement Learning with Receding-Horizon Safety Critic and Differentiable Action Shields
+2610.20388	cs.AI	From Relevance to Validity: Zero-Shot Tool Selection via Functional and Contextual Validation
+2610.20397	cs.CV	Where Should the Gaussians Go? Reusable Label-Aware Allocation for Budget-Constrained Gaussian Splatting of Cinematic CT
+2610.20773	cs.LG	Selection-Safe Conformal Early Exit: Distribution-Free Coverage under Adaptive Depth
+2610.20852	cs.AI,cs.CV	Probing Negation Understanding in Vision-Language Models With Object Attention
+2610.21214	cs.AI	Rubric Judgments Lack Uncertainty: Conformal Weighting for LLM Evaluation
+2610.21320	cs.CV	ZoomCap: Evidence-Routed Visual Zooming for Recoverable Visual Information Transfer
+2610.21571	cs.AI	Rethinking the Role of Tool Graph Memory in Multi-Turn Tool Use
+2610.21919	cs.LG	The Lagrangian Structure of Cost-Penalized Active Feature Acquisition
+2610.22335	cs.RO	Illumination-Aware Active Perception for Spacecraft Inspection
+2610.22688	cs.AI	Explore Separately, Adopt Selectively: Execution-Guided Tool Use over Large Tool Libraries
+2610.22930	cs.LG	Conformal Policy Selection: When to Deploy AI Decisions for Targeted Intervention
+2610.23131	cs.LG	Information-Geometric Blind Spots of Conformal Test Martingales
+2610.23298	cs.LG	How the elastic axis folds the transonic flutter boundary: shock energy transfer and conformally calibrated active learning
+2610.23508	cs.LG	Adaptive conformal prediction on the Grassmannian
+2610.23891	cs.RO	When to Make a Decision: Task-Sufficient Active Perception for Mobile Manipulator Robots
+2610.23917	cs.LG	Announced Breaks Separate Conformal Reliability from Frequency Calibration
+2610.24194	cs.AI	Agents' Last Doubt: Knowing When to Act and When to Step Back in Tool-Using Agents
+2610.24246	cs.LG	CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions
+2610.24510	cs.LG	What "Form'' of Uncertainty Does Conformal Prediction Quantify?
+2610.24813	cs.LG	Tilted Mondrian: Triage and Mitigation of Fine-grained Disparities in Conformal Prediction
+2610.25092	cs.LG	Conformal Prediction-Enabled Sequence-level Policy Optimization for Reasoning Language Models
+2610.25349	cs.CV,cs.LG	Predicted Class Correction: Conformal Thresholds for Classes with No Calibration Data
+2610.26987	cs.AI,cs.LG	Dynamic Dual-Feedback Conformal Inference for Time Series Forecasting
+2610.27307	cs.AI	Evolving Self-tuning Benchmarks for Long-Horizon Tool Use
+2610.27350	cs.AI,cs.RO	Refuses When Asked, Complies When Acting: A Runtime Safety Check for Robot Control Loops
+2610.27726	cs.AI,cs.LG	Anytime-Valid Runtime Monitoring of Learned Barrier Certificates
+2610.27822	cs.AI	COMPASS: Routing via Capability-Oriented Model Profiling with Adaptive Search, Selection, and Tool Use
+2610.28409	cs.AI,cs.LG	Rewards for Budget-Aware Multi-Turn Agents That Adapt to Arbitrary Test-Time Constraints
+2610.28889	cs.CV	Policy-Mask: Budget-Aware Adaptation of Diffusion Features to Discriminative Tasks
+2610.28937	cs.LG	Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift
+2610.29067	cs.LG	The Price of Choice in Selective Prediction
+2610.29816	cs.AI	COMET: A coordinated multi-layer runtime monitoring framework for human-supervised AI-enabled safety systems
+2610.29964	cs.RO	Object- and Task-Aware Active Perception for Safe Navigation of Mobile Manipulators in Semi-Static Environments
+2610.30926	cs.CV	Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation
+2610.31013	cs.AI,cs.RO	Multi-Tool Selection for Robotic Systems: Comparing Semantic Retrieval and LLM
+2610.31336	cs.LG	Metric Conformal Prediction via the Conditional Expected Local Radius
+2610.31483	cs.AI,cs.LG	Training Small Language Models for Transferable Tool Selection
+2610.31923	cs.RO	Not an Accident: Exploiting Safety Filter Inadequacy in Humanoid Robots
+2610.32664	cs.CV	The Answer Knows Where to Look: Zooming before MLLMs Answer under Visual-Token Budgets
+2610.33580	cs.CV	ZoomSEM: accelerating large-scale brain connectomics with intelligent SEM super-resolution
+2610.33959	cs.RO	I Won't Know Until I Try: Interactive Information Gathering for Long-Horizon Manipulation
+2610.34191	cs.CV	Timing Matters Twice: When to Query and When to Skip in Flow-Matching On-Policy Distillation
+2610.34854	cs.CV	Learning Dual-Camera Smooth Zoom via Decoupled Geometric-Photometric Data Synthesis
+2610.34872	cs.AI	Adaptive Retrieval, Selective Answers: Evaluating Conformal Factuality in Agentic RAG
+2610.35035	cs.LG	Macro Mondrian Conformal Risk Control
+2610.35877	cs.LG,cs.RO	Calibrated for Which Policy? Conformal Uncertainty for Fixed World Models Under Intervention
+2610.36652	cs.AI	Remembering Is Not Enough: Refining Memories and Learning When to Use Them in Multi-Agent Systems
+2610.36859	cs.AI,cs.CV,cs.RO	ActiveAlign: Aligning Egocentric Manipulation via Active Perception
+2610.36874	cs.AI,cs.CV	AdaGround: Token-Normalized Adaptive Zooming with Verifier-in-the-Loop Refinement for GUI Grounding
+2610.37037	cs.AI,cs.CV,cs.LG	Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception
+2610.37533	cs.AI,cs.RO	Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use
+2610.37561	cs.AI,cs.LG	When uncertainty quantification fails: structural vulnerabilities and corrections for selective prediction under clinical class imbalance
+2610.37652	cs.LG,cs.RO	Dexterous In-Hand Object Pose Reaching with Learned Safety Filters
+2610.37866	cs.LG	Finite-Sample Optimal Conformal Prediction Sets under Covariate Shift
+2610.38046	cs.LG	Conformal Predictive Distributions for Contextual Order Fulfillment Optimization
+2610.38405	cs.AI,cs.RO	SpaceAct: Benchmarking 3D Spatial and Temporal Reasoning via Closed-Loop Action and Active Perception
+2610.38957	cs.CV	What do MLLMs know about 'Waldo'? Evaluating Visual Reasoning under Multi-Instance Multi-Object Challenges
+2610.39547	cs.RO	Assuring Learning-Enabled Cyber-Physical Systems with Foundation Models: A Neuro-Symbolic Agenda for Testing, Verification, and Runtime Assurance
+2610.40030	cs.AI,cs.LG	Cheap Retrieval and Observation Credit Assignment from One Quantity: The Value of Information
+2610.40252	cs.LG	Conformal Annotation with Randomized Expert Review: Application to Online Cell-Type Labeling
+2610.40421	cs.CV,cs.LG	Uncertainty-aware Feedback Loop Diagnosis: integrating reinforcement learning and conformal prediction for reliable wafer defect classification
+2610.40478	cs.CV	Accurate MRI-free PET Quantification and Reliability Assessment via CT-to-MRI Synthesis and Conformal Prediction
+2610.40738	cs.LG	Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use
+2610.41166	cs.LG	Adaptive Uncertainty Quantification on Simplicial Complexes with Conformalized Simplicial Neural Networks
+2610.41618	cs.AI,cs.CV	Attention Maps Know When to Think: Training-Free Difficulty-Aware Chain-of-Thought for Reasoning Segmentation
+2610.41987	cs.CV	FoAViS: Analyzing Learned Fixation Strategies in a Foveated Active Vision System
+2611.00414	cs.AI,cs.LG	Nonconformal Distortion and Local Orientation Reversal in the Fourier Circuit of a Modular-Addition Transformer
+2611.01053	cs.LG	Efficient Conformal Calibration for Paired Recommendation Decisions
+2611.01446	cs.AI,cs.LG	I-PTC: Interactive Programmatic Tool Calling for Stateful Tool-Augmented Agents
+2611.01512	cs.LG	Abstention Spends Its Budget on Local Label Variance More Than on Novelty: Auditing Conformal Calibration and Selective Prediction under Molecular Scaffold Shift
+2611.01659	cs.RO	HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception
+2611.01724	cs.LG	Beyond Imputation: Mask-Adaptive Conformal Prediction via Tree Embeddings on General Missing Data Mechanisms
+2611.02478	cs.LG	MetaPOCS: Meta-Learned Multi-Exit Unfolding for Budget-Aware Seismic Data Interpolation
+2611.03661	cs.LG	Tail reliability in probabilistic electricity price forecasts: comparing model combination and conformal prediction in the GB day-ahead market
+2611.03982	cs.AI	SLATE: A Large-Scale Benchmark for Long-Horizon API Selection in E-commerce Tool Use
+2611.04006	cs.AI	Controlling Action-Head Co-Adaptation to VLM Representation Anisotropy
+2611.04066	cs.LG	Graph-Localized Coverage for Conformal Prediction on Inductive Graphs
+2611.04943	cs.CV	Learning Where to Look: Observation Policy Optimization for Thinking with Images
+2611.05277	cs.LG	Conformal Prediction at Performative Equilibrium: The Price of Performativity
+2611.05517	cs.AI	When to Ask, When to Answer: Strategic Clarification for Ambiguous Reference Resolution in Dialogue
+2611.05543	cs.LG	Generalized Hyperrectangular Prediction Sets in Multivariate Conformal Prediction
+2611.05559	cs.AI,cs.CV	How Finely Can Vision-Language Models See Biology? Bio-VQA: A Benchmark for Taxonomic, Morphological, Spatial and Individual Reasoning
+2611.05591	cs.LG	C-GRPO: Conformal Group Relative Policy Optimization
+2611.06108	cs.LG	Learning When to Think Aloud in Latent Reasoning
+2611.06151	cs.AI,cs.LG	CARM: Conformal Adaptive Risk Masking for Reliable Scientific Super-Resolution
+2611.06158	cs.LG	Selective Prediction Intervals: Jointly Learning to Predict, Bound, and Abstain
+2611.06320	cs.AI,cs.LG	Conformal Prediction for Distribution-to-Distribution Regression
+2611.06434	cs.AI	EviSeek: An Evidence-Centric Agentic Framework for Embodied Active Information Seeking
+2611.06702	cs.RO	When to Ask for Help: Uncertainty-Triggered Aerial Refinement for Off-Road Navigation
+2611.06879	cs.LG	Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes
+2611.07155	cs.AI,cs.LG	Depth or Description? When a One-Step Latent Score Replaces Lookahead in Proactive Information Acquisition
+2611.07188	cs.CV	MammoSeek: A Mammography Agent with selective zooming for grounded reports
+2611.07502	cs.CV,cs.LG	Coverage Hides Churn: Auditing and Preserving Conformal Decisions as VLM Label Registries Grow
+2611.08409	cs.LG	Conformal Prediction for Time-Dependent PDEs

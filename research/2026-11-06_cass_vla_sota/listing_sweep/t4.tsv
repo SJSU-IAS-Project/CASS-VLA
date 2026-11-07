@@ -1,0 +1,78 @@
+2607.01531	cs.AI,cs.LG	OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3
+2607.03155	cs.RO	Hope for the Best, Prepare for the Worst: Occlusion-Aware Contingency Planning for Autonomous Vehicles
+2607.03488	cs.CV	Learning to Generate Multiple Objects from Dense and Occluded Layouts
+2607.03581	cs.AI,cs.CV	PLGSA-Transformer: Periocular Landmark-Guided Attention with Occlusion-Adaptive Cosine Thresholding for Cross-Modal Masked and Unmasked Face Recognition
+2607.03758	cs.RO	Occluding the Solution Space: Planner-Agnostic Adversarial Attacks on Tolerance-Aware Manipulation
+2607.04451	cs.CV	CCFM: Collision-Constrained Flow Matching for Safety-Critical Scenario Generation
+2607.06223	cs.AI	Information Gain-based Rollout Policy Optimization: An Adaptive Tree-Structured Rollout Approach for Multi-Turn Search Agents
+2607.13361	cs.CV	Detector Confidence Signals Presence Rather Than Occlusion in Cluttered Manipulation
+2607.13880	cs.LG	Task-Oriented Sensing and Covert Transmissions for Collaborative Multi-AUV Systems
+2607.14760	cs.CV	Clean-Reference Streaming Detection of Lens Occlusion and Photometric Transitions for Camera Tamper Monitoring
+2607.14842	cs.RO	KineFuse: Kinematic-Aware Haptic Fusion for In-Hand Occluded-Object Pose Tracking
+2607.16274	cs.CV	The JEPA Predictor: A Transferable Operator for Occluded Feature Completion
+2607.17660	cs.CV	RayOcc: Occlusion-Aware Ray Occupancy Estimation via Gaussian Mixture Intensity
+2607.18112	cs.CV	Occlusion-Aware Panoptic Segmentation with Joint Position Embedding and Occlusion-Level Attention
+2607.21545	cs.CV	Towards Robust Iris Recognition Through Occlusion Identification and Conditional Diffusion-Based Reconstruction
+2607.23122	cs.CV	Occlusion-Point Reuse for Ray-Traced Ambient Occlusion and Shadow
+2607.23468	cs.CV	Robust 6-DoF Object Pose Tracking with Built-In Recovery under Occlusions and Rapid Object Motions
+2607.24302	cs.CV	Multiview Multi-Person Human Mesh Recovery Under Large Scenes with Occlusions
+2607.28186	cs.CV	Think with Extra-Image: A Farmland Segmentation Agent Driven by Spatio-Temporal Information Gain
+2607.29633	cs.CV	OASIS: Occlusion-aware Single-image Hand Avatar Reconstruction via 3D Gaussian Splatting
+2608.04776	cs.AI	NSF-HRPT: Neural Semantic Field meets Hierarchical Risk Perception Tree for Safety-Critical Scenario Assessment
+2608.04820	cs.CV	When Diffusion Models Forget Who You Are: Identity Preservation in Face Inpainting under Large Occlusions
+2608.14428	cs.CV	GhostPoint: Self-Supervised Representation Learning by Hallucinating Occluded LiDAR Structure
+2608.16535	cs.CV	Automatic Cephalometric Landmark Localization on CBCT-Derived Digitally Reconstructed Radiographs for Skeletal Malocclusion Classification
+2608.18446	cs.RO	HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion
+2608.20308	cs.CV	ACE-Ego-Hand: Repurposing Video Diffusion Models for Occlusion-Robust Egocentric 3D Hand Motion Recovery
+2608.20932	cs.CV	OccluRank: Controllable Occlusion-Aware Layout-to-Image Generation by Adding Just an Ordinal Rank
+2608.21883	cs.CV	VIG: Visual Information Gain as a Reward Signal for Multimodal Chain-of-Thought Compression
+2608.29516	cs.RO	Task-Relevant Feature-Dynamics Fidelity Enables Zero-Shot Sim-to-Real Transfer for Robotic Ultrasound Scanning
+2608.30820	cs.CV	RealOOB: A Definition-Consistent Real-World Oriented Occlusion Boundary Benchmark
+2609.03569	cs.CV	Occlusion-Robust Multimodal Emotion Recognition in VR via Fusion of Facial Images and EMG
+2609.06342	cs.RO	OcclusionCBF: Backup Control Barrier Functions for Safe Navigation Among Hidden Dynamic Obstacles
+2609.06433	cs.AI,cs.RO	Collision Snapshot Guided Time-Reversed Safety-Critical Scenario Generation
+2609.09801	cs.CV	Morphological Decoupling-Based Skeletal Classification for Clinical Assessment of Malocclusion
+2609.09826	cs.CV	Freezing of Gait Prediction Under Spatial Occlusion: An IMU-Supervised Cross-Modal Distillation Approach
+2609.12350	cs.CV	EgoMaize: A First-Person Maize Instance Segmentation Benchmark under Severe Field Occlusion
+2609.13237	cs.CV	Occlusal Geometry in Closed Form for Orthodontic Report Generation
+2609.17427	cs.AI,cs.CV	Tracking the Unseen: An Occlusion-Robust Framework for Target Tracking Under Full and Long-Term Occlusion
+2609.17450	cs.CV	ORCA: Occlusion-Aware Refinement and Completion for Novel View Synthesis
+2609.18396	cs.AI,cs.LG	Reliable Virtual Sensing: A Multi-Domain Benchmark for Robustness Under Sensor Failures
+2609.18432	cs.CV	Occluded Gait Recognition with Mixture of Experts: An Action Detection Perspective
+2609.18628	cs.RO	Benchmarking Visual-Inertial Odometry in Subterranean Environments Under Sensor Degradation, Miscalibration, and Dynamic Occlusion
+2609.20103	cs.RO	Safety-Critical Scenarios Emerge from Initial Scenes
+2609.22706	cs.CV	DOA-SORT: Directional Occlusion-Aware Multi-Object Tracking with Distributional Observations
+2609.24290	cs.AI	When and How Should an Agent Clarify? CIGAsk: Teaching LLMs to Clarify via Counterfactual Information Gain
+2609.28709	cs.RO	OA-MPPI: Occlusion-Aware Model Predictive Path Integral Control for UAV Flight
+2609.38714	cs.CV	Hard-Region Supervision: #1 on the Waymo Open Dataset 2D Video Panoptic Segmentation Leaderboard
+2609.38857	cs.RO	Plan-Conditioned Imitation for Robust Object Retrieval under Self-Occlusion in Dense Clutter
+2609.39017	cs.RO	OccluDex: Hierarchical 3D Visuo-Tactile Representation Learning for Egocentric Dexterous Manipulation under Self-Occlusion
+2609.39467	cs.CV	DensePed-Lite: Quality-Aware Adaptive Detection for Dense Pedestrians under Occlusion
+2609.40297	cs.RO	GPU-Accelerated Path-Dependent Marginal Information Gain for Autonomous Exploration
+2610.07561	cs.CV	LARK: A Low-Cost, Accurate, Occlusion-Resilient, Kalman Filter-Assisted Tracking System for Image-Guided Surgery
+2610.11954	cs.CV	Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion
+2610.12995	cs.AI,cs.LG	What Should SFT Learn? Conditional Information Gain for Generalizable Post-Training
+2610.16293	cs.CV,cs.RO	ClothAtlas: Joint Garment Identification and State Estimation under Self-Occlusion
+2610.17279	cs.RO	ReForesight: Occlusion-Robust Re-Identification and Future Occupancy Forecasting for Dynamic Semantic Mapping
+2610.18422	cs.RO	Augmenting Real-time Visualization in Minimally Invasive Surgery with Particle Filtering and Depth-Aware Occlusion Handling
+2610.19082	cs.RO	Receding-Horizon Next-Best-View Planning for Highly Occluded Target Perception
+2610.19847	cs.CV	VisibilitySplat: Ray-Traced Occlusion for Relighting with 3D Gaussian Splatting
+2610.22831	cs.LG	Partial-Revelation Panel Forecasting: Predictive Information Gain, Allocation, and Coarsening-Consistent Operators
+2610.23733	cs.CV	Material and Defocus Cues for Occluded Object Localization in Single Hyperspectral Images: An Exploratory Study
+2610.23874	cs.RO	Adaptive Question Generation for Ambiguous Robot Instructions Based on Information Gain and Human Cognitive Characteristics
+2610.26528	cs.AI,cs.LG	A Semantic Knowledge Graph Construction Pipeline for Vehicle Intention Prediction in nuScenes
+2610.27108	cs.CV	Counting Contributions, Not Views: Occlusion-Aware Densification for 3D Gaussian Splatting
+2610.29061	cs.CV,cs.LG	OccJEPA: Occlusion as Masking for Amodal Video Segmentation
+2610.29177	cs.CV,cs.LG	ROCOCO: Robust Outline Completion of Occluded Curvilinear Objects
+2610.32932	cs.CV	STROKE: Simple Sparse Structural Occlusions for Black-Box Adversarial Attacks
+2610.34040	cs.RO	Cut a Wall, See a Wall: Identity Substitution in Occluded Point-Cloud Perception for Construction Robots
+2610.35051	cs.RO	VISTA: Active Exploration for Self-Improvement in Embodied Agents
+2610.39126	cs.RO	Actuator-Aware Observer Inputs for Cascade ADRC of Quadrotors Under Rotor Lag, Measurement Delay and Sensor Noise
+2610.41834	cs.CV	ObjectGuidedMap: An Object-Aware Model for Robust Bird's Eye View Map Prediction in High-Occlusion Scenarios
+2611.00105	cs.CV	Detector-Integrated Multi-Cue Association for Occlusion-Aware UAV Multi-Object Tracking
+2611.00780	cs.CV	Now You See Them, Now You Dont FusionGhost Gait for Occlusion-Robust Gait Recognition with ArabGait dataset
+2611.01600	cs.AI,cs.CV,cs.RO	SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts
+2611.01822	cs.CV	RCFormer: Reliability-aware Context Transformer for Occlusion-Robust Facial Landmark Detection
+2611.04548	cs.CV	Predicting Void Points in Self-Occluding Forest Volumes
+2611.06588	cs.RO	FOSCo-Net: Ego-centric Voxel Completion for Forest LiDAR Occlusions
+2611.06899	cs.AI,cs.CV	Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues

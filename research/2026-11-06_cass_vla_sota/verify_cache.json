@@ -1,0 +1,2347 @@
+{
+ "2609.08217": {
+  "title": "Drive by Hindsight and Foresight: Tool-Grounded Synergistic Reasoning over Hierarchical Memory for Autonomous Driving",
+  "date": "2026/09/08",
+  "author": "Chen, Baojie"
+ },
+ "2505.15298": {
+  "title": "AgentThink: A Unified Framework for Tool-Augmented Chain-of-Thought Reasoning in Vision-Language Models for Autonomous Driving",
+  "date": "2025/05/21",
+  "author": "Qian, Kangan"
+ },
+ "2512.14044": {
+  "title": "OmniDrive-R1: Reinforcement-driven Interleaved Multi-modal Chain-of-Thought for Trustworthy Vision-Language Autonomous Driving",
+  "date": "2025/12/16",
+  "author": "Zhang, Zhenguo"
+ },
+ "2509.20843": {
+  "title": "MTRDrive: Memory-Tool Synergistic Reasoning for Robust Autonomous Driving in Corner Cases",
+  "date": "2025/09/25",
+  "author": "Luo, Ziang"
+ },
+ "2507.20879": {
+  "title": "DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking",
+  "date": "2025/07/28",
+  "author": "Zheng, Weicheng"
+ },
+ "2609.22910": {
+  "title": "When Should a VLM Look? Paying Only for Visual Calls That Were Needed and Used",
+  "date": "2026/09/19",
+  "author": "Peng, Kunyu"
+ },
+ "2606.20458": {
+  "title": "Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation",
+  "date": "2026/06/18",
+  "author": "Peng, Zhenghao \"Mark''"
+ },
+ "2608.01755": {
+  "title": "Deferred Exposure of Future Trajectories for Verifiable Reasoning in Autonomous Driving VLMs",
+  "date": "2026/08/03",
+  "author": "Huang, Zixuan"
+ },
+ "2607.00283": {
+  "title": "What's Hidden Matters: Identifying Planning-Critical Occluded Agents using Vision-Language Models",
+  "date": "2026/07/01",
+  "author": "Chahe, Amirhosein"
+ },
+ "2607.04179": {
+  "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+  "date": "2026/07/05",
+  "author": "Liu, Zhaohong"
+ },
+ "2610.05025": {
+  "title": "Triggering Generalist Reasoning via Predictive Uncertainty for Dual-System VLA",
+  "date": "2026/10/04",
+  "author": "Yang, Hyemin"
+ },
+ "2505.16192": {
+  "title": "VLM-R$^3$: Region Recognition, Reasoning, and Refinement for Enhanced Multimodal Chain-of-Thought",
+  "date": "2025/05/22",
+  "author": "Jiang, Chaoya"
+ },
+ "2512.03794": {
+  "title": "AdaptVision: Efficient Vision-Language Models via Adaptive Visual Acquisition",
+  "date": "2025/12/03",
+  "author": "Lin, Zichuan"
+ },
+ "2609.03493": {
+  "title": "Making Every Tool Call Count: Necessary Tool-Evidence Path Rewards for Agentic Vision-Language Models",
+  "date": "2026/09/03",
+  "author": "Long, Xingming"
+ },
+ "2506.14821": {
+  "title": "Reinforcing VLMs to Use Tools for Detailed Visual Reasoning Under Resource Constraints",
+  "date": "2025/06/10",
+  "author": "Kumar, Sunil"
+ },
+ "2603.14523": {
+  "title": "VLA-Thinker: Boosting Vision-Language-Action Models through Thinking-with-Image Reasoning",
+  "date": "2026/03/15",
+  "author": "Wang, Chaoyang"
+ },
+ "2610.10390": {
+  "title": "Explicit Geometric Chain-of-Thought for Vision-Language-Action in Autonomous Driving",
+  "date": "2026/10/07",
+  "author": "Gui, Xingtai"
+ },
+ "2606.12236": {
+  "title": "DrivingAgent: Design and Scheduling Agents for Autonomous Driving Systems",
+  "date": "2026/06/10",
+  "author": "Xia, Zhongyu"
+ },
+ "2507.20342": {
+  "title": "VLMPlanner: Integrating Visual Language Models with Motion Planning",
+  "date": "2025/07/27",
+  "author": "Tang, Zhipeng"
+ },
+ "2510.17191": {
+  "title": "SimpleVSF: VLM-Scoring Fusion for Trajectory Prediction of End-to-End Autonomous Driving",
+  "date": "2025/10/20",
+  "author": "Zheng, Peiru"
+ },
+ "2512.24426": {
+  "title": "Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning",
+  "date": "2025/12/30",
+  "author": "Peng, Zhenghao \"Mark\""
+ },
+ "2601.08355": {
+  "title": "Semantic Misalignment in Vision-Language Models under Perceptual Degradation",
+  "date": "2026/01/13",
+  "author": "Cheng, Guo"
+ },
+ "2609.01659": {
+  "title": "Beyond Textual Chain-of-Thought: A Survey on Action-Grounded Reasoning in Autonomous Driving",
+  "date": "2026/08/31",
+  "author": "Tang, Zhengxu"
+ },
+ "2609.16368": {
+  "title": "UDAV: Uncertainty-Driven Adaptive VLM Waypoint Planner",
+  "date": "2026/09/14",
+  "author": "Farhani, Ghazal"
+ },
+ "2602.22474": {
+  "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+  "date": "2026/02/25",
+  "author": "Yuan, Jessie"
+ },
+ "2501.04671": {
+  "title": "Retrieval-Based Interleaved Visual Chain-of-Thought in Real-World Driving Scenarios",
+  "date": "2025/01/08",
+  "author": "Corbi\u00e8re, Charles"
+ },
+ "2601.06407": {
+  "title": "Value of Information: A Framework for Human-Agent Communication",
+  "date": "2026/01/10",
+  "author": "Dong, Yijiang River"
+ },
+ "2606.03054": {
+  "title": "ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents",
+  "date": "2026/06/02",
+  "author": "Liu, Anjie"
+ },
+ "2601.06077": {
+  "title": "One if by Land, Two if by Sea, Three if by Four Seas, and More to Come -- Values of Perception, Prediction, Communication, and Common Sense in Decision Making",
+  "date": "2025/12/29",
+  "author": "Xu, Aolin"
+ },
+ "2508.12166": {
+  "title": "Belief-Conditioned One-Step Diffusion: Real-Time Trajectory Planning with Just-Enough Sensing",
+  "date": "2025/08/16",
+  "author": "Puthumanaillam, Gokul"
+ },
+ "2509.13769": {
+  "title": "AdaThinkDrive: Adaptive Thinking via Reinforcement Learning for Autonomous Driving",
+  "date": "2025/09/17",
+  "author": "Luo, Yuechen"
+ },
+ "2506.13757": {
+  "title": "AutoVLA: A Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning",
+  "date": "2025/06/16",
+  "author": "Zhou, Zewei"
+ },
+ "2606.25509": {
+  "title": "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
+  "date": "2026/06/24",
+  "author": "Ang, Sining"
+ },
+ "2602.10719": {
+  "title": "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
+  "date": "2026/02/11",
+  "author": "Ang, Sining"
+ },
+ "2503.08162": {
+  "title": "FASIONAD++ : Integrating High-Level Instruction and Information Bottleneck in FAt-Slow fusION Systems for Enhanced Safety in Autonomous Driving with Adaptive Feedback",
+  "date": "2025/03/11",
+  "author": "Qian, Kangan"
+ },
+ "2507.23318": {
+  "title": "FastDriveVLA: Efficient End-to-End Driving via Plug-and-Play Reconstruction-based Token Pruning",
+  "date": "2025/07/31",
+  "author": "Cao, Jiajun"
+ },
+ "1909.08792": {
+  "title": "Agent Prioritization for Autonomous Navigation",
+  "date": "2019/09/19",
+  "author": "Refaat, Khaled S."
+ },
+ "2312.02467": {
+  "title": "Object Importance Estimation using Counterfactual Reasoning for Intelligent Driving",
+  "date": "2023/12/05",
+  "author": "Gupta, Pranay"
+ },
+ "2303.06935": {
+  "title": "Importance Filtering with Risk Models for Complex Driving Situations",
+  "date": "2023/03/13",
+  "author": "Puphal, Tim"
+ },
+ "2403.03269": {
+  "title": "Active Information Gathering for Long-Horizon Navigation Under Uncertainty by Learning the Value of Information",
+  "date": "2024/03/05",
+  "author": "Arnob, Raihan Islam"
+ },
+ "2105.08169": {
+  "title": "Safe Occlusion-aware Autonomous Driving via Game-Theoretic Active Perception",
+  "date": "2021/05/17",
+  "author": "Zhang, Zixu"
+ },
+ "2603.05147": {
+  "title": "Act, Think or Abstain: Complexity-Aware Adaptive Inference for Vision-Language-Action Models",
+  "date": "2026/03/05",
+  "author": "Izzo, Riccardo Andrea"
+ },
+ "2605.29438": {
+  "title": "ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models",
+  "date": "2026/05/28",
+  "author": "Li, Ye"
+ },
+ "2604.26988": {
+  "title": "Robot Planning and Situation Handling with Active Perception",
+  "date": "2026/04/28",
+  "author": "Oloo, Austine"
+ },
+ "2605.01345": {
+  "title": "The Perceptual Bandwidth Bottleneck in Vision-Language Models: Active Visual Reasoning via Sequential Experimental Design",
+  "date": "2026/05/02",
+  "author": "Liu, Anjie"
+ },
+ "2605.18603": {
+  "title": "Starve to Perceive: Taming Lazy Perception in VLMs with Constrained Visual Bandwidth",
+  "date": "2026/05/18",
+  "author": "Wu, Yuhuan"
+ },
+ "2602.11541": {
+  "title": "Budget-Constrained Agentic Large Language Models: Intention-Based Planning for Costly Tool Use",
+  "date": "2026/02/12",
+  "author": "Liu, Hanbing"
+ },
+ "2605.05701": {
+  "title": "Inference-Time Budget Control for LLM Search Agents",
+  "date": "2026/05/07",
+  "author": "Fang, Zhengru"
+ },
+ "2602.16699": {
+  "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+  "date": "2026/02/18",
+  "author": "Ding, Wenxuan"
+ },
+ "2511.17006": {
+  "title": "Budget-Aware Tool Use Enables Effective Agent Scaling",
+  "date": "2025/11/21",
+  "author": "Liu, Tengxiao"
+ },
+ "2609.22762": {
+  "title": "DriveReferee: Geometric Safety Verdicts Need Not Be Learned for Driving World-Action Models",
+  "date": "2026/09/19",
+  "author": "Yu, Fengcheng"
+ },
+ "2610.04933": {
+  "title": "DiVeR: Decision-Critical Verifier Learning for VLA Test-Time Scaling",
+  "date": "2026/10/04",
+  "author": "Park, Seongheon"
+ },
+ "2607.00399": {
+  "title": "DriveVer: Lightweight Trajectory Evaluator as Test-Time Verifier for Autonomous Driving",
+  "date": "2026/07/01",
+  "author": "He, Chong"
+ },
+ "2512.04441": {
+  "title": "MindDrive: An All-in-One Framework Bridging World Models and Vision-Language Model for End-to-End Autonomous Driving",
+  "date": "2025/12/04",
+  "author": "Sun, Bin"
+ },
+ "2510.13108": {
+  "title": "DriveCritic: Towards Context-Aware, Human-Aligned Evaluation for Autonomous Driving with Vision-Language Models",
+  "date": "2025/10/15",
+  "author": "Song, Jingyu"
+ },
+ "2606.17362": {
+  "title": "DriveJudge: Rethinking Autonomous Driving Evaluation with Vision-Language Models",
+  "date": "2026/06/15",
+  "author": "Sun, Xinglong"
+ },
+ "2606.08525": {
+  "title": "DriveReward: A Comprehensive Dataset and Generative Vision-Language Reward Model for Autonomous Driving",
+  "date": "2026/06/07",
+  "author": "Chen, Qimao"
+ },
+ "2604.27366": {
+  "title": "Judge, Then Drive: A Critic-Centric Vision Language Action Framework for Autonomous Driving",
+  "date": "2026/04/30",
+  "author": "Yang, Lijin"
+ },
+ "2506.06664": {
+  "title": "Generalized Trajectory Scoring for End-to-end Multimodal Planning",
+  "date": "2025/06/07",
+  "author": "Li, Zhenxin"
+ },
+ "2506.06659": {
+  "title": "DriveSuprim: Towards Precise Trajectory Selection for End-to-End Planning",
+  "date": "2025/06/07",
+  "author": "Yao, Wenhao"
+ },
+ "2603.29163": {
+  "title": "SparseDriveV2: Scoring is All You Need for End-to-End Autonomous Driving",
+  "date": "2026/03/31",
+  "author": "Sun, Wenchao"
+ },
+ "2608.19085": {
+  "title": "DA-WAM: Decision-Aligned Future Latents for Driving World Models",
+  "date": "2026/08/19",
+  "author": "Zhong, Ruiguo"
+ },
+ "2606.07170": {
+  "title": "Test-Time Trajectory Optimization for Autonomous Driving",
+  "date": "2026/06/05",
+  "author": "Xu, Yihong"
+ },
+ "2604.15308": {
+  "title": "RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework",
+  "date": "2026/04/16",
+  "author": "Gao, Hao"
+ },
+ "2601.05083": {
+  "title": "Driving on Registers",
+  "date": "2026/01/08",
+  "author": "Kirby, Ellington"
+ },
+ "2510.24108": {
+  "title": "Zero-Human Demonstration End-to-end Autonomous Driving with Trajectory Scorer",
+  "date": "2025/10/28",
+  "author": "Li, Zhenxin"
+ },
+ "2507.22389": {
+  "title": "Safety Evaluation of Motion Plans Using Trajectory Predictors as Forward Reachable Set Estimators",
+  "date": "2025/07/30",
+  "author": "Chakraborty, Kaustav"
+ },
+ "2605.20082": {
+  "title": "VL-DPO: Vision-Language-Guided Finetuning for Preference-Aligned Autonomous Driving",
+  "date": "2026/05/19",
+  "author": "Xu, Zhefan"
+ },
+ "2604.01723": {
+  "title": "Causal Scene Narration: Inference-Time Text Restructuring for Vision-Language-Action Driving",
+  "date": "2026/04/02",
+  "author": "Li, Yun"
+ },
+ "2605.19771": {
+  "title": "Beyond Imitation: Learning Safe End-to-End Autonomous Driving from Hard Negatives",
+  "date": "2026/05/19",
+  "author": "Wang, Junli"
+ },
+ "2509.17940": {
+  "title": "DriveDPO: Policy Learning via Safety DPO For End-to-End Autonomous Driving",
+  "date": "2025/09/22",
+  "author": "Shang, Shuyao"
+ },
+ "2506.00560": {
+  "title": "Using Ensemble Diffusion to Estimate Uncertainty for End-to-End Autonomous Driving",
+  "date": "2025/05/31",
+  "author": "Wintel, Florian"
+ },
+ "2511.22865": {
+  "title": "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving",
+  "date": "2025/11/28",
+  "author": "Ryu, Wonjeong"
+ },
+ "2603.10282": {
+  "title": "Update-Free On-Policy Steering via Verifiers",
+  "date": "2026/03/10",
+  "author": "Attarian, Maria"
+ },
+ "2609.21486": {
+  "title": "Driving on Registers, Reasoning on Risk: Risk-Aware Occupancy for Register-Based End-to-End Autonomous Driving",
+  "date": "2026/09/18",
+  "author": "Chen, Jiaxing"
+ },
+ "2602.23259": {
+  "title": "Risk-Aware World Model Predictive Control for Generalizable End-to-End Autonomous Driving",
+  "date": "2026/02/26",
+  "author": "Sun, Jiangxin"
+ },
+ "2605.09252": {
+  "title": "LLM Agents Already Know When to Call Tools -- Even Without Reasoning",
+  "date": "2026/05/10",
+  "author": "Sun, Chung-En"
+ },
+ "2608.06270": {
+  "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
+  "date": "2026/08/06",
+  "author": "Wang, Zhiheng"
+ },
+ "2606.16667": {
+  "title": "Look Again Before You Abstain:Budgeted Conformal Evidence Acquisition for Reliable Vision-Language Model",
+  "date": "2026/06/15",
+  "author": "Xu, Jian"
+ },
+ "2512.16918": {
+  "title": "AdaTooler-V: Adaptive Tool-Use for Images and Videos",
+  "date": "2025/12/18",
+  "author": "Wang, Chaoyang"
+ },
+ "2605.19852": {
+  "title": "Are Tools Always Beneficial? Learning to Invoke Tools Adaptively for Dual-Mode Multimodal LLM Reasoning",
+  "date": "2026/05/19",
+  "author": "Ma, Qinghe"
+ },
+ "2602.03007": {
+  "title": "VOILA: Value-of-Information Guided Fidelity Selection for Cost-Aware Multimodal Question Answering",
+  "date": "2026/02/03",
+  "author": "Bhope, Rahul Atul"
+ },
+ "2603.14324": {
+  "title": "Consistent Learning-to-Defer with Expert-Conditional Advice",
+  "date": "2026/03/15",
+  "author": "Montreuil, Yannis"
+ },
+ "2504.12988": {
+  "title": "Why Ask One When You Can Ask $k$? Learning-to-Defer to the Top-$k$ Experts",
+  "date": "2025/04/17",
+  "author": "Montreuil, Yannis"
+ },
+ "2510.26706": {
+  "title": "Budgeted Multiple-Expert Deferral",
+  "date": "2025/10/30",
+  "author": "DeSalvo, Giulia"
+ },
+ "2508.14734": {
+  "title": "AFABench: A Generic Framework for Benchmarking Active Feature Acquisition",
+  "date": "2025/08/20",
+  "author": "Sch\u00fctz, Valter"
+ },
+ "2410.03892": {
+  "title": "Towards Cost Sensitive Decision Making",
+  "date": "2024/10/04",
+  "author": "Li, Yang"
+ },
+ "2604.09155": {
+  "title": "CORA: Conformal Risk-Controlled Agents for Safeguarded Mobile GUI Automation",
+  "date": "2026/04/10",
+  "author": "Feng, Yushi"
+ },
+ "2606.18467": {
+  "title": "ToolChain-CRC: Conformal Risk Control for Agentic AI Under Retrieval and Tool-Use Drift",
+  "date": "2026/06/16",
+  "author": "Opoku, Jeffery"
+ },
+ "2604.01202": {
+  "title": "Therefore I am. I Think",
+  "date": "2026/04/01",
+  "author": "Esakkiraja, Esakkivel"
+ },
+ "2410.13339": {
+  "title": "Probing-RAG: Self-Probing to Guide Language Models in Selective Document Retrieval",
+  "date": "2024/10/17",
+  "author": "Baek, Ingeol"
+ },
+ "2604.15771": {
+  "title": "Skill-RAG: Failure-State-Aware Retrieval Augmentation via Hidden-State Probing and Skill Routing",
+  "date": "2026/04/17",
+  "author": "Wei, Kai"
+ },
+ "2410.04707": {
+  "title": "Learning How Hard to Think: Input-Adaptive Allocation of LM Computation",
+  "date": "2024/10/07",
+  "author": "Damani, Mehul"
+ },
+ "2608.20256": {
+  "title": "Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation",
+  "date": "2026/08/20",
+  "author": "Kassenaar, Gijs"
+ },
+ "2504.14870": {
+  "title": "Acting Less is Reasoning More! Teaching Model to Act Efficiently",
+  "date": "2025/04/21",
+  "author": "Wang, Hongru"
+ },
+ "2606.02132": {
+  "title": "Learning When Not to Act: Mitigating Tool Abuse in Agentic Reinforcement Learning",
+  "date": "2026/06/01",
+  "author": "Chen, Liuji"
+ },
+ "2502.11435": {
+  "title": "SMART: Self-Aware Agent for Tool Overuse Mitigation",
+  "date": "2025/02/17",
+  "author": "Qian, Cheng"
+ },
+ "2502.12961": {
+  "title": "Adaptive Tool Use in Large Language Models with Meta-Cognition Trigger",
+  "date": "2025/02/18",
+  "author": "Li, Wenjun"
+ },
+ "2505.14362": {
+  "title": "DeepEyes: Incentivizing \"Thinking with Images\" via Reinforcement Learning",
+  "date": "2025/05/20",
+  "author": "Zheng, Ziwei"
+ },
+ "2505.15436": {
+  "title": "Adaptive Chain-of-Focus Reasoning via Dynamic Visual Search and Zooming for Efficient VLMs",
+  "date": "2025/05/21",
+  "author": "Zhang, Xintong"
+ },
+ "2512.18571": {
+  "title": "ESearch-R1: Learning Cost-Aware MLLM Agents for Interactive Embodied Search via Reinforcement Learning",
+  "date": "2025/12/21",
+  "author": "Zhou, Weijie"
+ },
+ "2504.00907": {
+  "title": "Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning",
+  "date": "2025/04/01",
+  "author": "Ramrakhya, Ram"
+ },
+ "2512.04597": {
+  "title": "When Robots Should Say \"I Don't Know\": Benchmarking Abstention in Embodied Question Answering",
+  "date": "2025/12/04",
+  "author": "Wu, Tao"
+ },
+ "2307.01928": {
+  "title": "Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners",
+  "date": "2023/07/04",
+  "author": "Ren, Allen Z."
+ },
+ "2501.04947": {
+  "title": "Seeing with Partial Certainty: Conformal Prediction for Robotic Scene Recognition in Built Environments",
+  "date": "2025/01/09",
+  "author": "Xu, Yifan"
+ },
+ "2601.08325": {
+  "title": "ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation",
+  "date": "2026/01/13",
+  "author": "Liu, Zhenyang"
+ },
+ "2601.00138": {
+  "title": "Explicit Abstention Knobs for Predictable Reliability in Video Question Answering",
+  "date": "2025/12/31",
+  "author": "Ortiz, Jorge"
+ },
+ "2604.08545": {
+  "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
+  "date": "2026/04/09",
+  "author": "Yan, Shilin"
+ },
+ "2603.16932": {
+  "title": "Look Where It Matters: High-Resolution Crops Retrieval for Efficient VLMs",
+  "date": "2026/03/14",
+  "author": "Shabtay, Nimrod"
+ },
+ "2604.15376": {
+  "title": "Zoom Consistency: A Free Confidence Signal in Multi-Step Visual Grounding Pipelines",
+  "date": "2026/04/15",
+  "author": "Kim, Keon"
+ },
+ "2603.12193": {
+  "title": "SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics",
+  "date": "2026/03/12",
+  "author": "Liu, Mengzhen"
+ },
+ "2508.05186": {
+  "title": "Learning to See and Act: Task-Aware Virtual View Exploration for Robotic Manipulation",
+  "date": "2025/08/07",
+  "author": "Bai, Yongjie"
+ },
+ "2602.04600": {
+  "title": "Act, Sense, Act: Learning Active Perception from Large-Scale Egocentric Human Data",
+  "date": "2026/02/04",
+  "author": "Li, Jialiang"
+ },
+ "2605.21446": {
+  "title": "Lost in Fog: Sensor Perturbations Expose Reasoning Fragility in Driving VLAs",
+  "date": "2026/05/20",
+  "author": "Priyadershi, Abhinaw"
+ },
+ "2604.01259": {
+  "title": "Bench2Drive-VL: Benchmarks for Closed-Loop Autonomous Driving with Vision-Language Models",
+  "date": "2026/04/01",
+  "author": "Jia, Xiaosong"
+ },
+ "2506.04218": {
+  "title": "Pseudo-Simulation for Autonomous Driving",
+  "date": "2025/06/04",
+  "author": "Cao, Wei"
+ },
+ "2510.26125": {
+  "title": "WOD-E2E: Waymo Open Dataset for End-to-End Driving in Challenging Long-tail Scenarios",
+  "date": "2025/10/30",
+  "author": "Xu, Runsheng"
+ },
+ "2512.01300": {
+  "title": "RoboDriveVLM: A Novel Benchmark and Baseline towards Robust Vision-Language Models for Autonomous Driving",
+  "date": "2025/12/01",
+  "author": "Liao, Dacheng"
+ },
+ "2501.04003": {
+  "title": "Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives",
+  "date": "2025/01/07",
+  "author": "Xie, Shaoyuan"
+ },
+ "2501.09167": {
+  "title": "Embodied Scene Understanding for Vision Language Models via MetaVQA",
+  "date": "2025/01/15",
+  "author": "Wang, Weizhen"
+ },
+ "2508.02028": {
+  "title": "Bench2ADVLM: A Closed-Loop Benchmark for Vision-language Models in Autonomous Driving",
+  "date": "2025/08/04",
+  "author": "Zhang, Tianyuan"
+ },
+ "2505.13872": {
+  "title": "Safety2Drive: Safety-Critical Scenario Benchmark for the Evaluation of Autonomous Driving",
+  "date": "2025/05/20",
+  "author": "Li, Jingzheng"
+ },
+ "2605.24098": {
+  "title": "D2-V2X: Depth-Driven Cooperative V2X Reasoning for Autonomous Driving",
+  "date": "2026/05/22",
+  "author": "Richard, Kevin"
+ },
+ "2607.09138": {
+  "title": "BeyondSight: Object Permanence for End-to-End Autonomous Driving",
+  "date": "2026/07/10",
+  "author": "Papais, Sandro"
+ },
+ "2605.31572": {
+  "title": "nuReasoning: A Reasoning-Centric Dataset and Benchmark for Long-Tail Autonomous Driving",
+  "date": "2026/05/29",
+  "author": "Huang, Zhiyu"
+ },
+ "2506.05667": {
+  "title": "DriveAction: A Benchmark for Exploring Human-like Driving Decisions in VLA Models",
+  "date": "2025/06/06",
+  "author": "Hao, Yuhan"
+ },
+ "2510.08352": {
+  "title": "Evaluating Small Vision-Language Models on Distance-Dependent Traffic Perception",
+  "date": "2025/10/09",
+  "author": "Theodoridis, Nikos"
+ },
+ "2411.01639": {
+  "title": "Know Where You're Uncertain When Planning with Multimodal Foundation Models: A Formal Framework",
+  "date": "2024/11/03",
+  "author": "Bhatt, Neel P."
+ },
+ "2602.08440": {
+  "title": "SteerVLA: Steering Vision-Language-Action Models in Long-Tail Driving Scenarios",
+  "date": "2026/02/09",
+  "author": "Gao, Tian"
+ },
+ "2608.18035": {
+  "title": "Plug-and-Play Traffic Element Awareness for End-to-End Autonomous Driving",
+  "date": "2026/08/18",
+  "author": "Zhang, Zongzheng"
+ },
+ "2606.11889": {
+  "title": "Task-Aligned Stability Analysis of Vision-Language Models for Autonomous Driving Hazard Detection",
+  "date": "2026/06/10",
+  "author": "Richards, Everett"
+ },
+ "2602.23499": {
+  "title": "TaCarla: A comprehensive benchmarking dataset for end-to-end autonomous driving",
+  "date": "2026/02/26",
+  "author": "Gorgulu, Tugrul"
+ },
+ "2508.14527": {
+  "title": "Adversarial Generation and Collaborative Evolution of Safety-Critical Scenarios for Autonomous Vehicles",
+  "date": "2025/08/20",
+  "author": "Liu, Jiangfan"
+ },
+ "2607.19701": {
+  "title": "SafeGen: Goal-Conditioned Video Diffusion of Safety-Critical Scenarios for VLM-Based Autonomous Driving",
+  "date": "2026/07/22",
+  "author": "Liu, Jiangfan"
+ },
+ "2601.12672": {
+  "title": "VILTA: A VLM-in-the-Loop Adversary for Enhancing Driving Policy Robustness",
+  "date": "2026/01/19",
+  "author": "Chen, Qimao"
+ },
+ "2306.12241": {
+  "title": "ScenarioNet: Open-Source Platform for Large-Scale Traffic Scenario Simulation and Modeling",
+  "date": "2023/06/21",
+  "author": "Li, Quanyi"
+ },
+ "2606.14238": {
+  "title": "When and How Severely: Scenario-Specific Safety Envelopes for Driving VLAs",
+  "date": "2026/06/12",
+  "author": "Priyadershi, Abhinaw"
+ },
+ "2601.08470": {
+  "title": "Towards Safer Mobile Agents: Scalable Generation and Evaluation of Diverse Scenarios for VLMs",
+  "date": "2026/01/13",
+  "author": "Taniguchi, Takara"
+ },
+ "2608.22975": {
+  "title": "Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B",
+  "date": "2026/08/24",
+  "author": "Lin, Defu"
+ },
+ "2607.14547": {
+  "title": "AdaTurn: Budget-Aware Test-Time Scaling for Active Visual Perception Agents",
+  "date": "2026/07/16",
+  "author": "Liang, Susan"
+ },
+ "2605.18746": {
+  "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+  "date": "2026/05/18",
+  "author": "Hong, Yining"
+ },
+ "2606.15749": {
+  "title": "OmniTraffic: A Controllable Generation Pipeline and Benchmark for Spatio-Temporal Traffic Reasoning",
+  "date": "2026/06/14",
+  "author": "Wang, Maonan"
+ },
+ "2603.23607": {
+  "title": "Reasoning models do not yet follow their reasoning in autonomous driving: The KITScenes LongTail Dataset",
+  "date": "2026/03/24",
+  "author": "Wagner, Royden"
+ },
+ "2609.38948": {
+  "title": "DrivingBench: Can Vision-Language Models Drive a Toyota Corolla?",
+  "date": "2026/09/30",
+  "author": "Ramabadran, Aditya"
+ },
+ "2508.02047": {
+  "title": "Mapillary Vistas Validation for Fine-Grained Traffic Signs: A Benchmark Revealing Vision-Language Model Limitations",
+  "date": "2025/08/04",
+  "author": "Garg, Sparsh"
+ },
+ "2509.15968": {
+  "title": "CoReVLA: A Dual-Stage End-to-End Autonomous Driving Framework for Long-Tail Scenarios via Collect-and-Refine",
+  "date": "2025/09/19",
+  "author": "Fang, Shiyu"
+ },
+ "2606.08684": {
+  "title": "BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving",
+  "date": "2026/06/07",
+  "author": "Ling, George"
+ },
+ "2609.08130": {
+  "title": "Observe Before You Alert: Adaptive Driver Alerting with Vision-Language Models",
+  "date": "2026/09/08",
+  "author": "Wang, Yuhang"
+ },
+ "2607.15621": {
+  "title": "Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving",
+  "date": "2026/07/17",
+  "author": "Li, Yun"
+ },
+ "2603.06054": {
+  "title": "Probing Visual Concepts in Lightweight Vision-Language Models for Automated Driving",
+  "date": "2026/03/06",
+  "author": "Theodoridis, Nikos"
+ },
+ "2606.31257": {
+  "title": "Decodable Is Not Grounded: A Vision-Ablation Arbiter for VLM Spatial Reasoning",
+  "date": "2026/06/30",
+  "author": "Liao, Chih-Ting"
+ },
+ "2605.20448": {
+  "title": "Do Vision-Language Models Understand 3D Scenes or Just Catalogue Objects?",
+  "date": "2026/05/19",
+  "author": "Maheshwari, Animesh"
+ },
+ "2605.30557": {
+  "title": "Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?",
+  "date": "2026/05/28",
+  "author": "Zhang, Yue"
+ },
+ "2601.03464": {
+  "title": "Prompting Underestimates LLM Capability for Time Series Classification",
+  "date": "2026/01/06",
+  "author": "Schumacher, Dan"
+ },
+ "2502.02013": {
+  "title": "Layer by Layer: Uncovering Hidden Representations in Language Models",
+  "date": "2025/02/04",
+  "author": "Skean, Oscar"
+ },
+ "2507.21637": {
+  "title": "Self-Aware Safety Augmentation: Leveraging Internal Semantic Understanding to Enhance Safety in Vision-Language Models",
+  "date": "2025/07/29",
+  "author": "Wang, Wanying"
+ },
+ "2604.08266": {
+  "title": "Orion-Lite: Distilling LLM Reasoning into Efficient Vision-Only Driving Models",
+  "date": "2026/04/09",
+  "author": "Gu, Jing"
+ },
+ "2505.15925": {
+  "title": "VERDI: VLM-Embedded Reasoning for Autonomous Driving",
+  "date": "2025/05/21",
+  "author": "Feng, Bowen"
+ },
+ "2601.21288": {
+  "title": "Drive-KD: Multi-Teacher Distillation for VLMs in Autonomous Driving",
+  "date": "2026/01/29",
+  "author": "Lian, Weitong"
+ },
+ "2604.07944": {
+  "title": "On-Policy Distillation of Language Models for Autonomous Vehicle Motion Planning",
+  "date": "2026/04/09",
+  "author": "Afsharrad, Amirhossein"
+ },
+ "2601.03460": {
+  "title": "FROST-Drive: Scalable and Efficient End-to-End Driving with a Frozen Vision Encoder",
+  "date": "2026/01/06",
+  "author": "Dong, Zeyu"
+ },
+ "2603.14851": {
+  "title": "AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving",
+  "date": "2026/03/16",
+  "author": "Huang, Wenhui"
+ },
+ "2511.14499": {
+  "title": "Enhancing End-to-End Autonomous Driving with Risk Semantic Distillaion from VLM",
+  "date": "2025/11/18",
+  "author": "Qin, Jack"
+ },
+ "2609.15322": {
+  "title": "Planning in the Backbone: DiffAdapterVLA for Native Continuous Trajectory Generation with Driving VLMs",
+  "date": "2026/09/14",
+  "author": "Lu, Changxin"
+ },
+ "2507.07620": {
+  "title": "ViLU: Learning Vision-Language Uncertainties for Failure Prediction",
+  "date": "2025/07/10",
+  "author": "Lafon, Marc"
+ },
+ "2606.20754": {
+  "title": "Perturbation-Based Epistemic Uncertainty for Failure Detection in Vision-Language-Action Models",
+  "date": "2026/06/18",
+  "author": "Lee, Yousung"
+ },
+ "2410.22313": {
+  "title": "Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving",
+  "date": "2024/10/29",
+  "author": "Jiang, Bo"
+ },
+ "2603.05465": {
+  "title": "HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token",
+  "date": "2026/03/05",
+  "author": "Kogilathota, Sai Akhil"
+ },
+ "2606.09740": {
+  "title": "ProbeAct: Probe-Guided Training-Free Failure Recovery in Vision-Language-Action Models",
+  "date": "2026/06/08",
+  "author": "Zhang, Fan"
+ },
+ "2505.24840": {
+  "title": "The LLM Bottleneck: Why Open-Source Vision LLMs Struggle with Hierarchical Visual Recognition",
+  "date": "2025/05/30",
+  "author": "Tan, Yuwen"
+ },
+ "2606.06890": {
+  "title": "Diagnosing Visual Ignorance in Vision-Language Models",
+  "date": "2026/06/05",
+  "author": "Zhou, Runyu"
+ },
+ "2606.06219": {
+  "title": "Vault: One-Step Latent Generation with Positive-Anchored Rewards for Autonomous Driving",
+  "date": "2026/06/04",
+  "author": "Xing, Yining"
+ },
+ "2605.30834": {
+  "title": "Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring",
+  "date": "2026/05/29",
+  "author": "Park, Seongheon"
+ },
+ "2604.16677": {
+  "title": "SentryVLA: Uncertainty-Guided Action Selection and State Monitoring for Vision-Language-Action Robotic Control",
+  "date": "2026/04/17",
+  "author": "Lyu, Zongyao"
+ },
+ "2608.25757": {
+  "title": "LM-X: Explainable Vision--Language--Action Modeling via Progress, Event, and Uncertainty Prediction",
+  "date": "2026/08/26",
+  "author": "Lou, Jin"
+ },
+ "2606.09749": {
+  "title": "Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models",
+  "date": "2026/06/08",
+  "author": "Park, Seongbin"
+ },
+ "2510.00054": {
+  "title": "HiDe: Rethinking The Zoom-IN method in High Resolution MLLMs via Hierarchical Decoupling",
+  "date": "2025/09/28",
+  "author": "Liu, Xianjie"
+ },
+ "2511.19820": {
+  "title": "CropVLM: Learning to Zoom for Fine-Grained Vision-Language Perception",
+  "date": "2025/11/25",
+  "author": "Carvalho, Miguel"
+ },
+ "2610.09520": {
+  "title": "Not All Uncertainty Matters: Simulation-in-the-Loop Fast-Slow Reasoning for Decision-Critical Autonomous Driving System",
+  "date": "2026/10/07",
+  "author": "Chen, Jiayi"
+ },
+ "2610.02765": {
+  "title": "Localized Conformal Safety Monitoring with Vision-Language Models for Autonomous Driving",
+  "date": "2026/10/02",
+  "author": "Marques, Lu\u00eds"
+ },
+ "2608.26533": {
+  "title": "Barrier Function Conformal Safety Clearance Certification with CVaR for Driving Trajectory Selection",
+  "date": "2026/08/27",
+  "author": "Chang, Pei Yu"
+ },
+ "2606.21399": {
+  "title": "Calibration Is Not Control: Intervention Value for LLM-Agent Oversight",
+  "date": "2026/06/19",
+  "author": "Zhang, Chubin"
+ },
+ "2605.30660": {
+  "title": "BOKBO (Best of K Bad Options): Calibrated Abstention for VLA Policies",
+  "date": "2026/05/28",
+  "author": "Singh, Anya"
+ },
+ "2608.04289": {
+  "title": "SafeCommit: Certifying When Memory-Grounded Agents May Safely Act",
+  "date": "2026/08/04",
+  "author": "Akewar, Mayur"
+ },
+ "2609.36906": {
+  "title": "SafeVantage: Vantage-Aware Memory for Reliable Embodied Decisions",
+  "date": "2026/09/29",
+  "author": "Lewis, Sean Hardesty"
+ },
+ "2610.18866": {
+  "title": "AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving",
+  "date": "2026/10/13",
+  "author": "Liu, Jiageng"
+ },
+ "2606.02641": {
+  "title": "CARVE: Certified Affordable Repair of Vetoed Maneuvers via Envelopes for Interactive Driving",
+  "date": "2026/05/31",
+  "author": "Wang, Yifan"
+ },
+ "2602.12616": {
+  "title": "When Environments Shift: Safe Planning with Generative Priors and Robust Conformal Prediction",
+  "date": "2026/02/13",
+  "author": "Rahaman, Kaizer"
+ },
+ "2511.10586": {
+  "title": "Safe Planning in Interactive Environments via Iterative Policy Updates and Adversarially Robust Conformal Prediction",
+  "date": "2025/11/13",
+  "author": "Mirzaeedodangeh, Omid"
+ },
+ "2610.37217": {
+  "title": "KEPT: Conformal Keepouts Kept in Planning for Enclosed-Space Navigation in Degraded Sensing",
+  "date": "2026/10/27",
+  "author": "Kim, Eric Minwoo"
+ },
+ "2610.22981": {
+  "title": "How Murky Before a VLM Knows It Cannot See? Accuracy, Confidence and Abstention on a Physical Visibility Axis",
+  "date": "2026/10/16",
+  "author": "Fauzan, Mochamad Rizal"
+ },
+ "2507.17383": {
+  "title": "Confidence Calibration in Vision-Language-Action Models",
+  "date": "2025/07/23",
+  "author": "Zollo, Thomas P"
+ },
+ "2610.27677": {
+  "title": "CovNav: Conformal Prediction-Guided Adaptive Inference for Object Goal Navigation",
+  "date": "2026/10/20",
+  "author": "Wu, Pengying"
+ },
+ "2610.28476": {
+  "title": "CLOSER: Evidence-Aware Active Visual Verification for Embodied Object-Goal Navigation",
+  "date": "2026/10/20",
+  "author": "Wu, Pengying"
+ },
+ "2511.11828": {
+  "title": "Conformal Constrained Policy Optimization for Cost-Effective LLM Agents",
+  "date": "2025/11/14",
+  "author": "Si, Wenwen"
+ },
+ "2604.07036": {
+  "title": "ReDAct: Uncertainty-Aware Deferral for LLM Agents",
+  "date": "2026/04/08",
+  "author": "Piatrashyn, Dzianis"
+ },
+ "2511.06575": {
+  "title": "CoFineLLM: Conformal Finetuning of LLMs for Language-Instructed Robot Planning",
+  "date": "2025/11/09",
+  "author": "Wang, Jun"
+ },
+ "2608.17994": {
+  "title": "Judge, Retrieve, or Abstain: Uncertainty-Guarded LLM Judging with Provable Risk Guarantees",
+  "date": "2026/08/18",
+  "author": "Badshah, Sher"
+ },
+ "2608.27808": {
+  "title": "CURA: Certified Runtime Alarms for Computer-Use Agents",
+  "date": "2026/08/28",
+  "author": "Kumar, Divake"
+ },
+ "2610.05563": {
+  "title": "G-CARB: Graph-Localized Conformal Agent Risk Budget for Compositional Harm",
+  "date": "2026/10/04",
+  "author": "Yu, Zijun"
+ },
+ "2607.24343": {
+  "title": "Beyond Aggregate Risk: Role-Stratified Conformal Risk Control for LLM Tool Calls",
+  "date": "2026/07/27",
+  "author": "Rahman, Md Ashikur"
+ },
+ "2608.07751": {
+  "title": "CoCoNav: Conformal Control for Safe Robot Navigation in Crowds",
+  "date": "2026/08/07",
+  "author": "Guo, Cheng"
+ },
+ "2610.18321": {
+  "title": "CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation",
+  "date": "2026/10/13",
+  "author": "Wang, Shuqi"
+ },
+ "2609.35415": {
+  "title": "Adaptive Safety Filtering for Frozen ACC Policies via Conformal Residual Calibration",
+  "date": "2026/09/28",
+  "author": "Zhou, Zhiruo"
+ },
+ "2604.12425": {
+  "title": "Forecasting the Past: Gradient-Based Distribution Shift Detection in Trajectory Prediction",
+  "date": "2026/04/14",
+  "author": "De Vita, Michele"
+ },
+ "2610.40922": {
+  "title": "Confidence-Modulated Safety Filtering for End-to-End Policies",
+  "date": "2026/10/29",
+  "author": "Borquez, Javier"
+ },
+ "2606.25629": {
+  "title": "Event-Adaptive Motion Planning with Distilled Vision-Language Model in Safety-Critical Situations",
+  "date": "2026/06/24",
+  "author": "Huang, Zhenwei"
+ },
+ "2403.15941": {
+  "title": "Explore until Confident: Efficient Exploration for Embodied Question Answering",
+  "date": "2024/03/23",
+  "author": "Ren, Allen Z."
+ },
+ "2611.02240": {
+  "title": "When to Probe and When to Act: Clarity-Aware Risk-Adaptive Control for Interactive Driving",
+  "date": "2026/11/01",
+  "author": "Wang, Youran"
+ },
+ "2610.21160": {
+  "title": "When to Ask for Help: A Decision-Theoretic Account and Measurement Standard for Slow-Module Scheduling in Dual-System Vision-Language-Action Models",
+  "date": "2026/10/15",
+  "author": "Zhang, Shilin"
+ },
+ "2608.02197": {
+  "title": "Look Where It Matters: Adaptive Visual Refinement for Vision-Language-Action Models",
+  "date": "2026/08/03",
+  "author": "Cui, Jin"
+ },
+ "2610.01531": {
+  "title": "Towards Reliable Vision-Language Models for Autonomous Driving",
+  "date": "2026/10/01",
+  "author": "Mammen, Manasa Mariam"
+ },
+ "2609.37046": {
+  "title": "Speed in the Blind Spot: An Interpretability Analysis of Dynamic Perception in VLMs for Autonomous Driving",
+  "date": "2026/09/29",
+  "author": "Winter, Katharina"
+ },
+ "2610.37299": {
+  "title": "Structured Representation Probing for Risk Anticipation in End-to-End Autonomous Driving",
+  "date": "2026/10/27",
+  "author": "Liang, Jiawei"
+ },
+ "2610.13516": {
+  "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",
+  "date": "2026/10/09",
+  "author": "Ahmedt-Aristizabal, David"
+ },
+ "2611.08425": {
+  "title": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",
+  "date": "2026/11/05",
+  "author": "Podolinsky, Michal P."
+ },
+ "2610.29730": {
+  "title": "Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies",
+  "date": "2026/10/21",
+  "author": "Keller, Johannes"
+ },
+ "2608.08557": {
+  "title": "OpenVisTool: An Open Recipe for Synthesizing Instructive Visual Tool-Use Trajectories",
+  "date": "2026/08/09",
+  "author": "Xiang, Changhao"
+ },
+ "2609.32157": {
+  "title": "CausalDriveBench: Evaluating Causal Reasoning in Vision-Language-Action Models for Autonomous Driving",
+  "date": "2026/09/26",
+  "author": "Chembu, Narendiran"
+ },
+ "2610.30953": {
+  "title": "Measuring the Reasoning-Action Coupling in Driving Vision-Language-Action Models through Counterfactuals",
+  "date": "2026/10/22",
+  "author": "Manalu, Gabriel"
+ },
+ "2608.20084": {
+  "title": "Evidence-Gated Task and Motion Planning with Vision-Language Models",
+  "date": "2026/08/20",
+  "author": "Tanaka, Tsunehiko"
+ },
+ "2609.32645": {
+  "title": "From Scene Graphs to Answers: Selective Neuro-Symbolic Reasoning for Autonomous Driving",
+  "date": "2026/09/26",
+  "author": "Wang, Yiyao"
+ },
+ "2607.16938": {
+  "title": "What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning",
+  "date": "2026/07/18",
+  "author": "Panda, Kalpana"
+ },
+ "2608.17095": {
+  "title": "Inference-Time Attention Steering for Vision-Language-Action Driving Models",
+  "date": "2026/08/17",
+  "author": "Prasad, Darshan Nagendra"
+ },
+ "2610.05878": {
+  "title": "OGAM: Connecting Systematic Testing to Runtime Assurance through Object-Grounded Attention Monitoring for VLA Policies",
+  "date": "2026/10/05",
+  "author": "Darwish, Haki"
+ },
+ "2609.19681": {
+  "title": "VAST: V2X/Dynamic Map-Aware Autonomous Driving Systems Validation Toolchain",
+  "date": "2026/09/17",
+  "author": "Ito, Shunsuke"
+ },
+ "2611.06702": {
+  "title": "When to Ask for Help: Uncertainty-Triggered Aerial Refinement for Off-Road Navigation",
+  "date": "2026/11/04",
+  "author": "Samineni, Pranay"
+ },
+ "2609.30706": {
+  "title": "LAVOIR: Teaching a Single-Pass Decision Encoder When and What to Ask with Amortized Value of Information",
+  "date": "2026/09/25",
+  "author": "Yilmaz, Furkan"
+ },
+ "2608.21762": {
+  "title": "Learning to Look Again: Loss-Gap Supervision for Free-form Crop Routing in Vision-Language Models",
+  "date": "2026/08/22",
+  "author": "Zhu, Jinchang"
+ },
+ "2608.17496": {
+  "title": "Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields",
+  "date": "2026/08/18",
+  "author": "Zhong, Kaiming"
+ },
+ "2609.25889": {
+  "title": "Risk-Aware Online Conformal State Probing",
+  "date": "2026/09/22",
+  "author": "Talli, Pietro"
+ },
+ "2608.08907": {
+  "title": "ToolVision: Learning When and How to Use Visual Tools with Capability-Aligned Supervision",
+  "date": "2026/08/09",
+  "author": "Mao, Delin"
+ },
+ "2611.04943": {
+  "title": "Learning Where to Look: Observation Policy Optimization for Thinking with Images",
+  "date": "2026/11/03",
+  "author": "Wang, Junfeng"
+ },
+ "2610.13790": {
+  "title": "OccludeBench: Can VLMs Find What's Missing?",
+  "date": "2026/10/09",
+  "author": "Cekinmez, Jasin"
+ },
+ "2607.01537": {
+  "title": "Certified World Models as Sensing Clocks: Drift-Aware Deadlines for Active Perception",
+  "date": "2026/07/01",
+  "author": "Wang, Hongbo"
+ },
+ "2611.07155": {
+  "title": "Depth or Description? When a One-Step Latent Score Replaces Lookahead in Proactive Information Acquisition",
+  "date": "2026/11/04",
+  "author": "Sengupta, Biswa"
+ },
+ "2608.02305": {
+  "title": "BRiG-AFA: Bellman Risk-to-Go Learning for Non-Myopic Active Feature Acquisition",
+  "date": "2026/08/03",
+  "author": "Feng, Jiaorong"
+ },
+ "2610.21919": {
+  "title": "The Lagrangian Structure of Cost-Penalized Active Feature Acquisition",
+  "date": "2026/10/15",
+  "author": "Bingham, Joseph"
+ },
+ "2607.26887": {
+  "title": "Conformalized Rate-Adaptive Sensing",
+  "date": "2026/07/29",
+  "author": "Yang, Jiawei"
+ },
+ "2610.24194": {
+  "title": "Agents' Last Doubt: Knowing When to Act and When to Step Back in Tool-Using Agents",
+  "date": "2026/10/16",
+  "author": "Liu, Qisai"
+ },
+ "2610.01236": {
+  "title": "Learning to Ask: Information Acquisition for SLM-LLM Collaboration, under a budget",
+  "date": "2026/10/01",
+  "author": "Kim, Yongjun"
+ },
+ "2607.24010": {
+  "title": "When Should Active RAG Retrieve? A Budget-Aware Evaluation of Utility, Calibration, and Cost",
+  "date": "2026/07/27",
+  "author": "Qian, Pin"
+ },
+ "2609.00291": {
+  "title": "StreamScout: Learning When to Look Deeper for Streaming Video Understanding",
+  "date": "2026/08/31",
+  "author": "Zhang, Ce"
+ },
+ "2608.14991": {
+  "title": "Risk-Adaptive Edge--Cloud Visual Reasoning for Communication-Efficient Autonomous Driving",
+  "date": "2026/08/15",
+  "author": "Ma, Meng"
+ },
+ "2608.29772": {
+  "title": "Self-Aware Active Learning Enables Continual Improvement in Autonomous Driving",
+  "date": "2026/08/30",
+  "author": "Hu, Dong"
+ },
+ "2609.01799": {
+  "title": "Designing Versatile Samples for Learned Trajectory Scoring",
+  "date": "2026/09/01",
+  "author": "Li, Yaguang"
+ },
+ "2607.03751": {
+  "title": "Look Before You Leap: Distilling Tree Search into Action Evaluation for Frozen VLA Models",
+  "date": "2026/07/04",
+  "author": "Xie, Xinyi"
+ },
+ "2609.02688": {
+  "title": "From Proxy Learning to Driving Decisions: A Transfer-Based Framework for Evaluating Future-Aware Autonomous Driving Planners",
+  "date": "2026/09/02",
+  "author": "Wu, Yikai"
+ },
+ "2609.30557": {
+  "title": "Auditing Latent-Space Monitors for Autonomous Driving",
+  "date": "2026/09/24",
+  "author": "Advani, Nikhil Kamalkumar"
+ },
+ "2608.04246": {
+  "title": "SAFECAST: Robust Failure Detection for VLA Policies with Contrast-Set Training and Calibration",
+  "date": "2026/08/04",
+  "author": "Rajaprakash, Harshitha"
+ },
+ "2608.26074": {
+  "title": "Gating Before Commitment: Anticipating Intent Divergence to Prevent Post-Interaction Decision Failures in Autonomous Driving",
+  "date": "2026/08/26",
+  "author": "Xu, Cong"
+ },
+ "2607.19194": {
+  "title": "Cognitive Dual-Process Planning for Autonomous Driving with Structured Scene Knowledge and Verifiable Reasoning-Action Consistency",
+  "date": "2026/07/21",
+  "author": "Yang, Zhongyao"
+ },
+ "2608.29005": {
+  "title": "When Does Corruption Break the Plan? A Degradation-Tolerance Benchmark for Camera-Only End-to-End Driving",
+  "date": "2026/08/29",
+  "author": "Que, Haohua"
+ },
+ "2609.22582": {
+  "title": "Beyond the Leaderboard: Counterfactual Diagnosis of End-to-End and VLA Driving Policies Under Domain Shift",
+  "date": "2026/09/18",
+  "author": "Yang, Ruolin"
+ },
+ "2608.24366": {
+  "title": "Variance-Guided Spatial Attention Fusion for Robust End-to-End Driving under Asymmetric Sensor Degradation",
+  "date": "2026/08/25",
+  "author": "Tao, Weizhi"
+ },
+ "2609.20480": {
+  "title": "Worst-Case Hidden-Vehicle Trajectory Search in Spatiotemporal Occlusion Regions",
+  "date": "2026/09/17",
+  "author": "Tan, Ruichen"
+ },
+ "2609.18663": {
+  "title": "VLA-ULAP: Interleaving Cloud VLA Calls with Ultra-Lightweight Local Action Prediction at the Edge",
+  "date": "2026/09/16",
+  "author": "Cao, Deyu"
+ },
+ "2610.23262": {
+  "title": "Expand-and-Prune: Test-Time Candidate-Space Adaptation for End-to-End Autonomous Driving",
+  "date": "2026/10/16",
+  "author": "Schmidt, Fabian"
+ },
+ "2610.21434": {
+  "title": "Policy-Aligned Predictive Verification for Adaptive VLA Action-Chunk Execution",
+  "date": "2026/10/15",
+  "author": "Kim, Minkyu"
+ },
+ "2609.34387": {
+  "title": "CAR-VLA: Complexity-Aware and Risk-Adaptive Reasoning for Autonomous Driving",
+  "date": "2026/09/28",
+  "author": "Chen, Xiaolei"
+ },
+ "2611.00718": {
+  "title": "STEER: Route-Aware Adaptive Reasoning for Autonomous Driving",
+  "date": "2026/10/31",
+  "author": "Zou, Yangang"
+ },
+ "2609.36438": {
+  "title": "World4Scorer: Outcome-Grounded World Modeling for Autonomous Driving",
+  "date": "2026/09/29",
+  "author": "Pei, Jieyuan"
+ },
+ "2611.05072": {
+  "title": "Trajectory Evaluation via Rollout-Free World Model for End-to-end Autonomous Driving",
+  "date": "2026/11/03",
+  "author": "Wang, Junzhe"
+ },
+ "2609.37871": {
+  "title": "ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving",
+  "date": "2026/09/29",
+  "author": "Luo, Ziyi"
+ },
+ "2610.28184": {
+  "title": "Perceives but Doesn't Brake: A Perception-Action Binding Gap in Reasoning Driving VLAs",
+  "date": "2026/10/20",
+  "author": "Cercola, Matteo"
+ },
+ "2609.35039": {
+  "title": "Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in Robotic Harvesting",
+  "date": "2026/09/28",
+  "author": "Zhang, Heng"
+ },
+ "2611.05448": {
+  "title": "Jev with Foresight: Safe Language-Guided Autonomous Driving via a Language World Model",
+  "date": "2026/11/03",
+  "author": "Qu, Yansong"
+ },
+ "2611.06899": {
+  "title": "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues",
+  "date": "2026/11/04",
+  "author": "Onyenweaku, Chibueze Praise"
+ },
+ "2609.24290": {
+  "title": "When and How Should an Agent Clarify? CIGAsk: Teaching LLMs to Clarify via Counterfactual Information Gain",
+  "date": "2026/09/21",
+  "author": "Li, Yunxiang"
+ },
+ "2609.33190": {
+  "title": "FocusDrive: Reasoning with Visual Focus for Autonomous Driving",
+  "date": "2026/09/27",
+  "author": "Liu, Zhiyuan"
+ },
+ "2610.04088": {
+  "title": "Towards Safer Autonomous Driving in an Open World: A Dual-Process Approach",
+  "date": "2026/10/02",
+  "author": "Janssen, Simon"
+ },
+ "2609.32681": {
+  "title": "RCVLA: 4D Radar-Grounded Semantic Reasoning and Trajectory Arbitration for Autonomous Driving",
+  "date": "2026/09/26",
+  "author": "Zheng, Lianqing"
+ },
+ "2610.13409": {
+  "title": "ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving",
+  "date": "2026/10/09",
+  "author": "Wei, Yuhao"
+ },
+ "2610.14066": {
+  "title": "Safety-Oriented Trajectory Ranking from BEV Perception Outputs",
+  "date": "2026/10/07",
+  "author": "Pohl, Leon"
+ },
+ "2610.35448": {
+  "title": "Model-Aware Generation of Safety-Critical Scenes for Robust End-to-End Driving via Distilled Planner Surrogates",
+  "date": "2026/10/26",
+  "author": "Seyam, Khaled M."
+ },
+ "2610.41185": {
+  "title": "Mechanistic Interpretability for End-to-End Self-Driving",
+  "date": "2026/10/30",
+  "author": "Gagvani, Manav"
+ },
+ "2609.20103": {
+  "title": "Safety-Critical Scenarios Emerge from Initial Scenes",
+  "date": "2026/09/17",
+  "author": "Wu, Yin"
+ },
+ "2609.30818": {
+  "title": "Evaluation Is All You Need for Multi-Modal Autonomous Driving",
+  "date": "2026/09/25",
+  "author": "He, Zeyu"
+ },
+ "2507.09822": {
+  "title": "Active Probing with Multimodal Predictions for Motion Planning",
+  "date": "2025/07/13",
+  "author": "Gadginmath, Darshan"
+ },
+ "2510.01389": {
+  "title": "INSIGHT: INference-time Sequence Introspection for Generating Help Triggers in Vision-Language-Action Models",
+  "date": "2025/10/01",
+  "author": "Karli, Ulas Berk"
+ },
+ "2510.16281": {
+  "title": "Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action Alignment Verification",
+  "date": "2025/10/18",
+  "author": "Wu, Yilin"
+ },
+ "2602.07399": {
+  "title": "VGAS: Value-Guided Action-Chunk Selection for Few-Shot Vision-Language-Action Adaptation",
+  "date": "2026/02/07",
+  "author": "Xu, Changhua"
+ },
+ "2602.12281": {
+  "title": "Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment",
+  "date": "2026/02/12",
+  "author": "Kwok, Jacky"
+ },
+ "2510.05681": {
+  "title": "Verifier-free Test-Time Sampling for Vision-Language-Action Models",
+  "date": "2025/10/07",
+  "author": "Jang, Suhyeok"
+ },
+ "2511.20720": {
+  "title": "DeeAD: Dynamic Early Exit of Vision-Language Action for Efficient Autonomous Driving",
+  "date": "2025/11/25",
+  "author": "HU, Haibo"
+ },
+ "2510.16376": {
+  "title": "Conformal Prediction in The Loop: A Feedback-Based Uncertainty Model for Trajectory Optimization",
+  "date": "2025/10/18",
+  "author": "Wang, Han"
+ },
+ "2511.18170": {
+  "title": "Time-aware Motion Planning in Dynamic Environments with Conformal Prediction",
+  "date": "2025/11/22",
+  "author": "Liang, Kaier"
+ },
+ "2601.21712": {
+  "title": "CoFreeVLA: Short-Horizon Collision-Free Dual-Arm Manipulation via Vision-Language-Action Model and Risk Estimation",
+  "date": "2026/01/29",
+  "author": "Liu, Yaohua"
+ },
+ "2601.14702": {
+  "title": "Drive-P2D: A Progressive Perception-to-Decision Benchmark for VLMs in Autonomous Driving",
+  "date": "2026/01/21",
+  "author": "Tang, Zecong"
+ },
+ "2510.04532": {
+  "title": "More Than Meets the Eye? Uncovering the Reasoning-Planning Disconnect in Training Vision-Language Driving Models",
+  "date": "2025/10/06",
+  "author": "Song, Xurui"
+ },
+ "2509.20109": {
+  "title": "Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving",
+  "date": "2025/09/24",
+  "author": "Li, Pengxiang"
+ },
+ "2602.15543": {
+  "title": "Selective Perception for Robot: Task-Aware Attention in Multimodal VLA",
+  "date": "2026/02/17",
+  "author": "Son, Young-Chae"
+ },
+ "2511.12405": {
+  "title": "VLA-R: Vision-Language Action Retrieval toward Open-World End-to-End Autonomous Driving",
+  "date": "2025/11/16",
+  "author": "Seong, Hyunki"
+ },
+ "2606.22277": {
+  "title": "Active Sensing and Deferred-Decision Trajectory Optimization for Robust Target Identification",
+  "date": "2026/06/21",
+  "author": "Siahkali, Farbod"
+ },
+ "2603.18091": {
+  "title": "TokenPB: Enabling VLA Action Self-Verification via VLM Token Probability Bucketing",
+  "date": "2026/03/18",
+  "author": "Zhao, Chen"
+ },
+ "2606.10568": {
+  "title": "VeriSpace: Spatially Grounded Action Verification for Vision-Language-Action Models",
+  "date": "2026/06/09",
+  "author": "Zhao, Guiyu"
+ },
+ "2605.22446": {
+  "title": "Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts",
+  "date": "2026/05/21",
+  "author": "Sun, Zhen"
+ },
+ "2606.17598": {
+  "title": "MuseVLA: An Adaptive Multimodal Sensing Vision-Language-Action Model for Robotic Manipulation",
+  "date": "2026/06/16",
+  "author": "Liu, Xingyuming"
+ },
+ "2606.14772": {
+  "title": "ScoutVLA: UAV-Centric Active Perception via a Dual-Expert VLA Model for Open-World Embodied Question Answering",
+  "date": "2026/06/09",
+  "author": "Lu, Wenhao"
+ },
+ "2605.29605": {
+  "title": "VLAConf: Calibrated Task-Success Confidence for Vision-Language-Action Models",
+  "date": "2026/05/28",
+  "author": "Huang, Dehao"
+ },
+ "2604.20472": {
+  "title": "Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models",
+  "date": "2026/04/22",
+  "author": "Francis-Meretzki, Shelly"
+ },
+ "2606.21386": {
+  "title": "VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models",
+  "date": "2026/06/19",
+  "author": "Seligmann, Florian"
+ },
+ "2603.13782": {
+  "title": "Your Vision-Language-Action Model Already Has Attention Heads For Path Deviation Detection",
+  "date": "2026/03/14",
+  "author": "Jeong, Jaehwan"
+ },
+ "2606.06996": {
+  "title": "Mission-Level Runtime Assurance Framework for Autonomous Driving",
+  "date": "2026/06/05",
+  "author": "Tsai, Chieh"
+ },
+ "2605.10386": {
+  "title": "GuardAD: Safeguarding Autonomous Driving MLLMs via Markovian Safety Logic",
+  "date": "2026/05/11",
+  "author": "Zhang, Tianyuan"
+ },
+ "2605.10744": {
+  "title": "C-CoT: Counterfactual Chain-of-Thought with Vision-Language Models for Safe Autonomous Driving",
+  "date": "2026/05/11",
+  "author": "Tian, Kefei"
+ },
+ "2606.29879": {
+  "title": "LWDrive: Layer-Wise World-Model-Guided Vision-Language Model Planning for Autonomous Driving",
+  "date": "2026/06/29",
+  "author": "Yang, Chen"
+ },
+ "2603.25946": {
+  "title": "Collision-Aware Vision-Language Learning for End-to-End Driving with Multimodal Infraction Datasets",
+  "date": "2026/03/26",
+  "author": "Koran, Alex"
+ },
+ "2605.31041": {
+  "title": "Does Visual Information Play a Decisive Role in Vision-Language-Action Model Driving Behavior?",
+  "date": "2026/05/29",
+  "author": "He, Jingtao"
+ },
+ "2605.17268": {
+  "title": "Is VLA Reasoning Faithful? Probing Safety of Chain-of-Causation in Autonomous Driving Models",
+  "date": "2026/05/17",
+  "author": "Mayumu, Nicanor"
+ },
+ "2606.09644": {
+  "title": "Where Does the Answer Come From? Benchmarking View-Level Visual Evidence Identification in Multi-View MLLMs for Autonomous Driving",
+  "date": "2026/06/08",
+  "author": "Wang, Yimu"
+ },
+ "2604.06750": {
+  "title": "How Well Do Vision-Language Models Understand Sequential Driving Scenes? A Sensitivity Study",
+  "date": "2026/04/08",
+  "author": "Brusnicki, Roberto"
+ },
+ "2606.10862": {
+  "title": "LIBERO-Occ: Evaluating and Improving Vision-Language-Action Models under Scene-Induced Occlusion via Viewpoint Imagination",
+  "date": "2026/06/09",
+  "author": "Li, Taishan"
+ },
+ "2606.23147": {
+  "title": "Assistron: Bayesian Shared Autonomy with Off-the-shelf Vision-Language-Action Models",
+  "date": "2026/06/22",
+  "author": "Song, Pinhao"
+ },
+ "2606.27355": {
+  "title": "RouterVLA: Budgeted Commissioning and Expert Onboarding for Growing VLA Pools",
+  "date": "2026/06/25",
+  "author": "Ren, Xingyu"
+ },
+ "2507.15886": {
+  "title": "Combining Cost-Constrained Runtime Monitors for AI Safety",
+  "date": "2025/07/19",
+  "author": "Hua, Tim Tian"
+ },
+ "2507.11920": {
+  "title": "Heterogeneous Predictor-based Risk-Aware Planning with Conformal Prediction in Dense, Uncertain Environments",
+  "date": "2025/07/16",
+  "author": "Yang, Jeongyong"
+ },
+ "2512.00453": {
+  "title": "Sample-Efficient Expert Query Control in Active Imitation Learning via Conformal Prediction",
+  "date": "2025/11/29",
+  "author": "Firouzkouhi, Arad"
+ },
+ "2601.20666": {
+  "title": "Learning Contextual Runtime Monitors for Safe AI-Based Autonomy",
+  "date": "2026/01/28",
+  "author": "Luque-Cerpa, Alejandro"
+ },
+ "2512.01556": {
+  "title": "LEC: Linear Expectation Constraints for Selection-Conditioned Risk Control in Selective Prediction and Routing Systems",
+  "date": "2025/12/01",
+  "author": "Wang, Zhiyuan"
+ },
+ "2602.03814": {
+  "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+  "date": "2026/02/03",
+  "author": "Wang, Xi"
+ },
+ "2507.03279": {
+  "title": "Conformal Information Pursuit for Interactively Guiding Large Language Models",
+  "date": "2025/07/04",
+  "author": "Chan, Kwan Ho Ryan"
+ },
+ "2508.01957": {
+  "title": "Stochastic Encodings for Active Feature Acquisition",
+  "date": "2025/08/03",
+  "author": "Norcliffe, Alexander"
+ },
+ "2508.18380": {
+  "title": "Information Templates: A New Paradigm for Intelligent Active Feature Acquisition",
+  "date": "2025/08/25",
+  "author": "Huang, Hung-Tien"
+ },
+ "2510.12624": {
+  "title": "Learning-To-Measure: In-Context Active Feature Acquisition",
+  "date": "2025/10/14",
+  "author": "Kobayashi, Yuta"
+ },
+ "2510.17543": {
+  "title": "Reliable Inference in Edge-Cloud Model Cascades via Conformal Alignment",
+  "date": "2025/10/20",
+  "author": "Huang, Jiayi"
+ },
+ "2509.21955": {
+  "title": "Learnable Conformal Prediction with Context-Aware Nonconformity Functions for Robotic Planning and Perception",
+  "date": "2025/09/26",
+  "author": "Kumar, Divake"
+ },
+ "2509.25692": {
+  "title": "CPATTA: Conformal Supervision Allocation For Active Test-Time Adaptation",
+  "date": "2025/09/30",
+  "author": "Shi, Tingyu"
+ },
+ "2512.01188": {
+  "title": "Real-World Reinforcement Learning of Active Perception Behaviors",
+  "date": "2025/12/01",
+  "author": "Hu, Edward S."
+ },
+ "2511.15613": {
+  "title": "When to Think and When to Look: Uncertainty-Guided Lookback",
+  "date": "2025/11/19",
+  "author": "Bi, Jing"
+ },
+ "2512.17227": {
+  "title": "Learning When to Look: A Disentangled Curriculum for Strategic Perception in Multimodal Reasoning",
+  "date": "2025/12/19",
+  "author": "Yang, Siqi"
+ },
+ "2509.25699": {
+  "title": "AIM-CoT: Active Information-driven Multimodal Chain-of-Thought for Vision-Language Reasoning",
+  "date": "2025/09/30",
+  "author": "Li, Xiping"
+ },
+ "2511.11567": {
+  "title": "Who Moved My Distribution? Conformal Prediction for Interactive Multi-Agent Systems",
+  "date": "2025/11/14",
+  "author": "Binny, Allen Emmanuel"
+ },
+ "2509.12573": {
+  "title": "No Need for Learning to Defer? A Training Free Deferral Framework to Multiple Experts through Conformal Prediction",
+  "date": "2025/09/16",
+  "author": "Bary, Tim"
+ },
+ "2509.25124": {
+  "title": "Safe Planning in Unknown Environments Using Conformalized Semantic Maps",
+  "date": "2025/09/29",
+  "author": "Sundarsingh, David Smith"
+ },
+ "2604.14251": {
+  "title": "Calibrate-Then-Delegate: Safety Monitoring with Risk and Budget Guarantees via Model Cascades",
+  "date": "2026/04/15",
+  "author": "Pona, Edoardo"
+ },
+ "2605.00737": {
+  "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+  "date": "2026/05/01",
+  "author": "Wu, Qinyuan"
+ },
+ "2603.00324": {
+  "title": "Proof-of-Perception: Certified Tool-Using Multimodal Reasoning with Compositional Conformal Guarantees",
+  "date": "2026/02/27",
+  "author": "Fayyazi, Arya"
+ },
+ "2605.14038": {
+  "title": "Model-Adaptive Tool Necessity Reveals the Knowing-Doing Gap in LLM Tool Use",
+  "date": "2026/05/13",
+  "author": "Cheng, Yize"
+ },
+ "2603.19896": {
+  "title": "Utility-Guided Agent Orchestration for Efficient LLM Tool Use",
+  "date": "2026/03/20",
+  "author": "Liu, Boyan"
+ },
+ "2605.16604": {
+  "title": "R2V Agent: Teaching SLMs When to Ask for Help",
+  "date": "2026/05/15",
+  "author": "Hemadri, Raghu Vamshi"
+ },
+ "2605.27788": {
+  "title": "Knowing When to Ask: Segment-Level Credit Assignment for LLM Tool Use",
+  "date": "2026/05/27",
+  "author": "Kumar, Abhijit"
+ },
+ "2603.23919": {
+  "title": "Uncertainty-Aware Vision-based Risk Object Identification via Conformal Risk Tube Prediction",
+  "date": "2026/03/25",
+  "author": "Fu, Kai-Yu"
+ },
+ "2605.13923": {
+  "title": "Vision-Based Runtime Monitoring under Varying Specifications using Semantic Latent Representations",
+  "date": "2026/05/13",
+  "author": "Hoxha, Bardh"
+ },
+ "2606.04185": {
+  "title": "Distribution-Free Risk-Aware Planning and Control Under Uncertainty Using Conformal Spectral Risk Control",
+  "date": "2026/06/02",
+  "author": "Eom, Junsik"
+ },
+ "2606.05551": {
+  "title": "Conformal Risk-Averse Decision Making with Action Conditional Guarantee",
+  "date": "2026/06/04",
+  "author": "Zhu, Zihan"
+ },
+ "2603.10392": {
+  "title": "Safe Probabilistic Planning for Human-Robot Interaction using Conformal Risk Control",
+  "date": "2026/03/11",
+  "author": "Gonzales, Jake"
+ },
+ "2606.09919": {
+  "title": "Co-GLANCE: Uncertainty-Aware Active Perception for Heterogeneous Robot Teaming",
+  "date": "2026/06/07",
+  "author": "Podolinsky, Michal P."
+ },
+ "2604.01434": {
+  "title": "Leveraging the Value of Information in POMDP Planning",
+  "date": "2026/04/01",
+  "author": "Laouar, Zakariya"
+ },
+ "2605.05511": {
+  "title": "Non-Myopic Active Feature Acquisition via Pathwise Policy Gradients",
+  "date": "2026/05/06",
+  "author": "Aronsson, Linus"
+ },
+ "2606.18933": {
+  "title": "Zero-Shot Active Feature Acquisition via LLM-Elicitation",
+  "date": "2026/06/17",
+  "author": "Perets, Binyamin"
+ },
+ "2603.07822": {
+  "title": "Knowing When to Ask: Resolving Uncertainty in Human-Robot Joint Planning via Explicit Dialogue and Implicit Intent Cues",
+  "date": "2026/03/08",
+  "author": "Fang, Zeyu"
+ },
+ "2606.02357": {
+  "title": "Do Multimodal Agents Really Benefit from Tool Use? A Systematic Study of Capability Gains",
+  "date": "2026/06/01",
+  "author": "Guo, Jiawei"
+ },
+ "2605.31196": {
+  "title": "Probing Collision Grounding in Vision-Language Models for Safe Human-Robot Collaboration",
+  "date": "2026/05/29",
+  "author": "Wang, Jun"
+ },
+ "2604.06912": {
+  "title": "Q-Zoom: Query-Aware Adaptive Perception for Efficient Multimodal Large Language Models",
+  "date": "2026/04/08",
+  "author": "Shi, Yuheng"
+ },
+ "2605.16401": {
+  "title": "CADS: Conformal Adaptive Decision System for Cost-Efficient Image Classification",
+  "date": "2026/05/12",
+  "author": "Turkoglu, Mikael"
+ },
+ "2511.06253": {
+  "title": "AdaDrive: Self-Adaptive Slow-Fast System for Language-Grounded Autonomous Driving",
+  "date": "2025/11/09",
+  "author": "Zhang, Ruifei"
+ },
+ "2508.11488": {
+  "title": "Perception in Plan: Coupled Perception and Planning for End-to-End Autonomous Driving",
+  "date": "2025/08/15",
+  "author": "Zhang, Bozhou"
+ },
+ "2509.19789": {
+  "title": "RDAR: Reward-Driven Agent Relevance Estimation for Autonomous Driving",
+  "date": "2025/09/24",
+  "author": "Bosio, Carlo"
+ },
+ "2510.25205": {
+  "title": "Energy-Efficient Autonomous Driving with Adaptive Perception and Robust Decision",
+  "date": "2025/10/29",
+  "author": "Xia, Yuyang"
+ },
+ "2511.11840": {
+  "title": "LAVQA: A Latency-Aware Visual Question Answering Framework for Shared Autonomy in Self-Driving Vehicles",
+  "date": "2025/11/14",
+  "author": "Xie, Shuangyu"
+ },
+ "2511.14391": {
+  "title": "Enhancing LLM-based Autonomous Driving with Modular Traffic Light and Sign Recognition",
+  "date": "2025/11/18",
+  "author": "Schmidt, Fabian"
+ },
+ "2510.18552": {
+  "title": "Occluded nuScenes: A Multi-Sensor Dataset for Evaluating Perception Robustness in Automated Driving",
+  "date": "2025/10/21",
+  "author": "Kumar, Sanjay"
+ },
+ "2510.13114": {
+  "title": "Safe Driving in Occluded Environments",
+  "date": "2025/10/15",
+  "author": "Wang, Zhuoyuan"
+ },
+ "2511.22928": {
+  "title": "Seeing before Observable: Potential Risk Reasoning in Autonomous Driving via Vision Language Models",
+  "date": "2025/11/28",
+  "author": "Liu, Jiaxin"
+ },
+ "2509.25944": {
+  "title": "NuRisk: A Visual Question Answering Dataset for Agent-Level Risk Assessment in Autonomous Driving",
+  "date": "2025/09/30",
+  "author": "Gao, Yuan"
+ },
+ "2511.20022": {
+  "title": "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving",
+  "date": "2025/11/25",
+  "author": "Yu, Seungjun"
+ },
+ "2510.05729": {
+  "title": "Precise and Efficient Collision Prediction under Uncertainty in Autonomous Driving",
+  "date": "2025/10/07",
+  "author": "Kaufeld, Marc"
+ },
+ "2510.15505": {
+  "title": "Perfect Prediction or Plenty of Proposals? What Matters Most in Planning for Autonomous Driving",
+  "date": "2025/10/17",
+  "author": "Distelzweig, Aron"
+ },
+ "2510.08571": {
+  "title": "Scalable Offline Metrics for Autonomous Driving",
+  "date": "2025/10/09",
+  "author": "Aich, Animikh"
+ },
+ "2511.00088": {
+  "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail",
+  "date": "2025/10/30",
+  "author": "NVIDIA"
+ },
+ "2510.01829": {
+  "title": "Calibrating the Full Predictive Class Distribution of 3D Object Detectors for Autonomous Driving",
+  "date": "2025/10/02",
+  "author": "Schr\u00f6der, Cornelius"
+ },
+ "2603.04222": {
+  "title": "PRAM-R: A Perception-Reasoning-Action-Memory Framework with LLM-Guided Modality Routing for Adaptive Autonomous Driving",
+  "date": "2026/03/04",
+  "author": "Zhang, Yi"
+ },
+ "2512.06182": {
+  "title": "Situation-Aware Interactive MPC Switching for Autonomous Driving",
+  "date": "2025/12/05",
+  "author": "Qi, Shuhao"
+ },
+ "2512.24712": {
+  "title": "LSRE: Latent Semantic Rule Encoding for Real-Time Semantic Risk Detection in Autonomous Driving",
+  "date": "2025/12/31",
+  "author": "Cheng, Qian"
+ },
+ "2602.18887": {
+  "title": "SafeDrive: Fine-Grained Safety Reasoning for End-to-End Driving in a Sparse World",
+  "date": "2026/02/21",
+  "author": "Kim, Jungho"
+ },
+ "2602.03112": {
+  "title": "A Unified Candidate Set with Scene-Adaptive Refinement via Diffusion for End-to-End Autonomous Driving",
+  "date": "2026/02/03",
+  "author": "Wu, Zhengfei"
+ },
+ "2512.20299": {
+  "title": "KnowVal: A Knowledge-Augmented and Value-Guided Autonomous Driving System",
+  "date": "2025/12/23",
+  "author": "Xia, Zhongyu"
+ },
+ "2601.22930": {
+  "title": "MTDrive: Multi-turn Interactive Reinforcement Learning for Autonomous Driving",
+  "date": "2026/01/30",
+  "author": "Li, Xidong"
+ },
+ "2605.01194": {
+  "title": "VLA-ATTC: Adaptive Test-Time Compute for VLA Models with Relative Action Critic Model",
+  "date": "2026/05/02",
+  "author": "Li, Wenhao"
+ },
+ "2605.01191": {
+  "title": "Sentinel-VLA: A Metacognitive VLA Model with Active Status Monitoring for Dynamic Reasoning and Error Recovery",
+  "date": "2026/05/02",
+  "author": "Li, Wenhao"
+ },
+ "2604.02965": {
+  "title": "Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA",
+  "date": "2026/04/03",
+  "author": "Wang, Zihua"
+ },
+ "2603.18342": {
+  "title": "Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model",
+  "date": "2026/03/18",
+  "author": "Tang, Yanchuan"
+ },
+ "2602.16035": {
+  "title": "The Impact of Class Uncertainty Propagation in Perception-Based Motion Planning",
+  "date": "2026/02/17",
+  "author": "Shah, Jibran Iqbal"
+ },
+ "2603.28029": {
+  "title": "Effort-Based Criticality Metrics for Evaluating 3D Perception Errors in Autonomous Driving",
+  "date": "2026/03/30",
+  "author": "Kaul, Sharang"
+ },
+ "2603.04603": {
+  "title": "Risk-Aware Rulebooks for Multi-Objective Trajectory Evaluation under Uncertainty",
+  "date": "2026/03/04",
+  "author": "Wongpiromsarn, Tichakorn"
+ },
+ "2602.16598": {
+  "title": "Sensor Query Schedule and Sensor Noise Covariances for Accuracy-constrained Trajectory Estimation",
+  "date": "2026/02/18",
+  "author": "Goudar, Abhishek"
+ },
+ "2605.15120": {
+  "title": "CLOVER: Closed-Loop Value Estimation and Ranking for End-to-End Autonomous Driving Planning",
+  "date": "2026/05/14",
+  "author": "Ang, Sining"
+ },
+ "2605.25095": {
+  "title": "RECTOR: Priority-Aware Rule-Based Reranking for Compliance-Aware Autonomous Driving Trajectory Selection",
+  "date": "2026/05/24",
+  "author": "Hajieghrary, Hadi"
+ },
+ "2605.24004": {
+  "title": "Reason--Imagine--Act: Closed-Loop LLM Decision Making with World Models for Autonomous Driving",
+  "date": "2026/05/19",
+  "author": "Sun, Zhengqi"
+ },
+ "2606.00191": {
+  "title": "Safe2Drive: Evaluating Safe Driving Behaviors of E2E Autonomous Driving Models",
+  "date": "2026/05/29",
+  "author": "Sahu, Nishad"
+ },
+ "2605.18059": {
+  "title": "Bench2Drive-Robust: Benchmarking Closed-Loop Autonomous Driving under Deployment Perturbations",
+  "date": "2026/05/18",
+  "author": "Zhang, Zhiyuan"
+ },
+ "2606.10688": {
+  "title": "Self-Supervised Relevance Modelling in Autonomous Driving via Counterfactual Analysis",
+  "date": "2026/06/09",
+  "author": "Lusvarghi, Luca"
+ },
+ "2606.14375": {
+  "title": "Elastic Queries Reinforcement Learning: Self-Aware Policy Execution for VLA Models",
+  "date": "2026/06/12",
+  "author": "Wang, Ge"
+ },
+ "2605.26155": {
+  "title": "When Does Adaptive Guidance Help? Belief-Aware Privileged Distillation for Autonomous Driving Under Partial Observability",
+  "date": "2026/05/24",
+  "author": "Haklidir, Mehmet"
+ },
+ "2605.10117": {
+  "title": "Think as Needed: Geometry-Driven Adaptive Perception for Autonomous Driving",
+  "date": "2026/05/11",
+  "author": "Kim, Donghyun"
+ },
+ "2606.22913": {
+  "title": "Intend, Reflect, Refine: An Adaptive Multimodal Reflection Framework for Autonomous Driving",
+  "date": "2026/06/22",
+  "author": "Chen, Zisheng"
+ },
+ "2606.28384": {
+  "title": "A Query-Driven Communication-Efficient Digital Twins Design for Autonomous Driving",
+  "date": "2026/06/22",
+  "author": "Yang, Nuocheng"
+ },
+ "2606.03135": {
+  "title": "Uncertainty-Aware Clarification in LLM Agents with Information Gain",
+  "date": "2026/06/02",
+  "author": "Deng, Mengyi"
+ },
+ "2605.30576": {
+  "title": "Uncertainty-Aware and Temporally Regulated Expert Advice in Reinforcement Learning for Autonomous Driving",
+  "date": "2026/05/28",
+  "author": "Abouelazm, Ahmed"
+ },
+ "2606.03296": {
+  "title": "Bridging Predictive Uncertainty and Safe Action: Sample-Conditioned Differentiable Planning for Autonomous Driving",
+  "date": "2026/06/02",
+  "author": "Meng, Chengzhen"
+ },
+ "2508.04059": {
+  "title": "Beyond the Visible: Benchmarking Occlusion Perception in Multimodal Large Language Models",
+  "date": "2025/08/06",
+  "author": "Liu, Zhaochen"
+ },
+ "2004.08745": {
+  "title": "Learning to Evaluate Perception Models Using Planner-Centric Metrics",
+  "date": "2020/04/19",
+  "author": "Philion, Jonah"
+ },
+ "2110.03270": {
+  "title": "Injecting Planning-Awareness into Prediction and Detection Evaluation",
+  "date": "2021/10/07",
+  "author": "Ivanovic, Boris"
+ },
+ "2309.06597": {
+  "title": "Rank2Tell: A Multimodal Driving Dataset for Joint Importance Ranking and Reasoning",
+  "date": "2023/09/12",
+  "author": "Sachdeva, Enna"
+ },
+ "1603.02729": {
+  "title": "Revisiting Active Perception",
+  "date": "2016/03/08",
+  "author": "Bajcsy, Ruzena"
+ },
+ "1003.3967": {
+  "title": "Adaptive Submodularity: Theory and Applications in Active Learning and Stochastic Optimization",
+  "date": "2010/03/21",
+  "author": "Golovin, Daniel"
+ },
+ "1207.1394": {
+  "title": "Near-optimal Nonmyopic Value of Information in Graphical Models",
+  "date": "2012/07/04",
+  "author": "Krause, Andreas"
+ },
+ "2301.00557": {
+  "title": "Learning to Maximize Mutual Information for Dynamic Feature Selection",
+  "date": "2023/01/02",
+  "author": "Covert, Ian"
+ },
+ "1711.07364": {
+  "title": "Classification with Costly Features using Deep Reinforcement Learning",
+  "date": "2017/11/20",
+  "author": "Janisch, Jarom\u00edr"
+ },
+ "1901.00243": {
+  "title": "Opportunistic Learning: Budgeted Cost-Sensitive Learning from Data Streams",
+  "date": "2019/01/02",
+  "author": "Kachuee, Mohammad"
+ },
+ "2010.02433": {
+  "title": "Active Feature Acquisition with Generative Surrogate Models",
+  "date": "2020/10/06",
+  "author": "Li, Yang"
+ },
+ "1705.10194": {
+  "title": "Adaptive Classification for Prediction Under a Budget",
+  "date": "2017/05/26",
+  "author": "Nan, Feng"
+ },
+ "1705.08500": {
+  "title": "Selective Classification for Deep Neural Networks",
+  "date": "2017/05/23",
+  "author": "Geifman, Yonatan"
+ },
+ "1901.09192": {
+  "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+  "date": "2019/01/26",
+  "author": "Geifman, Yonatan"
+ },
+ "1711.06664": {
+  "title": "Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer",
+  "date": "2017/11/17",
+  "author": "Madras, David"
+ },
+ "2006.01862": {
+  "title": "Consistent Estimators for Learning to Defer to an Expert",
+  "date": "2020/06/02",
+  "author": "Mozannar, Hussein"
+ },
+ "1907.00208": {
+  "title": "Deep Gamblers: Learning to Abstain with Portfolio Theory",
+  "date": "2019/06/29",
+  "author": "Ziyin, Liu"
+ },
+ "2208.02814": {
+  "title": "Conformal Risk Control",
+  "date": "2022/08/04",
+  "author": "Angelopoulos, Anastasios N."
+ },
+ "2110.01052": {
+  "title": "Learn then Test: Calibrating Predictive Algorithms to Achieve Risk Control",
+  "date": "2021/10/03",
+  "author": "Angelopoulos, Anastasios N."
+ },
+ "2402.06529": {
+  "title": "Introspective Planning: Aligning Robots' Uncertainty with Inherent Task Ambiguity",
+  "date": "2024/02/09",
+  "author": "Liang, Kaiqu"
+ },
+ "1711.06406": {
+  "title": "Predicting Driver Attention in Critical Situations",
+  "date": "2017/11/17",
+  "author": "Xia, Ye"
+ },
+ "1705.03854": {
+  "title": "Predicting the Driver's Focus of Attention: the DR(eye)VE Project",
+  "date": "2017/05/10",
+  "author": "Palazzi, Andrea"
+ },
+ "2005.10420": {
+  "title": "Towards Streaming Perception",
+  "date": "2020/05/21",
+  "author": "Li, Mengtian"
+ },
+ "1810.11408": {
+  "title": "Anytime Stereo Image Depth Estimation on Mobile Devices",
+  "date": "2018/10/26",
+  "author": "Wang, Yan"
+ },
+ "1603.08983": {
+  "title": "Adaptive Computation Time for Recurrent Neural Networks",
+  "date": "2016/03/29",
+  "author": "Graves, Alex"
+ },
+ "1709.01686": {
+  "title": "BranchyNet: Fast Inference via Early Exiting from Deep Neural Networks",
+  "date": "2017/09/06",
+  "author": "Teerapittayanon, Surat"
+ },
+ "1711.05187": {
+  "title": "Dynamic Zoom-in Network for Fast Object Detection in Large Images",
+  "date": "2017/11/14",
+  "author": "Gao, Mingfei"
+ },
+ "2010.05300": {
+  "title": "Glance and Focus: a Dynamic Approach to Reducing Spatial Redundancy in Image Classification",
+  "date": "2020/10/11",
+  "author": "Wang, Yulin"
+ },
+ "2102.04906": {
+  "title": "Dynamic Neural Networks: A Survey",
+  "date": "2021/02/09",
+  "author": "Han, Yizeng"
+ },
+ "1903.01534": {
+  "title": "Selective Sensor Fusion for Neural Visual-Inertial Odometry",
+  "date": "2019/03/04",
+  "author": "Chen, Changhao"
+ },
+ "2212.10156": {
+  "title": "Planning-oriented Autonomous Driving",
+  "date": "2022/12/20",
+  "author": "Hu, Yihan"
+ },
+ "2311.10813": {
+  "title": "A Language Agent for Autonomous Driving",
+  "date": "2023/11/17",
+  "author": "Mao, Jiageng"
+ },
+ "2312.14150": {
+  "title": "DriveLM: Driving with Graph Visual Question Answering",
+  "date": "2023/12/21",
+  "author": "Sima, Chonghao"
+ },
+ "2310.01415": {
+  "title": "GPT-Driver: Learning to Drive with GPT",
+  "date": "2023/10/02",
+  "author": "Mao, Jiageng"
+ },
+ "2402.12289": {
+  "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+  "date": "2024/02/19",
+  "author": "Tian, Xiaoyu"
+ },
+ "2312.07488": {
+  "title": "LMDrive: Closed-Loop End-to-End Driving with Large Language Models",
+  "date": "2023/12/12",
+  "author": "Shao, Hao"
+ },
+ "2210.03629": {
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "date": "2022/10/06",
+  "author": "Yao, Shunyu"
+ },
+ "2302.04761": {
+  "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+  "date": "2023/02/09",
+  "author": "Schick, Timo"
+ },
+ "2312.14135": {
+  "title": "V*: Guided Visual Search as a Core Mechanism in Multimodal LLMs",
+  "date": "2023/12/21",
+  "author": "Wu, Penghao"
+ },
+ "2406.09403": {
+  "title": "Visual Sketchpad: Sketching as a Visual Chain of Thought for Multimodal Language Models",
+  "date": "2024/06/13",
+  "author": "Hu, Yushi"
+ },
+ "2502.17422": {
+  "title": "MLLMs Know Where to Look: Training-free Perception of Small Visual Details with Multimodal LLMs",
+  "date": "2025/02/24",
+  "author": "Zhang, Jiarui"
+ },
+ "2305.01870": {
+  "title": "Task-Aware Risk Estimation of Perception Failures for Autonomous Vehicles",
+  "date": "2023/05/03",
+  "author": "Antonante, Pasquale"
+ },
+ "2306.07276": {
+  "title": "Transcendental Idealism of Planner: Evaluating Perception from Planning Perspective for Autonomous Driving",
+  "date": "2023/06/12",
+  "author": "Li, Wei-Xin"
+ },
+ "2210.07913": {
+  "title": "Efficiently Controlling Multiple Risks with Pareto Testing",
+  "date": "2022/10/14",
+  "author": "Laufer-Goldshtein, Bracha"
+ },
+ "2602.17633": {
+  "title": "When to Trust the Cheap Check: Weak and Strong Verification for Reasoning",
+  "date": "2026/02/19",
+  "author": "Kiyani, Shayan"
+ },
+ "2605.17609": {
+  "title": "Adaptive Generate-Rank-Verify: Inference-Time Search with Costly Verification",
+  "date": "2026/05/17",
+  "author": "Dughmi, Shaddin"
+ },
+ "2606.11576": {
+  "title": "AVIS: Adaptive Test-Time Scaling for Vision-Language Models",
+  "date": "2026/06/10",
+  "author": "Jeddi, Ahmadreza"
+ },
+ "2607.05391": {
+  "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+  "date": "2026/07/06",
+  "author": "Kwok, Jacky"
+ },
+ "2606.30919": {
+  "title": "Budget-Adaptive Routing: Skipping the Weak When the Strong Answers Anyway",
+  "date": "2026/06/29",
+  "author": "Geng, Wei"
+ },
+ "2410.18919": {
+  "title": "Optimizing Edge Offloading Decisions for Object Detection",
+  "date": "2024/10/24",
+  "author": "Qiu, Jiaming"
+ },
+ "2509.15674": {
+  "title": "Inference Offloading for Cost-Sensitive Binary Classification at the Edge",
+  "date": "2025/09/19",
+  "author": "Moothedath, Vishnu Narayanan"
+ },
+ "2604.01681": {
+  "title": "Bridging Large-Model Reasoning and Real-Time Control via Agentic Fast-Slow Planning",
+  "date": "2026/04/02",
+  "author": "Chen, Jiayi"
+ },
+ "2404.06940": {
+  "title": "Learning-based Methods for Adaptive Informative Path Planning",
+  "date": "2024/04/10",
+  "author": "Popovic, Marija"
+ },
+ "2602.09127": {
+  "title": "Epistemic Throughput: Fundamental Limits of Attention-Constrained Inference",
+  "date": "2026/02/09",
+  "author": "You, Lei"
+ },
+ "2511.20906": {
+  "title": "DASIP: Dynamic Test-Time Compute Scaling for Robot Control with Stochastic Interpolant Policies",
+  "date": "2025/11/25",
+  "author": "Chun, Inkook"
+ },
+ "2506.12723": {
+  "title": "SP-VLA: A Joint Model Scheduling and Token Pruning Approach for VLA Model Acceleration",
+  "date": "2025/06/15",
+  "author": "Li, Ye"
+ },
+ "2509.22093": {
+  "title": "Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation",
+  "date": "2025/09/26",
+  "author": "Pei, Xiaohuan"
+ },
+ "2511.22998": {
+  "title": "TIM-PRM: Verifying multimodal reasoning with Tool-Integrated PRM",
+  "date": "2025/11/28",
+  "author": "Kuang, Peng"
+ },
+ "2601.03956": {
+  "title": "CoINS: Counterfactual Interactive Navigation via Skill-Aware VLM",
+  "date": "2026/01/07",
+  "author": "Zhou, Kangjie"
+ },
+ "2503.03921": {
+  "title": "CREStE: Scalable Mapless Navigation with Internet Scale Priors and Counterfactual Guidance",
+  "date": "2025/03/05",
+  "author": "Zhang, Arthur"
+ },
+ "2406.05313": {
+  "title": "Traversing Mars: Cooperative Informative Path Planning to Efficiently Navigate Unknown Scenes",
+  "date": "2024/06/08",
+  "author": "Rockenbauer, Friedrich M."
+ },
+ "2310.13324": {
+  "title": "ColAG: A Collaborative Air-Ground Framework for Perception-Limited UGVs' Navigation",
+  "date": "2023/10/20",
+  "author": "Li, Zhehan"
+ },
+ "2603.06049": {
+  "title": "Devil is in Narrow Policy: Unleashing Exploration in Driving VLA Models",
+  "date": "2026/03/06",
+  "author": "Chen, Canyu"
+ },
+ "2406.18665": {
+  "title": "RouteLLM: Learning to Route LLMs with Preference Data",
+  "date": "2024/06/26",
+  "author": "Ong, Isaac"
+ },
+ "2609.35910": {
+  "title": "The Decision Value of Perception Compute",
+  "date": "2026/09/28",
+  "author": "Cong, Hoang Pham"
+ },
+ "2605.00066": {
+  "title": "Do Open-Loop Metrics Predict Closed-Loop Driving? A Cross-Benchmark Correlation Study of NAVSIM and Bench2Drive",
+  "date": "2026/04/30",
+  "author": "Wang, Yiru"
+ },
+ "2604.10856": {
+  "title": "BridgeSim: Unveiling the OL-CL Gap in End-to-End Autonomous Driving",
+  "date": "2026/04/12",
+  "author": "Zhao, Seth Z."
+ },
+ "2511.15279": {
+  "title": "Look, Zoom, Understand: The Robotic Eyeball for Embodied Perception",
+  "date": "2025/11/19",
+  "author": "Yang, Jiashu"
+ }
+}

@@ -1,0 +1,405 @@
+2607.00776	cs.RO	From Prediction Uncertainty to Conformalized Distance Fields for Safe Motion Planning
+2607.01212	cs.AI,cs.RO	FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model
+2607.01378	cs.RO	Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching
+2607.01586	cs.AI,cs.CV,cs.RO	VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment
+2607.01658	cs.CV	Teaching Vision-Language-Action Models What to See and Where to Look
+2607.02092	cs.AI,cs.RO	Guided Action Flow: Value-Guided Sampling for Frozen Vision-Language-Action Policies
+2607.03146	cs.RO	Exp2VLA: Enabling Vision-Language-Action for Drone Navigation from Expert Demonstrations
+2607.03182	cs.AI,cs.RO	AnchorVLA: Bridging Discrete Decisions and Continuous Trajectories for Vision-Language-Action Planning
+2607.03449	cs.AI,cs.RO	HiMe: Hierarchical Embodied Memory for Long-Horizon Vision-Language-Action Control
+2607.03461	cs.CV,cs.LG	WorldBagel: Uncovering the Power of Unified Multimodal Models for Vision-Language-Action-World Modeling
+2607.03693	cs.RO	CoRE-VLA: Towards Scalable and Robust Vision-Language-Action Modeling via Conditional Routing of Experts
+2607.04171	cs.LG,cs.RO	XS-VLA: Teaching Tiny Vision-Language-Action Models with Spatial Supervision and Demonstration Conditioning
+2607.04179	cs.AI,cs.CV	CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving
+2607.04591	cs.AI,cs.RO	Simple-to-Complex Structured Demonstrations for Vision-Language-Action Learning
+2607.04609	cs.RO	SEAM: Smooth Execution of Action-Chunked Motion for Vision-Language-Action Policies
+2607.04637	cs.CV	PixelPilot: Scalable Vision-Language-Action Models for End-to-End Autonomous Driving
+2607.04681	cs.AI,cs.RO	Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning
+2607.04816	cs.RO	CAC-VLA: Context-Gated Action Conditioning for Vision-Language-Action Models
+2607.05180	cs.CV,cs.RO	VLM-CASE: Vision-Language Model Enabled Context-Adaptive Safety Envelopes for Anticipatory Safe Autonomous Driving
+2607.05396	cs.AI,cs.CV,cs.LG,cs.RO	From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model
+2607.06256	cs.RO	Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill Composition
+2607.06370	cs.CV,cs.LG,cs.RO	ActionCache: Training-Free Acceleration for Vision-Language-Action Models with Action Caching and Refinement
+2607.07608	cs.CV,cs.RO	Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation
+2607.08182	cs.AI,cs.CV	LEEVLA: Seeing What Matters in Latent Environment Evolution for Vision-Language-Action
+2607.08375	cs.AI,cs.CV	WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving
+2607.08575	cs.RO	FabriVLA: A Lightweight Vision-Language-Action Model with Conformal Action Chunk Uncertainty
+2607.08974	cs.AI,cs.RO	CLAP: Direct VLM-to-VLA Adaptation via Language-Action Grounding
+2607.09818	cs.AI,cs.CV,cs.RO	TS-Mask VLA: 2D Temporal-Spatial Masking for Vision-Language-Action Model with Effective Bridging
+2607.10172	cs.LG,cs.RO	On the Efficiency of LoRA Fine-Tuning for Vision-Language-Action Models in Industrial Robotic Manipulation
+2607.10180	cs.AI,cs.RO	ActiveFly-Bench: Aligning Embodied Question Answering with Vision-Language-Action for Aerial Embodied Perception
+2607.12287	cs.RO	Reducing Temporal Redundancy for Efficient Vision-Language-Action Inference
+2607.12571	cs.RO	TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
+2607.12931	cs.RO	ExToken: Structured Exploration for Efficient Vision-Language-Action Reinforcement Fine-tuning
+2607.13926	cs.RO	S-squared-VLA: Decoupling Semantic and Spatial Streams in Vision-Language-Action Models for Autonomous Driving
+2607.14280	cs.LG,cs.RO	DiMaS: Distribution Matching for Steering Vision-Language-Action Models
+2607.14635	cs.AI,cs.CV,cs.RO	Action QFormer: Structured Representation Shaping under Action Supervision in Vision-Language-Action Models
+2607.14739	cs.AI,cs.CV	FoMoVLA: Bridging Visual Foresight and Motion Guidance for Vision-Language-Action Models
+2607.14852	cs.RO	Towards Human-like Physical Intelligence: Lifelong Vision-Language-Action Learning for Robotic Manipulation
+2607.15004	cs.RO	CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking
+2607.15330	cs.CV,cs.RO	Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories
+2607.16506	cs.LG,cs.RO	Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models
+2607.16938	cs.AI,cs.CV,cs.LG,cs.RO	What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning
+2607.17442	cs.LG	Calibrated Alzheimer's Conversion Risk in Mild Cognitive Impairment: Persistent Homology of Clinical Trajectories with Conformal Guarantees
+2607.17786	cs.AI,cs.LG,cs.RO	Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models
+2607.18231	cs.RO	FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation
+2607.19399	cs.AI,cs.CV,cs.LG	Leveraging Offline Supervision for Efficient and Generalizable Reinforcement Learning in Large-Scale Vision-Language-Action Models
+2607.20988	cs.AI,cs.CV	HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving
+2607.22409	cs.RO	Conformal Constraint Tightening for Chance-Constrained Motion Planning with Unknown Dynamics
+2607.22997	cs.AI,cs.LG,cs.RO	Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline
+2607.24485	cs.RO	τ: Learning Touch-Augmented Vision-Language-Action Models from Future Visual Supervision
+2607.25487	cs.AI,cs.CV	CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model
+2607.25912	cs.AI,cs.RO	SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models
+2607.26513	cs.RO	Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models
+2607.26991	cs.RO	RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models
+2607.27205	cs.CV,cs.RO	TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM
+2607.29052	cs.RO	Outcome-Guided Distillation: A Teacher-Student Framework to Advance VLM Reasoning in Autonomous Driving
+2607.29169	cs.AI,cs.RO	ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency
+2607.29596	cs.CV,cs.RO	FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling
+2607.29613	cs.CV,cs.RO	WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning
+2608.00569	cs.AI,cs.RO	Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization
+2608.01028	cs.AI,cs.RO	VLAGuard: A Framework for Evaluating and Mitigating Physical Attention Hijacking in Vision-Language-Action Robots within Wireless Sensor Networks
+2608.01265	cs.CV,cs.RO	Hermite Curves as Trajectory Priors for Vision-Language-Action Models
+2608.01573	cs.RO	Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models
+2608.01755	cs.AI	Deferred Exposure of Future Trajectories for Verifiable Reasoning in Autonomous Driving VLMs
+2608.01998	cs.AI	TALSC: Timeliness-Aware Large-Small VLM Collaboration for Infrastructure-Assisted Autonomous Driving
+2608.02197	cs.RO	Look Where It Matters: Adaptive Visual Refinement for Vision-Language-Action Models
+2608.02326	cs.RO	ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation
+2608.02449	cs.CV,cs.RO	MoRAL: Sensor-Grounded BEV Reasoning for Compact VLMs toward Edge-Oriented Autonomous Driving
+2608.02497	cs.RO	Grounded Semantic Re-Binding for Robust Instruction Generalization in Vision-Language-Action Models
+2608.03052	cs.RO	How Should Vision-Language-Action Models Use Proprioceptive State?
+2608.03231	cs.AI,cs.RO	Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking
+2608.03727	cs.RO	Track4Action: Distilling World-Centric 3D Tracker into Vision-Language-Action Policies
+2608.04396	cs.CV	CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention
+2608.04633	cs.RO	Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models
+2608.04765	cs.AI,cs.CV,cs.RO	Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models
+2608.05042	cs.RO	BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation
+2608.05738	cs.RO	In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use
+2608.06729	cs.CV,cs.RO	AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models
+2608.06965	cs.RO	Cross-View Action Consistency for Camera-Robust Vision-Language-Action Policies
+2608.07314	cs.CV,cs.RO	TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models
+2608.07361	cs.CV,cs.RO	Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model
+2608.07596	cs.CV,cs.RO	LIRA: Local Cross-Layer Information Routing for Vision-Language-Action Decoding
+2608.07619	cs.RO	GWM-VLA: Geometry-Aware Latent World Modeling for Vision-Language-Action Learning
+2608.07621	cs.AI,cs.CV,cs.RO	CMU-Drive and V2V-VLA: Cooperative Multi-agent Unified Driving with Reasoning Benchmark and Vehicle-to-Vehicle Vision-Language-Action Models
+2608.08557	cs.CV,cs.LG	OpenVisTool: An Open Recipe for Synthesizing Instructive Visual Tool-Use Trajectories
+2608.08631	cs.LG	Trajectory Design and Budgeted Querying for Digital Twin Calibration
+2608.08725	cs.RO	WA-SpecDec: World-Aware Speculative Decoding for Vision-Language-Action Models
+2608.09202	cs.AI	CRUISE: Vision-Language Model-Guided Uncertainty-Aware Cross-Modal Sensor Fusion for Robust Autonomous Driving
+2608.09333	cs.RO	DH-VLM: Dual-Horizon Cooperative Latent Reasoning for Autonomous Driving
+2608.09381	cs.RO	JEPA-WAM: Learning Vision-Language-Action Policies with Joint-Embedding World Modeling
+2608.09448	cs.CV,cs.RO	VANE: Reliable Test-Time Training for Vision-Language-Action Models via Future Visual Representation Prediction
+2608.10393	cs.AI,cs.RO	Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
+2608.10484	cs.AI,cs.RO	Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models
+2608.10824	cs.CV,cs.RO	Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models
+2608.10976	cs.AI	XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving
+2608.11671	cs.RO	StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models
+2608.12932	cs.AI	FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving
+2608.13026	cs.RO	Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning
+2608.13395	cs.RO	FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving
+2608.13453	cs.AI,cs.CV	UniTexture: Cross-Task Universal Adversarial Textures for Vision-Language-Action Models
+2608.13924	cs.RO	BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control
+2608.14047	cs.AI,cs.CV,cs.RO	Evolve Vision-Language-Action Model into an Agent with On-the-fly Tool-use
+2608.14379	cs.AI,cs.RO	Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation
+2608.14586	cs.AI	Efficient Block-Layer Parallel Inference for Vision-Language-Action on Hybrid Architectures
+2608.14822	cs.CV,cs.RO	Imagining Recovery: Inference-Time Counterfactual Realignment for Vision-Language-Action Models
+2608.15009	cs.CV,cs.RO	ForceU-VLA: A Force-Aware Vision-Language-Action Model for Embodied Ultrasound Scanning
+2608.15285	cs.AI,cs.RO	PhaseLoRA: Control-Regime-Conditioned Low-Rank Adaptation for Continuous-Action Vision-Language-Action Policies
+2608.15475	cs.AI	Bit-Flip Attacks on Vision-Language-Action Models: Action-Decoding Architecture Shapes the Vulnerability
+2608.15502	cs.AI,cs.RO	EcoVLA: Energy-Efficient Device-Edge Co-Inference for Vision-Language-Action Models under Real-Time Constraints
+2608.15573	cs.RO	Not All History Helps: Velocity-Aware Selective Memory for Long-Horizon End-to-End Autonomous Driving
+2608.16074	cs.CV,cs.RO	US-VLA: An Ultrasound Vision-Language-Action Model for Embodied Abdomina
+2608.16503	cs.AI,cs.RO	NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation
+2608.17095	cs.CV	Inference-Time Attention Steering for Vision-Language-Action Driving Models
+2608.17453	cs.RO	EATR-Stereo: Embodiment-Aware Token Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control
+2608.17600	cs.RO	LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models
+2608.18410	cs.LG	Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies
+2608.19891	cs.AI	EXIMO: VLM Guided Exploration of VLA Policies
+2608.20084	cs.AI,cs.RO	Evidence-Gated Task and Motion Planning with Vision-Language Models
+2608.20556	cs.RO	Logic-VLA: A Temporal Logic Conditioned Vision-Language-Action Model
+2608.20791	cs.AI,cs.CV	CertVLA: Certified Defense against Physical Visual Attacks for Vision-Language-Action Models
+2608.21032	cs.RO	Roadside-Cooperative Autonomous Driving: From Data Platform to Vision-Language End-to-End Reasoning
+2608.21247	cs.CV,cs.RO	Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models
+2608.21407	cs.AI,cs.RO	Mamba-based Selective State Space Modeling Improves the Accuracy-Complexity Tradeoff of SmolVLA Vision-Language-Action Experts
+2608.21440	cs.AI,cs.RO	Geo-VLA: Geometry-Aware Vision-Language-Action Planning via Internalization of Map Semantics
+2608.21740	cs.RO	CounterAlign: Counterfactual Supervision for Vision-Language-Action Models
+2608.22419	cs.CV,cs.RO	Robust Bimanual Vision-Language-Action Models via Embarrassingly Simple Modality Masking
+2608.23138	cs.AI,cs.CV,cs.RO	Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation
+2608.23224	cs.AI,cs.CV,cs.RO	Think Only When Needed: Prompt-Authority Control for Selective Slow-Path Intervention in Vision-Language-Action Manipulation
+2608.23320	cs.RO	ROS2SmolVLA: Enabling Small Vision-Language-Action Models for Integration into Industrial-Grade Lightweight Robots
+2608.23478	cs.AI,cs.CV,cs.RO	Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models
+2608.24042	cs.AI,cs.LG,cs.RO	Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models
+2608.24959	cs.CV,cs.RO	GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model
+2608.25308	cs.CV	V-Link: Recovering Lost Visual Representations in Action DiT for Vision-Language-Action Models
+2608.25864	cs.RO	MA-VLA: Multi-Arm Vision-Language-Action Model for Collaboration and Compositional Generalization
+2608.26067	cs.CV	StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models
+2608.26578	cs.CV,cs.RO	TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes
+2608.27124	cs.LG	TRACE-CRC: Trajectory-Adaptive Conformal Risk Control for Multi-Step Channel State Information Prediction
+2608.27550	cs.CV,cs.RO	Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models
+2608.27609	cs.AI,cs.RO	PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models
+2608.29208	cs.LG,cs.RO	AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models
+2608.29749	cs.RO	DriftingVLA: Native One-Step Vision-Language-Action Generation via Per-Dimension Temporal Drifting
+2608.30536	cs.RO	Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks
+2608.30643	cs.RO	Temporal Forcing: 4D Representation Alignment for Vision-Language-Action Models
+2609.00111	cs.CV	Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving
+2609.01281	cs.AI,cs.RO	EmbodiedSkills: World Action Model-augmented Cascaded Skills for Vision-Language-Action Agent
+2609.01404	cs.AI,cs.RO	Evaluating Multimodal LLMs as Generalist Vision-Language-Action Agents for Drone Control: Commanding, Approaching, Tracking and Searching
+2609.01579	cs.RO	SG-AMP: Scene-Graph-Guided Active Perception and Semantics-Aware Motion Planning for Pepper Plants
+2609.02634	cs.RO	Latent Cluster Analysis for Vision-Language-Action Models
+2609.03681	cs.RO	WISE: World-model-guided Imagination Scheduling for Efficient Post-training of Vision-Language-Action Models
+2609.03927	cs.RO	Toward Unified Robot Learning: Bridging Representation, Vision-Language-Action, and World Models
+2609.04277	cs.CV,cs.RO	FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models
+2609.04355	cs.AI,cs.LG,cs.RO	VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models
+2609.05369	cs.CV,cs.RO	Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation
+2609.05533	cs.CV,cs.LG,cs.RO	SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models
+2609.06079	cs.AI,cs.LG	LayerRoute: Action-Conditioned Mixture-of-Layers Routing for Vision-Language-Action Policies
+2609.06114	cs.RO	Where Success Breaks: Failure-Boundary Learning for Robust Vision-Language-Action Models
+2609.06508	cs.RO	VLA-Corrector: Stage-Aware Observable State Understanding for Prompt-Based Closed-Loop Recovery of Vision-Language-Action Policies
+2609.07470	cs.AI,cs.RO	Measuring Language Transfer in Robot Policies: Adding Greek to a Cosmos3 Vision-Language-Action Policy
+2609.07581	cs.RO	ICI-VLA: In-Context Imitation with Spatiotemporally Aligned Demonstrations for Vision-Language-Action Models
+2609.08217	cs.CV,cs.RO	Drive by Hindsight and Foresight: Tool-Grounded Synergistic Reasoning over Hierarchical Memory for Autonomous Driving
+2609.09119	cs.AI,cs.RO	DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination
+2609.09158	cs.AI,cs.RO	TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model
+2609.09925	cs.AI,cs.RO	Time-Frequency Geometric Cross-Attention for Chunked Vision-Language-Action Models
+2609.10405	cs.RO	Frequency-Conditioned Flow Matching for Vision-Language-Action Models
+2609.10915	cs.CV,cs.RO	IMLE-VLA: Fast Single-Step Action Generation for Vision-Language-Action Policies
+2609.12075	cs.LG,cs.RO	Efficient Vision-Language-Action Management and Serving for Robot Factories
+2609.12316	cs.RO	DATAFARM: Distribution-Aligned Task and Motion Planning for Fine-Tuning Vision-Language-Action Models
+2609.13053	cs.AI,cs.LG,cs.RO	Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model
+2609.13231	cs.AI,cs.RO	ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models
+2609.15005	cs.AI,cs.RO	IMPACT-VLA: Interaction-aware Multimodal Propagation Attribution via Counterfactual Trajectories for Vision-Language-Action Policies
+2609.15940	cs.RO	Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies
+2609.16641	cs.RO	SAVLA: Symmetry-Aware Vision-Language-Action Models for Robotic Manipulation
+2609.17021	cs.CV,cs.RO	sensVLA: Spatially-Grounded Vision-Language-Action Model for Autonomous Wheel Loader
+2609.18084	cs.CV,cs.LG,cs.RO	Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models
+2609.18207	cs.LG,cs.RO	Reinforcement Learning for Real-Time Vision-Language-Action Policies
+2609.18259	cs.AI,cs.CV,cs.RO	M2Tok: Multi-head Multi-codebook Discrete Action Tokenization for Vision-Language-Action Models
+2609.18487	cs.AI,cs.CV,cs.RO	ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models
+2609.19104	cs.AI,cs.RO	rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference
+2609.19579	cs.RO	Recovering Aggressively Pruned Vision-Language-Action Models with Offline Hidden-State Distillation
+2609.19669	cs.CV,cs.RO	Beyond Patch Removal: Persistent Adversarial Effects in Vision-Language-Action Policies
+2609.19681	cs.RO	VAST: V2X/Dynamic Map-Aware Autonomous Driving Systems Validation Toolchain
+2609.19923	cs.RO	Co-VLA: Consensus-based Federated Training for Vision-Language-Action Models
+2609.20659	cs.AI,cs.RO	HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface
+2609.20980	cs.RO	ForeTac-VLA: A Forecasting-Based Tactile-Vision-Language-Action Model for Contact-Rich Robotic Manipulation
+2609.21228	cs.AI,cs.CV,cs.RO	FOCAL-VLA: Subtask-Guided Geometry Distillation and Implicit World Modeling for Vision-Language-Action Models
+2609.21246	cs.AI,cs.CV,cs.RO	VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models
+2609.21358	cs.RO	FAN: Foresight Action Normalization for Continual Adaptation of Vision-Language-Action Models
+2609.21659	cs.AI,cs.RO	Outcome-Conditioned End-Effector Geometry Across Vision-Language-Action Policies
+2609.21948	cs.CV,cs.RO	GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments
+2609.22293	cs.AI,cs.CV	Validating, Not Sampling: Region-Level Robustness of Vision-Language and Vision-Language-Action Models
+2609.22335	cs.RO	KerColle: Unlocking Fine-Grained GPU Concurrency in Vision-Language-Action Models
+2609.22684	cs.LG,cs.RO	StateMem: Single-State Residual Memory with Adaptive Inference for Vision-Language-Action Policies
+2609.22854	cs.CV,cs.RO	SmoLSTM: A Compact Vision-Language-Action Model with Recurrent Memory that Persists
+2609.22879	cs.LG	Prioritized Rollouts for Efficient World Model-based Vision-Language-Action Policy Optimization
+2609.22895	cs.RO	H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space
+2609.22973	cs.RO	An Empirical Study and Open Testbed for Federated Fine-Tuning of Vision-Language-Action Models
+2609.23565	cs.AI,cs.CV,cs.RO	MaskVLA: Visual Masking Against Trajectory Overfitting of Vision-Language-Action Model
+2609.23614	cs.RO	CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation
+2609.23968	cs.RO	Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation
+2609.24118	cs.RO	CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies
+2609.24433	cs.AI,cs.RO	FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding
+2609.24525	cs.RO	Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D
+2609.25376	cs.AI,cs.RO	VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models
+2609.25558	cs.LG,cs.RO	HABILIS Brain 0: Geometry-Change Supervision for Vision-Language-Action and Residual Flow Recovery
+2609.25756	cs.RO	MedVLA: A Hierarchical Vision-Language-Action Framework for Closed-Loop Precision Medical Robot Manipulation
+2609.25820	cs.LG,cs.RO	Beyond Reconstruction Error: Analytical and Data-Driven Action Tokenization for Autoregressive Vision-Language-Action Models
+2609.25831	cs.CV,cs.RO	Sometimes You Gotta Run Before You Can Walk: Run-then-Walk Scheduling Strategy for VLM Autonomous Driving
+2609.26071	cs.RO	StrataVLA: Hierarchical and Efficient 3D Geometric Grounding for Vision-Language-Action Models
+2609.26313	cs.RO	SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
+2609.26467	cs.RO	Generalists Act, Specialists Intervene: Modular Stage-Selective Reinforcement Learning for Vision-Language-Action Manipulation
+2609.27450	cs.AI,cs.RO	BEE: Intervention-Adaptive Real-World Reinforcement Learning with Vision-Language-Action Models
+2609.27468	cs.CV	CereVLA: Cerebellum-Inspired Consequence-Aware Residual Governance for Efficient Vision-Language-Action Execution
+2609.27753	cs.CV	AWM-VLA: AlignedWorld Modeling for Efficient and Explainable Vision-Language-Action Policies
+2609.28161	cs.RO	Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies
+2609.28256	cs.AI,cs.CV,cs.RO	MemBodied: Recurrent Associative Memory for Vision-Language-Action Models
+2609.28314	cs.RO	TANDEM: Task and Motion Planning with As-Needed Demonstrations for Efficient Vision-Language-Action Model Fine-tuning
+2609.28838	cs.LG,cs.RO	Uncertainty-Gated Exploration Noise Suppresses Task Collapse in Online RL Fine-Tuning of a Flow-Matching Vision-Language-Action Policy
+2609.28865	cs.CV,cs.RO	Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models
+2609.29204	cs.RO	AdaHVLA: Adaptive Harnesses for Long-Horizon Vision-Language-Action Execution
+2609.30709	cs.AI,cs.CV	VLALight: Lightweight Vision-Language-Action Models for Emergency-Aware Traffic Signal Control
+2609.30833	cs.RO	Fast Plans, Faithful Actions: Closing the Planning-Execution Gap in Hierarchical Vision-Language-Action Models
+2609.30868	cs.RO	VLaRL: Augmenting Vision-Language-Action Models with Simulation-Trained Latent-Conditioned Residual RL
+2609.30996	cs.AI,cs.LG	The Linear Representation Hypothesis for Vision-Language-Action Models
+2609.31717	cs.CV,cs.RO	PanoFuse: Panorama-Enhanced Vision-Language-Action Learning with Decoupled Semantic-Geometric Routing
+2609.31792	cs.AI,cs.RO	ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts
+2609.32108	cs.LG,cs.RO	SAMBAR: Selective Anchoring via Method of Multipliers for Balanced Knowledge Acquisition and Retention in Vision-Language-Action Models
+2609.32157	cs.CV,cs.RO	CausalDriveBench: Evaluating Causal Reasoning in Vision-Language-Action Models for Autonomous Driving
+2609.32193	cs.CV	Devol-ONE: One Autoregressive Mixture of Transformers to Unify Vision-Language-Action and Latent World Modeling
+2609.32239	cs.CV,cs.LG,cs.RO	Federated Subspace Guided Vision-Language-Action Policy Distillation for Non-IID Multi-Robot Manipulation
+2609.32253	cs.AI,cs.RO	DS-VLA: A Dendritic-inspired Vision-Language-Action Model for Robust Action Control
+2609.32550	cs.AI,cs.LG,cs.RO	Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?
+2609.32634	cs.RO	PF-RL: Progress Field Reinforcement Learning via Goal-Conditioned Value Geometry for Vision-Language-Action Models
+2609.32645	cs.AI	From Scene Graphs to Answers: Selective Neuro-Symbolic Reasoning for Autonomous Driving
+2609.33197	cs.AI,cs.RO	TAO-DA: Towards Autonomous Operation--A Dual-Arm Vision-Language-Action Model for Coordinated Manipulation
+2609.33256	cs.RO	ActionGround: Training-Free Runtime Refinement of Frozen VLA Policies
+2609.33575	cs.RO	SLIP-VLA: Single-Step Latent Imagination for Policy Learning in Vision-Language-Action Models
+2609.33647	cs.RO	InfraVLA: Extending Vision-Language-Action Navigation with Infrastructure Cameras
+2609.34061	cs.CV,cs.RO	Quantile Head for Vision-Language-Action Models
+2609.34170	cs.RO	RAVEL: Asynchronous Rolling Inference for Flow-Based Vision-Language-Action Models
+2609.34175	cs.RO	FailPatch: Failure Residual Patching for Vision-Language-Action Models
+2609.34206	cs.CV	WorldGuide: Learning Success-Failure Boundaries in Latent World Models for Vision-Language-Action Policies
+2609.34319	cs.CV,cs.RO	Text-Vision Synergistic Token Caching: A Training-Free Framework for Efficient Vision-Language-Action Inference
+2609.34384	cs.CV,cs.RO	RoboIRGBench: Benchmarking Implicit Referential Grounding in Vision-Language-Action Models
+2609.34467	cs.LG	Alignment-Guided Flow Transformer for Efficient Vision-Language-Action Policy Learning
+2609.34550	cs.RO	Gaze Prompts: Temporally Dense Human Attention for Vision-Language-Action Fine-Tuning
+2609.34792	cs.CV	D$^2$-VLA: Dual-Memory Dual-Frequency Vision-Language-Action Model For Long Dynamic Manipulation
+2609.35003	cs.AI,cs.RO	Learning to Act under Visual Interruptions with Vision-Language-Action Models
+2609.35078	cs.CV	RefineDrive: Reliable Failure-Guided Learning for Vision-Language-Action Driving
+2609.36352	cs.CV,cs.LG,cs.RO	StructRL: Online Structured Reinforcement Learning for Long-Horizon Vision-Language-Action Tasks
+2609.36416	cs.AI,cs.CV,cs.LG,cs.RO	FineART: Fine-Grained Annotated Robotic Trajectory Dataset and Vision-Language-Action Model for Bimanual Manipulation
+2609.36588	cs.AI,cs.RO	Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning
+2609.36915	cs.AI,cs.RO	AeroManip-VLA: Scalable Vision-Language-Action Learning for Aerial Manipulation with RL-Generated Demonstrations
+2609.36934	cs.AI	VLALight: A Vision-Language-Action Model for Traffic Signal Control
+2609.36967	cs.RO	Beyond Token Importance: Preserving Spatial Scaffolds for Efficient Vision-Language-Action Inference
+2609.37046	cs.CV	Speed in the Blind Spot: An Interpretability Analysis of Dynamic Perception in VLMs for Autonomous Driving
+2609.37165	cs.LG,cs.RO	Disentangling Spurious Correlations in Vision-Language-Action Models via Predicting Domain-Invariant Latent Lookahead
+2609.37307	cs.RO	ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
+2609.37771	cs.RO	Faster and Better? Benchmark Bugs and Design Limitations Distort the Evaluation of Vision-Language-Action Acceleration
+2609.38616	cs.CV,cs.LG,cs.RO	Correcting WHERE, Preserving HOW: Compositional Generalization for Vision-Language-Action Models via Referential Guidance
+2609.38641	cs.CV,cs.RO	Vision-Language-Action Autonomous Driving Agent with Language-based Memory
+2609.39178	cs.CV,cs.RO	Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics
+2609.39324	cs.CV,cs.LG,cs.RO	MotionWeave: Learning Motion-Centered Future Dynamics for Vision-Language-Action Policies
+2609.39794	cs.CV,cs.RO	Inline Memory Meets Reusable Skills: Memory-centric Framework for Vision-Language-Action Model
+2609.39820	cs.AI,cs.RO	Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models
+2609.40007	cs.CV,cs.RO	Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
+2610.00601	cs.AI,cs.RO	When Reasoning Helps Action: Monitoring and Steering Chain-of-Thought in Vision-Language-Action Policies
+2610.00899	cs.AI,cs.LG,cs.RO	TOAST: Stochastic Robot Action Tokenization for Autoregressive Vision-Language-Action Models
+2610.00981	cs.CV,cs.RO	NarrativeFlow: Flow-Based Vision-Language-Action Model Using Robot Velocity Fields
+2610.01083	cs.RO	WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
+2610.01531	cs.AI,cs.CV	Towards Reliable Vision-Language Models for Autonomous Driving
+2610.01741	cs.CV	ATI-VLA: Action-Centric Predictive Vision-Language-Action Models via Actionable Alignment Then Adaptive Injection
+2610.01856	cs.RO	ChunkVLA-AM: Parallel Action Chunking for Vision-Language-Action Robot Control in Additive Manufacturing
+2610.02323	cs.CV,cs.RO	World-Calibrated Proposal-to-Action Flow for Vision-Language-Action Models
+2610.02666	cs.CV	CHASE-VLA: Post-Training Quantization Framework for Vision-Language-Action Models with Chunk-Aware Scale Estimation
+2610.02784	cs.RO	SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?
+2610.02898	cs.RO	MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models
+2610.04616	cs.CV,cs.RO	PerturBot: Breaking Shortcut Priors in Vision-Language-Action Models with Perturbative Training
+2610.04805	cs.CV,cs.RO	ExStereo: Lifting 2D Vision-Language-Action Models to 3D with Explicit Stereo Representations
+2610.05026	cs.CV,cs.RO	GeoBridge-VLA: Geometry-Aware Residual Adaptation for Vision-Language-Action Models
+2610.05062	cs.RO	Beyond LLM Serving: Characterizing Vision-Language-Action Workloads for Embodied AI System Design
+2610.05166	cs.AI,cs.RO	A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies
+2610.05230	cs.AI,cs.RO	Vela: Scaling Vision-Language-Action Models with Adaptive Action Curve Parametrization
+2610.05492	cs.LG	When Does Retrieval Help? A Study of In-Context Adaptation in Vision-Language-Action Models
+2610.05719	cs.RO	When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models
+2610.05878	cs.AI,cs.LG,cs.RO	OGAM: Connecting Systematic Testing to Runtime Assurance through Object-Grounded Attention Monitoring for VLA Policies
+2610.06184	cs.RO	Arm-wise Compositional Generalization in Dual-Arm Vision-Language-Action Models
+2610.06271	cs.AI,cs.RO	VLA-ZO: Fast Zeroth-Order Adaptation for Vision-Language-Action Models
+2610.06318	cs.AI,cs.CV	Wiring Matters: Injection Topology and Initialization of Affordance Heads in Vision-Language-Action Policies
+2610.06926	cs.RO	SWAP: Stepwise Action Policy Routing for Vision-Language-Action Models
+2610.07756	cs.RO	StairVLA: Stage-Aware Hierarchical Action Generation for Vision-Language-Action Models
+2610.07946	cs.AI,cs.RO	Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution
+2610.08133	cs.CV,cs.RO	VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models
+2610.08150	cs.RO	ViDAL: A Visual Dynamics-Grounded Action Latent Space for Vision-Language-Action Models
+2610.08444	cs.RO	ActTune: Action-Aware Precision and GPU Operating-Point Adaptation for Energy-Efficient Vision-Language-Action Inference
+2610.08526	cs.CV,cs.RO	WareFly-VLA: A Vision-Language-Action Framework for UAV Navigation and Human Tracking in Smart Warehouses
+2610.08917	cs.LG	CARE: Certifying Acceleration for Vision-Language-Action Inference
+2610.09016	cs.AI	PAIR: Bridging Perception and Action in Vision-Language-Action Models
+2610.09144	cs.AI	DIVA: Dual-Space Intent-Aware Visual Attenuation for Vision-Language-Action Policies
+2610.09451	cs.RO	TempoBridge: Language-Guided Tempo Control for Vision-Language-Action Policies
+2610.09462	cs.RO	TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks
+2610.09496	cs.AI,cs.LG,cs.RO	Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models
+2610.09940	cs.CV,cs.RO	Juno: Taming Predictive Latents for Vision-Language-Action Models
+2610.10178	cs.RO	Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding
+2610.10390	cs.CV	Explicit Geometric Chain-of-Thought for Vision-Language-Action in Autonomous Driving
+2610.10526	cs.LG,cs.RO	Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models
+2610.11508	cs.CV,cs.RO	WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models
+2610.11771	cs.RO	PathTime-VLA: Path-Time Decoupling for Factorized Post-Training of Vision-Language-Action Policies
+2610.12090	cs.AI	Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models
+2610.12285	cs.RO	PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies
+2610.12696	cs.RO	Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models
+2610.12914	cs.AI	OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models
+2610.12936	cs.RO	Evo-World: A Lightweight Vision-Language-Action Model with Future Motion Prediction via Optical-Flow Supervision
+2610.13212	cs.AI,cs.RO	Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models
+2610.13262	cs.CV,cs.RO	Dual-Stream Memory for Vision-Language-Action Policies
+2610.13516	cs.AI,cs.RO	RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors
+2610.14155	cs.CV,cs.RO	Axiom-0: Hierarchical Self-Refinement for Vision-Language-Action Policies
+2610.14415	cs.RO	Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation
+2610.14704	cs.RO	PRISM: Precision Forcing for Generalist Vision-Language-Action Policies
+2610.14885	cs.RO	Verify, Act, Distill: Turning Test-Time Compute into Test-Time Adaptation for Vision-Language-Action Models
+2610.15666	cs.CV	A Persian Vision-Language-Action Dataset and Benchmark for Ambiguity- and Infeasibility-Aware Instruction-to-Plan Grounding
+2610.15675	cs.CV,cs.RO	Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning
+2610.16567	cs.AI,cs.CV,cs.RO	VLA-GAUGE: Systematically Evaluating Generalization and Robustness in Vision-Language-Action Models
+2610.16634	cs.CV,cs.RO	Language2Drive: Do Vision-Language-Action Models Really Follow the Instructions in Autonomous Driving?
+2610.17540	cs.AI,cs.RO	TacitVLA: Reasoning Vision-Language-Action Models Without Reasoning Latency
+2610.18650	cs.RO	ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures
+2610.18843	cs.AI,cs.RO	LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models
+2610.19224	cs.RO	End-to-End Vision-Language-Action Policies for Autonomous Lunar Rover Docking
+2610.19517	cs.AI,cs.RO	VLRLA: Deployment-Time Adaptation of Vision-Language-Action Models through In-Context Reinforcement Learning
+2610.19651	cs.CV	SPECTRA-VLA: Base-Fine Hyperspectral Token Transfer at Frozen Vision-Language-Action Interfaces
+2610.19746	cs.RO	One-shot Human Video-Guided Adaptation for Vision-Language-Action Models
+2610.19825	cs.CV,cs.RO	What Matters for World Modeling in Vision-Language-Action Models?
+2610.20223	cs.RO	ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction
+2610.20627	cs.CV,cs.LG,cs.RO	BD-HazardVLM: Probing Vision-Language Models for Latent Defensive-Driving Hazards in Bangladesh Road Scenes
+2610.20840	cs.LG,cs.RO	A Phenomenology of Neural Geometry in Vision-Language-Action Models
+2610.21160	cs.RO	When to Ask for Help: A Decision-Theoretic Account and Measurement Standard for Slow-Module Scheduling in Dual-System Vision-Language-Action Models
+2610.21251	cs.CV,cs.RO	Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models
+2610.21306	cs.CV	VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models
+2610.21362	cs.AI,cs.RO	LTM: Latent Transition Based In-Context Memory for Vision-Language-Action Models
+2610.21522	cs.RO	Multi-Teacher On-Policy Distillation for Flow-Based Vision-Language-Action Models
+2610.21915	cs.RO	What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning
+2610.22146	cs.RO	FastVLA: Task-Conditioned and Temporally Adaptive Visual Token Compression for Efficient Vision-Language-Action Models
+2610.22556	cs.LG,cs.RO	When Plans Change, Remember: Replanning-Guided Visual Memory for Vision-Language-Action Models
+2610.22951	cs.CV,cs.RO	MambaAct: Efficient Mamba Action Experts for Flow-Matching Vision-Language-Action Models
+2610.23271	cs.LG,cs.RO	NestedVLA: Learning to Consolidate and Generate Skills for Vision-Language-Action Models
+2610.23372	cs.LG,cs.RO	Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action Systems
+2610.23378	cs.RO	Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation
+2610.23566	cs.RO	Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization
+2610.23880	cs.RO	AutoPruner: Agentic Depth Pruning for Vision-Language-Action Models
+2610.24256	cs.RO	TrajEdit: Real-Time Flow-Matching Trajectory Adaptation via FlowEdit and CBF Safety Filter
+2610.24705	cs.RO	Relational Spatial Alignment for Vision-Language-Action Models
+2610.25407	cs.RO	AeroDASH: Asynchronous Vision-Language-Action Control for Continuous UAV Flight
+2610.25734	cs.CV,cs.RO	Think Densely, Act Sparsely: Latent Expert Cognitive Chains for Vision-Language-Action Autonomous Driving
+2610.25961	cs.AI,cs.RO	PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models
+2610.26287	cs.AI,cs.RO	Robotic Photography System based on Vision-Language-Action Model
+2610.26487	cs.AI,cs.RO	SPAR: Structural Pruning and Action Recovery for Vision-Language-Action Models
+2610.26584	cs.RO	HAF-VLA: Hierarchical Action Flow Framework for Humanoid Vision-Language-Action Control
+2610.26717	cs.RO	Robot Learning with Vision-Language-Action Models for Agricultural Manipulation
+2610.27277	cs.LG,cs.RO	What Would Removing This Corruption Change? Failure Attribution for Vision-Language-Action Models
+2610.27861	cs.RO	RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation
+2610.28109	cs.RO	FIT-MAC: A Closed-Loop Multi-Agent Framework for Robust Vision-Language-Action Models
+2610.28166	cs.RO	Reasoning as a Distribution: Generative Plan Latents for Vision-Language-Action Models
+2610.29730	cs.LG,cs.RO	Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
+2610.29866	cs.CV	GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models
+2610.30953	cs.AI	Measuring the Reasoning-Action Coupling in Driving Vision-Language-Action Models through Counterfactuals
+2610.31423	cs.AI,cs.RO	FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models
+2610.31427	cs.RO	FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies
+2610.31613	cs.RO	Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
+2610.32431	cs.AI	When to Stop Penalizing Actions? Martingale GRPO for VLA Reinforcement Learning
+2610.33074	cs.AI,cs.CV	AGQ: Action-Guided Ultra-Low-Bit Quantization for Vision-Language-Action Models
+2610.33650	cs.AI	TAD: Distilling Vision-Language-Action Policies from Teacher Trajectories Alone
+2610.33658	cs.AI	Power-of-Two Leaky Integrate-and-Fire Neurons for Event-Driven Vision-Language-Action Inference
+2610.34108	cs.CV,cs.RO	RoboDuo: Attempt, Check and Atomic Recovery through Code for Vision-Language-Action Models
+2610.34186	cs.RO	HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience
+2610.34251	cs.AI	Variational Cognitive Memory Abstraction for Long-Horizon Vision-Language-Action Models
+2610.34519	cs.AI,cs.CV,cs.LG,cs.RO	TRIAGE: Efficient Vision-Language-Action Inference Needs Both Reuse and Pruning
+2610.34689	cs.CV	RSKD: Grounding Semantic Consistency in Driving VLMs via Distillation
+2610.34837	cs.AI	Beyond Behaviour: A Stimulus-Response Safety Evaluation of Vision-Language-Action Models
+2610.35010	cs.RO	JevVLA: Jev-Inspired Energy-Based Adaptation for Vision-Language-Action Policies
+2610.35289	cs.AI,cs.RO	Reward-Guided RRT* for Budgeted Task and Motion Planning
+2610.36765	cs.CV	Evaluation-Guided Demonstration Refinement for Vision-Language-Action Policies: The Winning Entry in the MetaFine Open Competition
+2610.37219	cs.CV,cs.RO	Vision-Language-Action or World-Action? Just Action Models
+2610.37299	cs.LG	Structured Representation Probing for Risk Anticipation in End-to-End Autonomous Driving
+2610.37378	cs.RO	VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via Reinforcement Learning
+2610.37381	cs.CV,cs.LG,cs.RO	PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations
+2610.38661	cs.RO	Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models
+2610.39287	cs.RO	OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation
+2610.39543	cs.RO	From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models
+2610.40026	cs.RO	RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability, and Research Evidence
+2610.40373	cs.CV,cs.RO	HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model
+2610.41408	cs.CV,cs.LG,cs.RO	SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models
+2610.41696	cs.LG	From fleet trajectories to single-cell promises: hierarchically weighted conformal prediction for battery SOH monitoring
+2611.00231	cs.AI,cs.LG,cs.RO	Spectral and Conformal: Neural Network Methods for Calibrated Trajectory Prediction and Control-Point Intervals
+2611.00394	cs.AI,cs.RO	CalVLA: Shaping Native Confidence in Vision-Language-Action Policies with Outcome Supervision
+2611.00522	cs.LG,cs.RO	Behavioral Steering of Vision-Language-Action Models in the Low-Parameter Regime
+2611.00896	cs.RO	Verifying Test-State Identity in Paired Evaluation of Vision-Language-Action Models
+2611.01011	cs.AI	Leap-VLA: High-Rate Robot Control from a Low-Rate VLM Backbone
+2611.01390	cs.LG,cs.RO	Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency
+2611.01713	cs.AI,cs.RO	Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models
+2611.02240	cs.RO	When to Probe and When to Act: Clarity-Aware Risk-Adaptive Control for Interactive Driving
+2611.02777	cs.RO	Beyond Policy Patches: Distilling RL Specialists into Vision-Language-Action Policies
+2611.05093	cs.RO	LoopQ: Fair, Closed-Loop Evaluation of Quantized Vision-Language-Action Models
+2611.06160	cs.CV	DSRS: Teaching MLLMs to Perceive, Reason, and Segment in Complex Driving Scenes
+2611.06204	cs.AI,cs.RO	CoSafe: Cooperative Runtime Safety Assurance for Mixed-Traffic Autonomous Driving
+2611.06918	cs.CV	From Pixels to Actions - Towards Native Vision-Language-Action Policies
+2611.08425	cs.AI,cs.RO	Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing

@@ -1,0 +1,408 @@
+2507.00319	cs.RO	When Digital Twins Meet Large Language Models: Realistic, Interactive, and Editable Simulation for Autonomous Driving
+2507.00525	cs.AI,cs.CV	Box-QAymo: Box-Referring VQA Dataset for Autonomous Driving
+2507.00603	cs.CV	World4Drive: End-to-End Autonomous Driving via Intention-aware Physical Latent World Model
+2507.00707	cs.CV	BEV-VAE: Multi-view Image Generation with Spatial Consistency for Autonomous Driving
+2507.00709	cs.AI,cs.CV	TopoStreamer: Temporal Lane Segment Topology Reasoning in Autonomous Driving
+2507.01198	cs.AI,cs.RO	Search-Based Robot Motion Planning With Distance-Based Adaptive Motion Primitives
+2507.01735	cs.AI,cs.CV,cs.LG	ECCV 2024 W-CODA: 1st Workshop on Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving
+2507.03878	cs.RO	DK-RRT: Deep Koopman RRT for Collision-Aware Motion Planning of Space Manipulators in Dynamic Debris Environments
+2507.04002	cs.CV,cs.RO	NRSeg: Noise-Resilient Learning for BEV Semantic Segmentation via Driving World Models
+2507.04049	cs.CV,cs.RO	DIVER: Reinforced Diffusion Breaks Imitation Bottlenecks in End-to-End Autonomous Driving
+2507.04123	cs.AI,cs.CV	Towards Accurate and Efficient 3D Object Detection for Autonomous Driving: A Mixture of Experts Computing System on Edge
+2507.04503	cs.CV,cs.RO	U-ViLAR: Uncertainty-Aware Visual Localization for Autonomous Driving via Differentiable Association and Registration
+2507.04790	cs.AI,cs.CV,cs.LG,cs.RO	Interaction-Merged Motion Planning: Effectively Leveraging Diverse Motion Datasets for Robust Planning
+2507.05227	cs.CV,cs.LG,cs.RO	NavigScene: Bridging Local Perception and Global Navigation for Beyond-Visual-Range Autonomous Driving
+2507.05251	cs.AI,cs.RO	Action Space Reduction Strategies for Reinforcement Learning in Autonomous Driving
+2507.05661	cs.CV,cs.RO	3DGS_LSR:Large_Scale Relocation for Autonomous Driving Based on 3D Gaussian Splatting
+2507.05710	cs.RO	DRO-EDL-MPC: Evidential Deep Learning-Based Distributionally Robust Model Predictive Control for Safe Autonomous Driving
+2507.05754	cs.AI,cs.RO	LeAD: The LLM Enhanced Planning System Converged with End-to-end Autonomous Driving
+2507.05932	cs.CV	TigAug: Data Augmentation for Testing Traffic Light Detection in Autonomous Driving Systems
+2507.07444	cs.RO	Towards Safe Autonomous Driving: A Real-Time Safeguarding Concept for Motion Planning Algorithms
+2507.08563	cs.LG	STRAP: Spatial-Temporal Risk-Attentive Vehicle Trajectory Prediction for Autonomous Driving
+2507.09095	cs.LG	Temporal Misalignment Attacks against Multimodal Perception in Autonomous Driving
+2507.09214	cs.CV	Stereo-based 3D Anomaly Object Detection for Autonomous Driving: A New Dataset and Baseline
+2507.09309	cs.RO	Informed Hybrid Zonotope-based Motion Planning Algorithm
+2507.09383	cs.LG,cs.RO	Real-Time Adaptive Motion Planning via Point Cloud-Guided, Energy-Based Diffusion and Potential Fields
+2507.09993	cs.CV	3DGAA: Realistic and Robust 3D Gaussian-based Adversarial Attack for Autonomous Driving
+2507.10749	cs.RO	RCG: Safety-Critical Scenario Generation for Robust Autonomous Driving via Real-World Crash Grounding
+2507.11211	cs.RO	MPC-based Coarse-to-Fine Motion Planning for Robotic Object Transportation in Cluttered Environments
+2507.11940	cs.RO	IANN-MPPI: Interaction-Aware Neural Network-Enhanced Model Predictive Path Integral Approach for Autonomous Driving
+2507.12137	cs.CV	AD-GS: Object-Aware B-Spline Gaussian Splatting for Self-Supervised Autonomous Driving
+2507.12499	cs.LG,cs.RO	ReAL-AD: Towards Human-Like Reasoning in End-to-End Autonomous Driving
+2507.12762	cs.CV,cs.LG	World Model-Based End-to-End Scene Generation for Accident Anticipation in Autonomous Driving
+2507.12800	cs.RO	FFI-VTR: Lightweight and Robust Visual Teach and Repeat Navigation based on Feature Flow Indicator and Probabilistic Motion Planning
+2507.12977	cs.RO	Non-differentiable Reward Optimization for Diffusion-based Autonomous Motion Planning
+2507.13162	cs.AI,cs.CV,cs.LG	Orbis: Overcoming Challenges of Long-Horizon Prediction in Driving World Models
+2507.13373	cs.CV	Butter: Frequency Consistency and Hierarchical Fusion for Autonomous Driving Object Detection
+2507.13940	cs.RO	NeHMO: Neural Hamilton-Jacobi Reachability Learning for Decentralized Safe Multi-Arm Motion Planning
+2507.14456	cs.CV,cs.RO	GEMINUS: Dual-aware Global and Scene-Adaptive Mixture-of-Experts for End-to-End Autonomous Driving
+2507.14903	cs.RO	CoMoCAVs: Cohesive Decision-Guided Motion Planning for Connected and Autonomous Vehicles with Multi-Policy Reinforcement Learning
+2507.15088	cs.RO	Search-Based Autonomous Vehicle Motion Planning Using Game Theory
+2507.15782	cs.RO	Interleaved LLM and Motion Planning for Generalized Multi-Object Collection in Large Scene Graphs
+2507.16833	cs.LG	Exploring the Limitations of kNN Noisy Feature Detection and Recovery for Self-Driving Labs
+2507.17317	cs.RO	HuNavSim 2.0: An Enhanced Human Navigation Simulator for Human-Aware Robot Navigation
+2507.17342	cs.CV	DeMo++: Motion Decoupling for Autonomous Driving
+2507.17479	cs.CV,cs.LG	SRMambaV2: Biomimetic Attention for Sparse Point Cloud Upsampling in Autonomous Driving
+2507.17596	cs.AI,cs.CV,cs.LG,cs.RO	PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving
+2507.17679	cs.RO	Safety Assurance for Quadrotor Kinodynamic Motion Planning
+2507.18763	cs.CV,cs.RO	Diffusion-FS: Multimodal Free-Space Prediction via Diffusion for Autonomous Driving
+2507.19146	cs.LG,cs.RO	Diverse and Adaptive Behavior Curriculum for Autonomous Driving: A Student-Teacher Framework with Multi-Agent RL
+2507.19370	cs.CV	BEV-LLM: Leveraging Multimodal BEV Maps for Scene Captioning in Autonomous Driving
+2507.19881	cs.AI,cs.CV	FedS2R: One-Shot Federated Domain Generalization for Synthetic-to-Real Semantic Segmentation in Autonomous Driving
+2507.19883	cs.RO	Bridging Simulation and Usability: A User-Friendly Framework for Scenario Generation in CARLA
+2507.20397	cs.CV	VESPA: Towards un(Human)supervised Open-World Pointcloud Labeling for Autonomous Driving
+2507.20901	cs.CV	Event-Based De-Snowing for Autonomous Driving
+2507.21423	cs.AI,cs.CV,cs.LG,cs.RO	MapDiffusion: Generative Diffusion for Vectorized Online HD Map Construction and Uncertainty Estimation in Autonomous Driving
+2507.21585	cs.AI	SafeDriveRAG: Towards Safe Autonomous Driving with Knowledge Graph-based Retrieval-Augmented Generation
+2507.21610	cs.CV,cs.RO	Research Challenges and Progress in the End-to-End V2X Cooperative Autonomous Driving Competition
+2507.21872	cs.AI	MultiEditor: Controllable Multimodal Object Editing for Driving Scenarios Using 3D Gaussian Splatting Priors
+2507.22769	cs.RO	Bayesian Optimization applied for accelerated Virtual Validation of the Autonomous Driving Function
+2507.23309	cs.CV	PriorFusion: Unified Integration of Priors for Robust Road Perception in Autonomous Driving
+2507.23324	cs.RO	A Framework for Human-Reason-Aligned Trajectory Evaluation in Automated Vehicles
+2507.23540	cs.AI,cs.CV,cs.RO	A Unified Perception-Language-Action Framework for Adaptive Autonomous Driving
+2507.23599	cs.CV	DA-Occ: Direction-Aware 2D Convolution for Efficient and Geometry-Preserving 3D Occupancy Prediction in Autonomous Driving
+2507.23683	cs.CV	I2V-GS: Infrastructure-to-Vehicle View Transformation with Gaussian Splatting for Autonomous Driving Data Generation
+2508.00154	cs.LG,cs.RO	Data-Driven Motion Planning for Uncertain Nonlinear Systems
+2508.00299	cs.AI,cs.CV,cs.RO	Controllable Pedestrian Video Editing for Multi-View Driving Scenarios via Motion Sequence
+2508.00589	cs.CV,cs.RO	Context-based Motion Retrieval using Open Vocabulary Methods for Autonomous Driving
+2508.01158	cs.AI	H2C: Hippocampal Circuit-inspired Continual Learning for Lifelong Trajectory Prediction in Autonomous Driving
+2508.01583	cs.RO	Adverse Weather-Independent Framework Towards Autonomous Driving Perception through Temporal Correlation and Unfolded Regularization
+2508.01704	cs.CV	LT-Gaussian: Long-Term Map Update Using 3D Gaussian Splatting for Autonomous Driving
+2508.01778	cs.CV,cs.RO	DiffSemanticFusion: Semantic Raster BEV Fusion for Autonomous Driving via Online HD Map Diffusion
+2508.01922	cs.RO	Beyond Simulation: Benchmarking World Models for Planning and Causality in Autonomous Driving
+2508.02287	cs.RO	Framework for Robust Motion Planning of Tethered Multi-Robot Systems in Marine Environments
+2508.02350	cs.RO	Adaptive Lattice-based Motion Planning
+2508.02919	cs.RO	Context-aware Risk Assessment and Its Application in Autonomous Driving
+2508.04066	cs.AI,cs.RO	DRIVE: Dynamic Rule Inference and Verified Evaluation for Constraint-Aware Autonomous Driving
+2508.04146	cs.RO	Industrial Robot Motion Planning with GPUs: Integration of cuRobo for Extended DOF Systems
+2508.04384	cs.RO	Incorporating Stochastic Models of Controller Behavior into Kinodynamic Efficiently Adaptive State Lattices for Mobile Robot Motion Planning in Off-Road Environments
+2508.05027	cs.RO	Benchmarking Shortcutting Techniques for Multi-Robot-Arm Motion Planning
+2508.05167	cs.CV	PhysPatch: A Physically Realizable and Transferable Adversarial Patch Attack for Multimodal Large Language Models-based Autonomous Driving Systems
+2508.05236	cs.CV	ArbiViewGen: Controllable Arbitrary Viewpoint Camera Data Generation for Autonomous Driving via Stable Diffusion Models
+2508.05402	cs.CV,cs.RO	DistillDrive: End-to-End Multi-Mode Autonomous Driving Distillation by Isomorphic Hetero-Source Planning Model
+2508.06074	cs.AI,cs.RO	ME$^3$-BEV: Mamba-Enhanced Deep Reinforcement Learning for End-to-End Autonomous Driving with BEV-Perception
+2508.06095	cs.RO	Incremental Language Understanding for Online Motion Planning of Robot Manipulators
+2508.06113	cs.CV,cs.RO	GMF-Drive: Gated Mamba Fusion with Spatial-Aware BEV Representation for End-to-End Autonomous Driving
+2508.06404	cs.RO	V*: An Efficient Motion Planning Algorithm for Autonomous Vehicles
+2508.06529	cs.CV,cs.LG	RMT-PPAD: Real-time Multi-task Learning for Panoptic Perception in Autonomous Driving
+2508.06534	cs.AI,cs.RO	MetAdv: A Unified and Interactive Adversarial Testing Platform for Autonomous Driving
+2508.06642	cs.LG	Benchmarking Self-Driving Labs
+2508.07029	cs.AI,cs.LG,cs.RO	From Imitation to Optimization: A Comparative Study of Offline Learning for Autonomous Driving
+2508.07080	cs.AI,cs.RO	An Evolutionary Game-Theoretic Merging Decision-Making Considering Social Acceptance for Autonomous Driving
+2508.07502	cs.RO	A Learning-Based Framework for Collision-Free Motion Planning
+2508.07552	cs.CV	Decoupled Functional Evaluation of Autonomous Driving Models via Feature Map Quality Scoring
+2508.07560	cs.CV,cs.RO	Progressive Bird's Eye View Perception for Safety-Critical Autonomous Driving: A Comprehensive Survey
+2508.07686	cs.RO	Risk Map As Middleware: Towards Interpretable Cooperative End-to-end Autonomous Driving for Risk-Aware Planning
+2508.07838	cs.CV	CBDES MoE: Hierarchically Decoupled Mixture-of-Experts for Functional Modules in Autonomous Driving
+2508.09032	cs.AI,cs.CV,cs.RO	Spatial Traces: Enhancing VLA Models with Spatial-Temporal Understanding
+2508.09158	cs.AI,cs.LG	EvaDrive: Evolutionary Adversarial Policy Optimization for End-to-End Autonomous Driving
+2508.09404	cs.CV	Waymo-3DSkelMo: A Multi-Agent 3D Skeletal Motion Dataset for Pedestrian Interaction Modeling in Autonomous Driving
+2508.10427	cs.CV	STRIDE-QA: Visual Question Answering Dataset for Spatiotemporal Reasoning in Urban Driving Scenes
+2508.10511	cs.RO	KDPE: A Kernel Density Estimation Strategy for Diffusion Policy Trajectory Selection
+2508.10567	cs.CV,cs.RO	SpaRC-AD: A Baseline for Radar-Camera Fusion in End-to-End Autonomous Driving
+2508.10600	cs.CV	Towards Powerful and Practical Patch Attacks for 2D Object Detection in Autonomous Driving
+2508.11218	cs.CV,cs.LG	A CLIP-based Uncertainty Modal Modeling (UMM) Framework for Pedestrian Re-Identification in Autonomous Driving
+2508.11301	cs.CV	Hyperspectral vs. RGB for Pedestrian Segmentation in Urban Driving Scenes: A Comparative Study
+2508.11426	cs.RO	ReachVox: Clutter-free Reachability Visualization for Robot Motion Planning in Virtual Reality
+2508.11428	cs.CV	ImagiDrive: A Unified Imagination-and-Planning Framework for Autonomous Driving
+2508.11453	cs.RO	OEL-AD: An Online Evolutive Learning Framework for Cross-Region Adaptive Autonomous Driving
+2508.11488	cs.CV	Perception in Plan: Coupled Perception and Planning for End-to-End Autonomous Driving
+2508.11520	cs.RO	A Comparative Study of Floating-Base Space Parameterizations for Agile Whole-Body Motion Planning
+2508.11868	cs.AI,cs.CV,cs.RO	Data Shift of Object Detection in Autonomous Driving
+2508.12015	cs.CV	InstDrive: Instance-Aware 3D Gaussian Splatting for Driving Scenes
+2508.12603	cs.CV	ViLaD: A Large Vision Language Diffusion Framework for End-to-End Autonomous Driving
+2508.12729	cs.RO	MCTR: Midpoint Corrected Triangulation for Autonomous Racing via Digital Twin Simulation in CARLA
+2508.13032	cs.RO	On the complexity of constrained reconfiguration and motion planning
+2508.13052	cs.RO	BOW: Bayesian Optimization over Windows for Motion Planning in Complex Environments
+2508.13407	cs.RO	Accelerating Signal-Temporal-Logic-Based Task and Motion Planning of Bipedal Navigation using Benders Decomposition
+2508.13485	cs.AI,cs.CV	CORENet: Cross-Modal 4D Radar Denoising Network with LiDAR Supervision for Autonomous Driving
+2508.13977	cs.CV	ROVR-Open-Dataset: A Large-Scale Depth Dataset for Autonomous Driving
+2508.14099	cs.RO	Task and Motion Planning for Humanoid Loco-manipulation
+2508.14729	cs.CV	Multiscale Video Transformers for Class Agnostic Segmentation in Autonomous Driving
+2508.15207	cs.CV	Adversarial Agent Behavior Learning in Autonomous Driving Using Deep Reinforcement Learning
+2508.15376	cs.CV	DriveSplat: Unified Neural Gaussian Reconstruction for Dynamic Driving Scenes
+2508.16845	cs.AI,cs.CV,cs.LG	NinA: Normalizing Flows in Action. Training VLA Models with Normalizing Flows
+2508.16962	cs.AI,cs.RO	LLM-based Human-like Traffic Simulation for Self-driving Tests
+2508.17975	cs.CV	Enhanced Drift-Aware Computer Vision Architecture for Autonomous Driving
+2508.17985	cs.RO	Integration of Computer Vision with Adaptive Control for Autonomous Driving Using ADORE
+2508.18397	cs.AI,cs.LG,cs.RO	Mining the Long Tail: A Comparative Study of Data-Centric Criticality Metrics for Robust Offline Reinforcement Learning in Autonomous Motion Planning
+2508.18898	cs.AI,cs.CV,cs.LG,cs.RO	Interpretable Decision-Making for End-to-End Autonomous Driving
+2508.19204	cs.AI,cs.CV	LSD-3D: Large-Scale 3D Driving Scene Generation with Geometry Grounding
+2508.19776	cs.RO	Tree-Based Grafting Approach for Bidirectional Motion Planning with Local Subsets Optimization
+2508.19790	cs.RO	APT*: Asymptotically Optimal Motion Planning via Adaptively Prolated Elliptical R-Nearest Neighbors
+2508.19882	cs.AI	Generative AI for Testing of Autonomous Driving Systems: A Survey
+2508.19905	cs.CV	Hyperspectral Sensors and Autonomous Driving: Technologies, Limitations, and Opportunities
+2508.19958	cs.RO	Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation
+2508.20095	cs.AI,cs.LG,cs.RO	Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning
+2508.20203	cs.RO	Regulation-Aware Game-Theoretic Motion Planning for Autonomous Racing
+2508.20884	cs.RO	Deep Fuzzy Optimization for Batch-Size and Nearest Neighbors in Optimal Robot Motion Planning
+2508.20965	cs.CV	DrivingGaussian++: Towards Realistic Reconstruction and Editable Simulation for Surrounding Dynamic Driving Scenes
+2508.21001	cs.AI,cs.LG,cs.RO	Train-Once Plan-Anywhere Kinodynamic Motion Planning via Diffusion Trees
+2508.21080	cs.CV,cs.RO	2COOOL: 2nd Workshop on the Challenge Of Out-Of-Label Hazards in Autonomous Driving
+2509.00317	cs.AI,cs.RO	A Framework for Task and Motion Planning based on Expanding AND/OR Graphs
+2509.00576	cs.CV,cs.RO	Galaxea Open-World Dataset and G0 Dual-System VLA Model
+2509.00624	cs.RO	Vehicle-in-Virtual-Environment (VVE) Method for Developing and Evaluating VRU Safety of Connected and Autonomous Driving with Focus on Bicyclist Safety
+2509.00789	cs.CV	CogDriver: Integrating Cognitive Inertia for Temporally Coherent Planning in Autonomous Driving
+2509.00836	cs.RO	One-Step Model Predictive Path Integral for Manipulator Motion Planning Using Configuration Space Distance Fields
+2509.01291	cs.RO	Toward a Holistic Multi-Criteria Trajectory Evaluation Framework for Autonomous Driving in Mixed Traffic Environment
+2509.01944	cs.CV,cs.RO	AutoDrive-R$^2$: Incentivizing Reasoning and Self-Reflection Capacity for VLA Model in Autonomous Driving
+2509.02146	cs.RO	Systematic Evaluation of Trade-Offs in Motion Planning Algorithms for Optimal Industrial Robotic Work Cell Design
+2509.02659	cs.CV,cs.RO	2nd Place Solution for CVPR2024 E2E Challenge: End-to-End Autonomous Driving Using Vision Language Model
+2509.02754	cs.AI	Do LLM Modules Generalize? A Study on Motion Generation for Autonomous Driving
+2509.03515	cs.AI,cs.LG,cs.RO	Can the Waymo Open Motion Dataset Support Realistic Behavioral Modeling? A Validation Study with Naturalistic Trajectories
+2509.04063	cs.LG,cs.RO	Balancing Signal and Variance: Adaptive Offline RL Post-Training for VLA Flow Models
+2509.04076	cs.AI,cs.RO	Keypoint-based Diffusion for Robotic Motion Planning on the NICOL Robot
+2509.04413	cs.LG,cs.RO	SAFE--MA--RRT: Multi-Agent Motion Planning with Data-Driven Safety Certificates
+2509.04712	cs.AI,cs.LG,cs.RO	Bootstrapping Reinforcement Learning with Sub-optimal Policies for Autonomous Driving
+2509.04735	cs.AI,cs.CV	Enhancing Self-Driving Segmentation in Adverse Weather Conditions: A Dual Uncertainty-Aware Training Approach to SAM Optimization
+2509.04853	cs.AI,cs.RO	A Knowledge-Driven Diffusion Policy for End-to-End Autonomous Driving Based on Expert Routing
+2509.05351	cs.LG	Self-Driving Laboratory Optimizes the Lower Critical Solution Temperature of Thermoresponsive Polymers
+2509.05777	cs.RO	Scenario-based Decision-making Using Game Theory for Interactive Autonomous Driving: A Survey
+2509.06375	cs.RO	Adaptive Evolution Factor Risk Ellipse Framework for Reliable and Safe Autonomous Driving
+2509.06687	cs.RO	Safe Robust Predictive Control-based Motion Planning of Automated Surface Vessels in Inland Waterways
+2509.06932	cs.CV,cs.RO	LLaDA-VLA: Vision Language Diffusion Action Models
+2509.06953	cs.AI,cs.CV,cs.LG,cs.RO	Deep Reactive Policy: Learning Reactive Manipulator Motion Planning for Dynamic Environments
+2509.07412	cs.RO	Attention and Risk-Aware Decision Framework for Safe Autonomous Driving
+2509.08160	cs.AI,cs.RO	Diffusion-Guided Multi-Arm Motion Planning
+2509.08221	cs.RO	A Comprehensive Review of Reinforcement Learning for Autonomous Driving in the CARLA Simulator
+2509.08302	cs.CV,cs.RO	Foundation Models for Autonomous Driving Perception: A Survey Through Core Capabilities
+2509.09074	cs.AI,cs.LG,cs.RO	KoopMotion: Learning Almost Divergence Free Koopman Flow Fields for Motion Planning
+2509.09674	cs.AI,cs.LG,cs.RO	SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning
+2509.10444	cs.RO	Coordinated Motion Planning of a Wearable Multi-Limb System for Enhanced Human-Robot Interaction
+2509.10570	cs.AI,cs.RO	Large Foundation Models for Trajectory Prediction in Autonomous Driving: A Comprehensive Survey
+2509.10692	cs.RO	STL-Based Motion Planning and Uncertainty-Aware Risk Analysis for Human-Robot Collaboration with a Multi-Rotor Aerial Vehicle
+2509.10796	cs.RO	Follow-Bench: A Unified Motion Planning Benchmark for Socially-Aware Robot Person Following
+2509.12207	cs.RO	UrgenGo: Urgency-Aware Transparent GPU Kernel Launching for Autonomous Driving
+2509.12375	cs.LG	Diffusion-Based Generation and Imputation of Driving Scenarios from Limited Vehicle CAN Data
+2509.12632	cs.CV	Maps for Autonomous Driving: Full-process Survey and Frontiers
+2509.12683	cs.CV	StereoCarla: A High-Fidelity Driving Dataset for Generalizable Stereo
+2509.12931	cs.CV	4DRadar-GS: Self-Supervised Dynamic Driving Scene Reconstruction with 4D Radar
+2509.13116	cs.CV	Weakly and Self-Supervised Class-Agnostic Motion Prediction for Autonomous Driving
+2509.13132	cs.AI,cs.RO	An Uncertainty-Weighted Decision Transformer for Navigation in Dense, Complex Driving Scenarios
+2509.13164	cs.RO	TeraSim-World: Worldwide Safety-Critical Data Synthesis for End-to-End Autonomous Driving
+2509.13507	cs.CV	Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving
+2509.13774	cs.RO	Dual-Actor Fine-Tuning of VLA Models: A Talk-and-Tweak Human-in-the-Loop Approach
+2509.13882	cs.RO	Repulsive Trajectory Modification and Conflict Resolution for Efficient Multi-Manipulator Motion Planning
+2509.13926	cs.AI,cs.CV,cs.RO	MAP: End-to-End Autonomous Driving with Map-Assisted Planning
+2509.14303	cs.AI,cs.RO	FlowDrive: Energy Flow Field for End-to-End Autonomous Driving
+2509.15479	cs.CV	OpenViGA: Video Generation for Automotive Driving Scenes by Streamlining and Fine-Tuning Open Source Models with Public Data
+2509.15909	cs.RO	A CARLA-based Simulation of Electrically Driven Forklifts
+2509.16261	cs.RO	RaFD: Flow-Guided Radar Detection for Robust Autonomous Driving
+2509.16277	cs.AI,cs.LG	Stabilizing Information Flow Entropy: Regularization for Safe and Interpretable Autonomous Driving Perception
+2509.16500	cs.CV	RLGF: Reinforcement Learning with Geometric Feedback for Autonomous Driving Video Generation
+2509.16588	cs.AI,cs.CV,cs.RO	SQS: Enhancing Sparse Perception Models via Query-based Splatting in Autonomous Driving
+2509.16773	cs.RO	Improve bounding box in Carla Simulator
+2509.17080	cs.RO	CoPlanner: An Interactive Motion Planner with Contingency-Aware Diffusion for Autonomous Driving
+2509.17850	cs.RO	SocialTraj: Two-Stage Socially-Aware Trajectory Prediction for Autonomous Driving via Conditional Diffusion Model
+2509.18053	cs.RO	V2V-GoT: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multimodal Large Language Models and Graph-of-Thoughts
+2509.18609	cs.RO	PIE: Perception and Interaction Enhanced End-to-End Motion Planning for Autonomous Driving
+2509.18613	cs.CV	MLF-4DRCNet: Multi-Level Fusion with 4D Radar and Camera for 3D Object Detection in Autonomous Driving
+2509.18666	cs.RO	Distributionally Robust Safe Motion Planning with Contextual Information
+2509.19012	cs.AI,cs.RO	Pure Vision Language Action (VLA) Models: A Comprehensive Survey
+2509.19752	cs.RO	Beyond Human Demonstrations: Diffusion-Based Reinforcement Learning to Generate Data for VLA Training
+2509.19789	cs.AI,cs.LG,cs.RO	RDAR: Reward-Driven Agent Relevance Estimation for Autonomous Driving
+2509.19937	cs.CV	GS-RoadPatching: Inpainting Gaussians via 3D Searching and Placing for Driving Scenes
+2509.19973	cs.CV	OmniScene: Attention-Augmented Multimodal 4D Scene Understanding for Autonomous Driving
+2509.20251	cs.CV	4D Driving Scene Generation With Stereo Forcing
+2509.20253	cs.AI,cs.RO	AnchDrive: Bootstrapping Diffusion Policies with Hybrid Trajectory Anchors for End-to-End Driving
+2509.20333	cs.RO	BBoE: Leveraging Bundle of Edges for Kinodynamic Bidirectional Motion Planning
+2509.21020	cs.RO	Hybrid Task and Motion Planning with Reactive Collision Handling for Multi-Robot Disassembly of Complex Products: Application to EV Batteries
+2509.21330	cs.LG	InSpecLearn4SDL: Interpretable Spectral Features Predict Conductivity in Self-Driving Doped Conjugated Polymer Labs
+2509.21354	cs.AI,cs.CV	KV-Efficient VLA: A Method to Speed up Vision Language Models with RNN-Gated Chunked KV Cache
+2509.22199	cs.AI,cs.RO	MimicDreamer: Aligning Human and Robot Demonstrations for Scalable VLA Training
+2509.22379	cs.RO	A Multi-Modality Evaluation of the Reality Gap in Autonomous Driving Systems
+2509.22688	cs.CV	Robust Object Detection for Autonomous Driving via Curriculum-Guided Group Relative Policy Optimization
+2509.22754	cs.AI,cs.CV,cs.RO	Benchmarking Autonomous Driving Planners Across Leaderboards: A Unified CARLA-Based Evaluation
+2509.22756	cs.AI,cs.RO	Persistent Autoregressive Mapping with Traffic Rules for Autonomous Driving
+2509.23224	cs.AI,cs.CV,cs.RO	Leave No Observation Behind: Real-time Correction for VLA Action Chunks
+2509.23402	cs.CV	WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving
+2509.23589	cs.AI,cs.CV,cs.LG	BridgeDrive: Diffusion Bridge Policy for Closed-Loop Trajectory Planning in Autonomous Driving
+2509.23641	cs.CV,cs.RO	From Static to Dynamic: a Survey of Topology-Aware Perception in Autonomous Driving
+2509.23922	cs.CV,cs.RO	DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation
+2509.24143	cs.RO	A Novel Model for 3D Motion Planning for a Generalized Dubins Vehicle with Pitch and Yaw Rate Constraints
+2509.24235	cs.RO	Towards Tighter Convex Relaxation of Mixed-Integer Programs: Leveraging Logic Network Flow for Task and Motion Planning
+2509.24313	cs.RO	Learning to Sample: Reinforcement Learning-Guided Sampling for Autonomous Vehicle Motion Planning
+2509.24408	cs.LG	FuncPoison: Poisoning Function Library to Hijack Multi-agent Autonomous Driving Systems
+2509.24948	cs.RO	World-Env: Leveraging World Model as a Virtual Environment for VLA Post-Training
+2509.25352	cs.RO	SRMP: Search-Based Robot Motion Planning Library
+2509.25542	cs.CV,cs.RO	Online Mapping for Autonomous Driving: Addressing Sensor Generalization and Dynamic Map Updates in Campus Environments
+2509.25685	cs.RO	Structured-Diffuser: Diffusion with Task-Conditioned Structured Priors for Motion Planning
+2509.25718	cs.RO	VLA Model Post-Training via Action-Chunked PPO and Self Behavior Cloning
+2509.25751	cs.AI	Cooperative Autonomous Driving in Diverse Behavioral Traffic: A Heterogeneous Graph Reinforcement Learning Approach
+2509.25944	cs.AI	NuRisk: A Visual Question Answering Dataset for Agent-Level Risk Assessment in Autonomous Driving
+2509.26166	cs.CV	Beyond Overall Accuracy: Pose- and Occlusion-driven Fairness Analysis in Pedestrian Detection for Autonomous Driving
+2509.26339	cs.RO	Kinodynamic Motion Planning for Mobile Robot Navigation across Inconsistent World Models
+2510.00182	cs.AI,cs.RO	A Systematic Study of Large Language Models for Task and Motion Planning With PDDLStream
+2510.00425	cs.RO	Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks
+2510.01126	cs.CV,cs.RO	Strategic Fusion of Vision Language Models: Shapley-Credited Context-Aware Dawid-Skene for Multi-Label Tasks in Autonomous Driving
+2510.01357	cs.RO	Safe Motion Planning and Control Using Predictive and Adaptive Barrier Methods for Autonomous Surface Vessels
+2510.01829	cs.CV	Calibrating the Full Predictive Class Distribution of 3D Object Detectors for Autonomous Driving
+2510.02469	cs.AI,cs.CV,cs.RO	SIMSplat: Language-Aligned 4D Gaussian Splatting for Driving Scenario Generation
+2510.02728	cs.RO	Team Xiaomi EV-AD VLA: Caption-Guided Retrieval System for Cross-Modal Drone Navigation -- Technical Report for IROS 2025 RoboSense Challenge Track 4
+2510.03142	cs.CV,cs.RO	MM-Nav: Multi-View VLA Model for Robust Visual Navigation via Multi-Expert Learning
+2510.03460	cs.RO	Warm-Starting Optimization-Based Motion Planning for Robotic Manipulators via Point Cloud-Conditioned Flow Matching
+2510.03504	cs.RO	Connectivity Maintenance and Recovery for Multi-Robot Motion Planning
+2510.03875	cs.RO	COVER:COverage-VErified Roadmaps for Fixed-time Motion Planning in Continuous Semi-Static Environments
+2510.04912	cs.CV,cs.LG	Comparative Analysis of YOLOv5, Faster R-CNN, SSD, and RetinaNet for Motorbike Detection in Kigali Autonomous Driving Context
+2510.05729	cs.RO	Precise and Efficient Collision Prediction under Uncertainty in Autonomous Driving
+2510.05752	cs.CV	ALISE: Annotation-Free LiDAR Instance Segmentation for Autonomous Driving
+2510.06038	cs.AI,cs.LG	From Learning to Mastery: Achieving Safe and Efficient Real-World Autonomous Driving with Human-In-The-Loop Reinforcement Learning
+2510.06209	cs.CV	Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models
+2510.06546	cs.RO	RAISE: A self-driving laboratory for interfacial property formulation discovery
+2510.06970	cs.LG	Falsification-driven reinforcement learning for maritime motion planning
+2510.07067	cs.RO	Bring the Apple, Not the Sofa: Impact of Irrelevant Context in Embodied AI Commands on VLA Models
+2510.07133	cs.AI,cs.RO	A Digital Twin Framework for Metamorphic Testing of Autonomous Driving Systems Using Generative Model
+2510.07134	cs.AI,cs.CV,cs.RO	TrackVLA++: Unleashing Reasoning and Memory Capabilities in VLA Models for Embodied Visual Tracking
+2510.07210	cs.AI,cs.RO	HyPlan: Hybrid Learning-Assisted Planning Under Uncertainty for Safe Autonomous Driving
+2510.07856	cs.CV	XYZCylinder: Towards Compatible Feed-Forward 3D Gaussian Splatting for Driving Scenes via Unified Cylinder Lifting Method
+2510.07944	cs.CV	CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model for Autonomous Driving
+2510.08464	cs.LG,cs.RO	Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered
+2510.08562	cs.CV,cs.RO	ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving
+2510.08571	cs.CV,cs.RO	Scalable Offline Metrics for Autonomous Driving
+2510.08811	cs.RO	Adaptive Motion Planning via Contact-Based Intent Inference for Human-Robot Collaboration
+2510.10086	cs.RO	Beyond ADE and FDE: A Comprehensive Evaluation Framework for Safety-Critical Prediction in Multi-Agent Autonomous Driving Scenarios
+2510.10203	cs.CV	A Style-Based Profiling Framework for Quantifying the Synthetic-to-Real Gap in Autonomous Driving Datasets
+2510.10503	cs.AI,cs.LG,cs.RO	Align2Act: Instruction-Tuned Models for Human-Aligned Autonomous Driving
+2510.10567	cs.RO	Reinforcement Learning-based Dynamic Adaptation for Sampling-Based Motion Planning in Agile Autonomous Driving
+2510.10960	cs.RO	Game-Theoretic Risk-Shaped Reinforcement Learning for Safe Autonomous Driving
+2510.11083	cs.AI,cs.RO	Flow Matching-Based Autonomous Driving Planning with Advanced Interactive Behavior Modeling
+2510.11092	cs.CV	Future-Aware End-to-End Driving: Bidirectional Modeling of Trajectory Planning and Scene Evolution
+2510.11448	cs.RO	A Faster and More Reliable Middleware for Autonomous Driving Systems
+2510.12282	cs.CV	PAGS: Priority-Adaptive Gaussian Splatting for Dynamic Driving Scenes
+2510.12560	cs.CV,cs.LG,cs.RO	CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent World Models for Autonomous Driving
+2510.12710	cs.RO	Reflection-Based Task Adaptation for Self-Improving VLA
+2510.12796	cs.AI,cs.CV	DriveVLA-W0: World Models Amplify Data Scaling Law in Autonomous Driving
+2510.13054	cs.AI,cs.RO	VLA-0: Building State-of-the-Art VLAs with Zero Modification
+2510.13114	cs.RO	Safe Driving in Occluded Environments
+2510.14065	cs.RO	Optimistic Reinforcement Learning-Based Skill Insertions for Task and Motion Planning
+2510.14615	cs.RO	Accelerated Multi-Modal Motion Planning Using Context-Conditioned Diffusion Models
+2510.14677	cs.AI,cs.LG,cs.RO	When Planners Meet Reality: How Learned, Reactive Traffic Agents Shift nuPlan Benchmarks
+2510.15264	cs.CV	DriveGen3D: Boosting Feed-Forward Driving Scene Generation with Efficient Video Diffusion
+2510.15446	cs.RO	VDRive: Leveraging Reinforced VLA and Diffusion Policy for End-to-end Autonomous Driving
+2510.15467	cs.CV	MRASfM: Multi-Camera Reconstruction and Aggregation through Structure-from-Motion in Driving Scenes
+2510.15505	cs.RO	Perfect Prediction or Plenty of Proposals? What Matters Most in Planning for Autonomous Driving
+2510.16500	cs.RO	Advancing Off-Road Autonomous Driving: The Large-Scale ORAD-3D Dataset and Comprehensive Benchmarks
+2510.16767	cs.RO	T3 Planner: A Self-Correcting LLM Framework for Robotic Motion Planning with Temporal Logic
+2510.16790	cs.CV	Unsupervised Monocular Road Segmentation for Autonomous Driving via Scene Geometry
+2510.17148	cs.CV,cs.RO	DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment
+2510.18402	cs.RO	MPC-based motion planning for non-holonomic systems in non-convex domains
+2510.18552	cs.CV	Occluded nuScenes: A Multi-Sensor Dataset for Evaluating Perception Robustness in Automated Driving
+2510.18996	cs.RO	SHRUMS: Sensor Hallucination for Real-time Underwater Motion Planning with a Compact 3D Sonar
+2510.19054	cs.RO	Motion Planning and Control of an Overactuated 4-Wheel Drive with Constrained Independent Steering
+2510.19081	cs.RO	Kinematic Analysis and Integration of Vision Algorithms for a Mobile Manipulator Employed Inside a Self-Driving Laboratory
+2510.19195	cs.AI,cs.CV	Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks
+2510.19205	cs.AI	WebGraphEval: Multi-Turn Trajectory Evaluation for Web Agents using Graph Representation
+2510.21160	cs.CV	Towards Physics-informed Spatial Intelligence with Human Priors: An Autonomous Driving Pilot Study
+2510.21867	cs.AI,cs.CV	Addressing Corner Cases in Autonomous Driving: A World Model-based Approach with Mixture of Experts and LLMs
+2510.22190	cs.LG	RGC: a radio AGN classifier based on deep learning. I. A semi-supervised multiclass model for VLA images
+2510.22789	cs.RO	Learning Neural Observer-Predictor Models for Limb-level Sampling-based Locomotion Planning
+2510.22973	cs.CV	Scaling Up Occupancy-centric Driving Scene Generation: Dataset and Method
+2510.23205	cs.CV	VR-Drive: Viewpoint-Robust End-to-End Driving with Feed-Forward 3D Gaussian Splatting
+2510.23895	cs.RO	Modeling and Scheduling of Fusion Patterns in Autonomous Driving Systems (Extended Version)
+2510.24052	cs.AI,cs.RO	SynAD: Enhancing Real-World End-to-End Autonomous Driving Models through Synthetic Data Integration
+2510.24166	cs.AI	UniPlanner: A Unified Motion Planning Framework for Autonomous Vehicle Decision-Making Systems via Multi-Dataset Integration
+2510.24734	cs.CV,cs.LG,cs.RO	DrivingScene: A Multi-Task Online Feed-Forward 3D Gaussian Splatting Method for Dynamic Driving Scenes
+2510.24949	cs.AI,cs.CV,cs.LG,cs.RO	SCOUT: A Lightweight Framework for Scenario Coverage Assessment in Autonomous Driving
+2510.25205	cs.AI	Energy-Efficient Autonomous Driving with Adaptive Perception and Robust Decision
+2510.25616	cs.AI,cs.LG,cs.RO	Don't Blind Your VLA: Aligning Visual Representations for OOD Generalization
+2510.25694	cs.AI	Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents
+2510.26292	cs.CV	Beyond Imitation: Constraint-Aware Trajectory Generation with Flow Matching For End-to-End Autonomous Driving
+2510.27047	cs.CV	AD-SAM: Adapting the Segment Anything Model for Semantic Segmentation in Autonomous Driving
+2510.27333	cs.RO	Modified-Emergency Index (MEI): A Criticality Metric for Autonomous Driving in Lateral Conflict
+2511.00088	cs.AI,cs.LG,cs.RO	Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail
+2511.00139	cs.AI,cs.RO	End-to-End Dexterous Arm-Hand VLA Policies via Shared Autonomy: VR Teleoperation Augmented by Autonomous Hand VLA Policy for Efficient Data Collection
+2511.00652	cs.CV	Been There, Scanned That: Nostalgia-Driven LiDAR Compression for Self-Driving Cars
+2511.00685	cs.LG	SOCRATES: Simulation Optimization with Correlated Replicas and Adaptive Trajectory Evaluations
+2511.00814	cs.LG,cs.RO	Real-Time Learning of Predictive Dynamic Obstacle Models for Robotic Motion Planning
+2511.01210	cs.CV,cs.RO	OmniVLA: Physically-Grounded Multimodal VLA with Unified Multi-Sensor Perception for Robotic Manipulation
+2511.01334	cs.AI,cs.RO	Embodied Cognition Augmented End2End Autonomous Driving
+2511.01541	cs.AI,cs.CV	Driving scenario generation and evaluation using a structured layer representation and foundational models
+2511.01768	cs.CV	UniLION: Towards Unified Autonomous Driving Model with Linear Group RNNs
+2511.01914	cs.AI,cs.CV,cs.RO	iFlyBot-VLA Technical Report
+2511.02342	cs.RO	Whole-body motion planning and safety-critical control for aerial manipulation
+2511.03591	cs.RO	Manifold-constrained Hamilton-Jacobi Reachability Learning for Decentralized Multi-Agent Motion Planning
+2511.03652	cs.RO	Motion Planning Under Temporal Logic Specifications In Semantically Unknown Environments
+2511.04357	cs.CV,cs.RO	GraSP-VLA: Graph-based Symbolic Action Representation for Long-Horizon Planning with VLA Policies
+2511.04595	cs.CV	UniSplat: Unified Spatio-Temporal Fusion via 3D Latent Scaffolds for Dynamic Driving Scene Reconstruction
+2511.04758	cs.AI,cs.RO	ScheduleStream: Temporal Planning with Samplers for GPU-Accelerated Multi-Arm Task and Motion Planning & Scheduling
+2511.05052	cs.RO	TAPOM: Task-Space Topology-Guided Motion Planning for Manipulating Elongated Object in Cluttered Environments
+2511.05557	cs.CV	Compressing Multi-Task Model for Autonomous Driving via Pruning and Knowledge Distillation
+2511.06226	cs.AI	ROAR: Robust Accident Recognition and Anticipation for Autonomous Driving
+2511.06253	cs.CV	AdaDrive: Self-Adaptive Slow-Fast System for Language-Grounded Autonomous Driving
+2511.06496	cs.AI,cs.CV,cs.RO	A Low-Rank Method for Vision Language Model Hallucination Mitigation in Autonomous Driving
+2511.07106	cs.CV	HENet++: Hybrid Encoding and Multi-task Learning for 3D Perception and End-to-end Autonomous Driving
+2511.07155	cs.LG,cs.RO	Dynamics-Decoupled Trajectory Alignment for Sim-to-Real Transfer in Reinforcement Learning for Autonomous Driving
+2511.07727	cs.RO	LLM-GROP: Visually Grounded Robot Task and Motion Planning with Large Language Models
+2511.07925	cs.CV	HD$^2$-SSC: High-Dimension High-Density Semantic Scene Completion for Autonomous Driving
+2511.08001	cs.RO	Effective Game-Theoretic Motion Planning via Nested Search
+2511.08015	cs.AI,cs.CV	Invisible Triggers, Visible Threats! Road-Style Adversarial Creation Attack for Visual 3D Detection in Autonomous Driving
+2511.08214	cs.RO	Prioritizing Perception-Guided Self-Supervision: A New Paradigm for Causal Modeling in End-to-End Autonomous Driving
+2511.08439	cs.AI	Dataset Safety in Autonomous Driving: Requirements, Risks, and Assurance
+2511.08778	cs.RO	Dual-Arm Whole-Body Motion Planning: Leveraging Overlapping Kinematic Chains
+2511.09013	cs.CV,cs.RO	UniMM-V2X: MoE-Enhanced Multi-Level Fusion for End-to-End Cooperative Autonomous Driving
+2511.09025	cs.LG	FLAD: Federated Learning for LLM-based Autonomous Driving in Vehicle-Edge-Cloud Networks
+2511.09080	cs.RO	D-AWSIM: Distributed Autonomous Driving Simulator for Dynamic Map Generation Framework
+2511.10008	cs.AI,cs.RO	Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
+2511.10403	cs.AI,cs.RO	nuPlan-R: A Closed-Loop Planning Benchmark for Autonomous Driving via Reactive Multi-Agent Simulation
+2511.11022	cs.RO	Miniature Testbed for Validating Multi-Agent Cooperative Autonomous Driving
+2511.11266	cs.CV	GraphPilot: Grounded Scene Graph Conditioning for Language-Based Autonomous Driving
+2511.11310	cs.RO	Simulating an Autonomous System in CARLA using ROS 2
+2511.11740	cs.AI,cs.RO	ExpertAD: Enhancing Autonomous Driving Systems with Mixture of Experts
+2511.11840	cs.RO	LAVQA: A Latency-Aware Visual Question Answering Framework for Shared Autonomy in Self-Driving Vehicles
+2511.12022	cs.RO	SBAMP: Sampling Based Adaptive Motion Planning
+2511.12117	cs.CV	RadarMP: Motion Perception for 4D mmWave Radar in Autonomous Driving
+2511.12160	cs.RO	Game-Theoretic Safe Multi-Agent Motion Planning with Reachability Analysis for Dynamic and Uncertain Environments (Extended Version)
+2511.12291	cs.CV	One target to align them all: LiDAR, RGB and event cameras extrinsic calibration for Autonomous Driving
+2511.12751	cs.AI,cs.LG,cs.RO	Are LLMs The Way Forward? A Case Study on LLM-Guided Reinforcement Learning for Decentralized Autonomous Driving
+2511.12755	cs.LG,cs.RO	Prompt-Driven Domain Adaptation for End-to-End Autonomous Driving via In-Context RL
+2511.12941	cs.RO	GUIDE: Gaussian Unified Instance Detection for Enhanced Obstacle Perception in Autonomous Driving
+2511.12956	cs.CV	T2I-Based Physical-World Appearance Attack against Traffic Sign Recognition Systems in Autonomous Driving
+2511.13079	cs.CV	Decoupling Scene Perception and Ego Status: A Multi-Context Fusion Approach for Enhanced Generalization in End-to-End Autonomous Driving
+2511.13297	cs.CV	CorrectAD: A Self-Correcting Agentic System to Improve End-to-end Planning in Autonomous Driving
+2511.13306	cs.AI,cs.CV	DAP: A Discrete-token Autoregressive Planner for Autonomous Driving
+2511.13309	cs.CV	DriveLiDAR4D: Sequential and Controllable LiDAR Scene Generation for Autonomous Driving
+2511.13744	cs.AI,cs.CV,cs.RO	nuCarla: A nuScenes-Style Bird's-Eye View Perception Dataset for CARLA Simulation
+2511.14178	cs.AI,cs.RO	Towards Deploying VLA without Fine-Tuning: Plug-and-Play Inference-Time VLA Policy Steering via Embodied Evolutionary Diffusion
+2511.14386	cs.AI,cs.CV	Cheating Stereo Matching in Full-scale: Physical Adversarial Attack against Binocular Depth Estimation in Autonomous Driving
+2511.14391	cs.CV	Enhancing LLM-based Autonomous Driving with Modular Traffic Light and Sign Recognition
+2511.14759	cs.LG,cs.RO	$π^{*}_{0.6}$: a VLA That Learns From Experience
+2511.14876	cs.CV,cs.LG,cs.RO	Attacking Autonomous Driving Agents with Adversarial Machine Learning: A Holistic Evaluation with the CARLA Leaderboard
+2511.15414	cs.AI,cs.RO	RRT*former: Environment-Aware Sampling-Based Motion Planning using Transformer
+2511.15429	cs.CV	WarNav: An Autonomous Driving Benchmark for Segmentation of Navigable Zones in War Scenes
+2511.15532	cs.RO	NMPC-based Motion Planning with Adaptive Weighting for Dynamic Object Interception
+2511.16049	cs.CV	LiSTAR: Ray-Centric World Models for 4D LiDAR Sequences in Autonomous Driving
+2511.16233	cs.RO	FT-NCFM: An Influence-Aware Data Distillation Framework for Efficient VLA Models
+2511.16449	cs.AI,cs.CV	Bridging the Semantic-Action Gap in Visual Token Pruning for Efficient VLA Inference
+2511.17150	cs.CV	DiffRefiner: Coarse to Fine Trajectory Planning via Diffusion Refinement with Semantic Interaction for End to End Autonomous Driving
+2511.18703	cs.RO	Asynchronous Distributed Multi-Robot Motion Planning Under Imperfect Communication
+2511.18713	cs.CV	DriveFlow: Rectified Flow Adaptation for Robust 3D Object Detection in Autonomous Driving
+2511.18729	cs.CV	GuideFlow: Constraint-Guided Flow Matching for Planning in End-to-End Autonomous Driving
+2511.18757	cs.CV	From Features to Reference Points: Lightweight and Adaptive Fusion for Cooperative Autonomous Driving
+2511.18950	cs.CV,cs.LG,cs.RO	Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation
+2511.19109	cs.CV	HABIT: Human Action Benchmark for Interactive Traffic in CARLA
+2511.19221	cs.CV,cs.RO	Percept-WAM: Perception-Enhanced World-Awareness-Action Model for Robust End-to-End Autonomous Driving
+2511.19235	cs.CV	IDSplat: Instance-Decomposed 3D Gaussian Splatting for Driving Scenes
+2511.19914	cs.RO	CoC-VLA: Delving into Adversarial Domain Transfer for Explainable Autonomous Driving via Chain-of-Causality Visual-Language-Action Model
+2511.20022	cs.AI,cs.CV	WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving
+2511.20156	cs.CV,cs.RO	Map-World: Masked Action planning and Path-Integral World Model for Autonomous Driving
+2511.20325	cs.CV	AD-R1: Closed-Loop Reinforcement Learning for End-to-End Autonomous Driving with Impartial World Models
+2511.20593	cs.RO	Safe and Stable Neural Network Dynamical Systems for Robot Motion Planning
+2511.21428	cs.AI,cs.CV,cs.RO	From Observation to Action: Latent Action-based Primitive Segmentation for VLA Pre-training in Industrial Settings
+2511.21542	cs.AI,cs.CV,cs.LG,cs.RO	E0: Enhancing Generalization and Fine-Grained Control in VLA Models via Tweedie Discrete Diffusion
+2511.21584	cs.AI,cs.RO	Model-Based Policy Adaptation for Closed-Loop End-to-End Autonomous Driving
+2511.21925	cs.RO	OpenTwinMap: An Open-Source Digital Twin Generator for Urban Autonomous Driving
+2511.22187	cs.CV,cs.RO	HybridWorldSim: A Scalable and Controllable High-fidelity Simulator for Autonomous Driving
+2511.22264	cs.CV	DriveVGGT: Calibration-Constrained Visual Geometry Transformers for Multi-Camera Autonomous Driving
+2511.22928	cs.RO	Seeing before Observable: Potential Risk Reasoning in Autonomous Driving via Vision Language Models
+2511.23236	cs.RO	Incorporating Ephemeral Traffic Waves in A Data-Driven Framework for Microsimulation in CARLA
+2512.00021	cs.CV,cs.RO	Foundation Models for Trajectory Planning in Autonomous Driving: A Review of Progress and Open Challenges
+2512.00060	cs.AI,cs.CV	PEFT-DML: Parameter-Efficient Fine-Tuning Deep Metric Learning for Robust Multi-Modal 3D Object Detection in Autonomous Driving
+2512.00375	cs.RO	DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments
+2512.00470	cs.RO	LAP: Fast LAtent Diffusion Planner for Autonomous Driving
+2512.00723	cs.CV,cs.RO	TrajDiff: End-to-end Autonomous Driving without Perception Annotation
+2512.00903	cs.CV,cs.RO	SwiftVLA: Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
+2512.01830	cs.CV	OpenREAD: Reinforced Open-Ended Reasoning for End-to-End Autonomous Driving with LLM-as-Critic
+2512.01993	cs.AI,cs.CV,cs.LG,cs.RO	RoaD: Rollouts as Demonstrations for Closed-Loop Supervised Fine-Tuning of Autonomous Driving Policies
+2512.02013	cs.RO	ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation
+2512.02018	cs.CV,cs.RO	Data-Centric Visual Development for Self-Driving Labs
+2512.02417	cs.AI,cs.RO	Vehicle Dynamics Embedded World Models for Autonomous Driving
