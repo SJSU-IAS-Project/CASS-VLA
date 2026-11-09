@@ -1,8 +1,16 @@
 """Accuracy against query cost for the selection policies, on a dataset from build_dataset.py.
 
     python scripts/eval_baselines.py --data out/dataset --split test --out out/eval
+    python scripts/eval_baselines.py --data out/dataset --split val --out out/eval --vlm out/vlm   # + VLM selectors
 
-Every policy shares the same ranker and tools. The geometry selector here has no VLA features.
+Every policy shares the same ranker and tools. Without --vlm the selectors use geometry features only.
+With --vlm (a cache from scripts/cache_vlm.py) every method is restricted to the decisions that have a
+cached frame, and three VLM selectors are added: VLM features only, geometry + VLM features, and the
+VLM's own prompted query choice. A VLM selector calls the VLM on every decision, so its curves carry a
+``cost_offset`` of --vlm-cost calls per decision on top of the tool budget.
+
+Each comparison reports a 95% seed-bootstrap interval, a two-sided bootstrap p-value and a Holm-adjusted
+p-value over all comparisons at the same noise level and metric.
 """
 import argparse
 import json
@@ -68,7 +76,21 @@ def gain_ci(a_order, a_tool, b_order, b_tool, a0, u0, at, ut, seeds, rng):
     for b in BUDGETS[1:]:
         diffs.append(apply_policy(a_order, a_tool, a0, u0, at, ut, b)[0] - apply_policy(b_order, b_tool, a0, u0, at, ut, b)[0])
     mean = np.mean(diffs, axis=0)
-    return dict(mean_acc_gain=round(float(mean.mean()), 4), ci95_by_seed=seed_boot(mean, seeds, rng))
+    stats = boot_stats(mean, seeds, rng)
+    # two-sided bootstrap p-value; it cannot resolve below 1 / N_BOOT, so it is floored there
+    p = max(2 * min(float(np.mean(stats <= 0)), float(np.mean(stats >= 0))), 1.0 / N_BOOT)
+    return dict(mean_acc_gain=round(float(mean.mean()), 4), ci95_by_seed=[round(float(np.percentile(stats, q)), 4) for q in (2.5, 97.5)],
+                p_boot=round(min(p, 1.0), 4))
+
+
+def holm(comparisons):
+    """Add a Holm-adjusted ``p_holm`` to each comparison dict, in place."""
+    names = sorted(comparisons, key=lambda k: comparisons[k]["p_boot"])
+    running = 0.0
+    for i, k in enumerate(names):
+        running = max(running, min(1.0, (len(names) - i) * comparisons[k]["p_boot"]))
+        comparisons[k]["p_holm"] = round(running, 4)
+    return comparisons
 
 
 def apply_policy(order, tool, a0, u0, at, ut, budget):
@@ -86,7 +108,8 @@ def curve(order, tool, a0, u0, at, ut):
     return [tuple(x.mean() for x in apply_policy(order, tool, a0, u0, at, ut, b)) for b in BUDGETS]
 
 
-def seed_boot(diff, seeds, rng):
+def boot_stats(diff, seeds, rng):
+    """Mean of ``diff`` over N_BOOT resamples of whole seeds (decisions of one seed are not independent)."""
     uniq = np.unique(seeds)
     per = np.array([diff[seeds == s].sum() for s in uniq])
     cnt = np.array([(seeds == s).sum() for s in uniq])
@@ -94,10 +117,14 @@ def seed_boot(diff, seeds, rng):
     for _ in range(N_BOOT):
         i = rng.integers(len(uniq), size=len(uniq))
         stats.append(per[i].sum() / max(cnt[i].sum(), 1))
-    return [round(float(np.percentile(stats, q)), 4) for q in (2.5, 97.5)]
+    return np.array(stats)
 
 
-def evaluate(train, test, level, key, agnostic_idx):
+def seed_boot(diff, seeds, rng):
+    return [round(float(np.percentile(boot_stats(diff, seeds, rng), q)), 4) for q in (2.5, 97.5)]
+
+
+def evaluate(train, test, level, key, agnostic_idx, vlm=None):
     a0, u0, at, ut, aa, ua = tables(test, level, key)
     a0_tr, _, at_tr, _, _, _ = tables(train, level, key)
     Xtr = np.array([r["features"] for r in train], float)
@@ -145,6 +172,32 @@ def evaluate(train, test, level, key, agnostic_idx):
     vs_margin = gain_ci(pd_order, pd_tool, margin_order, fixed, a0, u0, at, ut, seeds, rng)
     vs_scene = gain_ci(pd_order, pd_tool, scene_order, scene_tool, a0, u0, at, ut, seeds, rng)
 
+    comparisons = dict(plandiscrim_minus_uncertainty=vs_margin, plandiscrim_minus_scene_only=vs_scene)
+    cost_offset, vlm_report = {}, None
+    if vlm is not None:
+        # separate generator, so adding VLM methods never changes the numbers of the methods above
+        vrng = np.random.default_rng(1)
+        for name, Xa, Xb in (("plandiscrim_vlm_only", vlm["Xtr"], vlm["Xte"]),
+                             ("plandiscrim_geom_vlm", np.hstack([Xtr, vlm["Xtr"]]), np.hstack([Xte, vlm["Xte"]]))):
+            pv = predict(fit_selector(Xa, gain_tr), Xb)
+            o, t = rank_desc(pv.max(axis=1), vrng), pv.argmax(axis=1)
+            results[name] = curve(o, t, a0, u0, at, ut)
+            cost_offset[name] = vlm["cost"]
+            if name == "plandiscrim_geom_vlm":
+                comparisons["geom_vlm_minus_geometry"] = gain_ci(o, t, pd_order, pd_tool, a0, u0, at, ut, seeds, vrng)
+                comparisons["geom_vlm_minus_uncertainty"] = gain_ci(o, t, margin_order, fixed, a0, u0, at, ut, seeds, vrng)
+        asked = vlm["tool_te"] >= 0
+        v_order = rank_desc(asked.astype(float), vrng)
+        v_tool = np.where(asked, vlm["tool_te"], best_tool)
+        results["vlm_prompted"] = curve(v_order, v_tool, a0, u0, at, ut)
+        cost_offset["vlm_prompted"] = vlm["cost"]
+        comparisons["vlm_prompted_minus_uncertainty"] = gain_ci(v_order, v_tool, margin_order, fixed, a0, u0, at, ut, seeds, vrng)
+        vlm_report = dict(asked_rate=round(float(asked.mean()), 3),
+                          asked_tool_rate={t: round(float((vlm["tool_te"] == j).mean()), 3) for j, t in enumerate(TOOLS)},
+                          asked_precision=round(float((at[idx, v_tool] > a0)[asked].mean()), 3) if asked.any() else None,
+                          abstain_precision=round(float((~fixes)[~asked].mean()), 3) if (~asked).any() else None)
+    holm(comparisons)
+
     pred_q = prob.max(axis=1) >= 0.5
     abstain_truth = ~fixes
     tp = int(np.sum(~pred_q & abstain_truth))
@@ -175,6 +228,7 @@ def evaluate(train, test, level, key, agnostic_idx):
         curves={k: [[round(float(x), 4) for x in pt] for pt in v] for k, v in results.items()},
         auc={k: round(float(np.mean([pt[0] for pt in v])), 4) for k, v in results.items()},
         plandiscrim_minus_uncertainty=vs_margin, plandiscrim_minus_scene_only=vs_scene,
+        comparisons=comparisons, cost_offset=cost_offset, vlm=vlm_report,
         abstention=dict(precision=round(prec, 3), recall=round(rec_ab, 3), base_rate=round(float(abstain_truth.mean()), 3)),
         families=fam)
 
@@ -184,17 +238,35 @@ def main():
     p.add_argument("--data", required=True)
     p.add_argument("--split", default="val")
     p.add_argument("--out", required=True)
+    p.add_argument("--vlm", default=None, help="VLM cache from scripts/cache_vlm.py; adds the VLM selectors")
+    p.add_argument("--vlm-pca", type=int, default=32)
+    p.add_argument("--vlm-cost", type=float, default=1.0, help="cost of one VLM call, in tool-call units")
     args = p.parse_args()
     with open(os.path.join(args.data, "manifest.json")) as f:
         man = json.load(f)
     names = man["feature_names"]
     agnostic_idx = {k: names.index(k) for k in man["agnostic_features"]}
     train, test = load(args.data, "train"), load(args.data, args.split)
+    vlm, suffix = None, ""
+    if args.vlm:
+        from cassvla.perception.vlm import load_cache
+        from cassvla.perception.vlm_features import VLMFeatures
+        vf = VLMFeatures(load_cache(args.vlm), n_pca=args.vlm_pca)
+        n_tr, n_te = len(train), len(test)
+        train = [r for r, ok in zip(train, vf.covered(train)) if ok]
+        test = [r for r, ok in zip(test, vf.covered(test)) if ok]
+        if not train or not test:
+            raise SystemExit(f"no cached VLM frames for the train or {args.split} rows in {args.vlm}")
+        vf.fit(train)
+        vlm = dict(Xtr=vf.transform(train), Xte=vf.transform(test), tool_te=vf.prompted_tool(test), cost=args.vlm_cost)
+        suffix = "_vlm"
+        print(f"VLM cache covers {len(train)}/{n_tr} train and {len(test)}/{n_te} {args.split} rows; "
+              f"PCA({len(vf.components)}) explains {vf.explained:.3f} of embedding variance", flush=True)
     os.makedirs(args.out, exist_ok=True)
     report = {}
     for key in ("correct", "correct_tol"):
-        report[key] = {lv: evaluate(train, test, lv, key, agnostic_idx) for lv in LEVELS}
-    path = os.path.join(args.out, f"{args.split}.json")
+        report[key] = {lv: evaluate(train, test, lv, key, agnostic_idx, vlm) for lv in LEVELS}
+    path = os.path.join(args.out, f"{args.split}{suffix}.json")
     with open(path, "w") as f:
         json.dump(report, f, indent=1)
     for key, per in report.items():
@@ -203,6 +275,9 @@ def main():
             print(f"{key:12s} {lv:5s} n={r['n']} none={r['no_tool']['acc']:.3f} always={r['always_on']['acc']:.3f} oracle={r['oracle_selector']['acc']:.3f}@{r['oracle_selector']['cost']:.2f} "
                   f"auc rand={r['auc']['random']:.3f} unc={r['auc']['uncertainty_margin']:.3f} scene={r['auc']['scene_only_learned']:.3f} pd={r['auc']['plandiscrim_geometry']:.3f} "
                   f"vs_unc={d['mean_acc_gain']:+.3f} {d['ci95_by_seed']} vs_scene={e['mean_acc_gain']:+.3f} {e['ci95_by_seed']} agn_tool={r['best_agnostic_tool']} abst p={r['abstention']['precision']} r={r['abstention']['recall']} base={r['abstention']['base_rate']}")
+            if r["vlm"]:
+                print(" " * 19 + "vlm: " + " ".join(f"{m}={r['auc'][m]:.3f}" for m in r["cost_offset"]) +
+                      " | " + " ".join(f"{c}={v['mean_acc_gain']:+.3f} p_holm={v['p_holm']}" for c, v in r["comparisons"].items() if "vlm" in c))
 
 
 if __name__ == "__main__":
