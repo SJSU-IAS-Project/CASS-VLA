@@ -1,6 +1,9 @@
 """Accuracy against query budget, one panel per noise level, from eval_baselines.py output.
 
     python scripts/plot_pareto.py --eval out/eval/test.json --out docs/baseline_pareto.png
+    python scripts/plot_pareto.py --eval out/eval/test.json --out paper/figures/baseline_pareto.pdf   # vector
+
+scripts/make_figures.py makes all paper figures, including the VLM selectors and the unsafe-rate curves.
 """
 import argparse
 import json
@@ -8,6 +11,8 @@ import json
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+
+plt.rcParams.update({"pdf.fonttype": 42, "ps.fonttype": 42})   # embed TrueType fonts when --out is a .pdf
 
 SERIES = (("plandiscrim_geometry", "PlanDiscrim, geometry only", "#2a78d6", "-", 2.6),
           ("scene_only_learned", "Scene-only learned", "#eb6834", "--", 2.0),
