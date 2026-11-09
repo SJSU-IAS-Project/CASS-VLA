@@ -10,6 +10,7 @@ import argparse
 import json
 import multiprocessing as mp
 import os
+import re
 import resource
 import subprocess
 import sys
@@ -45,10 +46,22 @@ def run_chunk(task):
         oracle.close()
     os.replace(tmp, path)
     return dict(family=family, first=first, decisions=n, retained=int(kept), wall=round(time.time() - t0, 1),
-                peak_rss_mb=round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1))
+                peak_rss_mb=peak_rss_mb())
+
+
+def peak_rss_mb():
+    """Peak resident memory of this process. ru_maxrss is in bytes on macOS and in KiB on Linux."""
+    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    return round(rss / (1024 * 1024 if sys.platform == "darwin" else 1024), 1)
 
 
 def mem_available_mb():
+    """Memory the OS can hand out without swapping: MemAvailable on Linux, free + inactive + speculative pages on macOS."""
+    if sys.platform == "darwin":
+        out = subprocess.run(["vm_stat"], capture_output=True, text=True).stdout
+        page = int(re.search(r"page size of (\d+) bytes", out).group(1))
+        pages = {m.group(1): int(m.group(2)) for m in re.finditer(r"^Pages (free|inactive|speculative):\s+(\d+)\.", out, re.M)}
+        return sum(pages.values()) * page / 2**20
     with open("/proc/meminfo") as f:
         for line in f:
             if line.startswith("MemAvailable"):
