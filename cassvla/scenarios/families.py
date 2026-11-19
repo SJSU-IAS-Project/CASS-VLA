@@ -3,7 +3,7 @@
 Lane naming (PG maps): the first block is always ``I`` with nodes
 ``>``, ``>>``, ``>>>``; the ego spawns on (">", ">>", k) and the 40 m
 approach is (">>", ">>>", k). Lane 0 is the leftmost. ``lateral`` is
-positive to the left. See docs/phase1_findings.md for the X/T lane graphs.
+positive to the right. See docs/phase1_findings.md for the X/T lane graphs.
 
 Each family is a FamilySpec whose ``build(rng, mgr)`` returns the hazards to
 spawn for one episode. Randomness comes only from ``rng`` (seeded by episode).
@@ -34,7 +34,12 @@ class FamilySpec:
     ego_destination: str = None
     traffic_density: float = 0.0
     horizon: int = 300
+    t_window: tuple = (0.5, 6.0)
     env_overrides: dict = field(default_factory=dict)
+
+    def decision_times(self, step=0.5):
+        lo, hi = self.t_window
+        return [round(float(t), 2) for t in np.arange(lo, hi + 1e-9, step)]
 
 
 # ---------------------------------------------------------------------------
@@ -44,8 +49,8 @@ def _occluded_pedestrian(rng, mgr):
     lane = mgr.engine.current_map.road_network.get_lane(_lane(2))
     lon = float(rng.uniform(20.0, 30.0))
     parked = ParkedVehicle("parked_car", _lane(2), lon, lateral=0.0, large=bool(rng.random() < 0.3))
-    # pedestrian stands just right of the parked car (off the lane), then walks left across the road
-    ped_pos = lane.position(lon + float(rng.uniform(2.0, 4.0)), -4.3)
+    # 3.5 m clears the nose of both car sizes, so the walk across the ego lane does not pass through the car
+    ped_pos = lane.position(lon + float(rng.uniform(3.5, 5.0)), 0.0)
     ped = CrossingPedestrian("pedestrian", ped_pos, lane.heading_theta_at(lon) + np.pi / 2,
                              speed=float(rng.uniform(1.1, 1.8)), trigger_dist=float(rng.uniform(12.0, 20.0)),
                              walk_dist=float(rng.uniform(6.0, 10.0)))
@@ -132,19 +137,19 @@ def _merge_closing_speed(rng, mgr):
 
 FAMILIES: Dict[str, FamilySpec] = {
     "occluded_pedestrian": FamilySpec(
-        "occluded_pedestrian", "SS", "pedestrian steps out from behind a car parked in the right lane", _occluded_pedestrian),
+        "occluded_pedestrian", "SS", "pedestrian steps out from behind a car parked in the right lane", _occluded_pedestrian, t_window=(1.0, 4.5)),
     "occluded_cross_traffic": FamilySpec(
         "occluded_cross_traffic", "X", "red-light runner from the south arm, hidden by a truck at the corner", _occluded_cross_traffic,
-        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_"),
+        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(3.0, 8.0)),
     "ambiguous_light": FamilySpec(
         "ambiguous_light", "X", "ego light changes around the ego's arrival at the stop line", _ambiguous_light,
-        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_"),
+        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(1.5, 7.0)),
     "lead_brake_cutin": FamilySpec(
-        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin),
+        "lead_brake_cutin", "SS", "lead brakes hard, or a neighbour cuts in and slows", _lead_brake_cutin, t_window=(3.5, 18.0)),
     "lane_blockage": FamilySpec(
-        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage),
+        "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage, t_window=(1.0, 4.5)),
     "merge_closing_speed": FamilySpec(
-        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed),
+        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed, t_window=(2.5, 7.0)),
 }
 
 # per-seed signal schedules for families whose signal timing is randomised

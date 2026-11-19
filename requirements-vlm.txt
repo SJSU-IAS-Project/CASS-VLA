@@ -1,0 +1,8 @@
+# Optional: the offline VLM pass (Phase 5, scripts/cache_vlm.py). Apple Silicon only, because mlx runs on
+# Metal. Not needed for the simulator, the labels or the evaluation, which only read the cache.
+#
+#   uv pip install --python .venv/bin/python -r requirements-vlm.txt
+#
+# Tested with mlx-vlm 0.8.0 / mlx 0.32.4 and mlx-community/Qwen2.5-VL-3B-Instruct-4bit (~3 GB download,
+# ~3.7 GB peak memory).
+mlx-vlm>=0.8.0,<0.9

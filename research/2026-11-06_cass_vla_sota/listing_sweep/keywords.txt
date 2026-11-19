@@ -1,0 +1,33 @@
+# title regex alternatives, one per line, case-insensitive; used by listing_filter.py
+autonomous driving
+self-driving
+end-to-end driving
+driving (agent|policy|planner|planning|scene|vlm|vla|model|world|safety|benchmark|scenario)
+\bvla\b
+vision-language-action
+trajector(y|ies) (selection|scor|critic|evaluat|verif|propos|candidate|ranking)
+motion planning
+active (perception|sensing|vision|information|feature acquisition|exploration for)
+value of information
+information gain
+(task|decision|planning)[- ](aware|relevant|driven|oriented) (perception|sensing|query|feature)
+when to (call|use|look|query|ask|retrieve|act|think|zoom|perceive|invoke)
+tool (selection|use|call|invocation|calling|necessity|budget)
+(perception|visual|vision) tool
+think(ing)? with images
+zoom
+look again
+budget(ed)?[- ](aware|constrained|perception|tool|query|inference)
+(learning to|learn to) (defer|abstain|ask)
+ask(ing)? for help
+selective (prediction|perception|computation|sensing|querying)
+conformal
+runtime (monitor|assurance|verification|safety)
+safety (shield|filter|monitor|critic|supervisor)
+occlu
+sensor (corruption|perturbation|degradation|failure|noise)
+long[- ]tail (driving|scenario)
+safety-critical scenario
+metadrive|carla|nuplan|navsim|bench2drive|nuscenes|waymo
+probing .*(vlm|vision-language|multimodal)
+(vlm|vision-language model|mllm)s? (know|see|probe|hidden|latent|representation|feature)

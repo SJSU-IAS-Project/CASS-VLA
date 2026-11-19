@@ -1,0 +1,7 @@
+Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning | CVPR 2026 (id unknown)
+Judge, Then Drive: A Critic-Centric Vision Language Action Framework for Autonomous Driving | 2604.27366
+DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking | ICLR 2026 (id unknown)
+Unleashing VLA Potentials in Autonomous Driving via Explicit Learning from Failures | CVPR 2026 (id unknown)
+SafePath: Conformal Prediction for Safe LLM-Based Autonomous Navigation | 2505.09427
+Lost in Fog: Sensor Perturbations Expose Reasoning Fragility in Driving VLAs | CVPR 2026 Workshop SAIAD (id unknown)
+MetaDrive: Composing Diverse Driving Scenarios for Generalizable Reinforcement Learning | 2109.12674

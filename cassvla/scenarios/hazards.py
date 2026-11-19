@@ -75,8 +75,11 @@ class Barrier(Hazard):
         half = lane.width_at(self.longitude) / 2 - 0.4
         lats = np.linspace(-half, half, self.count) if self.count > 1 else [0.0]
         for lat in lats:
-            self.objs.append(mgr.spawn_object(cls, lane=lane, position=lane.position(self.longitude, float(lat)),
-                                              static=True, heading_theta=lane.heading_theta_at(self.longitude)))
+            obj = mgr.spawn_object(cls, lane=lane, position=lane.position(self.longitude, float(lat)),
+                                   static=True, heading_theta=lane.heading_theta_at(self.longitude))
+            # pooled objects keep the velocity of an earlier collision, which would corrupt TTC
+            obj.set_velocity([1, 0], 0.0, in_local_frame=False)
+            self.objs.append(obj)
 
     def state(self):
         return dict(kind="barrier", positions=[tuple(np.round(o.position, 2)) for o in self.objs])
@@ -204,7 +207,7 @@ class KinematicVehicle(Hazard):
         h = self.lane.heading_theta_at(lon)
         fwd = np.array([math.cos(h), math.sin(h)])
         left = np.array([-math.sin(h), math.cos(h)])
-        d = fwd + 0.25 * (self.target_lat - lat) * left
+        d = fwd - 0.25 * (self.target_lat - lat) * left
         d /= np.linalg.norm(d)
         self.obj.set_velocity(d, self.speed, in_local_frame=False)
         self.obj.set_heading_theta(math.atan2(d[1], d[0]))
