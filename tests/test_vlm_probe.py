@@ -26,7 +26,8 @@ def test_light_confusion_uses_ego_status():
     rows = [_row("ambiguous_light/5_2.0", light="green"), _row("ambiguous_light/5_2.5", light="red"), _row("lane_blockage/5_2.0", light="green")]
     records = [dict(family="ambiguous_light", seed=5, t_dec=2.0, signals=dict(ego_status="TRAFFIC_LIGHT_RED")),
                dict(family="ambiguous_light", seed=5, t_dec=2.5, signals=dict(ego_status="TRAFFIC_LIGHT_RED")),
-               dict(family="lane_blockage", seed=5, t_dec=2.0, signals=dict(ego_status=None))]
+               dict(family="lane_blockage", seed=5, t_dec=2.0, signals=dict(ego_status=None)),
+               dict(family="lane_blockage", seed=5, t_dec=9.0, skipped="episode ended")]          # sweep lines without signals
     c = light_confusion(rows, records)
     assert c["confusion"] == {"TRAFFIC_LIGHT_RED -> green": 1, "TRAFFIC_LIGHT_RED -> red": 1}
     assert c["accuracy"] == 0.5

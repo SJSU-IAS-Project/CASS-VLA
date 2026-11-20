@@ -44,7 +44,7 @@ def _by_family(rows, field):
 
 
 def light_confusion(rows, records):
-    truth = {_key(r["family"], r["seed"], r["t_dec"]): r["signals"].get("ego_status") for r in records}
+    truth = {_key(r["family"], r["seed"], r["t_dec"]): r["signals"].get("ego_status") for r in records if "signals" in r}
     conf, hit, n, none_n, none_green = collections.Counter(), 0, 0, 0, 0
     for r in rows:
         if r["key"] not in truth:
