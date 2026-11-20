@@ -1,6 +1,6 @@
 """Accuracy against query budget, one panel per noise level, from eval_baselines.py output.
 
-    python scripts/plot_pareto.py --eval out/eval/test.json --out docs/baseline_pareto.png
+    python scripts/plot_pareto.py --eval out/v2_eval/final.json --out docs/baseline_pareto.png
 """
 import argparse
 import json
@@ -9,8 +9,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-SERIES = (("plandiscrim_geometry", "PlanDiscrim, geometry only", "#2a78d6", "-", 2.6),
-          ("scene_only_learned", "Scene-only learned", "#eb6834", "--", 2.0),
+SERIES = (("plandiscrim_mlp", "PlanDiscrim, geometry MLP", "#2a78d6", "-", 2.6),
+          ("scene_only_mlp", "Scene-only MLP", "#eb6834", "--", 2.0),
           ("uncertainty_margin", "Ranker margin", "#1baf7a", "-.", 2.0),
           ("random", "Random tool", "#eda100", ":", 2.0),
           ("oracle", "Oracle selector", "#e87ba4", (0, (1, 1, 4, 1)), 2.0))
@@ -31,8 +31,7 @@ def main():
         for key, label, color, style, width in SERIES:
             ax.plot(r["budgets"], [pt[0] for pt in r["curves"][key]], color=color, linestyle=style, linewidth=width, label=label)
         ax.axhline(r["always_on"]["acc"], color=MUTED, linewidth=1.2)
-        ax.text(0.98, r["always_on"]["acc"] + 0.008, f"Always-on, 3 calls: {r['always_on']['acc']:.2f}", color=MUTED, fontsize=9, ha="right")
-        ax.set_title(f"{level.capitalize()} tool noise", color=INK, fontsize=11, loc="left")
+        ax.set_title(f"{level.capitalize()} tool noise\nGrey line: always-on, 3 calls, {r['always_on']['acc']:.2f}", color=INK, fontsize=10, loc="left")
         ax.set_xlabel("Tool calls per decision", color=MUTED)
         ax.set_xlim(0, 1)
         ax.set_ylim(0, 0.8)

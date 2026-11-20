@@ -1,6 +1,7 @@
 """Accuracy against query cost for the selection policies, on a dataset from build_dataset.py.
 
     python scripts/eval_baselines.py --data out/dataset --split test --out out/eval
+    python scripts/eval_baselines.py --data out/dataset --test-data out/final --split final --out out/eval
 
 Every policy shares the same ranker and tools. The geometry selector here has no VLA features.
 """
@@ -14,7 +15,7 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 TOOLS = ("roi", "depth", "collision")
 BUDGETS = np.round(np.arange(0.0, 1.0001, 0.05), 2)
-LEVELS = ("low", "mid", "high")
+LEVELS = ("low", "mid", "high", "mid_los")
 N_RANDOM, N_BOOT = 50, 1000
 
 
@@ -51,7 +52,35 @@ def fit_selector(Xtr, gain):
     return mu, sd, models
 
 
+def fit_mlp(Xtr, gain, hidden=32, epochs=300, lr=0.01, l2=1e-3, seed=0):
+    """One hidden layer, one sigmoid output per tool, class-balanced loss, full-batch Adam. Settings fixed in advance."""
+    rng = np.random.default_rng(seed)
+    mu, sd = Xtr.mean(axis=0), Xtr.std(axis=0) + 1e-6
+    Z = (Xtr - mu) / sd
+    pos = np.clip(gain.mean(axis=0), 1e-3, 1 - 1e-3)
+    wt = np.where(gain > 0, 0.5 / pos, 0.5 / (1 - pos))
+    params = [rng.normal(0, 1 / np.sqrt(Z.shape[1]), (Z.shape[1], hidden)), np.zeros(hidden),
+              rng.normal(0, 1 / np.sqrt(hidden), (hidden, gain.shape[1])), np.zeros(gain.shape[1])]
+    m1, m2 = [np.zeros_like(q) for q in params], [np.zeros_like(q) for q in params]
+    for step in range(1, epochs + 1):
+        W1, b1, W2, b2 = params
+        h = np.maximum(Z @ W1 + b1, 0)
+        p = 1 / (1 + np.exp(-(h @ W2 + b2)))
+        g = wt * (p - gain) / len(Z)
+        gh = (g @ W2.T) * (h > 0)
+        grads = [Z.T @ gh + l2 * W1, gh.sum(axis=0), h.T @ g + l2 * W2, g.sum(axis=0)]
+        for k, (q, gr) in enumerate(zip(params, grads)):
+            m1[k] = 0.9 * m1[k] + 0.1 * gr
+            m2[k] = 0.999 * m2[k] + 0.001 * gr * gr
+            q -= lr * (m1[k] / (1 - 0.9 ** step)) / (np.sqrt(m2[k] / (1 - 0.999 ** step)) + 1e-8)
+    return ("mlp", mu, sd, params)
+
+
 def predict(model, X):
+    if isinstance(model[0], str):
+        _, mu, sd, (W1, b1, W2, b2) = model
+        h = np.maximum((X - mu) / sd @ W1 + b1, 0)
+        return 1 / (1 + np.exp(-(h @ W2 + b2)))
     mu, sd, models = model
     Z = (X - mu) / sd
     return np.stack([1 / (1 + np.exp(-(Z @ w + b))) for w, b in models], axis=1)
@@ -97,7 +126,7 @@ def seed_boot(diff, seeds, rng):
     return [round(float(np.percentile(stats, q)), 4) for q in (2.5, 97.5)]
 
 
-def evaluate(train, test, level, key, agnostic_idx):
+def evaluate(train, test, level, key, agnostic_idx, base_cols):
     a0, u0, at, ut, aa, ua = tables(test, level, key)
     a0_tr, _, at_tr, _, _, _ = tables(train, level, key)
     Xtr = np.array([r["features"] for r in train], float)
@@ -130,6 +159,11 @@ def evaluate(train, test, level, key, agnostic_idx):
     scene_order, scene_tool = rank_desc(prob_a.max(axis=1), rng), prob_a.argmax(axis=1)
     results["scene_only_learned"] = curve(scene_order, scene_tool, a0, u0, at, ut)
 
+    for name, cols, fit in (("plandiscrim_mlp", list(range(Xtr.shape[1])), fit_mlp), ("scene_only_mlp", agn_cols, fit_mlp),
+                            ("plandiscrim_no_divergence", base_cols, fit_selector)):
+        pr = predict(fit(Xtr[:, cols], gain_tr), Xte[:, cols])
+        results[name] = curve(rank_desc(pr.max(axis=1), rng), pr.argmax(axis=1), a0, u0, at, ut)
+
     gain = at - a0[:, None]
     fixes = gain.max(axis=1) > 0
     best = gain.argmax(axis=1)
@@ -144,6 +178,12 @@ def evaluate(train, test, level, key, agnostic_idx):
     fixed = np.full(len(a0), best_tool)
     vs_margin = gain_ci(pd_order, pd_tool, margin_order, fixed, a0, u0, at, ut, seeds, rng)
     vs_scene = gain_ci(pd_order, pd_tool, scene_order, scene_tool, a0, u0, at, ut, seeds, rng)
+    mlp_orders = {}
+    for name, cols in (("plandiscrim_mlp", list(range(Xtr.shape[1]))), ("scene_only_mlp", agn_cols)):
+        pr = predict(fit_mlp(Xtr[:, cols], gain_tr), Xte[:, cols])
+        mlp_orders[name] = (rank_desc(pr.max(axis=1), np.random.default_rng(1)), pr.argmax(axis=1))
+    vs_scene_mlp = gain_ci(*mlp_orders["plandiscrim_mlp"], *mlp_orders["scene_only_mlp"], a0, u0, at, ut, seeds, rng)
+    vs_margin_mlp = gain_ci(*mlp_orders["plandiscrim_mlp"], margin_order, fixed, a0, u0, at, ut, seeds, rng)
 
     pred_q = prob.max(axis=1) >= 0.5
     abstain_truth = ~fixes
@@ -175,6 +215,7 @@ def evaluate(train, test, level, key, agnostic_idx):
         curves={k: [[round(float(x), 4) for x in pt] for pt in v] for k, v in results.items()},
         auc={k: round(float(np.mean([pt[0] for pt in v])), 4) for k, v in results.items()},
         plandiscrim_minus_uncertainty=vs_margin, plandiscrim_minus_scene_only=vs_scene,
+        mlp_minus_uncertainty=vs_margin_mlp, mlp_minus_scene_only_mlp=vs_scene_mlp,
         abstention=dict(precision=round(prec, 3), recall=round(rec_ab, 3), base_rate=round(float(abstain_truth.mean()), 3)),
         families=fam)
 
@@ -184,16 +225,18 @@ def main():
     p.add_argument("--data", required=True)
     p.add_argument("--split", default="val")
     p.add_argument("--out", required=True)
+    p.add_argument("--test-data", default=None, help="read the evaluated split from here instead of --data")
     args = p.parse_args()
     with open(os.path.join(args.data, "manifest.json")) as f:
         man = json.load(f)
     names = man["feature_names"]
     agnostic_idx = {k: names.index(k) for k in man["agnostic_features"]}
-    train, test = load(args.data, "train"), load(args.data, args.split)
+    base_cols = [i for i, k in enumerate(names) if not k.startswith(("div_", "runner_", "light_splits"))]
+    train, test = load(args.data, "train"), load(args.test_data or args.data, args.split)
     os.makedirs(args.out, exist_ok=True)
     report = {}
     for key in ("correct", "correct_tol"):
-        report[key] = {lv: evaluate(train, test, lv, key, agnostic_idx) for lv in LEVELS}
+        report[key] = {lv: evaluate(train, test, lv, key, agnostic_idx, base_cols) for lv in LEVELS if lv in train[0]["levels"]}
     path = os.path.join(args.out, f"{args.split}.json")
     with open(path, "w") as f:
         json.dump(report, f, indent=1)

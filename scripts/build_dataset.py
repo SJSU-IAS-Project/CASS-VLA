@@ -1,6 +1,7 @@
 """Turn a label sweep into the tool-discriminativeness dataset, split by seed.
 
     python scripts/build_dataset.py --sweep out/sweep --out out/dataset --procs 8
+    python scripts/build_dataset.py --sweep out/final_sweep --out out/final --as-split final
 
 Writes <out>/{train,val,test}.jsonl and <out>/manifest.json. Records with no retained scene are dropped.
 """
@@ -41,6 +42,7 @@ def main():
     p.add_argument("--sweep", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--procs", type=int, default=8)
+    p.add_argument("--as-split", default=None, help="put every seed in this one split, e.g. a held-out final test")
     args = p.parse_args()
     os.makedirs(args.out, exist_ok=True)
     files = sorted(glob.glob(os.path.join(args.sweep, "*.jsonl")))
@@ -51,7 +53,7 @@ def main():
     for path in files:
         with open(path) as f:
             all_seeds.update(json.loads(line)["seed"] for line in f)
-    splits = split_seeds(all_seeds)
+    splits = {args.as_split: sorted(all_seeds)} if args.as_split else split_seeds(all_seeds)
     which = {s: k for k, v in splits.items() for s in v}
     counts = {}
     handles = {k: open(os.path.join(args.out, f"{k}.jsonl"), "w") for k in splits}
