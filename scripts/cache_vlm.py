@@ -3,6 +3,7 @@
     pip install -r requirements-vlm.txt          # Apple Silicon only (mlx)
     python scripts/cache_vlm.py --frames out/frames --records out/dataset --out out/vlm
     python scripts/cache_vlm.py --frames out/frames --records out/dataset --out out/vlm --limit 20   # smoke test
+    python scripts/cache_vlm.py --frames out/frames --mode yesno --out out/vlm_yesno/frames.jsonl     # yes/no questions
 
 Writes <out>/meta.json (model, revision, prompt hash), <out>/emb_*.npz (keys + embeddings),
 <out>/prompted.jsonl (parsed answers plus the raw reply), <out>/timings.jsonl and <out>/profile.json.
@@ -41,7 +42,7 @@ def main():
     p.add_argument("--frames", required=True, help="directory written by render_frames.py")
     p.add_argument("--out", required=True)
     p.add_argument("--records", nargs="*", default=None)
-    p.add_argument("--mode", choices=("both", "embed", "ask"), default="both")
+    p.add_argument("--mode", choices=("both", "embed", "ask", "yesno"), default="both")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--revision", default=None)
     p.add_argument("--limit", type=int, default=None)
@@ -55,8 +56,16 @@ def main():
     missing = sum(r["key"] not in names for r in index[:len(frames)])
     print(f"{len(frames)} frames; {missing} without candidate names (full bank listed)", flush=True)
 
-    from cassvla.perception.vlm import MLXBackend
+    from cassvla.perception.vlm import MLXBackend, cache_yesno
     backend = MLXBackend(args.model, revision=args.revision)
+    if args.mode == "yesno":
+        rows = cache_yesno(frames, args.frames, backend, args.out)
+        secs = [r["seconds"] for r in rows]
+        prof = dict(frames=len(rows), mean_s=round(sum(secs) / max(len(secs), 1), 3), peak_memory_gb=backend.peak_memory_gb(), model=backend.model_id)
+        with open(args.out.replace(".jsonl", "_profile.json"), "w") as f:
+            json.dump(prof, f, indent=1)
+        print(json.dumps(prof))
+        return
     timings = cache_frames(frames, args.frames, backend, args.out, mode=args.mode)
 
     tpath = os.path.join(args.out, "timings.jsonl")

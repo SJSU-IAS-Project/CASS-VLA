@@ -49,6 +49,31 @@ Reply with JSON only, in this form:
 {{"hazards": ["short phrase", ...], "occlusion": true or false, "light": "green|yellow|red|none|unknown", "query": "roi|depth|collision|none"}}"""
 
 
+# Yes/no visual questions, scored by the probability of "Yes" against "No" in the first answer token. Narrow
+# perception questions, not the tool choice: the prompted tool choice is constant (docs/vlm_failure_analysis.md).
+QUESTIONS = {
+    "pedestrian": "Is there a pedestrian in this image? Answer Yes or No.",
+    "hidden": "Is part of the road ahead hidden behind a parked or stopped vehicle, so that a pedestrian or a car could be behind it? "
+              "Answer Yes or No.",
+    "red_light": "Is the traffic light facing the car red or yellow? Answer Yes or No.",
+}
+YES_WORDS, NO_WORDS = ("Yes", "yes", " Yes"), ("No", "no", " No")
+
+
+def questions_hash():
+    return hashlib.sha256(json.dumps(QUESTIONS, sort_keys=True).encode()).hexdigest()[:12]
+
+
+def yes_probability(logits, yes_ids, no_ids):
+    """P(yes) from first-token logits, normalised over the yes and no tokens only. Raises on non-finite input."""
+    logits = np.asarray(logits, np.float64)
+    if not np.isfinite(logits).all():      # any NaN means the forward pass broke (the float16 failure)
+        raise ValueError(f"non-finite logits ({int((~np.isfinite(logits)).sum())} entries)")
+    z = logits[list(yes_ids) + list(no_ids)]
+    e = np.exp(z - z.max())
+    return float(e[:len(yes_ids)].sum() / e.sum())
+
+
 def describe_candidates(names):
     return "\n".join(f"- {n}: {MANEUVERS.get(n, n.replace('_', ' '))}" for n in names)
 
@@ -133,6 +158,20 @@ class MLXBackend:
         t0 = time.time()
         r = generate(self.model, self.processor, self._chat(text), image=[image_path], max_tokens=self.max_tokens, temperature=0.0)
         return r.text, dict(seconds=round(time.time() - t0, 3), prompt_tokens=int(r.prompt_tokens), generation_tokens=int(r.generation_tokens))
+
+    def yes_prob(self, image_path, question):
+        from mlx_vlm.utils import prepare_inputs
+        mx = self.mx
+        if not hasattr(self, "_yes_no"):
+            tok = self.processor.tokenizer
+            ids = lambda words: sorted({tok.encode(w, add_special_tokens=False)[0] for w in words})
+            self._yes_no = ids(YES_WORDS), ids(NO_WORDS)
+        inp = prepare_inputs(self.processor, images=[image_path], prompts=[self._chat(question)],
+                             image_token_index=getattr(self.model.config, "image_token_index", None))
+        out = self.model(inp["input_ids"], inp["pixel_values"], mask=inp["attention_mask"], image_grid_thw=inp["image_grid_thw"])
+        logits = out.logits[0, -1].astype(mx.float32)
+        mx.eval(logits)
+        return yes_probability(np.array(logits), *self._yes_no)
 
     def peak_memory_gb(self):
         return round(self.mx.get_peak_memory() / 1e9, 3)
@@ -229,3 +268,37 @@ def summarize_timings(timings, peak_memory_gb=None):
             out[part] = dict(n=int(len(s)), mean_s=round(float(s.mean()), 3), p50_s=round(float(np.median(s)), 3),
                              p95_s=round(float(np.percentile(s, 95)), 3))
     return out
+
+
+def cache_yesno(frames, frames_dir, backend, out_path, log=print):
+    """P(yes) for every question in QUESTIONS, one JSON line per frame, after a header line. Resumable; refuses a
+    file made with other questions or another model."""
+    header = dict(model=getattr(backend, "model_id", type(backend).__name__), revision=getattr(backend, "revision", None),
+                  vision_dtype=getattr(backend, "vision_dtype", None), questions=QUESTIONS, questions_hash=questions_hash())
+    have = set()
+    if os.path.exists(out_path) and os.path.getsize(out_path):
+        with open(out_path) as f:
+            old = json.loads(f.readline())["header"]
+            for k in ("model", "revision", "vision_dtype", "questions_hash"):
+                if old.get(k) != header[k]:
+                    raise ValueError(f"{out_path} was made with {k}={old.get(k)!r}, not {header[k]!r}; use a new file")
+            have = {json.loads(line)["key"] for line in f}
+    else:
+        os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
+        with open(out_path, "w") as f:
+            f.write(json.dumps(dict(header=header)) + "\n")
+    rows = []
+    with open(out_path, "a") as f:
+        for i, fr in enumerate(frames):
+            if fr["key"] in have:
+                continue
+            t0 = time.time()
+            img = os.path.join(frames_dir, fr["path"])
+            row = dict(key=fr["key"], p={q: round(backend.yes_prob(img, text), 5) for q, text in QUESTIONS.items()},
+                       seconds=round(time.time() - t0, 3))
+            f.write(json.dumps(row) + "\n")
+            f.flush()
+            rows.append(row)
+            if log and (i + 1) % 50 == 0:
+                log(f"{i + 1} frames")
+    return rows
