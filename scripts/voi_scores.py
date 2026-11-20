@@ -6,7 +6,9 @@
 
 The first line is {"config": {...}} (priors, draws, classes, levels, git sha). Each further line is
 {"family", "seed", "t_dec", "levels": {level: {"voi": {tool: float}, "top_now": str}}, "seconds"}. --sim-level
-simulates tool answers at one fixed level for every evaluated level (the noise-unaware ablation).
+simulates tool answers at one fixed level for every evaluated level (the noise-unaware ablation). --vlm-yesno
+(from cache_vlm.py --mode yesno) sets each decision's occlusion priors from the VLM: occl_static = occl_ped =
+P(hidden) / 2; every retained decision must have a yes/no row.
 """
 import argparse
 import glob
@@ -36,17 +38,30 @@ def load_priors(spec):
     return dict(p.get("priors", p))
 
 
+def priors_for(priors, p_hidden):
+    """The VLM's P(hidden road user) as the combined weight of the two occlusion classes."""
+    return dict(priors, occl_static=p_hidden / 2.0, occl_ped=p_hidden / 2.0)
+
+
+def load_yesno(path):
+    with open(path) as f:
+        f.readline()
+        return {r["key"]: r["p"]["hidden"] for r in map(json.loads, f)}
+
+
 def score_file(task):
-    path, cfg = task
+    path, cfg, yesno, seeds = task
+    from cassvla.perception.frames import frame_key
     from cassvla.planning.voi import voi
     rows = []
     for line in open(path):
         rec = json.loads(line)
-        if not rec.get("retained"):
+        if not rec.get("retained") or (seeds is not None and rec["seed"] not in seeds):
             continue
+        priors = cfg["priors"] if yesno is None else priors_for(cfg["priors"], yesno[frame_key(rec["family"], rec["seed"], rec["t_dec"])])
         levels, secs = {}, 0.0
         for lv in cfg["levels"]:
-            o = voi(rec, cfg["sim_level"] or lv, priors=cfg["priors"], draws=cfg["draws"], classes=tuple(cfg["classes"]))
+            o = voi(rec, cfg["sim_level"] or lv, priors=priors, draws=cfg["draws"], classes=tuple(cfg["classes"]))
             levels[lv] = dict(voi={t: round(v, 4) for t, v in o["voi"].items()}, top_now=o["top_now"])
             secs += o["seconds"]
         rows.append(dict(family=rec["family"], seed=rec["seed"], t_dec=rec["t_dec"], levels=levels, n_worlds=o["n_worlds"],
@@ -71,14 +86,32 @@ def main():
     p.add_argument("--draws", type=int, default=8)
     p.add_argument("--classes", nargs="+", default=list(CLASSES))
     p.add_argument("--sim-level", default=None, help="simulate tool answers at this level for every evaluated level")
+    p.add_argument("--vlm-yesno", default=None, help="yes/no cache; its P(hidden) sets the occlusion priors per decision")
+    p.add_argument("--manifest", default=None, help="with --splits: score only the seeds of these dataset splits")
+    p.add_argument("--splits", nargs="*", default=None)
     p.add_argument("--procs", type=int, default=8)
     args = p.parse_args()
     cfg = dict(priors=load_priors(args.priors), draws=args.draws, classes=args.classes, levels=args.levels, sim_level=args.sim_level,
                priors_source=args.priors, git_sha=git_sha())
     files = sweep_files(args.sweep)
+    seeds = None
+    if args.manifest:
+        man = json.load(open(args.manifest))["splits"]
+        seeds = {s for sp in (args.splits or list(man)) for s in man[sp]}
+        cfg["splits"] = args.splits
+    yesno = None
+    if args.vlm_yesno:
+        from cassvla.perception.frames import frame_key
+        yesno = load_yesno(args.vlm_yesno)
+        keys = [frame_key(r["family"], r["seed"], r["t_dec"]) for f in files for r in map(json.loads, open(f))
+                if r.get("retained") and (seeds is None or r["seed"] in seeds)]
+        miss = [k for k in keys if k not in yesno]
+        if miss:
+            raise SystemExit(f"{len(miss)} of {len(keys)} retained decisions have no yes/no row in {args.vlm_yesno} (e.g. {miss[:3]})")
+        cfg["vlm_yesno"] = args.vlm_yesno
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     n, secs = 0, 0.0
-    tasks = [(f, cfg) for f in files]
+    tasks = [(f, cfg, yesno, seeds) for f in files]
     with open(args.out, "w") as fh:
         fh.write(json.dumps(dict(config=cfg)) + "\n")
         results = map(score_file, tasks) if args.procs == 1 else mp.Pool(args.procs).imap_unordered(score_file, tasks)

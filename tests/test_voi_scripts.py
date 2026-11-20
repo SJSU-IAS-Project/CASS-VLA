@@ -47,3 +47,47 @@ def test_priors_are_rates_between_zero_and_one(tmp_path, monkeypatch):
     assert p["priors"]["null"] == 1.0 and p["priors"]["depth"] == 1.0
     assert all(0.0 <= p["priors"][c] <= 1.0 for c in ("occl_static", "occl_ped", "light", "rear"))
     assert p["counts"]["occl_static"]["n"] > 0
+
+
+def _occl_weight(rec, priors):
+    from cassvla.planning import tools as T
+    from cassvla.planning.voi import weighted_worlds
+    total = 0.0
+    for w, world in weighted_worlds(rec, T.base_observation(rec), priors):
+        if any(a["name"] == "hyp" and not any(a["velocity"]) for a in world["actors"]):
+            total += w
+    return total
+
+
+def test_vlm_prior_sets_occlusion_weights():
+    from cassvla.planning.voi import UNIFORM
+    from voi_scores import priors_for
+    rec = next(json.loads(x) for x in open(FIXTURE) if json.loads(x)["family"] == "occluded_pedestrian")
+    ws = [_occl_weight(rec, priors_for(UNIFORM, p)) for p in (0.0, 0.25, 0.5, 1.0)]
+    assert ws[0] == 0.0
+    assert ws[1] < ws[2] < ws[3]
+
+
+def test_vlm_prior_requires_every_row(tmp_path, monkeypatch):
+    import voi_scores
+    from cassvla.perception.frames import frame_key
+    recs = [json.loads(x) for x in open(FIXTURE) if json.loads(x).get("retained")]
+    yn = tmp_path / "yn.jsonl"
+    with open(yn, "w") as f:
+        f.write(json.dumps(dict(header=dict(questions_hash="x"))) + "\n")
+        for r in recs[1:]:
+            f.write(json.dumps(dict(key=frame_key(r["family"], r["seed"], r["t_dec"]), p=dict(hidden=0.5))) + "\n")
+    with pytest.raises(SystemExit, match=f"1 of {len(recs)}"):
+        _run(voi_scores, ["--sweep", FIXTURE, "--out", str(tmp_path / "v.jsonl"), "--levels", "mid", "--procs", "1", "--vlm-yesno", str(yn)], monkeypatch)
+
+
+def test_voi_scores_keeps_only_the_chosen_splits(tmp_path, monkeypatch):
+    import voi_scores
+    recs = [json.loads(x) for x in open(FIXTURE) if json.loads(x).get("retained")]
+    seeds = sorted({r["seed"] for r in recs})
+    man = tmp_path / "manifest.json"
+    man.write_text(json.dumps(dict(splits=dict(train=seeds[1:], val=seeds[:1], test=[]))))
+    out = tmp_path / "v.jsonl"
+    _run(voi_scores, ["--sweep", FIXTURE, "--out", str(out), "--levels", "mid", "--procs", "1", "--manifest", str(man), "--splits", "val"], monkeypatch)
+    rows = [json.loads(x) for x in open(out)][1:]
+    assert rows and {r["seed"] for r in rows} == {seeds[0]}
