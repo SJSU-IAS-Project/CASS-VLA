@@ -122,3 +122,14 @@ def test_hidden_event_worlds_keep_their_extra_actor_and_light():
     worlds = weighted_worlds(rec, base, {"null": 1.0, "depth": 1.0, "light": 1.0})
     lights = [w["light"] for _, w in worlds]
     assert lights.count(None) == 8 and len(worlds) == 10          # 8 noise draws + red and green on top of draws
+
+
+def test_alternatives_world_model_keeps_the_noise_free_base_as_a_world():
+    from cassvla.planning.voi import UNIFORM, weighted_worlds
+    rec = RECS["merge_closing_speed"]
+    base = T.base_observation(rec)
+    worlds = weighted_worlds(rec, base, UNIFORM, world_model="alternatives")
+    exact = [w for _, w in worlds if all(np.allclose(a["position"], b["position"]) for a, b in zip(w["actors"], base["actors"]))
+             and len(w["actors"]) == len(base["actors"])]
+    assert len(exact) == 1
+    assert abs(sum(w for w, _ in worlds) - 1.0) < 1e-9

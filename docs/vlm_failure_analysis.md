@@ -47,8 +47,7 @@ The prompt showed the answer format inline: `"light": "green|yellow|red|none|unk
 | `noschema`: list hazards, then pick a query | lists "a person standing on the right side of the road" as a hazard, then picks **none** |
 | `orig` (the cached prompt) | `{"hazards": ["none"], "occlusion": false, "light": "green", "query": "none"}` |
 
-The free-text yes/no answers lean to "No" even when the description contains the object. Section 5 shows the
-first-token probabilities do carry the signal.
+The free-text yes/no answers lean to "No" even when the description contains the object.
 
 ## 3. Choosing a tool is beyond it, whatever the wording
 
@@ -72,11 +71,11 @@ non-finite embedding, and a cache records `vision_dtype` and refuses to mix dtyp
 
 ## 5. What the VLM is good for instead
 
-Narrow yes/no questions scored by the probability of "Yes" against "No" in the first answer token avoid causes 1
-and 2. On the same frame, "Is there a pedestrian in this image?" puts 27.0 on "Yes" and 26.0 on "No" in the logits,
-even though the free-text answer is "No". `scripts/eval_vlm_yesno.py` measures these probabilities as detectors
-(AUROC) on validation and test, and `voi_vlm` uses P(hidden road user) as the occlusion prior of the VoI selector.
-Results are in `docs/voi_selector.md`.
+Narrow yes/no questions scored by the probability of "Yes" against "No" in the first answer token should avoid
+causes 1 and 2, because they read the model's preference instead of its free text. `scripts/eval_vlm_yesno.py`
+measures these probabilities as detectors (AUROC) against truth from the records, and `voi_vlm` uses P(hidden road
+user) as the occlusion prior of the VoI selector. Their results are added to `docs/voi_selector.md` by
+`scripts/make_voi_page.py` once the validation yes/no pass is complete.
 
 ## On-device cost (Apple Silicon Mac, a sweep running alongside)
 

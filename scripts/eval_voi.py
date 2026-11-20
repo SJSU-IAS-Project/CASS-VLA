@@ -42,6 +42,7 @@ ABLATIONS = (
     ("abl_no_rear", "--classes null depth occl_static occl_ped light"),
     ("abl_fitted_priors", "--priors out/voi/priors_fitted.json"),
     ("abl_noise_unaware", "--sim-level mid"),
+    ("abl_alternatives_uniform", "--world-model alternatives"),
 )
 
 

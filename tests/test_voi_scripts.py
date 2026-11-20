@@ -91,3 +91,11 @@ def test_voi_scores_keeps_only_the_chosen_splits(tmp_path, monkeypatch):
     _run(voi_scores, ["--sweep", FIXTURE, "--out", str(out), "--levels", "mid", "--procs", "1", "--manifest", str(man), "--splits", "val"], monkeypatch)
     rows = [json.loads(x) for x in open(out)][1:]
     assert rows and {r["seed"] for r in rows} == {seeds[0]}
+
+
+def test_voi_scores_config_records_world_model_and_dirty_flag(tmp_path, monkeypatch):
+    import voi_scores
+    out = tmp_path / "v.jsonl"
+    _run(voi_scores, ["--sweep", FIXTURE, "--out", str(out), "--levels", "mid", "--procs", "1", "--world-model", "alternatives"], monkeypatch)
+    cfg = json.loads(open(out).readline())["config"]
+    assert cfg["world_model"] == "alternatives" and isinstance(cfg["git_dirty"], bool)

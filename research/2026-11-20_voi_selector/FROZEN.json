@@ -4,7 +4,14 @@
   "world_model": "compositional: every world is a measurement-noise draw of the visible actors, optionally with one hidden event on top",
   "priors": "out/voi/priors_fitted.json (fitted on the 10,329 train decisions): null 1.0, depth 1.0, occl_static 0.0143, occl_ped 0.1021, light 0.4147, rear 0.0",
   "draws": 8,
-  "classes": ["null", "depth", "occl_static", "occl_ped", "light", "rear"],
+  "classes": [
+   "null",
+   "depth",
+   "occl_static",
+   "occl_ped",
+   "light",
+   "rear"
+  ],
   "sim_level": "the evaluated noise level (noise-aware)",
   "lambda": 0.0,
   "budget_only_variant": "voi_budget, same scores, no abstention"
@@ -14,5 +21,11 @@
   "draws": "4 and 16 draws within +-0.007 of 8, so 8 is kept",
   "noise_aware": "noise-unaware was +0.011 / +0.000 / +0.008 but untested together with fitted priors and without a principled reason; the principled setting is kept",
   "lambda": "abstaining at 0 vs budget-only differed by at most +0.002"
+ },
+ "voi_vlm": {
+  "prior": "occl_static = occl_ped = P(hidden)/2 per decision, other classes as in the fitted priors (relative weights)",
+  "question": "hidden",
+  "model": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit, float32 vision tower",
+  "cost_offset": 1.0
  }
 }

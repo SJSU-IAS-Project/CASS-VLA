@@ -37,6 +37,11 @@ def candidate_names(paths):
     return names
 
 
+def profile_path(out):
+    """Where the yes/no profile goes: next to the cache, never on top of it."""
+    return os.path.splitext(out)[0] + "_profile.json"
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--frames", required=True, help="directory written by render_frames.py")
@@ -62,7 +67,7 @@ def main():
         rows = cache_yesno(frames, args.frames, backend, args.out)
         secs = [r["seconds"] for r in rows]
         prof = dict(frames=len(rows), mean_s=round(sum(secs) / max(len(secs), 1), 3), peak_memory_gb=backend.peak_memory_gb(), model=backend.model_id)
-        with open(args.out.replace(".jsonl", "_profile.json"), "w") as f:
+        with open(profile_path(args.out), "w") as f:
             json.dump(prof, f, indent=1)
         print(json.dumps(prof))
         return

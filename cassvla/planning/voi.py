@@ -29,15 +29,27 @@ CLASSES = ("null", "depth", "occl_static", "occl_ped", "light", "rear")
 UNIFORM = {c: 1.0 for c in CLASSES}
 
 
-def weighted_worlds(rec, base, priors, draws=8, classes=CLASSES):
+def weighted_worlds(rec, base, priors, draws=8, classes=CLASSES, world_model="compositional"):
     """[(weight, belief)], weights summing to 1.
 
     The base camera is always noisy, so with "depth" in ``classes`` every world carries one of ``draws``
     measurement-noise draws of the visible actors; without it the visible actors are taken as exact. "null" is
     the component with no hidden event (one world per draw); every other class is a hidden event (an occluded
     vehicle or pedestrian, an unread light, a car behind) layered on top of a draw. Each non-empty component gets
-    its prior, renormalised, split evenly over its worlds."""
+    its prior, renormalised, split evenly over its worlds.
+
+    ``world_model="alternatives"`` is the first design, kept for the ablation: the noise-free base estimate is the
+    null world and the noise draws are a class of their own, competing with the hidden events."""
     hyp = hypotheses(rec, base, draws=draws)
+    if world_model == "alternatives":
+        alt = {c: ([base] if c == "null" else hyp[c]) for c in classes}
+        alt = {c: ws for c, ws in alt.items() if ws and priors.get(c, 0.0) > 0}
+        total = sum(priors[c] for c in alt)
+        if not alt or total <= 0:
+            return [(1.0, base)]
+        return [(priors[c] / total / len(ws), w) for c, ws in alt.items() for w in ws]
+    if world_model != "compositional":
+        raise ValueError(f"unknown world_model {world_model!r}")
     noise = hyp["depth"] if "depth" in classes and hyp["depth"] else [base]
     n_base = len(base["actors"])
     groups = {}
@@ -88,13 +100,13 @@ def utility(cand, belief, stops):
     return float(m["score"] - (0.0 if m["safe"] else UNSAFE_MARGIN_OFFSET))
 
 
-def voi(rec, level, priors=UNIFORM, draws=8, classes=CLASSES):
+def voi(rec, level, priors=UNIFORM, draws=8, classes=CLASSES, world_model="compositional"):
     t0 = time.time()
     base = base_observation(rec)
     now = rank(rec, base)["top1"]
     cands = {c["name"]: c for c in rec["candidates"]}
     stops = [p[:2] for p in (rec["signals"].get("ego_stop_points") or {}).values()]
-    worlds = weighted_worlds(rec, base, priors, draws, classes)
+    worlds = weighted_worlds(rec, base, priors, draws, classes, world_model)
     u_now = [utility(cands[now], wd, stops) for _, wd in worlds]
     v_now = sum(w * u for (w, _), u in zip(worlds, u_now))
     pseudo = [pseudo_record(rec, wd, k, base) for k, (_, wd) in enumerate(worlds)]

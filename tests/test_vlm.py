@@ -158,3 +158,12 @@ def test_cache_yesno_resumes(tmp_path):
     be2 = YesNoBackend()
     cache_yesno(_frames(2), "frames", be2, out, log=None)
     assert be2.calls == []
+
+
+def test_yesno_profile_path_never_overwrites_the_cache():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("cache_vlm", os.path.join(os.path.dirname(__file__), "..", "scripts", "cache_vlm.py"))
+    cv = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(cv)
+    assert cv.profile_path("out/vlm_yesno/v5.jsonl") == "out/vlm_yesno/v5_profile.json"
+    assert cv.profile_path("out/vlm_yesno/v5") == "out/vlm_yesno/v5_profile.json"

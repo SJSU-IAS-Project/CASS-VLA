@@ -39,7 +39,9 @@ def load_priors(spec):
 
 
 def priors_for(priors, p_hidden):
-    """The VLM's P(hidden road user) as the combined weight of the two occlusion classes."""
+    """The VLM's P(hidden road user), halved onto each occlusion class. These are relative weights next to the
+    other classes (null 1.0, light, rear), so the occlusion share of the world weight is below P(hidden); see
+    docs/voi_selector.md."""
     return dict(priors, occl_static=p_hidden / 2.0, occl_ped=p_hidden / 2.0)
 
 
@@ -61,7 +63,7 @@ def score_file(task):
         priors = cfg["priors"] if yesno is None else priors_for(cfg["priors"], yesno[frame_key(rec["family"], rec["seed"], rec["t_dec"])])
         levels, secs = {}, 0.0
         for lv in cfg["levels"]:
-            o = voi(rec, cfg["sim_level"] or lv, priors=priors, draws=cfg["draws"], classes=tuple(cfg["classes"]))
+            o = voi(rec, cfg["sim_level"] or lv, priors=priors, draws=cfg["draws"], classes=tuple(cfg["classes"]), world_model=cfg["world_model"])
             levels[lv] = dict(voi={t: round(v, 4) for t, v in o["voi"].items()}, top_now=o["top_now"])
             secs += o["seconds"]
         rows.append(dict(family=rec["family"], seed=rec["seed"], t_dec=rec["t_dec"], levels=levels, n_worlds=o["n_worlds"],
@@ -76,6 +78,15 @@ def git_sha():
         return None
 
 
+def git_dirty():
+    """True if tracked code differs from HEAD, so git_sha alone does not identify the code that made the file."""
+    try:
+        out = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=ROOT, capture_output=True, text=True).stdout
+        return bool(out.strip())
+    except OSError:
+        return True
+
+
 def main():
     from cassvla.planning.voi import CLASSES
     p = argparse.ArgumentParser()
@@ -86,13 +97,14 @@ def main():
     p.add_argument("--draws", type=int, default=8)
     p.add_argument("--classes", nargs="+", default=list(CLASSES))
     p.add_argument("--sim-level", default=None, help="simulate tool answers at this level for every evaluated level")
+    p.add_argument("--world-model", default="compositional", choices=("compositional", "alternatives"))
     p.add_argument("--vlm-yesno", default=None, help="yes/no cache; its P(hidden) sets the occlusion priors per decision")
     p.add_argument("--manifest", default=None, help="with --splits: score only the seeds of these dataset splits")
     p.add_argument("--splits", nargs="*", default=None)
     p.add_argument("--procs", type=int, default=8)
     args = p.parse_args()
     cfg = dict(priors=load_priors(args.priors), draws=args.draws, classes=args.classes, levels=args.levels, sim_level=args.sim_level,
-               priors_source=args.priors, git_sha=git_sha())
+               priors_source=args.priors, world_model=args.world_model, git_sha=git_sha(), git_dirty=git_dirty())
     files = sweep_files(args.sweep)
     seeds = None
     if args.manifest:
