@@ -3,7 +3,7 @@ name: doc
 description: >
   What an agent needs to know about CASS-VLA that the code does not show. Covers which seed
   ranges are already used for tuning, validation and held-out tests; running sweeps,
-  evaluation and frame rendering on this 8 GB CPU machine (thread variables, memory per camera
+  trigger evaluation, flip features, VLM controls and frame rendering on this 8 GB CPU machine (thread variables, memory per camera
   worker, Xvfb, stopping process pools safely); the SJSU HPC setup (course directory, venv build,
   offline assets, agreed GPU terms); and the decisions log for windows, speeds and
   tool variants. Use before choosing seeds, launching a sweep or render, touching the cluster, or changing scenario

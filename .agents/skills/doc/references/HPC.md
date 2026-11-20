@@ -31,7 +31,20 @@ or `~/sjsu_hpc` on the cluster.
   there belongs to the master's tools.
 - matplotlib writes a font cache to `~/.cache/matplotlib`. Set `MPLCONFIGDIR=$D/cache/mpl` in jobs.
 
-## Status on 2026-11-06
+## Rendering
 
-The venv imports on g17. g17 has no Xvfb but has the NVIDIA EGL library. Whether compute nodes have Xvfb is
-unknown, and finding out needs a short `cpuqs` job. No job has been submitted.
+- Compute nodes have no Xvfb. Without DISPLAY, Panda3D falls back to headless EGL with Mesa llvmpipe, which cannot
+  create MetaDrive's 16x multisample buffers. Pass `--max-msaa 4` to `scripts/render_frames.py`. The frames are
+  pixel-identical to Xvfb frames on the research container (9-frame check, 2026-11-06).
+- One worker peaks at 5.5 GB. `scripts/hpc/render.sbatch` runs 16 workers in 100 GB on `cpuqs` and renders about
+  230-260 frames per minute.
+
+## Jobs
+
+- Job scripts are in `scripts/hpc/`; copies live in `$D/jobs/`. Submit from g17 with full paths, because a `$VAR`
+  inside the hpc1-to-g17 ssh string expands on hpc1.
+- `scripts/hpc/vlm.sbatch` runs `scripts/vlm_encode.py` in the ctxeval vLLM image on one A100, with the image and the
+  Qwen3.5-9B snapshot bound read-only from `/data/cmpe295-suresh`. Log every GPU job in
+  `~/sjsu-hpc/communication/resources_sharing/CASS_VLA_GPU_JOBS.md`, and keep at most one queued or running.
+- Smoke test 107999 (64 frames): embed 6 frames/s, describe and prompt about 20 frames/s, plus about 2 min per
+  vLLM start-up.
