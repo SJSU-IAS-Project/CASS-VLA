@@ -144,7 +144,7 @@ class KinematicVehicle(Hazard):
         self.events, self.fired, self.large = list(events), [], large
         self.obj, self.lane, self.target_lat = None, None, float(lateral)
         self._ego_v_prev = None
-        self.launch_lag = 0.5   # s; measured delay between the first velocity command and the body moving
+        self.launch_lag = 0.0   # s; measured arrival delay after the substep fix in _drive
 
     def spawn(self, mgr):
         self.lane = _lane(mgr, self.lane_index)
@@ -211,6 +211,9 @@ class KinematicVehicle(Hazard):
         d /= np.linalg.norm(d)
         self.obj.set_velocity(d, self.speed, in_local_frame=False)
         self.obj.set_heading_theta(math.atan2(d[1], d[0]))
+        # setting the heading freezes the body for the first physics substep, so advance it by that substep here
+        sub = self.obj.engine.global_config["physics_world_step_size"]
+        self.obj.set_position(np.asarray(self.obj.position) + d * self.speed * sub)
 
     def state(self):
         return dict(kind="kinematic", position=tuple(np.round(self.obj.position, 2)), speed=round(float(self.obj.speed), 2),

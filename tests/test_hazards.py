@@ -42,7 +42,7 @@ def test_cut_in_reaches_ego_lane():
             cut_ins += 1
             ego_y = float(env.agent.position[1])
             ys = []
-            for _ in range(150):
+            for _ in range(200):
                 env.step([0.0, 0.5])
                 ys.append(env.hazards.get_state()["hazards"]["cutter"]["position"][1])
             assert min(abs(y - ego_y) for y in ys) < 0.5, f"seed {seed}: cutter stayed at {ys[-1]}"
@@ -98,3 +98,18 @@ def test_record_logs_actor_state():
         assert np.linalg.norm(closer["measured_velocity"]) > 5.0
     finally:
         o.close()
+
+
+def test_kinematic_vehicle_moves_at_commanded_speed():
+    env = make_env("merge_closing_speed", seed=0, num_scenarios=1)
+    try:
+        env.reset(seed=0)
+        closer = next(h for h in env.hazards.hazards if h.name == "fast_closer")
+        env.step([0.0, 0.3])
+        p0 = np.asarray(closer.obj.position)
+        for _ in range(10):
+            env.step([0.0, 0.3])
+        moved = np.linalg.norm(np.asarray(closer.obj.position) - p0)
+        assert moved == pytest.approx(closer.speed * 10 * env.hazards.dt, rel=0.02)
+    finally:
+        env.close()

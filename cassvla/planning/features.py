@@ -12,7 +12,10 @@ FEATURE_NAMES = (
     "margin", "frac_pred_safe", "top_clearance", "top_ttc", "n_near_threshold", "range_uncertainty_near_top",
     "endpoint_spread", "progress_spread", "occl_top", "occl_mean", "occl_max", "stop_in_reach_light_unknown", "top_is_change",
     *[f"top_{n}" for n in CANDIDATE_NAMES],
+    "div_time", "div_occl", "div_actor_near", "div_lateral", "div_progress", "runner_safe", "runner_clearance", "runner_ttc",
+    "runner_is_change", "light_splits_top2",
 )
+DIVERGE_M = 1.0
 AGNOSTIC_FEATURES = ("ego_speed", "n_visible", "n_visible_ped", "nearest_visible", "light_known", "light_green", "light_yellow", "light_red",
                      "has_stop", "stop_dist", "margin")
 
@@ -20,6 +23,30 @@ AGNOSTIC_FEATURES = ("ego_speed", "n_visible", "n_visible_ped", "nearest_visible
 def _occluded_fraction(xy, origin, occluders):
     pts = xy[:OCCLUSION_STEPS:3]
     return float(np.mean([blocked(origin, p, occluders) for p in pts])) if occluders else 0.0
+
+
+def _divergence(rec, base, ranked, paths, origin, occluders, stop, light):
+    """Where the top two candidates part ways, and what the ego can see there."""
+    m, order = ranked["metrics"], ranked["order"]
+    top, run = order[0], order[1] if len(order) > 1 else order[0]
+    a, b = paths[top], paths[run]
+    n = min(len(a), len(b))
+    sep = np.linalg.norm(a[:n] - b[:n], axis=1)
+    i = int(np.argmax(sep > DIVERGE_M)) if (sep > DIVERGE_M).any() else n - 1
+    region = np.vstack([a[i:n:3], b[i:n:3]])
+    occl = float(np.mean([blocked(origin, p, occluders) for p in region])) if occluders and len(region) else 0.0
+    near = 0.0
+    for act in base["actors"]:
+        gap = float(np.min(np.linalg.norm(region - act["position"], axis=1)))
+        near = max(near, float(np.exp(-gap / 3.0)))
+    splits = 0.0
+    if stop is not None and light != GREEN:
+        reach_a, reach_b = (float(np.linalg.norm(p[-1] - origin)) >= stop for p in (a, b))
+        splits = float(reach_a != reach_b)
+    return dict(div_time=i / max(n - 1, 1), div_occl=occl, div_actor_near=near, div_lateral=float(np.abs(sep[-1])) / 10.0,
+                div_progress=abs(m[top]["progress"] - m[run]["progress"]) / 50.0, runner_safe=float(m[run]["safe"]),
+                runner_clearance=min(m[run]["clearance"], 20.0) / 20.0, runner_ttc=min(m[run]["ttc"], 10.0) / 10.0,
+                runner_is_change=float(run.startswith("change")), light_splits_top2=splits)
 
 
 def selector_features(rec, base, ranked):
@@ -40,6 +67,7 @@ def selector_features(rec, base, ranked):
         gap = float(np.min(np.linalg.norm(paths[top] - a["position"], axis=1)))
         sigma = max(BASE_NOISE["depth_rel"] * d, 0.5)
         unc = max(unc, float(np.exp(-gap / sigma)))
+    div = _divergence(rec, base, ranked, paths, origin, occluders, stop, light)
     reach = stop is not None and light is None and any(np.linalg.norm(p[-1] - origin) >= stop for p in paths.values())
     values = dict(
         ego_speed=rec["ego"]["speed"], n_visible=len(actors), n_visible_ped=sum(a["type"] == "Pedestrian" for a in actors),
@@ -50,5 +78,5 @@ def selector_features(rec, base, ranked):
         range_uncertainty_near_top=unc, endpoint_spread=float(np.max(np.linalg.norm(ends[:, None] - ends[None, :], axis=2))),
         progress_spread=float(max(progress) - min(progress)), occl_top=occl[top], occl_mean=float(np.mean(list(occl.values()))),
         occl_max=max(occl.values()), stop_in_reach_light_unknown=float(reach), top_is_change=float(top.startswith("change")),
-        **{f"top_{n}": float(top == n) for n in CANDIDATE_NAMES})
+        **{f"top_{n}": float(top == n) for n in CANDIDATE_NAMES}, **div)
     return [round(float(values[k]), 4) for k in FEATURE_NAMES]

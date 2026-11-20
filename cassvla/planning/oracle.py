@@ -81,9 +81,9 @@ def is_safe(m):
 class Oracle:
     """Owns one HazardEnv for a family (MetaDrive allows one engine per process)."""
 
-    def __init__(self, family, start_seed=0, num_scenarios=1, horizon=HORIZON, cruise=CRUISE):
+    def __init__(self, family, start_seed=0, num_scenarios=1, horizon=HORIZON, cruise=CRUISE, **env_overrides):
         self.family, self.horizon, self.cruise = family, horizon, cruise
-        self.env = make_env(family, seed=start_seed, num_scenarios=num_scenarios)
+        self.env = make_env(family, seed=start_seed, num_scenarios=num_scenarios, **env_overrides)
 
     def close(self):
         self.env.close()

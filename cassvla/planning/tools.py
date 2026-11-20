@@ -20,6 +20,7 @@ LEVELS = {
     "mid": dict(depth_rel=0.05, vel=0.5, miss=0.10, false_pos=0.05, track_pos=0.5, roi_rel=0.08, roi_vel=1.0),
     "high": dict(depth_rel=0.10, vel=1.0, miss=0.25, false_pos=0.15, track_pos=1.0, roi_rel=0.12, roi_vel=1.5),
 }
+LEVELS["mid_los"] = dict(LEVELS["mid"], roi_los=True)
 TOOLS = ("roi", "depth", "collision")
 TOOL_COST = 1.0
 
@@ -113,11 +114,11 @@ def _in_roi(rec, actor):
 
 
 def tool_roi(rec, level):
-    """Objects in the forward corridor of the candidates, occluded or not, and the light state."""
+    """Objects in the forward corridor of the candidates and the light state. Occluded objects too, unless ``roi_los``."""
     p, rng = LEVELS[level], rng_for(rec, "roi", level)
     found = []
     for a in rec["actors"]:
-        if _in_roi(rec, a) and rng.random() >= p["miss"]:
+        if _in_roi(rec, a) and rng.random() >= p["miss"] and not (p.get("roi_los") and not line_of_sight(rec, a)):
             found.append(_noisy(rec, a, rng, p["roi_rel"], p["roi_vel"], "roi"))
     if rng.random() < p["false_pos"] and rec["candidates"]:
         xy = np.array(rec["candidates"][int(rng.integers(len(rec["candidates"])))]["xy"], float)

@@ -5,6 +5,9 @@ Lane naming (PG maps): the first block is always ``I`` with nodes
 approach is (">>", ">>>", k). Lane 0 is the leftmost. ``lateral`` is
 positive to the right. See docs/phase1_findings.md for the X/T lane graphs.
 
+Kinematic speed and acceleration ranges are 0.8 times the original design values, which is what
+vehicles actually reached before the substep fix in ``KinematicVehicle._drive``.
+
 Each family is a FamilySpec whose ``build(rng, mgr)`` returns the hazards to
 spawn for one episode. Randomness comes only from ``rng`` (seeded by episode).
 """
@@ -71,7 +74,7 @@ def _occluded_cross_traffic(rng, mgr):
     conflict = (float(rn.get_lane(runner_lane).position(0, 0)[0]), float(ego_y))
     runner = KinematicVehicle("runner", runner_lane, float(rng.uniform(8.0, 18.0)), speed=0.0,
                               events=[dict(when=("eta_match", conflict, float(rng.uniform(-1.2, 1.2))),
-                                           speed=float(rng.uniform(9.0, 14.0)), accel=4.0),
+                                           speed=float(rng.uniform(7.2, 11.2)), accel=3.2),
                                       dict(when=("t", 1e9))],
                               destination="1X2_1_")
     out = [occluder, runner]
@@ -102,14 +105,14 @@ def _ambiguous_light_signals(rng):
 # 4. sudden lead-vehicle braking or cut-in
 # ---------------------------------------------------------------------------
 def _lead_brake_cutin(rng, mgr):
-    cruise = float(rng.uniform(6.0, 9.0))
+    cruise = float(rng.uniform(4.8, 7.2))
     if rng.random() < 0.5:
         lead = KinematicVehicle("lead", _lane(1), float(rng.uniform(22.0, 30.0)), speed=cruise,
-                                events=[dict(when=("ego_within", float(rng.uniform(10.0, 16.0))), speed=0.0, accel=float(rng.uniform(5.0, 8.0)))])
+                                events=[dict(when=("ego_within", float(rng.uniform(10.0, 16.0))), speed=0.0, accel=float(rng.uniform(4.0, 6.4)))])
         return [lead]
     side = int(rng.choice([0, 2]))
     cutter = KinematicVehicle("cutter", _lane(side), float(rng.uniform(14.0, 22.0)), speed=cruise,
-                              events=[dict(when=("ego_within", float(rng.uniform(8.0, 14.0))), lane_index=_lane(1), speed=cruise * 0.6, accel=3.0)])
+                              events=[dict(when=("ego_within", float(rng.uniform(8.0, 14.0))), lane_index=_lane(1), speed=cruise * 0.6, accel=2.4)])
     return [cutter]
 
 
@@ -120,7 +123,7 @@ def _lane_blockage(rng, mgr):
     lon = float(rng.uniform(26.0, 36.0))
     block = [ParkedVehicle("stalled_car", _lane(1), lon), Barrier("cones", _lane(1), lon - 6.0, count=3, cones=True)]
     # an overtaking car in the left lane approaching from behind makes "change left now" risky
-    block.append(KinematicVehicle("overtaker", _lane(0), 0.5, speed=float(rng.uniform(11.0, 15.0)), lateral=0.0))
+    block.append(KinematicVehicle("overtaker", _lane(0), 0.5, speed=float(rng.uniform(8.8, 12.0)), lateral=0.0))
     if rng.random() < 0.4:   # right lane sometimes blocked too (stalled truck)
         block.append(ParkedVehicle("right_truck", _lane(2), lon + float(rng.uniform(-4.0, 4.0)), large=True))
     return block
@@ -130,8 +133,8 @@ def _lane_blockage(rng, mgr):
 # 6. depth / closing-speed ambiguity when merging left to pass a slow lead
 # ---------------------------------------------------------------------------
 def _merge_closing_speed(rng, mgr):
-    slow = KinematicVehicle("slow_lead", _lane(1), float(rng.uniform(16.0, 24.0)), speed=float(rng.uniform(2.5, 4.5)))
-    closer = KinematicVehicle("fast_closer", _lane(0), 0.5, speed=float(rng.uniform(13.0, 18.0)))
+    slow = KinematicVehicle("slow_lead", _lane(1), float(rng.uniform(16.0, 24.0)), speed=float(rng.uniform(2.0, 3.6)))
+    closer = KinematicVehicle("fast_closer", _lane(0), 0.5, speed=float(rng.uniform(10.4, 14.4)))
     return [slow, closer]
 
 
@@ -140,7 +143,7 @@ FAMILIES: Dict[str, FamilySpec] = {
         "occluded_pedestrian", "SS", "pedestrian steps out from behind a car parked in the right lane", _occluded_pedestrian, t_window=(1.0, 4.5)),
     "occluded_cross_traffic": FamilySpec(
         "occluded_cross_traffic", "X", "red-light runner from the south arm, hidden by a truck at the corner", _occluded_cross_traffic,
-        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(3.0, 8.0)),
+        signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(3.5, 8.0)),
     "ambiguous_light": FamilySpec(
         "ambiguous_light", "X", "ego light changes around the ego's arrival at the stop line", _ambiguous_light,
         signals=dict(enabled=True, mode="scripted", schedule=[(0.0, GREEN, RED)]), ego_destination="1X1_1_", t_window=(1.5, 7.0)),
@@ -149,7 +152,7 @@ FAMILIES: Dict[str, FamilySpec] = {
     "lane_blockage": FamilySpec(
         "lane_blockage", "SS", "ego lane blocked ahead; overtaker approaching in the left lane", _lane_blockage, t_window=(1.0, 4.5)),
     "merge_closing_speed": FamilySpec(
-        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed, t_window=(2.5, 7.0)),
+        "merge_closing_speed", "SS", "slow lead ahead, fast closer behind in the passing lane", _merge_closing_speed, t_window=(2.0, 6.5)),
 }
 
 # per-seed signal schedules for families whose signal timing is randomised

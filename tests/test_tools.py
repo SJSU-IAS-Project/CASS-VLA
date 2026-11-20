@@ -62,6 +62,7 @@ def test_roi_reveals_the_hidden_pedestrian(recs):
     assert "pedestrian" not in {a["name"] for a in base_observation(rec)["actors"]}
     assert "pedestrian" in {a["name"] for a in tool_roi(rec, "perfect")["actors"]}
     assert "pedestrian" not in {a["name"] for a in tool_depth(rec, "perfect")["actors"]}
+    assert "pedestrian" not in {a["name"] for a in tool_roi(rec, "mid_los")["actors"]}
 
 
 def test_label_schema(recs):
