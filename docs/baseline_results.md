@@ -304,6 +304,66 @@ interval on it.
 - The choice of S4 used the validation and test splits, so its result here is the first clean estimate. A second
   pre-registered test on fresh seeds (1060 and up) would be needed before treating it as the headline method.
 
+## Second pre-registered final test (seeds 1060-1159)
+
+This is the second and last pre-registered run, on `out/v4_final` with 4,922 decisions from seeds 1060-1159. The
+hypotheses, methods and settings were written down before any evaluation on these seeds, and nothing was changed after.
+The selectors train on the same 34,718 rows as the first final test, with expected-gain targets and 3 initialisation
+seeds. The results are in `out/v4_eval/final_geom.json` (P1 to P4) and `out/v4_eval/final_vlm.json` (Q1).
+
+What was pre-registered:
+
+- P1: the abstain selector (`signed`, linear output, squared error on the signed expected gain, calls only when the
+  predicted gain is above 0) beats the frozen selector at mid and high noise. This replicates S4 of the first final test.
+- P2: `signed` beats the same model trained on scene features and the ranker margin only (`signed_scene`), at all levels.
+- P3: `signed` beats ranker margin at all levels.
+- P4: the criterion of equal safety with fewer calls. At a budget of 0.6 calls per decision, which is 20% of always-on's
+  3 calls, the accuracy difference from always-on has a lower bound above -0.01, and the unsafe-rate difference has an
+  upper bound below +0.01, at all levels.
+- Q1: `signed` with the VLM features beats `signed` without them, at all levels.
+
+All intervals are 95% bootstrap intervals over scenario seeds. Differences are in mean accuracy over budgets from 0 to 1.
+
+| Hypothesis | Low | Mid | High | Result |
+|---|---|---|---|---|
+| P1: `signed` minus frozen | not part of P1 | +0.009 (0.006 to 0.012) | +0.019 (0.016 to 0.023) | Holds |
+| P2: `signed` minus `signed_scene` | +0.017 (0.012 to 0.022) | +0.023 (0.019 to 0.027) | +0.026 (0.022 to 0.031) | Holds |
+| P3: `signed` minus ranker margin | +0.103 (0.094 to 0.112) | +0.096 (0.088 to 0.105) | +0.091 (0.082 to 0.100) | Holds |
+| Q1: `signed` + VLM minus `signed` | +0.016 (0.013 to 0.020) | +0.012 (0.008 to 0.015) | +0.010 (0.007 to 0.013) | Holds |
+
+Mean accuracy over budgets from 0 to 1:
+
+| Policy | Low | Mid | High |
+|---|---|---|---|
+| Ranker margin | 0.398 | 0.351 | 0.284 |
+| `signed_scene` | 0.483 | 0.424 | 0.349 |
+| Frozen selector | 0.498 | 0.439 | 0.356 |
+| `signed` | 0.500 | 0.447 | 0.375 |
+| `signed` + VLM | 0.516 | 0.459 | 0.385 |
+
+P4 compares `signed` at 0.6 calls per decision with always-on, which makes 3 calls.
+
+| Tool noise | Accuracy, `signed` / always-on | Difference (95% interval) | Unsafe rate, `signed` / always-on | Difference (95% interval) |
+|---|---|---|---|---|
+| Low | 0.592 / 0.585 | +0.006 (-0.002 to 0.016) | 0.302 / 0.315 | -0.013 (-0.021 to -0.005) |
+| Mid | 0.521 / 0.490 | +0.031 (0.021 to 0.041) | 0.363 / 0.388 | -0.025 (-0.035 to -0.015) |
+| High | 0.422 / 0.357 | +0.066 (0.055 to 0.077) | 0.457 / 0.491 | -0.034 (-0.047 to -0.023) |
+
+With a fifth of always-on's calls, the selector is non-inferior on accuracy at every level and has a lower unsafe rate
+at every level. So the criterion of similar or better safety decisions with far fewer calls holds on these seeds. The
+unsafe rate is the oracle's label for the chosen candidate. It is not a collision rate.
+
+Caveats:
+
+- The budget of 0.6 was chosen after the first final test, from its curves. These seeds are fresh, but the choice was
+  not blind to the earlier split.
+- The margin of 0.01 in P4 is ours, not a standard.
+- Four primary hypotheses were tested at several levels each, and no correction for multiple comparisons was applied.
+  The low-noise accuracy interval in P4 includes 0, so accuracy there is shown to be non-inferior and not better.
+- The VLM controls of [`phase5_vlm.md`](phase5_vlm.md) were run on the earlier selector. They were not repeated on
+  `signed`.
+- All data come from the same scenario generator, and the evaluation is open loop.
+
 ## ROI and occlusion
 
 In the default tools, ROI reports objects that an occluder hides, as the proposal's tool table implies. The
@@ -354,6 +414,7 @@ Known problems remain:
 | Label check | 420 random decisions relabelled in fresh processes: all `c*`, safety flags and retention agree |
 | Second extra training sweep | Seeds 860-1059, 9,682 decisions retained; no dataset or labels built from it yet |
 | Second final held-out sweep | Seeds 760-859, 4,903 decisions, used once for the pre-registered test below |
+| Third final held-out sweep | Seeds 1060-1159, 4,922 decisions, used once for the second pre-registered test below |
 | Throughput | 12,554 decisions per hour at 16 processes |
 
 The table below describes the labels at mid noise, over all 14,786 decisions of the main sweep. A tool is

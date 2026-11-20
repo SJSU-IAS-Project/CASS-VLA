@@ -109,6 +109,25 @@ Each cell shows the gain of geometry + VLM over the geometry selector, whose acc
 - The decision rule from the first result was not met by the shuffled runs (`decision_rule_met` is false in both
   shuffle files), and it was met by the family run.
 
+## Pre-registered check with the abstain selector
+
+The second pre-registered final test (seeds 1060-1159, 4,922 decisions) included one VLM hypothesis, Q1. It asks
+whether the abstain selector `signed` does better with the 32 VLM dimensions than without them. The features come from
+the same encoder and the same PCA recipe as above, with the PCA fitted on the training rows only. Both models train on
+the 34,718 rows of the first final test. The results are in `out/v4_eval/final_vlm.json`, and the full test is in
+[`baseline_results.md`](baseline_results.md).
+
+| Tool noise | `signed` | `signed` + VLM | Difference (95% interval) |
+|---|---|---|---|
+| Low | 0.500 | 0.516 | +0.016 (0.013 to 0.020) |
+| Mid | 0.447 | 0.459 | +0.012 (0.008 to 0.015) |
+| High | 0.375 | 0.385 | +0.010 (0.007 to 0.013) |
+
+Q1 holds at all three levels. At 0.6 calls per decision, the VLM features raise accuracy by 0.016, 0.012 and 0.012
+and lower the unsafe rate by 0.012, 0.004 and 0.003, at low, mid and high noise. The shuffle and family controls above were run on the earlier
+selector and were not repeated on `signed`, so this result does not say how much of the gain is scene-family
+identity.
+
 ## Not yet tried
 
 - Other layers, the last-token state, or more than 32 PCA dimensions. These were not tuned, so the numbers above

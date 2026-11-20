@@ -26,3 +26,9 @@ The machine has 16 usable cores, 8 GB of RAM and no swap.
 - Run the `eval_vlm.py --control` variants (`shuffle`, `shuffle_family`, `family`) one at a time. Three together next
   to a sweep ran out of memory on 2026-11-19, and one peaked at 3.7 GB resident.
 - The pytest suite takes more than 5 minutes. Run it in the background or pick single test files.
+- Headless Chromium makes the PDFs of the deck and the report. It needs `LD_LIBRARY_PATH` to the unpacked system
+  libraries and `FONTCONFIG_FILE` to a fonts config with Roboto, both set in
+  `research/2026-11-19_learned_selector/deliverables/deck/make_pdf.sh`. That script points into a session scratchpad
+  that no longer exists later, so unpack the libraries and write the fonts config again before running it.
+- Deliverables build commands, from `research/2026-11-19_learned_selector/deliverables/`: figures with
+  `cd figures && MPLBACKEND=Agg ../../../../.venv/bin/python make_figures.py`; the deck with `cd deck && python3 build_html.py && python3 build_pptx.py && python3 build_sources.py && sh make_pdf.sh`; the report with `cd report && python3 build.py`, then the Chromium command from the appendix of `build.py` for `report.pdf`. Slide and report tables are read from the result files, so rebuild after any result file changes.
