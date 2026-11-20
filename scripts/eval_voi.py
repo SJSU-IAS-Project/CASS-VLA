@@ -4,6 +4,8 @@
         --methods voi voi_budget voi_fitted signed uncertainty_margin always_on --test-dir v2_dataset --test-expgain v2_expgain.jsonl \
         --splits val --out out/voi_eval/val.json
     python scripts/eval_voi.py --report out/voi_eval/val.json --md research/2026-11-20_voi_selector/VAL_RESULTS.md
+    python scripts/eval_voi.py --print-ablation-commands out/v2_sweep out/v2_dataset/manifest.json val   # then score with
+    python scripts/eval_voi.py --voi abl_reference=out/voi/abl_reference.jsonl ... --methods abl_reference ... --compare-to abl_reference
 
 Every VoI file given as NAME=FILE is a method NAME (call the best tool only when its VoI > 0) and NAME_budget (no
 abstention, budget only). signed, frozen, signed_scene, uncertainty_margin and always_on come from the harness
@@ -25,6 +27,27 @@ HARNESS = os.path.join(ROOT, "research", "2026-11-19_learned_selector", "run2", 
 HARNESS_METHODS = ("signed", "frozen", "signed_scene", "uncertainty_margin", "always_on")
 TOOLS = ("roi", "depth", "collision")
 LEVELS = ("low", "mid", "high")
+
+
+# VoI ablations on validation: (name, extra voi_scores.py arguments). Each writes out/voi/<name>.jsonl and is scored
+# against abl_reference (uniform priors, 8 draws, every class, tool answers simulated at the true noise level).
+ABLATIONS = (
+    ("abl_reference", ""),
+    ("abl_draws4", "--draws 4"),
+    ("abl_draws16", "--draws 16"),
+    ("abl_no_depth", "--classes null occl_static occl_ped light rear"),
+    ("abl_no_occl_static", "--classes null depth occl_ped light rear"),
+    ("abl_no_occl_ped", "--classes null depth occl_static light rear"),
+    ("abl_no_light", "--classes null depth occl_static occl_ped rear"),
+    ("abl_no_rear", "--classes null depth occl_static occl_ped light"),
+    ("abl_fitted_priors", "--priors out/voi/priors_fitted.json"),
+    ("abl_noise_unaware", "--sim-level mid"),
+)
+
+
+def ablation_commands(sweep, manifest, split):
+    base = f"OMP_NUM_THREADS=1 .venv/bin/python scripts/voi_scores.py --sweep {sweep} --manifest {manifest} --splits {split} --procs 8"
+    return [f"{base} --out out/voi/{name}.jsonl {extra}".strip() for name, extra in ABLATIONS]
 
 
 def key(r):
@@ -147,8 +170,8 @@ def run(args):
         for lv in args.levels:
             tag = f"{sp}/{lv}"
             for m1 in args.methods:
-                for m2 in ("signed", "uncertainty_margin"):
-                    if m1 != m2 and m1 not in HARNESS_METHODS and m2 in args.methods:
+                for m2 in args.compare_to:
+                    if m1 != m2 and m1 not in HARNESS_METHODS and m2 in args.methods and (tag, m1) in dec and (tag, m2) in dec:
                         d = dec[(tag, m1)]["mean"] - dec[(tag, m2)]["mean"]
                         comparisons.setdefault(tag, {})[f"{m1}_minus_{m2}"] = dict(mean_diff=round(float(d.mean()), 4), ci95=F.ci(d, ctx.cells[(sp, lv)].seeds))
     hyp = hypotheses(F, ctx, dec, args.levels, args.splits, set(args.methods))
@@ -208,11 +231,15 @@ def main():
     p.add_argument("--test-expgain", nargs="+", default=[])
     p.add_argument("--splits", nargs="+", default=["val"])
     p.add_argument("--levels", nargs="+", default=list(LEVELS))
+    p.add_argument("--compare-to", nargs="+", default=["signed", "uncertainty_margin"], help="paired comparisons of every VoI method against these")
+    p.add_argument("--print-ablation-commands", nargs=3, metavar=("SWEEP", "MANIFEST", "SPLIT"), default=None)
     p.add_argument("--lam", type=float, default=0.0)
     p.add_argument("--vlm-cost", type=float, default=1.0)
     p.add_argument("--out", default="out/voi_eval/val.json")
     args = p.parse_args()
-    if args.report:
+    if args.print_ablation_commands:
+        print("\n".join(ablation_commands(*args.print_ablation_commands)))
+    elif args.report:
         report(args.report, args.md or args.report.replace(".json", ".md"))
     else:
         run(args)

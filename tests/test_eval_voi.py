@@ -53,3 +53,13 @@ def test_harness_root_is_this_repo():
     from eval_voi import ROOT, _harness
     F = _harness()
     assert os.path.realpath(F.X.ROOT) == os.path.realpath(ROOT)
+
+
+def test_ablation_names_are_unique_and_reference_first():
+    from eval_voi import ABLATIONS, ablation_commands
+    names = [a[0] for a in ABLATIONS]
+    assert names[0] == "abl_reference" and len(names) == len(set(names))
+    cmds = ablation_commands("out/v2_sweep", "out/v2_dataset/manifest.json", "val")
+    assert len(cmds) == len(ABLATIONS)
+    assert all("--manifest out/v2_dataset/manifest.json --splits val" in c for c in cmds)
+    assert any("--sim-level mid" in c for c in cmds) and any("--draws 16" in c for c in cmds)
