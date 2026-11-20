@@ -97,3 +97,32 @@ def test_summarize_timings():
 
 def test_prompt_template_formats():
     assert "{" in PROMPT and build_prompt(0, []).count("{") == 1
+
+
+class NaNBackend(FakeBackend):
+    def embed(self, path):
+        self.calls.append(("embed", path))
+        return np.full(4, np.nan, np.float32), dict(seconds=0.1)
+
+
+def test_cache_rejects_non_finite_embedding(tmp_path):
+    out = str(tmp_path / "vlm")
+    with pytest.raises(ValueError, match="non-finite embedding for fam/0_1.0"):
+        cache_frames(_frames(1), "frames", NaNBackend(), out, log=None)
+    assert not [f for f in os.listdir(out) if f.startswith("emb_")]
+    assert load_cache(out)["prompted"] == {}
+
+
+class FP32Backend(FakeBackend):
+    vision_dtype = "float32"
+
+
+def test_cache_refuses_mixed_vision_dtype(tmp_path):
+    out = str(tmp_path / "vlm")
+    cache_frames(_frames(1), "frames", FP32Backend(), out, log=None)
+    assert json.load(open(os.path.join(out, "meta.json")))["vision_dtype"] == "float32"
+    meta = json.load(open(os.path.join(out, "meta.json")))
+    meta["vision_dtype"] = "float16"
+    json.dump(meta, open(os.path.join(out, "meta.json"), "w"))
+    with pytest.raises(ValueError, match="vision_dtype"):
+        cache_frames(_frames(2), "frames", FP32Backend(), out, log=None)

@@ -106,6 +106,11 @@ class MLXBackend:
         path = snapshot_download(model_id, revision=revision)
         self.revision = os.path.basename(os.path.normpath(path))
         self.model, self.processor = load(path)
+        # the 4-bit checkpoint keeps the vision tower in float16, which overflows to NaN on some frames (flat
+        # intersection views): the reply became "!!!!" and the embedding NaN. float32 avoids it; mlx-vlm casts
+        # pixel values to the vision tower's dtype, so generation uses it too.
+        self.model.vision_tower.set_dtype(mx.float32)
+        self.vision_dtype = "float32"
 
     def _chat(self, text):
         from mlx_vlm.prompt_utils import apply_chat_template
@@ -117,7 +122,7 @@ class MLXBackend:
         t0 = time.time()
         inp = prepare_inputs(self.processor, images=[image_path], prompts=[self._chat("Describe the image.")],
                              image_token_index=getattr(self.model.config, "image_token_index", None))
-        pv = inp["pixel_values"].astype(self.model.vision_tower.patch_embed.proj.weight.dtype)
+        pv = inp["pixel_values"].astype(mx.float32)
         h = self.model.vision_tower(pv, inp["image_grid_thw"], output_hidden_states=False)
         e = mx.mean(h.astype(mx.float32), axis=0)
         mx.eval(e)
@@ -171,11 +176,12 @@ def cache_frames(frames, frames_dir, backend, out_dir, mode="both", log=print):
     ``candidates`` (maneuver names). ``mode``: ``embed``, ``ask`` or ``both``. Returns per-frame timings."""
     os.makedirs(out_dir, exist_ok=True)
     meta = dict(model=getattr(backend, "model_id", type(backend).__name__), revision=getattr(backend, "revision", None),
-                prompt_hash=prompt_hash(), prompt=PROMPT, embedding="vision tower patch features, mean-pooled")
+                prompt_hash=prompt_hash(), prompt=PROMPT, embedding="vision tower patch features, mean-pooled",
+                vision_dtype=getattr(backend, "vision_dtype", None))
     meta_path = os.path.join(out_dir, "meta.json")
     if os.path.exists(meta_path):
         old = json.load(open(meta_path))
-        for k in ("model", "revision", "prompt_hash"):
+        for k in ("model", "revision", "prompt_hash", "vision_dtype"):
             if old.get(k) != meta[k]:
                 raise ValueError(f"cache in {out_dir} was made with {k}={old.get(k)!r}, not {meta[k]!r}; use a new --out")
     else:
@@ -191,6 +197,10 @@ def cache_frames(frames, frames_dir, backend, out_dir, mode="both", log=print):
             t = dict(key=fr["key"])
             if mode in ("embed", "both") and fr["key"] not in have_emb:
                 e, s = backend.embed(img)
+                if not np.isfinite(e).all():
+                    if keys:
+                        _write_shard(out_dir, keys, embs)
+                    raise ValueError(f"non-finite embedding for {fr['key']} ({img})")
                 keys.append(fr["key"])
                 embs.append(e)
                 t["embed"] = s
