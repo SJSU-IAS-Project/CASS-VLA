@@ -7,7 +7,7 @@ import time
 
 import numpy as np
 
-ROOT = "/home/user/CASS-VLA"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".."))  # repo root (was /home/user/CASS-VLA)
 sys.path.insert(0, ROOT + "/scripts")
 import eval_baselines as E  # noqa: E402
 import eval_triggers as T  # noqa: E402
