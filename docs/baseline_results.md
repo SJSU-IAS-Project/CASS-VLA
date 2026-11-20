@@ -461,7 +461,7 @@ evaluation runs many times slower.
 
 ## Frames for Phase 5
 
-`scripts/render_frames.py` renders one 640x360 front-camera frame per decision and checks the ego position
+`scripts/hpc/render_frames_hpc.py` renders one 640x360 front-camera frame per decision and checks the ego position
 against the label record. It replays each seed once to its last decision, with every graphics output switched
 off, and captures each earlier decision on the way. A step then takes 0.002 s instead of 1.13 s, and a frame
 takes about 1.2 s under Xvfb on this CPU. In a 12-frame pilot, every frame matched the recorded ego position to
@@ -469,7 +469,7 @@ within 5 mm.
 
 ```bash
 Xvfb :99 -screen 0 1280x720x24 &
-DISPLAY=:99 OMP_NUM_THREADS=1 .venv/bin/python scripts/render_frames.py --data out/v2_final_ds --split final --out out/v2_frames --procs 1
+DISPLAY=:99 OMP_NUM_THREADS=1 .venv/bin/python scripts/hpc/render_frames_hpc.py --data out/v2_final_ds --split final --out out/v2_frames --procs 1
 ```
 
 Frames are saved in normal RGB colour order. The camera returns BGR arrays, and the script writes them with
