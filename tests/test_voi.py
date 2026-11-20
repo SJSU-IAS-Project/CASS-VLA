@@ -100,3 +100,25 @@ def test_select_abstains_below_lambda():
     from cassvla.planning.voi import select
     assert select({"roi": -1.0, "depth": 0.0, "collision": -2.0}, 0.0) == (0.0, 1, False)
     assert select({"roi": 2.0, "depth": 0.5, "collision": 0.0}, 0.0) == (2.0, 0, True)
+
+
+def test_every_default_world_carries_measurement_noise():
+    # the base camera is always noisy (BASE_NOISE), so no world may treat the base estimate as exact;
+    # hidden-event hypotheses sit on top of a noise draw
+    from cassvla.planning.voi import UNIFORM, weighted_worlds
+    for rec in RECS.values():
+        base = T.base_observation(rec)
+        if not base["actors"]:
+            continue
+        for _, world in weighted_worlds(rec, base, UNIFORM):
+            moved = [not np.allclose(a["position"], b["position"]) for a, b in zip(world["actors"], base["actors"])]
+            assert any(moved), rec["family"]
+
+
+def test_hidden_event_worlds_keep_their_extra_actor_and_light():
+    from cassvla.planning.voi import weighted_worlds
+    rec = RECS["ambiguous_light"]
+    base = T.base_observation(rec)
+    worlds = weighted_worlds(rec, base, {"null": 1.0, "depth": 1.0, "light": 1.0})
+    lights = [w["light"] for _, w in worlds]
+    assert lights.count(None) == 8 and len(worlds) == 10          # 8 noise draws + red and green on top of draws

@@ -1,7 +1,8 @@
 """Training-free counterfactual value-of-information (VoI) tool selector.
 
 For one decision, the selector weighs world hypotheses built from the base observation only
-(``hypotheses.py``), simulates what each tool would report in each world, reruns the ranker on the merged
+(``hypotheses.py``): every world is a measurement-noise draw of the visible actors, optionally with one hidden
+event on top, simulates what each tool would report in each world, reruns the ranker on the merged
 belief and scores the tool by the expected gain in ranker utility over not calling it:
 
     VoI(t) = sum_k w_k U(c_t,k, world_k) - sum_k w_k U(c_now, world_k)
@@ -29,13 +30,28 @@ UNIFORM = {c: 1.0 for c in CLASSES}
 
 
 def weighted_worlds(rec, base, priors, draws=8, classes=CLASSES):
-    """[(weight, belief)]: each non-empty class gets its prior, renormalised, split evenly over its worlds."""
+    """[(weight, belief)], weights summing to 1.
+
+    The base camera is always noisy, so with "depth" in ``classes`` every world carries one of ``draws``
+    measurement-noise draws of the visible actors; without it the visible actors are taken as exact. "null" is
+    the component with no hidden event (one world per draw); every other class is a hidden event (an occluded
+    vehicle or pedestrian, an unread light, a car behind) layered on top of a draw. Each non-empty component gets
+    its prior, renormalised, split evenly over its worlds."""
     hyp = hypotheses(rec, base, draws=draws)
-    groups = {c: ([base] if c == "null" else hyp[c]) for c in classes}
-    groups = {c: ws for c, ws in groups.items() if ws and priors.get(c, 0.0) > 0}
+    noise = hyp["depth"] if "depth" in classes and hyp["depth"] else [base]
+    n_base = len(base["actors"])
+    groups = {}
+    if "null" in classes:
+        groups["null"] = list(noise)
+    for c in classes:
+        if c in ("null", "depth") or not hyp[c]:
+            continue
+        groups[c] = [dict(noise[j % len(noise)], actors=list(noise[j % len(noise)]["actors"]) + list(w["actors"][n_base:]), light=w["light"])
+                     for j, w in enumerate(hyp[c])]
+    groups = {c: ws for c, ws in groups.items() if priors.get(c, 0.0) > 0}
     total = sum(priors[c] for c in groups)
     if not groups or total <= 0:
-        return [(1.0, base)]
+        return [(1.0 / len(noise), w) for w in noise]
     return [(priors[c] / total / len(ws), w) for c, ws in groups.items() for w in ws]
 
 
