@@ -1,0 +1,19 @@
+n_train 25036 {'val': 2222, 'test': 2235}
+low frozen plandiscrim 26s
+low signed_mse_abstain plandiscrim 22s
+mid frozen plandiscrim 19s
+mid signed_mse_abstain plandiscrim 19s
+high frozen plandiscrim 19s
+high signed_mse_abstain plandiscrim 18s
+signed_mse_abstain val/low/plandiscrim 0.5222 {'mean': 0.0056, 'ci95': [0.0006, 0.0107]}
+signed_mse_abstain test/low/plandiscrim 0.4811 {'mean': 0.0003, 'ci95': [-0.0032, 0.004]}
+signed_mse_abstain val/mid/plandiscrim 0.4648 {'mean': 0.0105, 'ci95': [0.0045, 0.0162]}
+signed_mse_abstain test/mid/plandiscrim 0.4171 {'mean': 0.0098, 'ci95': [0.0052, 0.015]}
+signed_mse_abstain val/high/plandiscrim 0.3863 {'mean': 0.018, 'ci95': [0.0118, 0.0239]}
+signed_mse_abstain test/high/plandiscrim 0.3509 {'mean': 0.0184, 'ci95': [0.0125, 0.024]}
+frozen val/low/plandiscrim 0.5166 
+frozen test/low/plandiscrim 0.4808 
+frozen val/mid/plandiscrim 0.4543 
+frozen test/mid/plandiscrim 0.4073 
+frozen val/high/plandiscrim 0.3683 
+frozen test/high/plandiscrim 0.3325 

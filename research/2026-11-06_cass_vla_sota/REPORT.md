@@ -51,11 +51,11 @@ The biggest open risk is the size of the candidate-conditioning gain. Our own re
 - It falls behind that rival at 0.95 and 1.00 calls per decision at mid noise, and at 1.00 with high noise
   or blocked ROI.
 - It falls behind on `occluded_cross_traffic` on the final split at mid noise and half a call per decision
-  (0.330 against 0.347). With 510 seeds and expected-gain targets, on the test split at mid noise and averaged
+  (0.330 against 0.347). Trained on 510 seeds with expected-gain targets, on the test split at mid noise and averaged
   over budgets, it leads there (0.297 against 0.272).
 - The features that describe where the top two candidates part ways changed the logistic selector by less than
   0.01. The four features whose shuffling hurts most are all scene features.
-- The headline table uses single-draw targets. With expected-gain targets and 510 seeds, the lead grows in
+- The headline table uses single-draw targets. With expected-gain targets and training on 510 seeds, the lead grows in
   four of six cells.
 
 DEEP (below) also reports that learned allocators "select nearly as much harm as random", even though they
@@ -244,7 +244,7 @@ Benchmark caveats:
 2. Add the ego-speed, fixed-schedule, any-tool gate and KnowNo-style baselines to the Pareto plot.
 3. Report how the selector's lead over the scene-only MLP varies by hazard family, on one split and budget
    setting. On `occluded_pedestrian` the lead is 0.105 on the final split at half a call per decision. It is
-   0.048 on the test split with 510 seeds, averaged over budgets.
+   0.048 on the test split, averaged over budgets, with training on 510 seeds.
 4. Add a blank-image control to the VLM feature experiment.
 5. Rewrite the related-work gap in `docs/literature_survey.md` around tool choice and candidate divergence.
    Cite SIGMA, DEEP and 2611.06702 as the nearest prior work. Also reword the proposal's claim that DriveAgent-R1
@@ -269,7 +269,7 @@ family-table items against the sources (`raw/Z_main_thread_checks.md`). These ar
   limits. They are the 1 to 2 point lead, the top-budget losses, `occluded_cross_traffic`, the small effect of
   the divergence features, and the single-draw targets.
 - **Family-level numbers.** The `occluded_pedestrian` lead now names its split and budget. It is 0.105 on the
-  final split at half a call, and 0.048 on the test split with 510 seeds.
+  final split at half a call, and 0.048 on the test split, with training on 510 seeds.
 - **DEEP.** "May barely beat random" became "pick harmful calls almost as often as random". The 34–54% figure
   is now limited to DEEP's monocular-geometry settings.
 - **Prompting evidence.** Section 4 no longer says that prompting is "known to work poorly". None of the three

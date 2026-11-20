@@ -181,9 +181,9 @@ The biggest open risk is the size of the candidate-conditioning gain. Our own re
 
 - The selector leads the scene-only MLP by only 1 to 2 points on average.
 - It falls behind that rival at 0.95 and 1.00 calls per decision at mid noise, and at 1.00 with high noise or blocked ROI.
-- It falls behind on `occluded_cross_traffic` on the final split at half a call per decision (0.330 against 0.347). With 510 seeds on the test split, averaged over budgets, it leads there (0.297 against 0.272).
+- It falls behind on `occluded_cross_traffic` on the final split at half a call per decision (0.330 against 0.347). Trained on 510 seeds (25,036 rows), on the test split, averaged over budgets, it leads there (0.297 against 0.272).
 - The features that describe how the candidates diverge changed the logistic selector by less than 0.01.
-- The headline table uses single-draw targets. With expected-gain targets and 510 seeds, the lead grows in four of six cells.
+- The headline table uses single-draw targets. With expected-gain targets and training on 510 seeds, the lead grows in four of six cells.
 
 DEEP also reports that learned allocators capture more benefit than random but select nearly as much harm as random, so we report harm selected and normalized decision gain next to accuracy. The evaluation is open loop, and offline metrics correlate poorly with closed-loop results.
 

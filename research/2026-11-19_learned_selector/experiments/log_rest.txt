@@ -1,0 +1,90 @@
+low frozen plandiscrim 36s
+low frozen scene_only 26s
+low cal_control_80pct plandiscrim 35s
+low cal_isotonic plandiscrim 30s
+low cal_platt plandiscrim 27s
+low softmax_none plandiscrim 40s
+low softmax_none scene_only 28s
+low pairwise_rank plandiscrim 61s
+low signed_huber_abstain plandiscrim 33s
+low signed_huber_abstain scene_only 28s
+mid frozen plandiscrim 42s
+mid frozen scene_only 29s
+mid cal_control_80pct plandiscrim 28s
+mid cal_isotonic plandiscrim 27s
+mid cal_platt plandiscrim 34s
+mid softmax_none plandiscrim 42s
+mid softmax_none scene_only 31s
+mid pairwise_rank plandiscrim 60s
+mid signed_huber_abstain plandiscrim 28s
+mid signed_huber_abstain scene_only 18s
+high frozen plandiscrim 27s
+high frozen scene_only 21s
+high cal_control_80pct plandiscrim 38s
+high cal_isotonic plandiscrim 36s
+high cal_platt plandiscrim 35s
+high softmax_none plandiscrim 50s
+high softmax_none scene_only 37s
+high pairwise_rank plandiscrim 73s
+high signed_huber_abstain plandiscrim 44s
+high signed_huber_abstain scene_only 29s
+cal_control_80pct val/low/plandiscrim 0.5159 {'mean': -0.0007, 'ci95': [-0.003, 0.0015]} peak 0.65 drop>.65 0.0285
+cal_control_80pct test/low/plandiscrim 0.4802 {'mean': -0.0006, 'ci95': [-0.0026, 0.0015]} peak 0.75 drop>.65 0.0213
+cal_control_80pct val/mid/plandiscrim 0.4531 {'mean': -0.0012, 'ci95': [-0.003, 0.0007]} peak 0.65 drop>.65 0.0452
+cal_control_80pct test/mid/plandiscrim 0.4057 {'mean': -0.0017, 'ci95': [-0.0033, 0.0001]} peak 0.65 drop>.65 0.0366
+cal_control_80pct val/high/plandiscrim 0.3667 {'mean': -0.0015, 'ci95': [-0.0034, 0.0003]} peak 0.65 drop>.65 0.061
+cal_control_80pct test/high/plandiscrim 0.3331 {'mean': 0.0006, 'ci95': [-0.0017, 0.0029]} peak 0.65 drop>.65 0.047
+cal_isotonic val/low/plandiscrim 0.5178 {'mean': 0.0011, 'ci95': [-0.0024, 0.0041]} peak 0.7 drop>.65 0.0271
+cal_isotonic test/low/plandiscrim 0.4808 {'mean': 0.0, 'ci95': [-0.0027, 0.0027]} peak 0.75 drop>.65 0.0203
+cal_isotonic val/mid/plandiscrim 0.4529 {'mean': -0.0014, 'ci95': [-0.004, 0.0012]} peak 0.65 drop>.65 0.048
+cal_isotonic test/mid/plandiscrim 0.4066 {'mean': -0.0008, 'ci95': [-0.0037, 0.0023]} peak 0.65 drop>.65 0.0329
+cal_isotonic val/high/plandiscrim 0.3668 {'mean': -0.0015, 'ci95': [-0.0038, 0.0006]} peak 0.6 drop>.65 0.0599
+cal_isotonic test/high/plandiscrim 0.3318 {'mean': -0.0006, 'ci95': [-0.0035, 0.0022]} peak 0.65 drop>.65 0.0465
+cal_platt val/low/plandiscrim 0.5167 {'mean': 0.0001, 'ci95': [-0.0021, 0.0024]} peak 0.7 drop>.65 0.0287
+cal_platt test/low/plandiscrim 0.4812 {'mean': 0.0005, 'ci95': [-0.0017, 0.0027]} peak 0.75 drop>.65 0.0218
+cal_platt val/mid/plandiscrim 0.4528 {'mean': -0.0015, 'ci95': [-0.0038, 0.0007]} peak 0.65 drop>.65 0.0505
+cal_platt test/mid/plandiscrim 0.4048 {'mean': -0.0025, 'ci95': [-0.0047, -0.0003]} peak 0.65 drop>.65 0.0393
+cal_platt val/high/plandiscrim 0.3695 {'mean': 0.0012, 'ci95': [-0.0009, 0.0033]} peak 0.65 drop>.65 0.0624
+cal_platt test/high/plandiscrim 0.3328 {'mean': 0.0003, 'ci95': [-0.002, 0.0026]} peak 0.65 drop>.65 0.0506
+softmax_none val/low/plandiscrim 0.5128 {'mean': -0.0039, 'ci95': [-0.0091, 0.001]} peak 0.65 drop>.65 0.0296
+softmax_none test/low/plandiscrim 0.474 {'mean': -0.0068, 'ci95': [-0.0116, -0.0019]} peak 0.7 drop>.65 0.024
+softmax_none val/low/scene_only 0.4964 {'mean': -0.0015, 'ci95': [-0.0061, 0.003]} peak 0.8 drop>.65 0.0081
+softmax_none test/low/scene_only 0.4534 {'mean': -0.0032, 'ci95': [-0.0071, 0.0004]} peak 0.85 drop>.65 0.0031
+softmax_none val/mid/plandiscrim 0.4536 {'mean': -0.0006, 'ci95': [-0.0052, 0.0041]} peak 0.65 drop>.65 0.0524
+softmax_none test/mid/plandiscrim 0.4064 {'mean': -0.001, 'ci95': [-0.005, 0.0034]} peak 0.65 drop>.65 0.0418
+softmax_none val/mid/scene_only 0.4335 {'mean': -0.001, 'ci95': [-0.0062, 0.0043]} peak 0.7 drop>.65 0.0119
+softmax_none test/mid/scene_only 0.3772 {'mean': -0.0004, 'ci95': [-0.0041, 0.0035]} peak 0.85 drop>.65 0.0086
+softmax_none val/high/plandiscrim 0.3681 {'mean': -0.0002, 'ci95': [-0.0055, 0.0055]} peak 0.6 drop>.65 0.0702
+softmax_none test/high/plandiscrim 0.336 {'mean': 0.0035, 'ci95': [-0.0019, 0.0087]} peak 0.65 drop>.65 0.0574
+softmax_none val/high/scene_only 0.3472 {'mean': 0.0039, 'ci95': [-0.001, 0.0088]} peak 0.65 drop>.65 0.0373
+softmax_none test/high/scene_only 0.3105 {'mean': 0.0016, 'ci95': [-0.0023, 0.0055]} peak 0.75 drop>.65 0.021
+pairwise_rank val/low/plandiscrim 0.5157 {'mean': -0.0009, 'ci95': [-0.0036, 0.0017]} peak 0.7 drop>.65 0.0315
+pairwise_rank test/low/plandiscrim 0.4785 {'mean': -0.0023, 'ci95': [-0.0045, 0.0]} peak 0.75 drop>.65 0.0212
+pairwise_rank val/mid/plandiscrim 0.4562 {'mean': 0.002, 'ci95': [-0.0012, 0.0052]} peak 0.65 drop>.65 0.0562
+pairwise_rank test/mid/plandiscrim 0.409 {'mean': 0.0017, 'ci95': [-0.0009, 0.0041]} peak 0.65 drop>.65 0.0446
+pairwise_rank val/high/plandiscrim 0.3729 {'mean': 0.0046, 'ci95': [0.0006, 0.0087]} peak 0.65 drop>.65 0.0738
+pairwise_rank test/high/plandiscrim 0.3367 {'mean': 0.0042, 'ci95': [0.0009, 0.0071]} peak 0.6 drop>.65 0.0591
+signed_huber_abstain val/low/plandiscrim 0.5211 {'mean': 0.0044, 'ci95': [0.0006, 0.0081]} peak 0.7 drop>.65 0.0026
+signed_huber_abstain test/low/plandiscrim 0.4805 {'mean': -0.0003, 'ci95': [-0.004, 0.0033]} peak 0.8 drop>.65 0.0006
+signed_huber_abstain val/low/scene_only 0.4967 {'mean': -0.0012, 'ci95': [-0.0051, 0.003]} peak 0.85 drop>.65 0.0002
+signed_huber_abstain test/low/scene_only 0.4537 {'mean': -0.0029, 'ci95': [-0.0063, 0.0007]} peak 0.95 drop>.65 0.0
+signed_huber_abstain val/mid/plandiscrim 0.4652 {'mean': 0.0109, 'ci95': [0.0065, 0.0157]} peak 0.7 drop>.65 0.0012
+signed_huber_abstain test/mid/plandiscrim 0.4173 {'mean': 0.0099, 'ci95': [0.0056, 0.0148]} peak 0.8 drop>.65 0.0002
+signed_huber_abstain val/mid/scene_only 0.4362 {'mean': 0.0019, 'ci95': [-0.0023, 0.0064]} peak 0.8 drop>.65 0.0014
+signed_huber_abstain test/mid/scene_only 0.3793 {'mean': 0.0018, 'ci95': [-0.0023, 0.0062]} peak 0.9 drop>.65 0.0
+signed_huber_abstain val/high/plandiscrim 0.3857 {'mean': 0.0174, 'ci95': [0.0108, 0.0234]} peak 0.7 drop>.65 0.0005
+signed_huber_abstain test/high/plandiscrim 0.3508 {'mean': 0.0184, 'ci95': [0.0124, 0.024]} peak 0.75 drop>.65 0.0
+signed_huber_abstain val/high/scene_only 0.3536 {'mean': 0.0103, 'ci95': [0.0061, 0.0146]} peak 0.7 drop>.65 0.0006
+signed_huber_abstain test/high/scene_only 0.313 {'mean': 0.0041, 'ci95': [-0.0003, 0.0084]} peak 0.8 drop>.65 0.0001
+frozen val/low/plandiscrim 0.5166 triggers.json 0.5166
+frozen test/low/plandiscrim 0.4808 triggers.json 0.4808
+frozen val/low/scene_only 0.498 triggers.json 0.498
+frozen test/low/scene_only 0.4566 triggers.json 0.4566
+frozen val/mid/plandiscrim 0.4543 triggers.json 0.4543
+frozen test/mid/plandiscrim 0.4073 triggers.json 0.4073
+frozen val/mid/scene_only 0.4344 triggers.json 0.4344
+frozen test/mid/scene_only 0.3775 triggers.json 0.3775
+frozen val/high/plandiscrim 0.3683 triggers.json 0.3683
+frozen test/high/plandiscrim 0.3325 triggers.json 0.3325
+frozen val/high/scene_only 0.3433 triggers.json 0.3433
+frozen test/high/scene_only 0.3089 triggers.json 0.3089

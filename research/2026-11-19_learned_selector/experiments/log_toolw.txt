@@ -1,0 +1,54 @@
+low frozen plandiscrim 49s
+low frozen scene_only 32s
+low signed_mse_abstain plandiscrim 39s
+low signed_mse_abstain scene_only 26s
+low signed_mse_abstain_toolw plandiscrim 30s
+low signed_mse_abstain_toolw scene_only 49s
+mid frozen plandiscrim 35s
+mid frozen scene_only 31s
+mid signed_mse_abstain plandiscrim 26s
+mid signed_mse_abstain scene_only 21s
+mid signed_mse_abstain_toolw plandiscrim 33s
+mid signed_mse_abstain_toolw scene_only 20s
+high frozen plandiscrim 60s
+high frozen scene_only 21s
+high signed_mse_abstain plandiscrim 27s
+high signed_mse_abstain scene_only 18s
+high signed_mse_abstain_toolw plandiscrim 26s
+high signed_mse_abstain_toolw scene_only 17s
+signed_mse_abstain val/low/plandiscrim 0.5222 {'mean': 0.0056, 'ci95': [0.0006, 0.0107]} peak 0.8 drop>.65 0.0005
+signed_mse_abstain test/low/plandiscrim 0.4811 {'mean': 0.0003, 'ci95': [-0.0032, 0.004]} peak 0.85 drop>.65 0.0002
+signed_mse_abstain val/low/scene_only 0.5 {'mean': 0.002, 'ci95': [-0.0008, 0.0048]} peak 0.8 drop>.65 0.0008
+signed_mse_abstain test/low/scene_only 0.4566 {'mean': -0.0001, 'ci95': [-0.0031, 0.0029]} peak 0.95 drop>.65 0.0
+signed_mse_abstain val/mid/plandiscrim 0.4648 {'mean': 0.0105, 'ci95': [0.0045, 0.0162]} peak 0.65 drop>.65 0.0008
+signed_mse_abstain test/mid/plandiscrim 0.4171 {'mean': 0.0098, 'ci95': [0.0052, 0.015]} peak 0.75 drop>.65 0.0002
+signed_mse_abstain val/mid/scene_only 0.4385 {'mean': 0.0041, 'ci95': [0.0009, 0.0073]} peak 0.85 drop>.65 0.0022
+signed_mse_abstain test/mid/scene_only 0.3816 {'mean': 0.0041, 'ci95': [0.001, 0.0076]} peak 0.9 drop>.65 0.0
+signed_mse_abstain val/high/plandiscrim 0.3863 {'mean': 0.018, 'ci95': [0.0118, 0.0239]} peak 0.75 drop>.65 0.0
+signed_mse_abstain test/high/plandiscrim 0.3509 {'mean': 0.0184, 'ci95': [0.0125, 0.024]} peak 0.75 drop>.65 0.0
+signed_mse_abstain val/high/scene_only 0.3559 {'mean': 0.0126, 'ci95': [0.0083, 0.0172]} peak 0.75 drop>.65 0.001
+signed_mse_abstain test/high/scene_only 0.3174 {'mean': 0.0085, 'ci95': [0.004, 0.013]} peak 0.85 drop>.65 0.0
+signed_mse_abstain_toolw val/low/plandiscrim 0.5227 {'mean': 0.0061, 'ci95': [0.0021, 0.0104]} peak 0.7 drop>.65 0.0022
+signed_mse_abstain_toolw test/low/plandiscrim 0.4817 {'mean': 0.001, 'ci95': [-0.0031, 0.0054]} peak 0.8 drop>.65 0.0008
+signed_mse_abstain_toolw val/low/scene_only 0.4992 {'mean': 0.0012, 'ci95': [-0.0017, 0.0044]} peak 0.95 drop>.65 0.0
+signed_mse_abstain_toolw test/low/scene_only 0.455 {'mean': -0.0017, 'ci95': [-0.0054, 0.0018]} peak 1.0 drop>.65 0.0
+signed_mse_abstain_toolw val/mid/plandiscrim 0.4615 {'mean': 0.0072, 'ci95': [0.001, 0.0134]} peak 0.7 drop>.65 0.0009
+signed_mse_abstain_toolw test/mid/plandiscrim 0.4172 {'mean': 0.0098, 'ci95': [0.0041, 0.0161]} peak 0.75 drop>.65 0.0018
+signed_mse_abstain_toolw val/mid/scene_only 0.4381 {'mean': 0.0037, 'ci95': [0.0006, 0.007]} peak 0.8 drop>.65 0.0036
+signed_mse_abstain_toolw test/mid/scene_only 0.3819 {'mean': 0.0044, 'ci95': [0.0007, 0.0081]} peak 0.95 drop>.65 0.0
+signed_mse_abstain_toolw val/high/plandiscrim 0.3863 {'mean': 0.018, 'ci95': [0.0116, 0.0235]} peak 0.65 drop>.65 0.0004
+signed_mse_abstain_toolw test/high/plandiscrim 0.3495 {'mean': 0.0171, 'ci95': [0.011, 0.023]} peak 0.7 drop>.65 0.0009
+signed_mse_abstain_toolw val/high/scene_only 0.3559 {'mean': 0.0126, 'ci95': [0.0085, 0.0169]} peak 0.75 drop>.65 0.0003
+signed_mse_abstain_toolw test/high/scene_only 0.3169 {'mean': 0.008, 'ci95': [0.0035, 0.0126]} peak 0.85 drop>.65 0.0
+frozen val/low/plandiscrim 0.5166 triggers.json 0.5166
+frozen test/low/plandiscrim 0.4808 triggers.json 0.4808
+frozen val/low/scene_only 0.498 triggers.json 0.498
+frozen test/low/scene_only 0.4566 triggers.json 0.4566
+frozen val/mid/plandiscrim 0.4543 triggers.json 0.4543
+frozen test/mid/plandiscrim 0.4073 triggers.json 0.4073
+frozen val/mid/scene_only 0.4344 triggers.json 0.4344
+frozen test/mid/scene_only 0.3775 triggers.json 0.3775
+frozen val/high/plandiscrim 0.3683 triggers.json 0.3683
+frozen test/high/plandiscrim 0.3325 triggers.json 0.3325
+frozen val/high/scene_only 0.3433 triggers.json 0.3433
+frozen test/high/scene_only 0.3089 triggers.json 0.3089
