@@ -49,11 +49,14 @@ admits ground-truth labels, which the original framing did not.
 A driving planner facing an ambiguous scene can produce several plausible candidate trajectories that differ
 in safety, but the difference may be undecidable from the raw observation alone. An occluding vehicle, a
 distant traffic light, or an ambiguous depth cue can each be the one fact that determines which candidate is
-correct. Querying every perception tool at every step resolves this but is wasteful; querying none leaves the
-ambiguity unresolved.
+correct. Querying every perception tool at every step is wasteful, and it can also make the decision worse, because extra
+evidence sometimes contradicts a correct judgment. Querying none leaves the ambiguity unresolved.
 
-Existing active-perception systems (e.g. DriveAgent-R1) trigger tools on *scene* uncertainty — a
-trajectory-agnostic signal. A scene can be visually uncertain in ways that are irrelevant to the choice at
+Existing active-perception systems decide to call a tool from the scene alone. DriveAgent-R1, for example, learns a
+mode token from the front-view image, speed and navigation command, and never sees the candidate trajectories. Recent
+work triggers on the expected effect on the plan instead (SIGMA, DEEP), or on realized benefit (BLUE), but as a
+single call-or-not decision. The one precedent that conditions on a planner's candidate set and chooses among sensing
+actions is the off-road paper 2611.06702, which is rule-based and not a driving system. A scene can be visually uncertain in ways that are irrelevant to the choice at
 hand, and visually clear in ways that hide the one detail that matters. This project asks whether conditioning
 on the **candidate set** does better.
 
@@ -96,14 +99,20 @@ whether `ĉ = c*` and on how many queries it spent getting there.
 ## 2. Motivation
 
 Every additional perception or VLA call costs latency and compute, and in a driving stack that budget is
-strictly bounded. The interesting question is not whether more evidence helps — it obviously does — but
-whether a system can predict *in advance* which single piece of evidence will change its mind, and skip the
-rest.
+strictly bounded. More evidence does not always help. In DEEP's monocular-geometry settings, 34% to 54% of the
+escalations that change the downstream loss make it worse. The question is whether a system can predict *in advance*
+which single piece of evidence will change its mind for the better, and skip the rest.
 
 Framing this over a candidate set makes the question answerable. "Was this tool call worth it?" is vague in
 the abstract; "did this tool call flip the top-1 candidate to the oracle-correct one?" is a binary label a
-simulator can produce at scale. That label is the methodological core of this proposal and is what makes the
-reduced scope tractable in a semester.
+simulator can produce at scale. That label is what makes the reduced scope tractable in a semester.
+Training a value head on the gain of a query is established practice. The gain is measured with and without the query
+(DEEP, Calibrate-Then-Delegate, To Call or Not to Call, AdaDrive). Our contribution is applying it per tool, over a
+candidate set.
+
+The claim is narrow. We did not find a driving system that chooses among several perception tools from how a planner's
+candidate trajectories diverge. We also found none that scores that choice as accuracy against a query budget, next to
+scene-uncertainty, random and oracle selectors. That is an absence over the papers we found, not over the field.
 
 ## 3. Technical Approach
 
@@ -212,20 +221,28 @@ consecutive frames.
 
 ## 5. Baselines
 
-All five methods share the same candidate generator, ranker, and tool implementations. Only the selection
+All of these methods share the same candidate generator, ranker, and tool implementations. Only the selection
 policy differs.
 
-1. **No tool** — rank from base observation only. Lower bound on both accuracy and cost.
+1. **No tool** — rank from base observation only. Lower bound on cost. Usually a lower bound on accuracy, but a noisy
+   tool can make a correct ranking wrong, so check.
 2. **Random tool** — uniform over `T`. Controls for the benefit of *any* extra evidence.
 3. **Generic uncertainty-based selection** — query when scene/ranker uncertainty exceeds a threshold, with
-   the tool chosen trajectory-agnostically. **This is the real rival.** The entire claim of the project is
-   that trajectory-conditioned selection beats trajectory-agnostic uncertainty at equal budget; without this
-   baseline there is no result.
-4. **Always-on** — query all three tools every step. Upper bound on accuracy, worst case on cost.
+   the tool chosen trajectory-agnostically (the ranker-margin trigger). Scene-uncertainty selection is likely a weak
+   rival. DEEP finds uncertainty heuristics are not significantly better than random at its 20% selection budget, and
+   BLUE reports that scene features struggle to predict when an extra step helps. The real test is the same learner
+   without candidate features (the scene-only MLP), and a learned gate trained on the gain of any tool (the AdaDrive
+   recipe). We also plan a counterfactual-rollout rule in the style of 2611.06702. The claim is that
+   candidate features help at equal budget.
+4. **Always-on** — query all three tools every step. Worst case on cost. It is not an accuracy ceiling, because extra
+   tool results can hurt.
 5. **PlanDiscrim** — trajectory-conditioned selection of at most one tool.
+6. **Scene-only MLP** — the same MLP as PlanDiscrim, trained on scene features and the ranker margin without the
+   candidate features.
 
-Reference point: the **oracle selector** from the labeling pipeline, which defines the achievable ceiling and
-turns the comparison into a regret measurement rather than a bare accuracy table.
+Reference points: one is the **oracle selector** from the labeling pipeline, which turns the comparison into a regret
+measurement rather than a bare accuracy table. The other is the **fair ceiling**, which calls the tool with the largest
+expected gain and cannot see the noise draws.
 
 ## 6. Metrics and Success Criteria
 
@@ -320,3 +337,7 @@ progress will be assessed against Phase 4 completion rather than against model r
   readily than conclusions about *geometric* ambiguity. Transfer is Stage E.
 - **No safety guarantee is claimed.** This phase produces no calibrated bound of any kind; calibration is
   Stage A.
+- **The candidate-conditioning gain is small.** The selector leads the scene-only MLP by about 1 to 2 points on
+  average with 10,329 training rows and 2 to 3 points with 25,036, and it falls behind that rival at the highest budgets. DEEP reports that learned allocators capture more
+  benefit than random but select nearly as much harm, so harm selected and normalized decision gain are reported next
+  to accuracy. Offline metrics also correlate poorly with closed-loop results.

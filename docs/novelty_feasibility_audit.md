@@ -6,7 +6,7 @@
 
 ## Summary judgment
 
-The proposed domain is timely and technically meaningful, but it is a crowded area. VLA driving, critic-based trajectory refinement, counterfactual reasoning, and active perception are already active research topics. The project is novel only if it is framed as a calibrated runtime-assurance system rather than as a generic “VLA with prompts, skills, and tools.”
+The proposed domain is timely and technically meaningful, but it is a crowded area. VLA driving, critic-based trajectory refinement, counterfactual reasoning, and active perception are already active research topics. The project is novel only if it is framed around a measurable selection problem (which perception query, given the candidate trajectories) rather than as a generic VLA with prompts and tools. Calibration is a later phase.
 
 ## Red-ocean risks
 
@@ -24,13 +24,15 @@ These directions overlap substantially with Counterfactual VLA, Judge, Then Driv
 
 The project should make the following precise claim:
 
-> We introduce a calibrated, trajectory-conditioned runtime safety shield that selectively decides whether to accept a planner-proposed trajectory, invoke an evidence-gathering tool, request replanning, or trigger fallback under a fixed 1-Hz compute budget.
+> We study which perception query a driving planner should make, given its candidate trajectories. A learned selector chooses among ROI inspection, depth and a collision check, or abstains. It uses features of how the candidates diverge and is trained on each tool's decision gain. Averaged over query budgets, it beats the same learner without candidate features, ranker margin and random selection.
+
+The calibrated, trajectory-conditioned runtime safety shield, which accepts a trajectory, invokes a tool, requests replanning or triggers fallback under a fixed 1-Hz compute budget, remains the long-term goal. Each of its parts is built and tested in a later phase (see [`future_steps.md`](future_steps.md)).
 
 The distinction is important:
 
 - Existing work often improves the planner itself.
 - CASS-VLA supervises an independently produced candidate trajectory.
-- Existing work may use tools when uncertain.
+- Existing work uses tools when the scene is uncertain, and increasingly when the expected effect on the plan is large.
 - CASS-VLA uses tool calls to reduce uncertainty specifically enough to make a risk-calibrated accept/reject decision.
 - Existing work may report safety improvements.
 - CASS-VLA evaluates empirical risk coverage, unsafe acceptance, false vetoes, and tool cost.
@@ -39,11 +41,11 @@ The distinction is important:
 
 1. **Trajectory-conditioned calibrated risk**
 
-   Predict and calibrate risk for the exact candidate trajectory proposed by the planner, not only for generic scene difficulty or object presence.
+   Predict and calibrate risk for the exact candidate trajectory proposed by the planner, not only for generic scene difficulty or object presence. This contribution is deferred (Stage A of [`future_steps.md`](future_steps.md)). Localized Conformal Safety Monitoring, Barrier Function Conformal Safety Clearance and Auditing Latent-Space Monitors (which uses the planned trajectory as input) are the starting points.
 
 2. **Selective active perception**
 
-   Invoke a visual or geometric tool only when the added evidence is likely to change the safety decision.
+   Choose which tool to invoke, among several, from how the planner's candidates diverge, and skip tools that are unlikely to change the choice. Triggering on expected decision change is prior work. The tool choice and the candidate conditioning are the new part.
 
 3. **Runtime intervention policy**
 
@@ -114,4 +116,4 @@ Proceed with this project if the team commits to the following scope:
 
 ## Final AI critique
 
-CASS-VLA is a credible research direction because it targets a practical and under-evaluated question: when should a VLA trust, inspect, or override a proposed driving trajectory? The project is not novel if presented as “a VLA critic with prompts and tools.” It becomes meaningfully novel if it demonstrates calibrated, trajectory-specific, compute-aware safety intervention with rigorous baselines and honest limitations.
+CASS-VLA is a credible research direction because it targets a practical question: when should a driving system inspect further before trusting a proposed trajectory, and with which tool? The when-to-query part is well studied. The which-tool part is not. The project is not novel if presented as “a VLA critic with prompts and tools.” It becomes meaningfully novel if it demonstrates calibrated, trajectory-specific, compute-aware safety intervention with rigorous baselines and honest limitations.

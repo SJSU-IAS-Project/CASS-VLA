@@ -74,5 +74,5 @@ the middle of that range is retained, which is the intended behaviour.
   labels from a fresh process matched the sweep on every safety flag and on
   `c*`. One candidate order differed, and scores differed by at most 0.8.
 - TTC is constant-velocity, measured edge to edge, and is a proxy only.
-- TTC uses the commanded velocity, and scripted kinematic vehicles move at 0.80
-  of it. The cause is not diagnosed.
+- TTC uses the commanded velocity. Scripted kinematic vehicles now move at
+  that velocity; `tests/test_hazards.py` checks it to within 2%.

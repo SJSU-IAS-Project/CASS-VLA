@@ -25,6 +25,20 @@ Starting Stage A before Stage 1 concludes would calibrate a signal not yet shown
 | E | CARLA / Bench2Drive transfer + perturbations | Stage D stable in MetaDrive | 4–6 weeks |
 | F | Real-data offline validation | Stage E, and results worth external validation | 3–4 weeks |
 
+## Where Phase 1 stands
+
+As of 2026-11-19, the label pipeline, the expected-gain targets, the baseline comparison and the cached VLM features
+are done. See [`baseline_results.md`](baseline_results.md) and [`phase5_vlm.md`](phase5_vlm.md).
+
+- The selector beats ranker margin, the other simple triggers and the scene-only MLP in all six validation and test
+  cells, averaged over budgets. Its lead over the scene-only MLP is small.
+- Stage A's entry criterion, beating the uncertainty baseline across the budget sweep, is met on the development
+  splits. The pre-registered test on seeds 760-859 confirmed it at all three noise levels, but the selector's unsafe rate at
+  matched accuracy is worse than always-on at high noise (see [`baseline_results.md`](baseline_results.md)).
+- The cached VLM features add +0.005 to +0.010 to the geometry selector when it trains on 25,036 rows.
+- Single-query accuracy peaks near a budget of 0.65 calls per decision and then falls. Stage B is the stage that would
+  address it. The later stages remain untouched.
+
 Stages A and B are independent of each other and could run in parallel if a second semester or additional
 people are available. C depends on both.
 

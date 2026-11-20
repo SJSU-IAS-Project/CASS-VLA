@@ -1,5 +1,7 @@
 # Project Proposal: CASS-VLA
 
+> This proposal is superseded by [`refined_proposal.md`](refined_proposal.md), which narrows the project to one question and defers the rest to [`future_steps.md`](future_steps.md). It is kept as the original text.
+
 ## Title
 
 **CASS-VLA: Calibrated Active Safety Shielding for Vision-Language-Action Driving Planners**

@@ -30,9 +30,9 @@ python -m pytest tests/test_scenarios.py              # 7 fast headless checks
 | `occluded_pedestrian` | SS | car parked in the right lane at 20–30 m; a pedestrian hidden on its far side walks left across the road once the ego is within 12–20 m | none |
 | `occluded_cross_traffic` | X | large truck parked at the near-right corner hides the south arm; a red-light runner launches from the south arm so that its arrival at the conflict point matches the ego's (lead ±1.2 s); 50% also a law-abiding IDM car queued on the north arm | ego axis green, cross axis red |
 | `ambiguous_light` | X | 50% an IDM lead car; the ego light goes green→yellow→red (or red→green) at a random time 2.5–8 s, i.e. around the ego's arrival at the stop line | scripted per seed |
-| `lead_brake_cutin` | SS | 50% a lead in the ego lane brakes to a stop (5–8 m/s²) when the ego is within 10–16 m; 50% a neighbour cuts into the ego lane and slows | none |
-| `lane_blockage` | SS | stalled car + cones in the ego lane at 26–36 m; an overtaker closes in the left lane at 11–15 m/s; 40% the right lane is blocked by a truck too | none |
-| `merge_closing_speed` | SS | slow lead (2.5–4.5 m/s) in the ego lane; fast closer (13–18 m/s) coming up the left lane | none |
+| `lead_brake_cutin` | SS | 50% a lead in the ego lane brakes to a stop (4.0–6.4 m/s²) when the ego is within 10–16 m; 50% a neighbour cuts into the ego lane and slows | none |
+| `lane_blockage` | SS | stalled car + cones in the ego lane at 26–36 m; an overtaker closes in the left lane at 8.8–12 m/s; 40% the right lane is blocked by a truck too | none |
+| `merge_closing_speed` | SS | slow lead (2.0–3.6 m/s) in the ego lane; fast closer (10.4–14.4 m/s) coming up the left lane | none |
 
 The ego always spawns on the middle lane `(">", ">>", 1)` at 5 m; the 40 m
 approach is `(">>", ">>>", k)`. On X maps the ego's destination is the
@@ -94,8 +94,12 @@ traces, which is what the oracle rollout relies on.
 - A vehicle spawned on a negative-direction road (e.g. `-1X0_1_`) without an
   explicit `destination` crashes MetaDrive's auto route assignment with
   `list.remove(x): x not in list`. All intersection hazards set one.
-- A velocity command on a Bullet vehicle takes about 0.5 s to take full
-  effect; `KinematicVehicle.launch_lag` compensates in the ETA trigger.
+- Setting a vehicle's heading freezes its body for the first of the five
+  physics substeps, so the vehicle covered only 0.8 of its commanded distance.
+  `KinematicVehicle._drive` now moves the body forward by that substep. The
+  family speed ranges were scaled by 0.8 at the same time, so vehicles drive
+  as fast as they did before the fix. The 0.5 s `launch_lag` that hid the
+  problem is now 0.
 - The ETA trigger must include the ego's measured acceleration, otherwise a
   throttle-happy ego arrives ~1 s early and the conflict never happens.
 

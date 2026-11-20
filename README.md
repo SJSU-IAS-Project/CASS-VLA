@@ -91,12 +91,6 @@ Primary metrics:
 4. Main planner with calibrated critic but no tools
 5. Full CASS-VLA system
 
-## Initial References
-
-- Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning, CVPR 2026
-- Judge, Then Drive: A Critic-Centric Vision Language Action Framework for Autonomous Driving, 2026 preprint
-- DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking, ICLR 2026
-
 ## Project Status
 
-Proposal-stage repository. The initial milestone is to finalize the literature survey, simulator selection, base planner, and evaluation protocol.
+The first phase, PlanDiscrim, is built: scenarios, tools, labels, baselines and cached VLM features. Results are in `docs/baseline_results.md` and `docs/phase5_vlm.md`, and plans are in `docs/refined_proposal.md` and `docs/future_steps.md`. Data and run outputs are under `out/` (git ignored), and the scripts in `scripts/` rebuild them.
