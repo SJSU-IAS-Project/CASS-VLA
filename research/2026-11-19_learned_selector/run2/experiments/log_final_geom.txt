@@ -1,0 +1,19 @@
+final rows in file 4922
+n_train 34718 {'final': 4922} hold 6966
+low signed {'final': 0.5001}
+low frozen {'final': 0.4984}
+low signed_scene {'final': 0.483}
+low uncertainty_margin {'final': 0.3975}
+low always_on {'final': 0.5853}
+mid signed {'final': 0.4473}
+mid frozen {'final': 0.4386}
+mid signed_scene {'final': 0.4243}
+mid uncertainty_margin {'final': 0.3509}
+mid always_on {'final': 0.49}
+high signed {'final': 0.3752}
+high frozen {'final': 0.3563}
+high signed_scene {'final': 0.3489}
+high uncertainty_margin {'final': 0.2842}
+high always_on {'final': 0.3566}
+final {'P1': 'pass', 'P2': 'pass', 'P3': 'pass', 'Q1': 'not run', 'P4': 'pass'}
+wrote /home/user/CASS-VLA/out/v4_eval/final_geom.json

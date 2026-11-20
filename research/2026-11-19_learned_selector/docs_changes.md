@@ -45,3 +45,11 @@ Skipped: delta rows marked "needs bib" (FD-WAM, ETM, Learning When to Search, Dy
 
 - docs/phase5_vlm.md: new "Controls" section (real, shuffle, shuffle within family, family; gain over geometry per cell, from out/v2_eval/vlm_extra_train.json and vlm_control_*.json; exploratory, 25,036 rows, no CIs). Manager's reading checked: full shuffle at or below geometry in 5 of 6 cells (test/high +0.0001) confirmed; family one-hot recovers 20% to 77% per cell (49% of the summed gain), not "a third to a half" in every cell; within-family shuffle at most +0.0014 in five cells, +0.0047 test/high; so about half of the gain is beyond scene family (23% to 80% by cell).
 - research/2026-11-19_learned_selector/REPORT.md: Limits "VLM controls" bullet replaced with the result and a pointer; next step 3 reworded.
+
+## Second final
+
+- docs/baseline_results.md: new section "Second pre-registered final test (seeds 1060-1159)" (P1-P3 and Q1 table, accuracy table, P4 table, caveats: 0.6 chosen post hoc, 0.01 margin ours, no multiple-comparison correction, controls not repeated on signed) and a Data row. Numbers read from out/v4_eval/final_geom.json and final_vlm.json.
+- docs/phase5_vlm.md: short Q1 section (+0.016, +0.012, +0.010; at 0.6 calls accuracy +0.016/+0.012/+0.012, unsafe -0.012/-0.004/-0.003).
+- DECISIONS.md: dated 2026-11-20 line, signed-gain abstain selector is the main method.
+- RUNNING.md: headless Chromium PDF needs (LD_LIBRARY_PATH, FONTCONFIG_FILE) and deliverables build commands.
+- Not edited: SEEDS.md (already updated). I did not run the build commands.

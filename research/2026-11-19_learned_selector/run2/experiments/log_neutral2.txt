@@ -1,0 +1,21 @@
+val rows in file 2222
+test rows in file 2235
+n_train 25036 {'val': 2222, 'test': 2235} hold 5119
+low signed {'val': 0.5222, 'test': 0.4811}
+low frozen {'val': 0.5166, 'test': 0.4808}
+low signed_scene {'val': 0.5, 'test': 0.4566}
+low uncertainty_margin {'val': 0.4179, 'test': 0.3844}
+low always_on {'val': 0.5954, 'test': 0.5781}
+mid signed {'val': 0.4648, 'test': 0.4171}
+mid frozen {'val': 0.4543, 'test': 0.4073}
+mid signed_scene {'val': 0.4385, 'test': 0.3816}
+mid uncertainty_margin {'val': 0.37, 'test': 0.3264}
+mid always_on {'val': 0.4968, 'test': 0.4537}
+high signed {'val': 0.3863, 'test': 0.3509}
+high frozen {'val': 0.3683, 'test': 0.3325}
+high signed_scene {'val': 0.3559, 'test': 0.3174}
+high uncertainty_margin {'val': 0.2915, 'test': 0.2561}
+high always_on {'val': 0.347, 'test': 0.3378}
+val {'P1': 'pass', 'P2': 'pass', 'P3': 'pass', 'Q1': 'not run', 'P4': 'pass'}
+test {'P1': 'pass', 'P2': 'pass', 'P3': 'pass', 'Q1': 'not run', 'P4': 'fail'}
+wrote /home/user/CASS-VLA/research/2026-11-19_learned_selector/run2/experiments/neutral2.json

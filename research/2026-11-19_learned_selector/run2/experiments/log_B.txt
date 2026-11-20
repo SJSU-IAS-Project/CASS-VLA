@@ -1,0 +1,10 @@
+n_train 25036 {'val': 2222, 'test': 2235} hold 5119
+low base 17s {'val': 0.5222, 'test': 0.4811}
+low B_signed_vlm 25s {'val': 0.5333, 'test': 0.496}
+low B_scene_signed 13s {'val': 0.5, 'test': 0.4566}
+mid base 24s {'val': 0.4648, 'test': 0.4171}
+mid B_signed_vlm 28s {'val': 0.4761, 'test': 0.4287}
+mid B_scene_signed 12s {'val': 0.4385, 'test': 0.3816}
+high base 18s {'val': 0.3863, 'test': 0.3509}
+high B_signed_vlm 27s {'val': 0.3951, 'test': 0.3593}
+high B_scene_signed 12s {'val': 0.3559, 'test': 0.3174}

@@ -1,0 +1,13 @@
+n_train 34718 {'val': 2222, 'test': 2235} hold 6966
+low base 38s {'val': 0.5228, 'test': 0.4829}
+low D_eps_heldout 36s {'val': 0.5231, 'test': 0.4829}
+low D_eps_0.02 1s {'val': 0.523, 'test': 0.4829}
+low D_eps_0.05 1s {'val': 0.523, 'test': 0.483}
+mid base 43s {'val': 0.4641, 'test': 0.4179}
+mid D_eps_heldout 38s {'val': 0.4641, 'test': 0.4178}
+mid D_eps_0.02 1s {'val': 0.4643, 'test': 0.418}
+mid D_eps_0.05 1s {'val': 0.4642, 'test': 0.4177}
+high base 37s {'val': 0.3851, 'test': 0.3515}
+high D_eps_heldout 32s {'val': 0.3851, 'test': 0.3517}
+high D_eps_0.02 1s {'val': 0.3851, 'test': 0.3518}
+high D_eps_0.05 1s {'val': 0.3849, 'test': 0.3516}

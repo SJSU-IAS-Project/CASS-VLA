@@ -1,0 +1,25 @@
+n_train 34718 {'val': 2222, 'test': 2235} hold 6966
+low base 57s {'val': 0.5228, 'test': 0.4829}
+low A_offset_optimal 39s {'val': 0.5239, 'test': 0.4846}
+low A_offset_gain 0s {'val': 0.5255, 'test': 0.4849}
+low A_ctrl80 0s {'val': 0.5216, 'test': 0.4833}
+low A_offset_optimal_80 0s {'val': 0.5233, 'test': 0.4843}
+low A_offset_gain_80 0s {'val': 0.5246, 'test': 0.4854}
+low A_hybrid 39s {'val': 0.5239, 'test': 0.4824}
+low C_scene_signed 30s {'val': 0.5002, 'test': 0.4579}
+mid base 41s {'val': 0.4641, 'test': 0.4179}
+mid A_offset_optimal 35s {'val': 0.464, 'test': 0.4176}
+mid A_offset_gain 0s {'val': 0.4654, 'test': 0.4201}
+mid A_ctrl80 0s {'val': 0.4648, 'test': 0.4177}
+mid A_offset_optimal_80 0s {'val': 0.4635, 'test': 0.4166}
+mid A_offset_gain_80 0s {'val': 0.4655, 'test': 0.4198}
+mid A_hybrid 50s {'val': 0.4645, 'test': 0.4184}
+mid C_scene_signed 28s {'val': 0.4391, 'test': 0.3818}
+high base 52s {'val': 0.3851, 'test': 0.3515}
+high A_offset_optimal 43s {'val': 0.385, 'test': 0.3514}
+high A_offset_gain 0s {'val': 0.3861, 'test': 0.3508}
+high A_ctrl80 0s {'val': 0.3859, 'test': 0.3506}
+high A_offset_optimal_80 0s {'val': 0.3846, 'test': 0.3515}
+high A_offset_gain_80 0s {'val': 0.3857, 'test': 0.35}
+high A_hybrid 51s {'val': 0.3858, 'test': 0.3499}
+high C_scene_signed 30s {'val': 0.3565, 'test': 0.3169}

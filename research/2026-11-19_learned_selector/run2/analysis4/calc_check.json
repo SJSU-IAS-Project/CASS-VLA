@@ -1,0 +1,65 @@
+{
+ "low": {
+  "always_on": {
+   "acc": 0.584132163981236,
+   "unsafe": 0.32857434223944526
+  },
+  "check_vs_triggers_final": {
+   "uncertainty_margin": {
+    "max_abs_acc": 4.582908423411691e-05,
+    "max_abs_unsafe": 4.68896593921464e-05
+   },
+   "plandiscrim": {
+    "max_abs_acc": 5.627167040589409e-05,
+    "max_abs_unsafe": 5.0479298388750315e-05
+   },
+   "scene_only": {
+    "max_abs_acc": 5.6985519069963075e-05,
+    "max_abs_unsafe": 6.024202868998296e-05
+   }
+  },
+  "fixed_tool": "depth"
+ },
+ "mid": {
+  "always_on": {
+   "acc": 0.48602896186008565,
+   "unsafe": 0.41036100346726495
+  },
+  "check_vs_triggers_final": {
+   "uncertainty_margin": {
+    "max_abs_acc": 4.7277177238402857e-05,
+    "max_abs_unsafe": 4.878645727102171e-05
+   },
+   "plandiscrim": {
+    "max_abs_acc": 6.0527568155610556e-05,
+    "max_abs_unsafe": 6.705418451286027e-05
+   },
+   "scene_only": {
+    "max_abs_acc": 5.629886464064704e-05,
+    "max_abs_unsafe": 4.982663675301424e-05
+   }
+  },
+  "fixed_tool": "depth"
+ },
+ "high": {
+  "always_on": {
+   "acc": 0.35855598613094025,
+   "unsafe": 0.4935753620232511
+  },
+  "check_vs_triggers_final": {
+   "uncertainty_margin": {
+    "max_abs_acc": 4.988782378134715e-05,
+    "max_abs_unsafe": 4.947991025905374e-05
+   },
+   "plandiscrim": {
+    "max_abs_acc": 7.172479434364165e-05,
+    "max_abs_unsafe": 4.802501869610731e-05
+   },
+   "scene_only": {
+    "max_abs_acc": 4.937113331976439e-05,
+    "max_abs_unsafe": 6.66938609015233e-05
+   }
+  },
+  "fixed_tool": "depth"
+ }
+}

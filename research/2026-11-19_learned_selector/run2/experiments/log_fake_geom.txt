@@ -1,0 +1,19 @@
+final rows in file 2235
+n_train 34718 {'final': 2235} hold 6966
+low signed {'final': 0.4829}
+low frozen {'final': 0.4806}
+low signed_scene {'final': 0.4579}
+low uncertainty_margin {'final': 0.3844}
+low always_on {'final': 0.5781}
+mid signed {'final': 0.4179}
+mid frozen {'final': 0.4066}
+mid signed_scene {'final': 0.3818}
+mid uncertainty_margin {'final': 0.3264}
+mid always_on {'final': 0.4537}
+high signed {'final': 0.3515}
+high frozen {'final': 0.3331}
+high signed_scene {'final': 0.3169}
+high uncertainty_margin {'final': 0.2561}
+high always_on {'final': 0.3378}
+final {'P1': 'pass', 'P2': 'pass', 'P3': 'pass', 'Q1': 'not run', 'P4': 'fail'}
+wrote /home/user/CASS-VLA/research/2026-11-19_learned_selector/run2/experiments/fake_final_geom.json

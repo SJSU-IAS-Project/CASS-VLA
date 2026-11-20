@@ -1,0 +1,10 @@
+final rows in file 4922
+n_train 34718 {'final': 4922} hold 6966
+low signed {'final': 0.5001}
+low signed_vlm {'final': 0.5163}
+mid signed {'final': 0.4473}
+mid signed_vlm {'final': 0.4589}
+high signed {'final': 0.3752}
+high signed_vlm {'final': 0.3851}
+final {'P1': 'not run', 'P2': 'not run', 'P3': 'not run', 'Q1': 'pass', 'P4': 'not run'}
+wrote /home/user/CASS-VLA/out/v4_eval/final_vlm.json

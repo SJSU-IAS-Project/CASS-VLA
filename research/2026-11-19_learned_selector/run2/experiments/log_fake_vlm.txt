@@ -1,0 +1,10 @@
+final rows in file 2235
+n_train 25036 {'final': 2235} hold 5119
+low signed {'final': 0.4811}
+low signed_vlm {'final': 0.496}
+mid signed {'final': 0.4171}
+mid signed_vlm {'final': 0.4287}
+high signed {'final': 0.3509}
+high signed_vlm {'final': 0.3593}
+final {'P1': 'not run', 'P2': 'not run', 'P3': 'not run', 'Q1': 'pass', 'P4': 'not run'}
+wrote /home/user/CASS-VLA/research/2026-11-19_learned_selector/run2/experiments/fake_final_vlm.json

@@ -1,0 +1,3989 @@
+{
+ "low": {
+  "always_on": {
+   "acc": 0.5841,
+   "unsafe": 0.3286
+  },
+  "n": 4903,
+  "n_seeds": 100,
+  "methods": {
+   "plandiscrim": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.58,
+      "calls_per_decision": 0.5801,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.58,
+      "calls_per_decision": 0.5801,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.5999,
+    "min_unsafe": 0.3191,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.6,
+      "calls_per_decision": 0.6,
+      "acc": 0.5937,
+      "acc_minus_always": 0.0096,
+      "acc_diff_ci95": [
+       0.0024,
+       0.0172
+      ],
+      "unsafe": 0.3237,
+      "unsafe_minus_always": -0.0049,
+      "unsafe_diff_ci95": [
+       -0.0123,
+       0.0032
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.4598,
+      "acc_minus_always": -0.1243,
+      "acc_diff_ci95": [
+       -0.1367,
+       -0.111
+      ],
+      "unsafe": 0.4538,
+      "unsafe_minus_always": 0.1252,
+      "unsafe_diff_ci95": [
+       0.1115,
+       0.1379
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.5648,
+      "acc_minus_always": -0.0194,
+      "acc_diff_ci95": [
+       -0.0291,
+       -0.0095
+      ],
+      "unsafe": 0.349,
+      "unsafe_minus_always": 0.0204,
+      "unsafe_diff_ci95": [
+       0.0105,
+       0.0303
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.5996,
+      "acc_minus_always": 0.0154,
+      "acc_diff_ci95": [
+       0.009,
+       0.0217
+      ],
+      "unsafe": 0.3208,
+      "unsafe_minus_always": -0.0078,
+      "unsafe_diff_ci95": [
+       -0.0141,
+       -0.001
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "acc_minus_always": 0.0035,
+      "acc_diff_ci95": [
+       -0.0044,
+       0.0115
+      ],
+      "unsafe_minus_always": 0.0003,
+      "unsafe_diff_ci95": [
+       -0.0078,
+       0.0088
+      ]
+     },
+     "unsafe": {
+      "budget": 0.58,
+      "calls_per_decision": 0.5801,
+      "acc_minus_always": 0.0055,
+      "acc_diff_ci95": [
+       -0.0022,
+       0.0136
+      ],
+      "unsafe_minus_always": -0.0016,
+      "unsafe_diff_ci95": [
+       -0.0095,
+       0.0071
+      ]
+     },
+     "both": {
+      "budget": 0.58,
+      "calls_per_decision": 0.5801,
+      "acc_minus_always": 0.0055,
+      "acc_diff_ci95": [
+       -0.0022,
+       0.0136
+      ],
+      "unsafe_minus_always": -0.0016,
+      "unsafe_diff_ci95": [
+       -0.0095,
+       0.0071
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.353,
+      -0.3082,
+      -0.2645,
+      -0.2227,
+      -0.184,
+      -0.1555,
+      -0.1243,
+      -0.0962,
+      -0.0678,
+      -0.0413,
+      -0.0194,
+      -0.004,
+      0.0096,
+      0.0155,
+      0.0154,
+      0.0135,
+      0.0086,
+      0.0045,
+      -0.0012,
+      -0.0052,
+      -0.0078
+     ],
+     "unsafe_diff": [
+      0.3365,
+      0.2938,
+      0.2526,
+      0.2141,
+      0.1806,
+      0.1511,
+      0.1252,
+      0.0986,
+      0.0693,
+      0.043,
+      0.0204,
+      0.0066,
+      -0.0049,
+      -0.0094,
+      -0.0078,
+      -0.0041,
+      0.0014,
+      0.0039,
+      0.0072,
+      0.0115,
+      0.0131
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.3176,
+       0.353
+      ],
+      [
+       0.2758,
+       0.3109
+      ],
+      [
+       0.2356,
+       0.2688
+      ],
+      [
+       0.1972,
+       0.2295
+      ],
+      [
+       0.1642,
+       0.1964
+      ],
+      [
+       0.1361,
+       0.1645
+      ],
+      [
+       0.1115,
+       0.1379
+      ],
+      [
+       0.0855,
+       0.1111
+      ],
+      [
+       0.0563,
+       0.0815
+      ],
+      [
+       0.0317,
+       0.0539
+      ],
+      [
+       0.0105,
+       0.0303
+      ],
+      [
+       -0.0025,
+       0.0153
+      ],
+      [
+       -0.0123,
+       0.0032
+      ],
+      [
+       -0.0162,
+       -0.0023
+      ],
+      [
+       -0.0141,
+       -0.001
+      ],
+      [
+       -0.0102,
+       0.0019
+      ],
+      [
+       -0.0044,
+       0.0074
+      ],
+      [
+       -0.0018,
+       0.0097
+      ],
+      [
+       0.0016,
+       0.0127
+      ],
+      [
+       0.0054,
+       0.0172
+      ],
+      [
+       0.0072,
+       0.0187
+      ]
+     ]
+    },
+    "first_acc_match_budget_boot": {
+     "never_share": 0.0,
+     "pct2_5_50_97_5": [
+      0.53,
+      0.57,
+      0.59
+     ]
+    },
+    "first_unsafe_match_budget_boot": {
+     "never_share": 0.003,
+     "pct2_5_50_97_5": [
+      0.54,
+      0.58,
+      0.62
+     ]
+    },
+    "acc_ge_always_budgets_0.01": [
+     0.57,
+     0.58,
+     0.59,
+     0.6,
+     0.61,
+     0.62,
+     0.63,
+     0.64,
+     0.65,
+     0.66,
+     0.67,
+     0.68,
+     0.69,
+     0.7,
+     0.71,
+     0.72,
+     0.73,
+     0.74,
+     0.75,
+     0.76,
+     0.77,
+     0.78,
+     0.79,
+     0.8,
+     0.81,
+     0.82,
+     0.83,
+     0.84,
+     0.85,
+     0.86,
+     0.87,
+     0.88
+    ]
+   },
+   "signed_mse_abstain": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": 0.6
+     },
+     "unsafe": {
+      "first_budget": 0.55,
+      "calls_per_decision": 0.5501,
+      "sustained_budget": 0.55
+     },
+     "both": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": 0.6
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "sustained_budget": 0.57
+     },
+     "unsafe": {
+      "first_budget": 0.54,
+      "calls_per_decision": 0.5401,
+      "sustained_budget": 0.54
+     },
+     "both": {
+      "first_budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "sustained_budget": 0.57
+     }
+    },
+    "max_acc": 0.6027,
+    "min_unsafe": 0.3108,
+    "max_call_rate": 0.8507,
+    "points": {
+     "orig_match": {
+      "budget": 0.6,
+      "calls_per_decision": 0.6,
+      "acc": 0.5926,
+      "acc_minus_always": 0.0085,
+      "acc_diff_ci95": [
+       -0.0007,
+       0.0179
+      ],
+      "unsafe": 0.3149,
+      "unsafe_minus_always": -0.0137,
+      "unsafe_diff_ci95": [
+       -0.022,
+       -0.0055
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.4628,
+      "acc_minus_always": -0.1214,
+      "acc_diff_ci95": [
+       -0.1365,
+       -0.1056
+      ],
+      "unsafe": 0.4501,
+      "unsafe_minus_always": 0.1216,
+      "unsafe_diff_ci95": [
+       0.1064,
+       0.1367
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.5623,
+      "acc_minus_always": -0.0218,
+      "acc_diff_ci95": [
+       -0.0328,
+       -0.0114
+      ],
+      "unsafe": 0.339,
+      "unsafe_minus_always": 0.0105,
+      "unsafe_diff_ci95": [
+       0.0009,
+       0.0203
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.6017,
+      "acc_minus_always": 0.0175,
+      "acc_diff_ci95": [
+       0.0101,
+       0.025
+      ],
+      "unsafe": 0.311,
+      "unsafe_minus_always": -0.0176,
+      "unsafe_diff_ci95": [
+       -0.0251,
+       -0.0101
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "acc_minus_always": 0.0019,
+      "acc_diff_ci95": [
+       -0.0074,
+       0.0108
+      ],
+      "unsafe_minus_always": -0.0094,
+      "unsafe_diff_ci95": [
+       -0.0182,
+       -0.0007
+      ]
+     },
+     "unsafe": {
+      "budget": 0.54,
+      "calls_per_decision": 0.5401,
+      "acc_minus_always": -0.0065,
+      "acc_diff_ci95": [
+       -0.0161,
+       0.0029
+      ],
+      "unsafe_minus_always": -0.0026,
+      "unsafe_diff_ci95": [
+       -0.0114,
+       0.0064
+      ]
+     },
+     "both": {
+      "budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "acc_minus_always": 0.0019,
+      "acc_diff_ci95": [
+       -0.0074,
+       0.0108
+      ],
+      "unsafe_minus_always": -0.0094,
+      "unsafe_diff_ci95": [
+       -0.0182,
+       -0.0007
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8482,
+      0.8507,
+      0.8507,
+      0.8507
+     ],
+     "acc_diff": [
+      -0.353,
+      -0.3102,
+      -0.2674,
+      -0.2272,
+      -0.1872,
+      -0.1534,
+      -0.1214,
+      -0.0961,
+      -0.0702,
+      -0.0453,
+      -0.0218,
+      -0.0039,
+      0.0085,
+      0.0138,
+      0.0175,
+      0.0181,
+      0.018,
+      0.0183,
+      0.0182,
+      0.0182,
+      0.0182
+     ],
+     "unsafe_diff": [
+      0.3365,
+      0.2942,
+      0.2532,
+      0.2139,
+      0.1774,
+      0.1513,
+      0.1216,
+      0.0901,
+      0.0613,
+      0.035,
+      0.0105,
+      -0.005,
+      -0.0137,
+      -0.0166,
+      -0.0176,
+      -0.0158,
+      -0.0151,
+      -0.015,
+      -0.0148,
+      -0.0148,
+      -0.0148
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.3176,
+       0.353
+      ],
+      [
+       0.2769,
+       0.31
+      ],
+      [
+       0.2367,
+       0.2691
+      ],
+      [
+       0.1974,
+       0.229
+      ],
+      [
+       0.1608,
+       0.1925
+      ],
+      [
+       0.1344,
+       0.1672
+      ],
+      [
+       0.1064,
+       0.1367
+      ],
+      [
+       0.077,
+       0.1028
+      ],
+      [
+       0.0485,
+       0.0736
+      ],
+      [
+       0.0236,
+       0.0461
+      ],
+      [
+       0.0009,
+       0.0203
+      ],
+      [
+       -0.0135,
+       0.0039
+      ],
+      [
+       -0.022,
+       -0.0055
+      ],
+      [
+       -0.0245,
+       -0.0088
+      ],
+      [
+       -0.0251,
+       -0.0101
+      ],
+      [
+       -0.0234,
+       -0.0085
+      ],
+      [
+       -0.0224,
+       -0.0081
+      ],
+      [
+       -0.0218,
+       -0.0085
+      ],
+      [
+       -0.0216,
+       -0.0084
+      ],
+      [
+       -0.0216,
+       -0.0084
+      ],
+      [
+       -0.0216,
+       -0.0084
+      ]
+     ]
+    }
+   },
+   "scene_only": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.74,
+      "calls_per_decision": 0.74,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.5875,
+    "min_unsafe": 0.3261,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.6,
+      "calls_per_decision": 0.6,
+      "acc": 0.5544,
+      "acc_minus_always": -0.0298,
+      "acc_diff_ci95": [
+       -0.0385,
+       -0.0204
+      ],
+      "unsafe": 0.3526,
+      "unsafe_minus_always": 0.024,
+      "unsafe_diff_ci95": [
+       0.0149,
+       0.0332
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.4289,
+      "acc_minus_always": -0.1552,
+      "acc_diff_ci95": [
+       -0.169,
+       -0.1404
+      ],
+      "unsafe": 0.4728,
+      "unsafe_minus_always": 0.1443,
+      "unsafe_diff_ci95": [
+       0.1294,
+       0.1573
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.5248,
+      "acc_minus_always": -0.0593,
+      "acc_diff_ci95": [
+       -0.0702,
+       -0.0476
+      ],
+      "unsafe": 0.3823,
+      "unsafe_minus_always": 0.0537,
+      "unsafe_diff_ci95": [
+       0.0432,
+       0.064
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.5763,
+      "acc_minus_always": -0.0078,
+      "acc_diff_ci95": [
+       -0.0156,
+       0.0005
+      ],
+      "unsafe": 0.334,
+      "unsafe_minus_always": 0.0054,
+      "unsafe_diff_ci95": [
+       -0.0028,
+       0.0131
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.74,
+      "calls_per_decision": 0.74,
+      "acc_minus_always": 0.0002,
+      "acc_diff_ci95": [
+       -0.0072,
+       0.0079
+      ],
+      "unsafe_minus_always": 0.0005,
+      "unsafe_diff_ci95": [
+       -0.0072,
+       0.0079
+      ]
+     },
+     "unsafe": {
+      "budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "acc_minus_always": 0.0014,
+      "acc_diff_ci95": [
+       -0.006,
+       0.009
+      ],
+      "unsafe_minus_always": -0.0007,
+      "unsafe_diff_ci95": [
+       -0.0083,
+       0.0064
+      ]
+     },
+     "both": {
+      "budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "acc_minus_always": 0.0014,
+      "acc_diff_ci95": [
+       -0.006,
+       0.009
+      ],
+      "unsafe_minus_always": -0.0007,
+      "unsafe_diff_ci95": [
+       -0.0083,
+       0.0064
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.353,
+      -0.3133,
+      -0.2766,
+      -0.2426,
+      -0.2135,
+      -0.184,
+      -0.1552,
+      -0.1282,
+      -0.1032,
+      -0.0802,
+      -0.0593,
+      -0.0443,
+      -0.0298,
+      -0.0179,
+      -0.0078,
+      0.0014,
+      0.0033,
+      0.0015,
+      -0.0003,
+      -0.0044,
+      -0.0039
+     ],
+     "unsafe_diff": [
+      0.3365,
+      0.2972,
+      0.2612,
+      0.2282,
+      0.197,
+      0.1723,
+      0.1443,
+      0.1177,
+      0.0935,
+      0.072,
+      0.0537,
+      0.0381,
+      0.024,
+      0.0128,
+      0.0054,
+      -0.0007,
+      -0.0022,
+      0.0018,
+      0.0032,
+      0.0085,
+      0.0084
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.3176,
+       0.353
+      ],
+      [
+       0.2791,
+       0.3141
+      ],
+      [
+       0.2437,
+       0.2774
+      ],
+      [
+       0.2111,
+       0.2438
+      ],
+      [
+       0.182,
+       0.211
+      ],
+      [
+       0.1577,
+       0.1856
+      ],
+      [
+       0.1294,
+       0.1573
+      ],
+      [
+       0.1039,
+       0.1305
+      ],
+      [
+       0.0808,
+       0.1046
+      ],
+      [
+       0.0608,
+       0.0824
+      ],
+      [
+       0.0432,
+       0.064
+      ],
+      [
+       0.0283,
+       0.0474
+      ],
+      [
+       0.0149,
+       0.0332
+      ],
+      [
+       0.0041,
+       0.0211
+      ],
+      [
+       -0.0028,
+       0.0131
+      ],
+      [
+       -0.0083,
+       0.0064
+      ],
+      [
+       -0.0094,
+       0.0045
+      ],
+      [
+       -0.0044,
+       0.0079
+      ],
+      [
+       -0.0027,
+       0.0087
+      ],
+      [
+       0.003,
+       0.0142
+      ],
+      [
+       0.0032,
+       0.0139
+      ]
+     ]
+    }
+   },
+   "uncertainty_margin": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.5639,
+    "min_unsafe": 0.348,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.6,
+      "calls_per_decision": 0.6,
+      "acc": 0.4571,
+      "acc_minus_always": -0.1271,
+      "acc_diff_ci95": [
+       -0.1404,
+       -0.1137
+      ],
+      "unsafe": 0.4399,
+      "unsafe_minus_always": 0.1114,
+      "unsafe_diff_ci95": [
+       0.0987,
+       0.1229
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.331,
+      "acc_minus_always": -0.2531,
+      "acc_diff_ci95": [
+       -0.2693,
+       -0.236
+      ],
+      "unsafe": 0.5815,
+      "unsafe_minus_always": 0.2529,
+      "unsafe_diff_ci95": [
+       0.2348,
+       0.27
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4191,
+      "acc_minus_always": -0.165,
+      "acc_diff_ci95": [
+       -0.1798,
+       -0.1495
+      ],
+      "unsafe": 0.4907,
+      "unsafe_minus_always": 0.1621,
+      "unsafe_diff_ci95": [
+       0.1456,
+       0.1778
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.4885,
+      "acc_minus_always": -0.0957,
+      "acc_diff_ci95": [
+       -0.107,
+       -0.0839
+      ],
+      "unsafe": 0.4024,
+      "unsafe_minus_always": 0.0738,
+      "unsafe_diff_ci95": [
+       0.063,
+       0.0845
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {},
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.353,
+      -0.3533,
+      -0.3449,
+      -0.3267,
+      -0.3037,
+      -0.278,
+      -0.2531,
+      -0.2337,
+      -0.2025,
+      -0.1793,
+      -0.165,
+      -0.1475,
+      -0.1271,
+      -0.1091,
+      -0.0957,
+      -0.0818,
+      -0.063,
+      -0.0485,
+      -0.0314,
+      -0.0265,
+      -0.0202
+     ],
+     "unsafe_diff": [
+      0.3365,
+      0.3375,
+      0.3304,
+      0.3182,
+      0.2982,
+      0.2729,
+      0.2529,
+      0.2356,
+      0.2029,
+      0.1768,
+      0.1621,
+      0.1383,
+      0.1114,
+      0.0912,
+      0.0738,
+      0.0571,
+      0.0418,
+      0.0353,
+      0.022,
+      0.0369,
+      0.0355
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.3176,
+       0.353
+      ],
+      [
+       0.3188,
+       0.354
+      ],
+      [
+       0.3112,
+       0.3478
+      ],
+      [
+       0.2988,
+       0.3354
+      ],
+      [
+       0.2797,
+       0.3151
+      ],
+      [
+       0.2545,
+       0.2903
+      ],
+      [
+       0.2348,
+       0.27
+      ],
+      [
+       0.2188,
+       0.2518
+      ],
+      [
+       0.186,
+       0.2185
+      ],
+      [
+       0.16,
+       0.1926
+      ],
+      [
+       0.1456,
+       0.1778
+      ],
+      [
+       0.1242,
+       0.1522
+      ],
+      [
+       0.0987,
+       0.1229
+      ],
+      [
+       0.0791,
+       0.1024
+      ],
+      [
+       0.063,
+       0.0845
+      ],
+      [
+       0.0466,
+       0.0677
+      ],
+      [
+       0.0312,
+       0.0519
+      ],
+      [
+       0.0256,
+       0.0446
+      ],
+      [
+       0.013,
+       0.0314
+      ],
+      [
+       0.0281,
+       0.0456
+      ],
+      [
+       0.027,
+       0.0439
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "mid": {
+  "always_on": {
+   "acc": 0.486,
+   "unsafe": 0.4104
+  },
+  "n": 4903,
+  "n_seeds": 100,
+  "methods": {
+   "plandiscrim": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.49,
+      "calls_per_decision": 0.4899,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.5149,
+    "min_unsafe": 0.3945,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.49,
+      "acc_minus_always": 0.0039,
+      "acc_diff_ci95": [
+       -0.007,
+       0.0143
+      ],
+      "unsafe": 0.4104,
+      "unsafe_minus_always": -0.0,
+      "unsafe_diff_ci95": [
+       -0.0099,
+       0.0103
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.409,
+      "acc_minus_always": -0.077,
+      "acc_diff_ci95": [
+       -0.0907,
+       -0.0644
+      ],
+      "unsafe": 0.4941,
+      "unsafe_minus_always": 0.0837,
+      "unsafe_diff_ci95": [
+       0.0705,
+       0.0977
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.49,
+      "acc_minus_always": 0.0039,
+      "acc_diff_ci95": [
+       -0.007,
+       0.0143
+      ],
+      "unsafe": 0.4104,
+      "unsafe_minus_always": -0.0,
+      "unsafe_diff_ci95": [
+       -0.0099,
+       0.0103
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.5137,
+      "acc_minus_always": 0.0277,
+      "acc_diff_ci95": [
+       0.0199,
+       0.0353
+      ],
+      "unsafe": 0.3981,
+      "unsafe_minus_always": -0.0123,
+      "unsafe_diff_ci95": [
+       -0.0199,
+       -0.0045
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.49,
+      "calls_per_decision": 0.4899,
+      "acc_minus_always": 0.0005,
+      "acc_diff_ci95": [
+       -0.0102,
+       0.0112
+      ],
+      "unsafe_minus_always": 0.004,
+      "unsafe_diff_ci95": [
+       -0.0063,
+       0.0146
+      ]
+     },
+     "unsafe": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc_minus_always": 0.0039,
+      "acc_diff_ci95": [
+       -0.007,
+       0.0143
+      ],
+      "unsafe_minus_always": -0.0,
+      "unsafe_diff_ci95": [
+       -0.0099,
+       0.0103
+      ]
+     },
+     "both": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc_minus_always": 0.0039,
+      "acc_diff_ci95": [
+       -0.007,
+       0.0143
+      ],
+      "unsafe_minus_always": -0.0,
+      "unsafe_diff_ci95": [
+       -0.0099,
+       0.0103
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.2549,
+      -0.2194,
+      -0.1884,
+      -0.1555,
+      -0.1273,
+      -0.102,
+      -0.077,
+      -0.0529,
+      -0.0329,
+      -0.0142,
+      0.0039,
+      0.0152,
+      0.0239,
+      0.0286,
+      0.0277,
+      0.0223,
+      0.0167,
+      0.0095,
+      0.001,
+      -0.0084,
+      -0.0134
+     ],
+     "unsafe_diff": [
+      0.2547,
+      0.2204,
+      0.1892,
+      0.1604,
+      0.1354,
+      0.111,
+      0.0837,
+      0.0587,
+      0.0386,
+      0.0182,
+      -0.0,
+      -0.01,
+      -0.0159,
+      -0.0154,
+      -0.0123,
+      -0.0054,
+      0.0003,
+      0.0062,
+      0.0126,
+      0.0213,
+      0.0253
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.235,
+       0.2737
+      ],
+      [
+       0.2017,
+       0.237
+      ],
+      [
+       0.1724,
+       0.2052
+      ],
+      [
+       0.1449,
+       0.1753
+      ],
+      [
+       0.1199,
+       0.1499
+      ],
+      [
+       0.0976,
+       0.1251
+      ],
+      [
+       0.0705,
+       0.0977
+      ],
+      [
+       0.0459,
+       0.0717
+      ],
+      [
+       0.0264,
+       0.0507
+      ],
+      [
+       0.0071,
+       0.0291
+      ],
+      [
+       -0.0099,
+       0.0103
+      ],
+      [
+       -0.0194,
+       -0.0005
+      ],
+      [
+       -0.0242,
+       -0.0071
+      ],
+      [
+       -0.0236,
+       -0.0069
+      ],
+      [
+       -0.0199,
+       -0.0045
+      ],
+      [
+       -0.0129,
+       0.0021
+      ],
+      [
+       -0.007,
+       0.0074
+      ],
+      [
+       -0.0003,
+       0.0125
+      ],
+      [
+       0.0066,
+       0.0185
+      ],
+      [
+       0.0153,
+       0.0274
+      ],
+      [
+       0.0185,
+       0.0313
+      ]
+     ]
+    },
+    "first_acc_match_budget_boot": {
+     "never_share": 0.0,
+     "pct2_5_50_97_5": [
+      0.46,
+      0.49,
+      0.53
+     ]
+    },
+    "first_unsafe_match_budget_boot": {
+     "never_share": 0.0,
+     "pct2_5_50_97_5": [
+      0.48,
+      0.5,
+      0.55
+     ]
+    },
+    "acc_ge_always_budgets_0.01": [
+     0.49,
+     0.5,
+     0.51,
+     0.52,
+     0.53,
+     0.54,
+     0.55,
+     0.56,
+     0.57,
+     0.58,
+     0.59,
+     0.6,
+     0.61,
+     0.62,
+     0.63,
+     0.64,
+     0.65,
+     0.66,
+     0.67,
+     0.68,
+     0.69,
+     0.7,
+     0.71,
+     0.72,
+     0.73,
+     0.74,
+     0.75,
+     0.76,
+     0.77,
+     0.78,
+     0.79,
+     0.8,
+     0.81,
+     0.82,
+     0.83,
+     0.84,
+     0.85,
+     0.86,
+     0.87,
+     0.88,
+     0.89,
+     0.9
+    ]
+   },
+   "signed_mse_abstain": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": 0.5
+     },
+     "unsafe": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": 0.5
+     },
+     "both": {
+      "first_budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "sustained_budget": 0.5
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.48,
+      "calls_per_decision": 0.4799,
+      "sustained_budget": 0.48
+     },
+     "unsafe": {
+      "first_budget": 0.46,
+      "calls_per_decision": 0.4599,
+      "sustained_budget": 0.46
+     },
+     "both": {
+      "first_budget": 0.48,
+      "calls_per_decision": 0.4799,
+      "sustained_budget": 0.48
+     }
+    },
+    "max_acc": 0.5211,
+    "min_unsafe": 0.3777,
+    "max_call_rate": 0.8075,
+    "points": {
+     "orig_match": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4924,
+      "acc_minus_always": 0.0063,
+      "acc_diff_ci95": [
+       -0.0052,
+       0.0176
+      ],
+      "unsafe": 0.3973,
+      "unsafe_minus_always": -0.0131,
+      "unsafe_diff_ci95": [
+       -0.0235,
+       -0.0023
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.4075,
+      "acc_minus_always": -0.0785,
+      "acc_diff_ci95": [
+       -0.0927,
+       -0.0651
+      ],
+      "unsafe": 0.4898,
+      "unsafe_minus_always": 0.0794,
+      "unsafe_diff_ci95": [
+       0.0664,
+       0.0919
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4924,
+      "acc_minus_always": 0.0063,
+      "acc_diff_ci95": [
+       -0.0052,
+       0.0176
+      ],
+      "unsafe": 0.3973,
+      "unsafe_minus_always": -0.0131,
+      "unsafe_diff_ci95": [
+       -0.0235,
+       -0.0023
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.5193,
+      "acc_minus_always": 0.0333,
+      "acc_diff_ci95": [
+       0.0238,
+       0.0425
+      ],
+      "unsafe": 0.38,
+      "unsafe_minus_always": -0.0304,
+      "unsafe_diff_ci95": [
+       -0.0398,
+       -0.0213
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.48,
+      "calls_per_decision": 0.4799,
+      "acc_minus_always": 0.0004,
+      "acc_diff_ci95": [
+       -0.0111,
+       0.0125
+      ],
+      "unsafe_minus_always": -0.0071,
+      "unsafe_diff_ci95": [
+       -0.0174,
+       0.0038
+      ]
+     },
+     "unsafe": {
+      "budget": 0.46,
+      "calls_per_decision": 0.4599,
+      "acc_minus_always": -0.0066,
+      "acc_diff_ci95": [
+       -0.0183,
+       0.0053
+      ],
+      "unsafe_minus_always": -0.0001,
+      "unsafe_diff_ci95": [
+       -0.0109,
+       0.0107
+      ]
+     },
+     "both": {
+      "budget": 0.48,
+      "calls_per_decision": 0.4799,
+      "acc_minus_always": 0.0004,
+      "acc_diff_ci95": [
+       -0.0111,
+       0.0125
+      ],
+      "unsafe_minus_always": -0.0071,
+      "unsafe_diff_ci95": [
+       -0.0174,
+       0.0038
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8075,
+      0.8075,
+      0.8075,
+      0.8075
+     ],
+     "acc_diff": [
+      -0.2549,
+      -0.2186,
+      -0.1834,
+      -0.153,
+      -0.1284,
+      -0.1043,
+      -0.0785,
+      -0.0531,
+      -0.0303,
+      -0.0106,
+      0.0063,
+      0.0195,
+      0.0272,
+      0.0321,
+      0.0333,
+      0.035,
+      0.035,
+      0.0345,
+      0.0345,
+      0.0345,
+      0.0345
+     ],
+     "unsafe_diff": [
+      0.2547,
+      0.2197,
+      0.188,
+      0.1607,
+      0.1345,
+      0.1071,
+      0.0794,
+      0.0515,
+      0.0255,
+      0.004,
+      -0.0131,
+      -0.0247,
+      -0.0306,
+      -0.0327,
+      -0.0304,
+      -0.0293,
+      -0.0266,
+      -0.0258,
+      -0.0258,
+      -0.0258,
+      -0.0258
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.235,
+       0.2737
+      ],
+      [
+       0.2016,
+       0.2367
+      ],
+      [
+       0.1703,
+       0.2051
+      ],
+      [
+       0.1437,
+       0.1763
+      ],
+      [
+       0.1194,
+       0.1494
+      ],
+      [
+       0.0932,
+       0.1206
+      ],
+      [
+       0.0664,
+       0.0919
+      ],
+      [
+       0.0392,
+       0.0633
+      ],
+      [
+       0.0138,
+       0.0368
+      ],
+      [
+       -0.0068,
+       0.0145
+      ],
+      [
+       -0.0235,
+       -0.0023
+      ],
+      [
+       -0.0352,
+       -0.0144
+      ],
+      [
+       -0.0403,
+       -0.0208
+      ],
+      [
+       -0.042,
+       -0.0233
+      ],
+      [
+       -0.0398,
+       -0.0213
+      ],
+      [
+       -0.0382,
+       -0.0208
+      ],
+      [
+       -0.0354,
+       -0.018
+      ],
+      [
+       -0.0345,
+       -0.0173
+      ],
+      [
+       -0.0345,
+       -0.0173
+      ],
+      [
+       -0.0345,
+       -0.0173
+      ],
+      [
+       -0.0345,
+       -0.0173
+      ]
+     ]
+    }
+   },
+   "scene_only": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.4901,
+    "min_unsafe": 0.4141,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4452,
+      "acc_minus_always": -0.0409,
+      "acc_diff_ci95": [
+       -0.0528,
+       -0.0283
+      ],
+      "unsafe": 0.4469,
+      "unsafe_minus_always": 0.0366,
+      "unsafe_diff_ci95": [
+       0.0245,
+       0.048
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.3784,
+      "acc_minus_always": -0.1076,
+      "acc_diff_ci95": [
+       -0.1209,
+       -0.0937
+      ],
+      "unsafe": 0.5181,
+      "unsafe_minus_always": 0.1077,
+      "unsafe_diff_ci95": [
+       0.0937,
+       0.1206
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4452,
+      "acc_minus_always": -0.0409,
+      "acc_diff_ci95": [
+       -0.0528,
+       -0.0283
+      ],
+      "unsafe": 0.4469,
+      "unsafe_minus_always": 0.0366,
+      "unsafe_diff_ci95": [
+       0.0245,
+       0.048
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.4811,
+      "acc_minus_always": -0.005,
+      "acc_diff_ci95": [
+       -0.0146,
+       0.0045
+      ],
+      "unsafe": 0.4189,
+      "unsafe_minus_always": 0.0085,
+      "unsafe_diff_ci95": [
+       -0.0011,
+       0.0178
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.75,
+      "calls_per_decision": 0.7499,
+      "acc_minus_always": 0.001,
+      "acc_diff_ci95": [
+       -0.0077,
+       0.01
+      ],
+      "unsafe_minus_always": 0.0058,
+      "unsafe_diff_ci95": [
+       -0.0034,
+       0.0142
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.2549,
+      -0.2286,
+      -0.1973,
+      -0.1706,
+      -0.1464,
+      -0.1267,
+      -0.1076,
+      -0.0895,
+      -0.0706,
+      -0.053,
+      -0.0409,
+      -0.0267,
+      -0.0162,
+      -0.0086,
+      -0.005,
+      0.001,
+      0.0037,
+      0.0031,
+      0.0011,
+      -0.0069,
+      -0.0071
+     ],
+     "unsafe_diff": [
+      0.2547,
+      0.2245,
+      0.1936,
+      0.1708,
+      0.1491,
+      0.1279,
+      0.1077,
+      0.0874,
+      0.0669,
+      0.0488,
+      0.0366,
+      0.024,
+      0.0154,
+      0.0086,
+      0.0085,
+      0.0058,
+      0.0041,
+      0.0058,
+      0.0088,
+      0.0197,
+      0.0202
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.235,
+       0.2737
+      ],
+      [
+       0.207,
+       0.2412
+      ],
+      [
+       0.1773,
+       0.2099
+      ],
+      [
+       0.1543,
+       0.1866
+      ],
+      [
+       0.1329,
+       0.1644
+      ],
+      [
+       0.1128,
+       0.1422
+      ],
+      [
+       0.0937,
+       0.1206
+      ],
+      [
+       0.0745,
+       0.0993
+      ],
+      [
+       0.0548,
+       0.079
+      ],
+      [
+       0.037,
+       0.0606
+      ],
+      [
+       0.0245,
+       0.048
+      ],
+      [
+       0.0127,
+       0.0356
+      ],
+      [
+       0.0048,
+       0.0262
+      ],
+      [
+       -0.0019,
+       0.0185
+      ],
+      [
+       -0.0011,
+       0.0178
+      ],
+      [
+       -0.0034,
+       0.0142
+      ],
+      [
+       -0.0038,
+       0.0119
+      ],
+      [
+       -0.0011,
+       0.0134
+      ],
+      [
+       0.0024,
+       0.0157
+      ],
+      [
+       0.0136,
+       0.026
+      ],
+      [
+       0.0141,
+       0.0269
+      ]
+     ]
+    }
+   },
+   "uncertainty_margin": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.466,
+    "min_unsafe": 0.4322,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.3667,
+      "acc_minus_always": -0.1193,
+      "acc_diff_ci95": [
+       -0.1326,
+       -0.1056
+      ],
+      "unsafe": 0.5356,
+      "unsafe_minus_always": 0.1252,
+      "unsafe_diff_ci95": [
+       0.1107,
+       0.1394
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.297,
+      "acc_minus_always": -0.1891,
+      "acc_diff_ci95": [
+       -0.204,
+       -0.174
+      ],
+      "unsafe": 0.6115,
+      "unsafe_minus_always": 0.2011,
+      "unsafe_diff_ci95": [
+       0.1841,
+       0.2179
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.3667,
+      "acc_minus_always": -0.1193,
+      "acc_diff_ci95": [
+       -0.1326,
+       -0.1056
+      ],
+      "unsafe": 0.5356,
+      "unsafe_minus_always": 0.1252,
+      "unsafe_diff_ci95": [
+       0.1107,
+       0.1394
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.4208,
+      "acc_minus_always": -0.0653,
+      "acc_diff_ci95": [
+       -0.077,
+       -0.0536
+      ],
+      "unsafe": 0.4638,
+      "unsafe_minus_always": 0.0534,
+      "unsafe_diff_ci95": [
+       0.0405,
+       0.0646
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {},
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.2549,
+      -0.2586,
+      -0.2582,
+      -0.2462,
+      -0.2286,
+      -0.208,
+      -0.1891,
+      -0.1756,
+      -0.1511,
+      -0.1303,
+      -0.1193,
+      -0.1063,
+      -0.0912,
+      -0.0773,
+      -0.0653,
+      -0.0555,
+      -0.0447,
+      -0.0365,
+      -0.0257,
+      -0.0249,
+      -0.02
+     ],
+     "unsafe_diff": [
+      0.2547,
+      0.2596,
+      0.2598,
+      0.2537,
+      0.2376,
+      0.216,
+      0.2011,
+      0.1893,
+      0.1615,
+      0.1373,
+      0.1252,
+      0.1073,
+      0.0869,
+      0.0698,
+      0.0534,
+      0.041,
+      0.0337,
+      0.033,
+      0.0247,
+      0.0434,
+      0.043
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.235,
+       0.2737
+      ],
+      [
+       0.2404,
+       0.2776
+      ],
+      [
+       0.2413,
+       0.2778
+      ],
+      [
+       0.234,
+       0.2712
+      ],
+      [
+       0.2195,
+       0.2548
+      ],
+      [
+       0.1981,
+       0.2332
+      ],
+      [
+       0.1841,
+       0.2179
+      ],
+      [
+       0.1734,
+       0.2055
+      ],
+      [
+       0.1457,
+       0.1763
+      ],
+      [
+       0.1226,
+       0.1514
+      ],
+      [
+       0.1107,
+       0.1394
+      ],
+      [
+       0.0933,
+       0.12
+      ],
+      [
+       0.0741,
+       0.0986
+      ],
+      [
+       0.0574,
+       0.0818
+      ],
+      [
+       0.0405,
+       0.0646
+      ],
+      [
+       0.0282,
+       0.0522
+      ],
+      [
+       0.0217,
+       0.0443
+      ],
+      [
+       0.0224,
+       0.0432
+      ],
+      [
+       0.015,
+       0.0349
+      ],
+      [
+       0.0341,
+       0.052
+      ],
+      [
+       0.0344,
+       0.0516
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "high": {
+  "always_on": {
+   "acc": 0.3586,
+   "unsafe": 0.4936
+  },
+  "n": 4903,
+  "n_seeds": 100,
+  "methods": {
+   "plandiscrim": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.35,
+      "calls_per_decision": 0.35,
+      "sustained_budget": 0.35
+     },
+     "unsafe": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.6,
+      "calls_per_decision": 0.6,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.35,
+      "calls_per_decision": 0.35,
+      "sustained_budget": 0.35
+     },
+     "unsafe": {
+      "first_budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.4123,
+    "min_unsafe": 0.4866,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.35,
+      "calls_per_decision": 0.35,
+      "acc": 0.3618,
+      "acc_minus_always": 0.0033,
+      "acc_diff_ci95": [
+       -0.0109,
+       0.0158
+      ],
+      "unsafe": 0.5367,
+      "unsafe_minus_always": 0.0432,
+      "unsafe_diff_ci95": [
+       0.0302,
+       0.0561
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.3475,
+      "acc_minus_always": -0.011,
+      "acc_diff_ci95": [
+       -0.025,
+       0.0017
+      ],
+      "unsafe": 0.5512,
+      "unsafe_minus_always": 0.0577,
+      "unsafe_diff_ci95": [
+       0.0438,
+       0.0709
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.3935,
+      "acc_minus_always": 0.0349,
+      "acc_diff_ci95": [
+       0.0218,
+       0.0478
+      ],
+      "unsafe": 0.503,
+      "unsafe_minus_always": 0.0094,
+      "unsafe_diff_ci95": [
+       -0.0036,
+       0.0212
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.4112,
+      "acc_minus_always": 0.0527,
+      "acc_diff_ci95": [
+       0.0419,
+       0.0625
+      ],
+      "unsafe": 0.4904,
+      "unsafe_minus_always": -0.0031,
+      "unsafe_diff_ci95": [
+       -0.0136,
+       0.0066
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.35,
+      "calls_per_decision": 0.35,
+      "acc_minus_always": 0.0033,
+      "acc_diff_ci95": [
+       -0.0109,
+       0.0158
+      ],
+      "unsafe_minus_always": 0.0432,
+      "unsafe_diff_ci95": [
+       0.0302,
+       0.0561
+      ]
+     },
+     "unsafe": {
+      "budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "acc_minus_always": 0.0457,
+      "acc_diff_ci95": [
+       0.0329,
+       0.057
+      ],
+      "unsafe_minus_always": -0.0014,
+      "unsafe_diff_ci95": [
+       -0.0131,
+       0.0096
+      ]
+     },
+     "both": {
+      "budget": 0.57,
+      "calls_per_decision": 0.5701,
+      "acc_minus_always": 0.0457,
+      "acc_diff_ci95": [
+       0.0329,
+       0.057
+      ],
+      "unsafe_minus_always": -0.0014,
+      "unsafe_diff_ci95": [
+       -0.0131,
+       0.0096
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.1275,
+      -0.1054,
+      -0.0786,
+      -0.0591,
+      -0.04,
+      -0.0241,
+      -0.011,
+      0.0033,
+      0.0145,
+      0.0247,
+      0.0349,
+      0.0428,
+      0.0488,
+      0.0528,
+      0.0527,
+      0.0499,
+      0.0445,
+      0.0364,
+      0.0279,
+      0.0152,
+      0.0028
+     ],
+     "unsafe_diff": [
+      0.1715,
+      0.1454,
+      0.1254,
+      0.1061,
+      0.0876,
+      0.0722,
+      0.0577,
+      0.0432,
+      0.0315,
+      0.0201,
+      0.0094,
+      0.0012,
+      -0.0048,
+      -0.007,
+      -0.0031,
+      0.0024,
+      0.008,
+      0.0137,
+      0.0185,
+      0.0288,
+      0.0373
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.1531,
+       0.1879
+      ],
+      [
+       0.1284,
+       0.161
+      ],
+      [
+       0.1089,
+       0.1414
+      ],
+      [
+       0.09,
+       0.122
+      ],
+      [
+       0.0723,
+       0.1025
+      ],
+      [
+       0.0579,
+       0.0858
+      ],
+      [
+       0.0438,
+       0.0709
+      ],
+      [
+       0.0302,
+       0.0561
+      ],
+      [
+       0.0184,
+       0.044
+      ],
+      [
+       0.0076,
+       0.0323
+      ],
+      [
+       -0.0036,
+       0.0212
+      ],
+      [
+       -0.0106,
+       0.0122
+      ],
+      [
+       -0.0163,
+       0.0058
+      ],
+      [
+       -0.018,
+       0.0031
+      ],
+      [
+       -0.0136,
+       0.0066
+      ],
+      [
+       -0.007,
+       0.0118
+      ],
+      [
+       -0.0012,
+       0.0164
+      ],
+      [
+       0.0046,
+       0.0221
+      ],
+      [
+       0.0093,
+       0.027
+      ],
+      [
+       0.0192,
+       0.038
+      ],
+      [
+       0.028,
+       0.046
+      ]
+     ]
+    },
+    "first_acc_match_budget_boot": {
+     "never_share": 0.0,
+     "pct2_5_50_97_5": [
+      0.3,
+      0.35,
+      0.4
+     ]
+    },
+    "first_unsafe_match_budget_boot": {
+     "never_share": 0.084,
+     "pct2_5_50_97_5": [
+      0.49,
+      0.56,
+      0.64
+     ]
+    },
+    "acc_ge_always_budgets_0.01": [
+     0.35,
+     0.36,
+     0.37,
+     0.38,
+     0.39,
+     0.4,
+     0.41,
+     0.42,
+     0.43,
+     0.44,
+     0.45,
+     0.46,
+     0.47,
+     0.48,
+     0.49,
+     0.5,
+     0.51,
+     0.52,
+     0.53,
+     0.54,
+     0.55,
+     0.56,
+     0.57,
+     0.58,
+     0.59,
+     0.6,
+     0.61,
+     0.62,
+     0.63,
+     0.64,
+     0.65,
+     0.66,
+     0.67,
+     0.68,
+     0.69,
+     0.7,
+     0.71,
+     0.72,
+     0.73,
+     0.74,
+     0.75,
+     0.76,
+     0.77,
+     0.78,
+     0.79,
+     0.8,
+     0.81,
+     0.82,
+     0.83,
+     0.84,
+     0.85,
+     0.86,
+     0.87,
+     0.88,
+     0.89,
+     0.9,
+     0.91,
+     0.92,
+     0.93,
+     0.94,
+     0.95,
+     0.96,
+     0.97,
+     0.98,
+     0.99,
+     1.0
+    ]
+   },
+   "signed_mse_abstain": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.35,
+      "calls_per_decision": 0.35,
+      "sustained_budget": 0.35
+     },
+     "unsafe": {
+      "first_budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "sustained_budget": 0.45
+     },
+     "both": {
+      "first_budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "sustained_budget": 0.45
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.33,
+      "calls_per_decision": 0.33,
+      "sustained_budget": 0.33
+     },
+     "unsafe": {
+      "first_budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "sustained_budget": 0.45
+     },
+     "both": {
+      "first_budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "sustained_budget": 0.45
+     }
+    },
+    "max_acc": 0.4297,
+    "min_unsafe": 0.4588,
+    "max_call_rate": 0.7461,
+    "points": {
+     "orig_match": {
+      "budget": 0.35,
+      "calls_per_decision": 0.35,
+      "acc": 0.365,
+      "acc_minus_always": 0.0065,
+      "acc_diff_ci95": [
+       -0.008,
+       0.0206
+      ],
+      "unsafe": 0.5257,
+      "unsafe_minus_always": 0.0322,
+      "unsafe_diff_ci95": [
+       0.0188,
+       0.0451
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.3507,
+      "acc_minus_always": -0.0079,
+      "acc_diff_ci95": [
+       -0.022,
+       0.0055
+      ],
+      "unsafe": 0.5429,
+      "unsafe_minus_always": 0.0494,
+      "unsafe_diff_ci95": [
+       0.035,
+       0.063
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.4076,
+      "acc_minus_always": 0.049,
+      "acc_diff_ci95": [
+       0.035,
+       0.0621
+      ],
+      "unsafe": 0.4767,
+      "unsafe_minus_always": -0.0169,
+      "unsafe_diff_ci95": [
+       -0.0289,
+       -0.0044
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.4291,
+      "acc_minus_always": 0.0705,
+      "acc_diff_ci95": [
+       0.0594,
+       0.0817
+      ],
+      "unsafe": 0.459,
+      "unsafe_minus_always": -0.0345,
+      "unsafe_diff_ci95": [
+       -0.0451,
+       -0.0243
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.33,
+      "calls_per_decision": 0.33,
+      "acc_minus_always": 0.0007,
+      "acc_diff_ci95": [
+       -0.0142,
+       0.0147
+      ],
+      "unsafe_minus_always": 0.0394,
+      "unsafe_diff_ci95": [
+       0.026,
+       0.053
+      ]
+     },
+     "unsafe": {
+      "budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "acc_minus_always": 0.0373,
+      "acc_diff_ci95": [
+       0.0233,
+       0.0514
+      ],
+      "unsafe_minus_always": -0.0027,
+      "unsafe_diff_ci95": [
+       -0.0154,
+       0.01
+      ]
+     },
+     "both": {
+      "budget": 0.45,
+      "calls_per_decision": 0.4499,
+      "acc_minus_always": 0.0373,
+      "acc_diff_ci95": [
+       0.0233,
+       0.0514
+      ],
+      "unsafe_minus_always": -0.0027,
+      "unsafe_diff_ci95": [
+       -0.0154,
+       0.01
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7461,
+      0.7461,
+      0.7461,
+      0.7461,
+      0.7461,
+      0.7461
+     ],
+     "acc_diff": [
+      -0.1275,
+      -0.0971,
+      -0.0749,
+      -0.0579,
+      -0.0399,
+      -0.0231,
+      -0.0079,
+      0.0065,
+      0.022,
+      0.0373,
+      0.049,
+      0.0582,
+      0.0649,
+      0.0692,
+      0.0705,
+      0.0707,
+      0.0707,
+      0.0707,
+      0.0707,
+      0.0707,
+      0.0707
+     ],
+     "unsafe_diff": [
+      0.1715,
+      0.1468,
+      0.1275,
+      0.1071,
+      0.088,
+      0.0682,
+      0.0494,
+      0.0322,
+      0.0142,
+      -0.0027,
+      -0.0169,
+      -0.025,
+      -0.0303,
+      -0.0336,
+      -0.0345,
+      -0.0331,
+      -0.0331,
+      -0.0331,
+      -0.0331,
+      -0.0331,
+      -0.0331
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.1531,
+       0.1879
+      ],
+      [
+       0.129,
+       0.1622
+      ],
+      [
+       0.1109,
+       0.142
+      ],
+      [
+       0.0908,
+       0.1219
+      ],
+      [
+       0.0723,
+       0.1028
+      ],
+      [
+       0.0534,
+       0.0823
+      ],
+      [
+       0.035,
+       0.063
+      ],
+      [
+       0.0188,
+       0.0451
+      ],
+      [
+       0.0011,
+       0.027
+      ],
+      [
+       -0.0154,
+       0.01
+      ],
+      [
+       -0.0289,
+       -0.0044
+      ],
+      [
+       -0.0362,
+       -0.0127
+      ],
+      [
+       -0.0415,
+       -0.0186
+      ],
+      [
+       -0.0445,
+       -0.023
+      ],
+      [
+       -0.0451,
+       -0.0243
+      ],
+      [
+       -0.0431,
+       -0.023
+      ],
+      [
+       -0.0431,
+       -0.023
+      ],
+      [
+       -0.0431,
+       -0.023
+      ],
+      [
+       -0.0431,
+       -0.023
+      ],
+      [
+       -0.0431,
+       -0.023
+      ],
+      [
+       -0.0431,
+       -0.023
+      ]
+     ]
+    }
+   },
+   "scene_only": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": 0.55,
+      "calls_per_decision": 0.5501,
+      "sustained_budget": 0.55
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": 0.52,
+      "calls_per_decision": 0.5201,
+      "sustained_budget": 0.52
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.385,
+    "min_unsafe": 0.5055,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.35,
+      "calls_per_decision": 0.35,
+      "acc": 0.3299,
+      "acc_minus_always": -0.0286,
+      "acc_diff_ci95": [
+       -0.043,
+       -0.0154
+      ],
+      "unsafe": 0.5624,
+      "unsafe_minus_always": 0.0689,
+      "unsafe_diff_ci95": [
+       0.0541,
+       0.0824
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.317,
+      "acc_minus_always": -0.0415,
+      "acc_diff_ci95": [
+       -0.0561,
+       -0.0277
+      ],
+      "unsafe": 0.5786,
+      "unsafe_minus_always": 0.085,
+      "unsafe_diff_ci95": [
+       0.0698,
+       0.0992
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.3556,
+      "acc_minus_always": -0.003,
+      "acc_diff_ci95": [
+       -0.0151,
+       0.009
+      ],
+      "unsafe": 0.5344,
+      "unsafe_minus_always": 0.0409,
+      "unsafe_diff_ci95": [
+       0.0279,
+       0.0525
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.383,
+      "acc_minus_always": 0.0245,
+      "acc_diff_ci95": [
+       0.0144,
+       0.0342
+      ],
+      "unsafe": 0.5073,
+      "unsafe_minus_always": 0.0137,
+      "unsafe_diff_ci95": [
+       0.0032,
+       0.0238
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {
+     "accuracy": {
+      "budget": 0.52,
+      "calls_per_decision": 0.5201,
+      "acc_minus_always": 0.0003,
+      "acc_diff_ci95": [
+       -0.0114,
+       0.0116
+      ],
+      "unsafe_minus_always": 0.0367,
+      "unsafe_diff_ci95": [
+       0.0244,
+       0.048
+      ]
+     }
+    },
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.1275,
+      -0.1068,
+      -0.0876,
+      -0.0727,
+      -0.0614,
+      -0.0528,
+      -0.0415,
+      -0.0286,
+      -0.0187,
+      -0.01,
+      -0.003,
+      0.0044,
+      0.0116,
+      0.0185,
+      0.0245,
+      0.0261,
+      0.026,
+      0.0238,
+      0.0192,
+      0.0097,
+      0.0063
+     ],
+     "unsafe_diff": [
+      0.1715,
+      0.1471,
+      0.1284,
+      0.1152,
+      0.1053,
+      0.0975,
+      0.085,
+      0.0689,
+      0.0582,
+      0.0485,
+      0.0409,
+      0.0329,
+      0.026,
+      0.0192,
+      0.0137,
+      0.0122,
+      0.016,
+      0.0203,
+      0.0239,
+      0.0356,
+      0.0378
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.1531,
+       0.1879
+      ],
+      [
+       0.1295,
+       0.1634
+      ],
+      [
+       0.1117,
+       0.1444
+      ],
+      [
+       0.0982,
+       0.131
+      ],
+      [
+       0.0892,
+       0.1214
+      ],
+      [
+       0.0816,
+       0.1127
+      ],
+      [
+       0.0698,
+       0.0992
+      ],
+      [
+       0.0541,
+       0.0824
+      ],
+      [
+       0.0444,
+       0.071
+      ],
+      [
+       0.0352,
+       0.0608
+      ],
+      [
+       0.0279,
+       0.0525
+      ],
+      [
+       0.0207,
+       0.0437
+      ],
+      [
+       0.0143,
+       0.0366
+      ],
+      [
+       0.0083,
+       0.0298
+      ],
+      [
+       0.0032,
+       0.0238
+      ],
+      [
+       0.0017,
+       0.0219
+      ],
+      [
+       0.0061,
+       0.0251
+      ],
+      [
+       0.0114,
+       0.0288
+      ],
+      [
+       0.0154,
+       0.0314
+      ],
+      [
+       0.027,
+       0.0426
+      ],
+      [
+       0.0294,
+       0.0451
+      ]
+     ]
+    }
+   },
+   "uncertainty_margin": {
+    "grid0.05": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "grid0.01": {
+     "accuracy": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "unsafe": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     },
+     "both": {
+      "first_budget": null,
+      "calls_per_decision": null,
+      "sustained_budget": null
+     }
+    },
+    "max_acc": 0.3559,
+    "min_unsafe": 0.5262,
+    "max_call_rate": 1.0,
+    "points": {
+     "orig_match": {
+      "budget": 0.35,
+      "calls_per_decision": 0.35,
+      "acc": 0.2554,
+      "acc_minus_always": -0.1032,
+      "acc_diff_ci95": [
+       -0.1157,
+       -0.0886
+      ],
+      "unsafe": 0.6461,
+      "unsafe_minus_always": 0.1526,
+      "unsafe_diff_ci95": [
+       0.138,
+       0.1663
+      ]
+     },
+     "fixed_0.3": {
+      "budget": 0.3,
+      "calls_per_decision": 0.3,
+      "acc": 0.249,
+      "acc_minus_always": -0.1095,
+      "acc_diff_ci95": [
+       -0.1232,
+       -0.0943
+      ],
+      "unsafe": 0.6516,
+      "unsafe_minus_always": 0.1581,
+      "unsafe_diff_ci95": [
+       0.1422,
+       0.1731
+      ]
+     },
+     "fixed_0.5": {
+      "budget": 0.5,
+      "calls_per_decision": 0.5001,
+      "acc": 0.291,
+      "acc_minus_always": -0.0675,
+      "acc_diff_ci95": [
+       -0.0793,
+       -0.0549
+      ],
+      "unsafe": 0.6015,
+      "unsafe_minus_always": 0.1079,
+      "unsafe_diff_ci95": [
+       0.0939,
+       0.121
+      ]
+     },
+     "fixed_0.7": {
+      "budget": 0.7,
+      "calls_per_decision": 0.7,
+      "acc": 0.33,
+      "acc_minus_always": -0.0286,
+      "acc_diff_ci95": [
+       -0.0392,
+       -0.0164
+      ],
+      "unsafe": 0.5466,
+      "unsafe_minus_always": 0.053,
+      "unsafe_diff_ci95": [
+       0.0408,
+       0.0638
+      ]
+     }
+    },
+    "at_own_first_match_0.01": {},
+    "curve05": {
+     "budget": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ],
+     "calls": [
+      0.0,
+      0.05,
+      0.0999,
+      0.1499,
+      0.2001,
+      0.2501,
+      0.3,
+      0.35,
+      0.4,
+      0.4499,
+      0.5001,
+      0.5501,
+      0.6,
+      0.65,
+      0.7,
+      0.7499,
+      0.7999,
+      0.8501,
+      0.9001,
+      0.95,
+      1.0
+     ],
+     "acc_diff": [
+      -0.1275,
+      -0.1379,
+      -0.1452,
+      -0.1405,
+      -0.1297,
+      -0.1185,
+      -0.1095,
+      -0.1032,
+      -0.0887,
+      -0.0753,
+      -0.0675,
+      -0.0571,
+      -0.0467,
+      -0.0355,
+      -0.0286,
+      -0.0204,
+      -0.0137,
+      -0.0104,
+      -0.0053,
+      -0.009,
+      -0.0086
+     ],
+     "unsafe_diff": [
+      0.1715,
+      0.1821,
+      0.1895,
+      0.1883,
+      0.1783,
+      0.166,
+      0.1581,
+      0.1526,
+      0.1336,
+      0.1158,
+      0.1079,
+      0.0918,
+      0.0777,
+      0.0651,
+      0.053,
+      0.042,
+      0.0383,
+      0.041,
+      0.0379,
+      0.0606,
+      0.064
+     ],
+     "unsafe_diff_ci": [
+      [
+       0.1531,
+       0.1879
+      ],
+      [
+       0.1643,
+       0.1983
+      ],
+      [
+       0.1714,
+       0.2057
+      ],
+      [
+       0.1709,
+       0.2038
+      ],
+      [
+       0.1623,
+       0.1937
+      ],
+      [
+       0.1489,
+       0.1815
+      ],
+      [
+       0.1422,
+       0.1731
+      ],
+      [
+       0.138,
+       0.1663
+      ],
+      [
+       0.1201,
+       0.1469
+      ],
+      [
+       0.102,
+       0.1287
+      ],
+      [
+       0.0939,
+       0.121
+      ],
+      [
+       0.0796,
+       0.1032
+      ],
+      [
+       0.0651,
+       0.0891
+      ],
+      [
+       0.0528,
+       0.0762
+      ],
+      [
+       0.0408,
+       0.0638
+      ],
+      [
+       0.0292,
+       0.053
+      ],
+      [
+       0.0259,
+       0.0482
+      ],
+      [
+       0.0301,
+       0.0504
+      ],
+      [
+       0.0273,
+       0.0475
+      ],
+      [
+       0.0497,
+       0.07
+      ],
+      [
+       0.0534,
+       0.073
+      ]
+     ]
+    }
+   }
+  }
+ }
+}
