@@ -108,6 +108,37 @@ alternatives`) was no better and was replaced, on validation, before the final t
   13.0% of calls at budget 0.3, against 1.5% for the learned selector.
 - The priors are under-weighted as world weights (see Method): a red light gets about a third of its fitted rate.
 
+## VLM yes/no questions (validation, `out/vlm_yesno/eval_val.json`)
+
+Qwen2.5-VL-3B, P(Yes) against P(No) in the first answer token, scored against truth from the records. The
+within-family AUROC separates real detection from recognising the scenario family.
+
+| Question vs truth | AUROC [95% seed CI] | Positives | Within-family AUROC |
+|---|---|---|---|
+| pedestrian vs pedestrian | 0.893 [0.843, 0.934] | 303 of 2222 | only one class in every family |
+| pedestrian vs pedestrian_visible | 0.991 [0.987, 0.995] | 1 of 2222 (too few positives to read) | occluded_pedestrian 0.93 |
+| pedestrian vs pedestrian_hidden | 0.892 [0.843, 0.930] | 302 of 2222 | occluded_pedestrian 0.07 |
+| hidden vs hidden | 0.578 [0.530, 0.625] | 357 of 2222 | merge_closing_speed 0.65, occluded_cross_traffic 0.80, occluded_pedestrian 0.43 |
+| red_light vs red_light | 0.999 [0.998, 1.000] | 234 of 2222 | ambiguous_light 0.97 |
+
+Only the red-light question holds up within its family. The pedestrian score tracks the scenario: every
+`occluded_pedestrian` decision has a pedestrian in view and no other family has one, so it cannot be tested within
+a family. The hidden-road-user question, the one VoI uses, is close to chance overall.
+
+## VoI + VLM prior (validation)
+
+| Mean accuracy | Low | Mid | High |
+|---|---|---|---|
+| VoI, abstains at VoI <= 0 | 0.398 | 0.351 | 0.306 |
+| VoI + VLM prior | 0.393 | 0.349 | 0.306 |
+| Learned selector `signed` (Max) | 0.507 | 0.449 | 0.376 |
+
+| Paired difference [95% CI] | Low | Mid | High |
+|---|---|---|---|
+| VoI + VLM prior - VoI | -0.005 [-0.011, +0.000] | -0.002 [-0.009, +0.004] | +0.000 [-0.006, +0.006] |
+
+`voi_vlm` pays one VLM call per decision on top of the tool budget.
+
 ## Cost on this Mac
 
 | Step | Seconds |

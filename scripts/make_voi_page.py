@@ -104,10 +104,17 @@ def page(F, V, A, D, P, Y=None, VV=None):
            f"  {V['results']['val/mid']['voi']['harm']['0.3']:.1%} of calls at budget 0.3, against {V['results']['val/mid']['signed']['harm']['0.3']:.1%} for the learned selector.",
            "- The priors are under-weighted as world weights (see Method): a red light gets about a third of its fitted rate.", ""]
     if Y:
-        md += ["## VLM yes/no questions (validation)", "", "| Question vs truth | AUROC [95% seed CI] | Positives |", "|---|---|---|"]
-        md += [f"| {q} | {v['auroc']:.3f} [{v['ci95'][0]:.3f}, {v['ci95'][1]:.3f}] | {v['positives']} of {Y['n']} |" for q, v in Y["questions"].items()
-               if v["auroc"] is not None]
-        md.append("")
+        fam = lambda v: ", ".join(f"{f} {a:.2f}" for f, a in v["by_family"].items() if a is not None) or "only one class in every family"
+        md += ["## VLM yes/no questions (validation, `out/vlm_yesno/eval_val.json`)", "",
+               "Qwen2.5-VL-3B, P(Yes) against P(No) in the first answer token, scored against truth from the records. The",
+               "within-family AUROC separates real detection from recognising the scenario family.", "",
+               "| Question vs truth | AUROC [95% seed CI] | Positives | Within-family AUROC |", "|---|---|---|---|"]
+        md += [f"| {q} | {v['auroc']:.3f} [{v['ci95'][0]:.3f}, {v['ci95'][1]:.3f}] | {v['positives']} of {Y['n']}"
+               f"{' (too few positives to read)' if v['positives'] < 30 else ''} | {fam(v)} |"
+               for q, v in Y["questions"].items() if v["auroc"] is not None]
+        md += ["", "Only the red-light question holds up within its family. The pedestrian score tracks the scenario: every",
+               "`occluded_pedestrian` decision has a pedestrian in view and no other family has one, so it cannot be tested within",
+               "a family. The hidden-road-user question, the one VoI uses, is close to chance overall.", ""]
     if VV:
         md += ["## VoI + VLM prior (validation)", "", "| Mean accuracy | Low | Mid | High |", "|---|---|---|---|"]
         md += [f"| {NAMES[m]} | {_row(VV, 'val', m)} |" for m in ("voi", "voi_vlm", "signed") if m in VV["results"]["val/mid"]]
