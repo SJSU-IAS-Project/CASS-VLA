@@ -47,7 +47,7 @@ def _one(text, old, new):
     return text.replace(old, new)
 
 
-def section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig):
+def section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig, YF=None):
     """Contribution 2 as markdown. fig(name) gives the image path relative to the report."""
     H = F["hypotheses"]["final"]
     d = D["levels"]
@@ -107,8 +107,8 @@ def section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig):
           "Intervals are paired seed bootstraps (1,000 resamples), as in Contribution 1. No multiple-comparison correction.", "",
           "### 7.3 Results (pre-registered final test, seeds 1160-1259)", "",
           f"All three tested hypotheses fail. VoI is {min(v1):.3f} to {max(v1):.3f} below the learned selector and level with the "
-          "ranker margin. V4 was not run, because the VLM answers for these frames were not ready when the final evaluation ran "
-          "(`V4_STATUS.md`).", "",
+          "ranker margin. V4 was not run in the confirmatory test, because the VLM answers for these frames were not ready when the "
+          "final evaluation ran (`V4_STATUS.md`); a later exploratory addendum is in Section 7.6.", "",
           "| Mean accuracy over budgets 0-1 | Low | Mid | High |", "|---|---|---|---|"]
     md += [f"| {M.NAMES[m]} | {M._row(F, 'final', m)} |" for m in ("signed", "voi", "voi_budget", "uncertainty_margin", "always_on")]
     md += ["", "| Mean unsafe rate over budgets 0-1 | Low | Mid | High |", "|---|---|---|---|"]
@@ -186,6 +186,12 @@ def section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig):
                                      f"[{V4['comparisons'][f'final/{lv}']['voi_vlm_minus_voi']['ci95'][0]:+.3f}, "
                                      f"{V4['comparisons'][f'final/{lv}']['voi_vlm_minus_voi']['ci95'][1]:+.3f}]" for lv in LV) +
                " (`out/voi_eval/final_v4_addendum.json`). It is not a confirmatory test."]
+    if YF:
+        q = YF["questions"]
+        md += ["", f"On the final frames ({YF['n']:,} decisions, `out/vlm_yesno/eval_final.json`) the detectors behave as on "
+               f"validation: red light AUROC {q['red_light vs red_light']['auroc']:.3f} ({q['red_light vs red_light']['by_family']['ambiguous_light']:.2f} "
+               f"within its family), pedestrian {q['pedestrian vs pedestrian']['auroc']:.3f}, hidden road user "
+               f"{q['hidden vs hidden']['auroc']:.3f} [{q['hidden vs hidden']['ci95'][0]:.3f}, {q['hidden vs hidden']['ci95'][1]:.3f}]."]
     lat = D["latency_s"]
     md += ["", "### 7.7 Cost on the Mac", "", "| Step | Seconds |", "|---|---|"] + [f"| {k} | {v:.3g} |" for k, v in lat.items()]
     md += ["", f"Peak memory of the VLM was {PF['peak_memory_gb']:.1f} GB. VoI needs no training but makes about 100 ranker calls per "
@@ -207,6 +213,7 @@ def joint_markdown(fig, maxfig):
     Y, VV = load("out/vlm_yesno/eval_val.json"), load("out/voi_eval/val_vlm.json")
     P, P16 = load("out/vlm_probe/report.json"), load("out/vlm_probe/report_fp16.json")
     PR, PF, V4 = load("out/voi/priors_fitted.json"), load("out/vlm_dev_fp32/profile.json"), _opt("out/voi_eval/final_v4_addendum.json")
+    YF = _opt("out/vlm_yesno/eval_final.json")
     H = F["hypotheses"]["final"]
     v1 = [-H["V1"]["cells"][lv]["mean_diff"] for lv in LV]
     first = md.split("\n", 1)[0]
@@ -233,7 +240,7 @@ def joint_markdown(fig, maxfig):
               "\n\n**Where Contribution 2 fits.** Best-of-Evidence and the off-road paper (2611.06702) estimate the value of a "
               "measurement with a plug-in or rule-based model and no training. Section 7 tests that idea on this benchmark, against "
               "the learned selector, on the same budget curve.\n\n## 3 Setup")
-    md = _one(md, "\n## 7 Limitations\n", "\n" + section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig) + "\n## 8 Limitations\n")
+    md = _one(md, "\n## 7 Limitations\n", "\n" + section7(F, V, A, D, Y, VV, P, P16, PR, PF, V4, fig, YF) + "\n## 8 Limitations\n")
     md = _one(md, "\n## 8 Next steps\n",
               "\n**Limits specific to Contribution 2.**\n\n"
               "- **Two data builds.** Contribution 2 regenerated the data on a second machine; the learned selector reads 0.010 to "

@@ -120,7 +120,7 @@ out/voi_eval/diagnosis.json levels.<level> (base_correct_rate, spearman_per_tool
 
 Speaker: Eshan (Contribution 2).
 
-out/vlm_probe/report.json (variants.occluded_pedestrian/100_2.0: describe, ped, orig; replies; nan_embeddings), report_fp16.json nan_embeddings; out/vlm_yesno/eval_val.json questions (auroc, by_family); out/voi_eval/val_vlm.json comparisons.val/<level>.voi_vlm_minus_voi; out/vlm_dev_fp32/profile.json. Analysis: docs/vlm_failure_analysis.md. Frame: out/frames_dev/occluded_pedestrian/100_2.0.png.
+out/vlm_probe/report.json (variants.occluded_pedestrian/100_2.0: describe, ped, orig; replies; nan_embeddings), report_fp16.json nan_embeddings; out/vlm_yesno/eval_val.json questions (auroc, by_family); out/voi_eval/final_v4_addendum.json comparisons.final/<level>.voi_vlm_minus_voi; out/vlm_dev_fp32/profile.json. Analysis: docs/vlm_failure_analysis.md. Frame: out/frames_dev/occluded_pedestrian/100_2.0.png.
 
 ## Slide 21: Limits: what these numbers do and do not show
 

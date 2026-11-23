@@ -127,7 +127,8 @@ def eshan_slides(K, d):
           f"Contribution 2 result · pre-registered final test · seeds 1160 to 1259, {n_final:,} decisions", [
               TABLE(100, 235, 1720, [4.3, 2.2, 2.2, 2.2], rows, size=28, rowh=64, hl=[], bold_rows=[2]),
               TABLE(100, 580, 1720, [4.3, 2.8, 2.8, 2.8, 1.3], hyp, size=26, rowh=72, hl=[4]),
-              T(100, 885, 1720, 150, ["All three hypotheses fail; V4 (VLM prior) was not run on these seeds. The learned selector here "
+              T(100, 885, 1720, 150, ["All three hypotheses fail; V4 (VLM prior) was not run in this test (a later exploratory run is on the "
+                                      "VLM slide). The learned selector here "
                                       "is retrained on Eshan’s rebuild of the data, which reads 0.010 to 0.016 lower than Max’s build "
                                       "(cause not confirmed). All methods are scored on the same rows."], size=26, color=GREY)],
           f"{FJ} results.final/<level>.<method>.mean_acc; hypotheses.final.V1/V2 cells (mean_diff, ci95), V3 cells (acc_diff, "

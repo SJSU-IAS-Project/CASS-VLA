@@ -419,7 +419,7 @@ Intervals are paired seed bootstraps (1,000 resamples), as in Contribution 1. No
 
 ### 7.3 Results (pre-registered final test, seeds 1160-1259)
 
-All three tested hypotheses fail. VoI is 0.076 to 0.098 below the learned selector and level with the ranker margin. V4 was not run, because the VLM answers for these frames were not ready when the final evaluation ran (`V4_STATUS.md`).
+All three tested hypotheses fail. VoI is 0.076 to 0.098 below the learned selector and level with the ranker margin. V4 was not run in the confirmatory test, because the VLM answers for these frames were not ready when the final evaluation ran (`V4_STATUS.md`); a later exploratory addendum is in Section 7.6.
 
 | Mean accuracy over budgets 0-1 | Low | Mid | High |
 |---|---|---|---|
@@ -515,6 +515,10 @@ The float16 vision tower overflowed to NaN on 11 intersection frames, which prod
 | red_light vs red_light | 0.999 [0.998, 1.000] | 234 of 2,222 | ambiguous_light 0.97 |
 
 Only the red-light question holds within its family. The pedestrian score tracks the scenario family, and the hidden-road-user question, the one VoI needs, is close to chance. Used as VoI's occlusion prior on validation it changes mean accuracy by -0.005, -0.002, +0.000 (low, mid, high).
+
+**V4 addendum (exploratory, run after the final evaluation).** On seeds 1160-1259, VoI with the VLM prior minus VoI: low -0.006 [-0.010, -0.002] | mid -0.007 [-0.011, -0.004] | high +0.001 [-0.003, +0.005] (`out/voi_eval/final_v4_addendum.json`). It is not a confirmatory test.
+
+On the final frames (4,557 decisions, `out/vlm_yesno/eval_final.json`) the detectors behave as on validation: red light AUROC 0.999 (0.97 within its family), pedestrian 0.862, hidden road user 0.513 [0.474, 0.552].
 
 ### 7.7 Cost on the Mac
 
