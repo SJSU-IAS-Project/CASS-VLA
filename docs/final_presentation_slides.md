@@ -225,7 +225,8 @@
 ## To do before the talk
 
 - [ ] Max: confirm his slides 1-2, 5-7 and 12, and the 0.6-budget wording.
-- [ ] Build the actual deck. Options: reuse Max's `deck/build_pptx.py` pipeline, or ask Claude to generate a slide deck from this outline.
+- [x] Build the actual deck: `docs/final/deck/joint_deck.pptx` (built on Max's deck by `docs/final/build_joint_deck.py`; see `docs/final/README.md`).
+- [ ] Max: choose which of his slides move to backup so the talk fits 10 minutes.
 - [ ] Prepare the pedestrian-frame image for slide 11 (`out/frames_dev/occluded_pedestrian/100_2.0.png`).
 - [ ] Rehearse to 10:00 with a timer, keeping each section to its time.
 - [ ] After the talk, upload to Canvas by Dec 3.
