@@ -14,7 +14,7 @@ OUT=$1; shift
 echo "node $(hostname)  $(date)  out $OUT"
 for ds in "$@"; do
   t=$SECONDS
-  env -u DISPLAY $D/venv/bin/python scripts/render_frames.py --data ${ds%%:*} --split ${ds#*:} --out $OUT --procs 16 --max-msaa 4 2>&1 | grep -v -E "WARNING|AL lib|audio|/dev/input" | awk 'NR==1 || /Error|Traceback/ || NR%50==0'
+  env -u DISPLAY $D/venv/bin/python scripts/hpc/render_frames_hpc.py --data ${ds%%:*} --split ${ds#*:} --out $OUT --procs 16 --max-msaa 4 2>&1 | grep -v -E "WARNING|AL lib|audio|/dev/input" | awk 'NR==1 || /Error|Traceback/ || NR%50==0'
   echo "== $ds exit ${PIPESTATUS[0]} in $((SECONDS - t)) s, $(wc -l < $OUT/frames.jsonl) frames logged"
 done
 echo done $(date)

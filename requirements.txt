@@ -6,6 +6,7 @@ metadrive-simulator @ git+https://github.com/metadriverse/metadrive.git@85e5dadc
 numpy
 matplotlib
 pytest
+scikit-learn   # gradient-boosted selector ablation (scripts/ablations.py)
 
 # opencv is intentionally NOT pinned here. metadrive-simulator depends on
 # opencv-python and installs it itself. Do NOT add opencv-python-headless:

@@ -82,6 +82,8 @@ class Oracle:
     """Owns one HazardEnv for a family (MetaDrive allows one engine per process)."""
 
     def __init__(self, family, start_seed=0, num_scenarios=1, horizon=HORIZON, cruise=CRUISE, **env_overrides):
+        """``env_overrides`` go to ``make_env``; the frame renderer uses them to add a camera without
+        changing the prefix policy."""
         self.family, self.horizon, self.cruise = family, horizon, cruise
         self.env = make_env(family, seed=start_seed, num_scenarios=num_scenarios, **env_overrides)
 
